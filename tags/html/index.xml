@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on My New Hugo Site</title>
+    <link>http://example.org/tags/html/</link>
+    <description>Recent content in html on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Aug 2020 23:03:58 +0530</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Making a Verlet Physics Engine in Javascript</title>
+      <link>http://example.org/markdown/</link>
+      <pubDate>Tue, 11 Aug 2020 23:03:58 +0530</pubDate>
+      
+      <guid>http://example.org/markdown/</guid>
+      <description>Have you ever wondered if you can make your own physics engine in JavaScript? If so, you have come to the right place. We are going to build a Physics engine from scratch in JavaScript.
+Before we start, I should mention that this tutorial assumes you have a good understanding of Vectors. Don’t worry if you do not yet have this understanding — Vectors are simple: get the Vector.js.
+What Is Verlet Physics?</description>
+    </item>
+    
+  </channel>
+</rss>

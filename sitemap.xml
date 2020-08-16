@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/tags/blog/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/javascript/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/fivth/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/theme/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/css/</loc>
+    <lastmod>2020-08-14T13:22:10+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/fourth/</loc>
+    <lastmod>2020-08-14T13:22:10+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/third/</loc>
+    <lastmod>2020-08-14T13:22:10+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/markdown/</loc>
+    <lastmod>2020-08-14T13:22:10+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/second/</loc>
+    <lastmod>2020-08-14T13:11:45+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/hugo/</loc>
+    <lastmod>2020-08-14T13:11:45+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/html/</loc>
+    <lastmod>2020-08-11T23:03:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/markdown/</loc>
+    <lastmod>2020-08-11T23:03:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/themes/</loc>
+    <lastmod>2020-08-11T23:03:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+  </url>
+  
+</urlset>

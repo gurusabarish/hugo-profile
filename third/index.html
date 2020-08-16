@@ -1,0 +1,362 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Making a Verlet Physics Engine in Javascript</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"></head>
+
+<body>
+    <div class="container col-md-6 col-md-offset-3">
+        <h1>Making a Verlet Physics Engine in Javascript</h1>
+        <div>Friday, Aug 14, 2020</div>
+        <div></div>
+        <div><p>Have you ever wondered if you can make your own physics engine in JavaScript? If so, you have come to the right place. We are going to build a Physics engine from scratch in JavaScript.</p>
+<p>Before we start, I should mention that this tutorial assumes you have a good understanding of Vectors.
+Don’t worry if you do not yet have this understanding — Vectors are simple: get the Vector.js.</p>
+<h2 id="what-is-verlet-physics">What Is Verlet Physics?</h2>
+<p>According to Wikipedia:</p>
+<blockquote>
+<p>Verlet integration is a numerical method used to integrate Newton’s equations of motion. It is frequently used to calculate trajectories of particles in molecular dynamics simulations and computer graphics. The algorithm was first used in 1791 by Delambre and has been rediscovered many times since then, most recently by Loup Verlet in the 1960s for use in molecular dynamics.
+In simple terms, Verlet physics is just a system of connected dots.</p>
+</blockquote>
+<h3 id="in-a-verlet-system-we-have-2-main-components">In a Verlet system, we have 2 main components:</h3>
+<ol>
+<li>Points (dots)</li>
+<li>Constraints (sticks)</li>
+</ol>
+<p><img src="./images/verlet_box.png" alt="A Box. Connected With Dots And Sticks"></p>
+<h2 id="dots">Dots</h2>
+<p>The dots have basic physics applied to them.
+We have to keep track of the dots’ current and old positions to add the physics behavior to them — you&rsquo;ll see this when we implement it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Dot.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dot</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vector</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>)
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">oldpos</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vector</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>)
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">friction</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.97</span>
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">groundFriction</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.7</span>
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">gravity</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vector</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#e62a4f&#34;</span>
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">mass</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+  }
+}
+</code></pre></div><p>We have the basic setup, now let&rsquo;s render the dots and make them move.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Dot.js
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">update</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">vel</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Vector</span>.<span style="color:#a6e22e">sub</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">oldpos</span>);
+  <span style="color:#a6e22e">vel</span>.<span style="color:#a6e22e">mult</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">friction</span>);
+  <span style="color:#75715e">// if the point touches the ground set groundFriction
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">CANVAS_HEIGHT</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">vel</span>.<span style="color:#a6e22e">magSq</span>() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.000001</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vel</span>.<span style="color:#a6e22e">mag</span>();
+    <span style="color:#a6e22e">vel</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">/=</span> <span style="color:#a6e22e">m</span>;
+    <span style="color:#a6e22e">vel</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">/=</span> <span style="color:#a6e22e">m</span>;
+    <span style="color:#a6e22e">vel</span>.<span style="color:#a6e22e">mult</span>(<span style="color:#a6e22e">m</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">groundFriction</span>);
+  }
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">oldpos</span>.<span style="color:#a6e22e">setXY</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">x</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span>);
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">vel</span>);
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">gravity</span>);
+}
+</code></pre></div><p>The update function will update the position and handle the physics of the dot.</p>
+<p>To do Verlet integration, we have to calculate velocity based on dots old position.</p>
+<p>In the first line, we are <strong>subtracting the current position from the old position to get the desired velocity.</strong> After calculating the velocity, we apply friction to the dots, so they come to rest instead of sliding forever.</p>
+<p>Then, we update the old position by saying <code>this.oldpos.setXY(this.pos.x, this.pos.y)</code> and add the velocity and gravity to the position.</p>
+<p>We also want to make them stay inside the canvas, so we have to add some checks. We will also add another function: <code>constrain()</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Dot.js
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">constrain</span>() {
+  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">CANVAS_WIDTH</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CANVAS_WIDTH</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span>;
+  }
+  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span>;
+  }
+  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">CANVAS_HEIGHT</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CANVAS_HEIGHT</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span>;
+  }
+  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span>;
+  }
+};
+</code></pre></div><p>Let’s add the render method too:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Dot.js
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">render</span>() {
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">beginPath</span>();
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">color</span>;
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">x</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span>, <span style="color:#ae81ff">0</span>, Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fill</span>();
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">closePath</span>();
+}
+</code></pre></div><p>Setting up:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// index.js | setup
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">canvas</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;c&#34;</span>)
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ctx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#34;2d&#34;</span>)
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">CANVAS_WIDTH</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerWidth</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">CANVAS_HEIGHT</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerHeight</span>
+<span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CANVAS_WIDTH</span>
+<span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CANVAS_HEIGHT</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">dots</span> <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">50</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  <span style="color:#a6e22e">dots</span>.<span style="color:#a6e22e">push</span>(
+    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dot</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">CANVAS_WIDTH</span>, Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">CANVAS_HEIGHT</span>)
+  )
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">animate</span>() {
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">CANVAS_WIDTH</span>, <span style="color:#a6e22e">CANVAS_HEIGHT</span>)
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">dots</span>) {
+    <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">update</span>()
+    <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">constrain</span>()
+    <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">ctx</span>)
+  }
+  <span style="color:#a6e22e">requestAnimationFrame</span>(<span style="color:#a6e22e">animate</span>)
+}
+<span style="color:#a6e22e">animate</span>()
+</code></pre></div><p>We added a lot more dots in random positions and then <code>update()</code> <code>constrain()</code> <code>render()</code> them.</p>
+<p>Let&rsquo;s see what that looks like:</p>
+<p><a href="https://codepen.io/anuraghazra/pen/VOpJJR?default-tab=results">https://codepen.io/anuraghazra/pen/VOpJJR?default-tab=results</a></p>
+<p>Excellent — it&rsquo;s just a start, but finally, we have something.</p>
+<p>Now we are going to add the sticks!</p>
+<h2 id="sticks">Sticks</h2>
+<p>Sticks are the core of Verlet physics. Sticks make sure that the dots don’t get too far or too close to each other — they constrain dots to a certain distance.</p>
+<p><img src="./images/constraint_particle.png" alt="https://slsdo.github.io/blob-family/#constraint"></p>
+<p><strong>Stick.js</strong> class is relatively simple. It will take two <strong>Dots</strong> as an argument and a length. But if the length is not defined, we will calculate the length based on the dot’s position.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Stick.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stick</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">p1</span>, <span style="color:#a6e22e">p2</span>, <span style="color:#a6e22e">length</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startPoint</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">p1</span>
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">endPoint</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">p2</span>
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">stiffness</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#f5476a&#34;</span>
+    <span style="color:#75715e">// if the length is not given then calculate the distance based on the position
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">length</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">dist</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">endPoint</span>.<span style="color:#a6e22e">pos</span>)
+    } <span style="color:#66d9ef">else</span> {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">length</span>
+    }
+  }
+}
+</code></pre></div><p>Now let&rsquo;s add the actual core of the algorithm, This resolves and updates the dot’s position based on the stick’s distance, ultimately constraining it to a certain distance from all other dots.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Stick.js
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">update</span>() {
+  <span style="color:#75715e">// calculate the distance between two dots
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">dx</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">endPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">x</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">dy</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">endPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span>;
+  <span style="color:#75715e">// pythagoras theorem
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">dist</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#a6e22e">dx</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">dx</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">dy</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">dy</span>);
+  <span style="color:#75715e">// calculate the resting distance betwen the dots
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">diff</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">dist</span>) <span style="color:#f92672">/</span> <span style="color:#a6e22e">dist</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">stiffness</span>;
+  <span style="color:#75715e">// getting the offset of the points
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">offsetx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dx</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">diff</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.5</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">offsety</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dy</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">diff</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.5</span>;
+  <span style="color:#75715e">// calculate mass
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">m1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startPoint</span>.<span style="color:#a6e22e">mass</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">endPoint</span>.<span style="color:#a6e22e">mass</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">m2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startPoint</span>.<span style="color:#a6e22e">mass</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">m1</span>;
+  <span style="color:#a6e22e">m1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">endPoint</span>.<span style="color:#a6e22e">mass</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">m1</span>;
+  <span style="color:#75715e">// and finally apply the offset with calculated mass
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startPoint</span>.<span style="color:#a6e22e">pinned</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">-=</span> <span style="color:#a6e22e">offsetx</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">m1</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">-=</span> <span style="color:#a6e22e">offsety</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">m1</span>;
+  }
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">endPoint</span>.<span style="color:#a6e22e">pinned</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">endPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">offsetx</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">m2</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">endPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">offsety</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">m2</span>;
+  }
+}
+</code></pre></div><p>Okay, I think we are good to go! Let’s add the render function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Stick.js
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">ctx</span>) {
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">beginPath</span>();
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">color</span>;
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">x</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span>);
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">endPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">x</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">endPoint</span>.<span style="color:#a6e22e">pos</span>.<span style="color:#a6e22e">y</span>);
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">stroke</span>();
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">closePath</span>();
+}
+</code></pre></div><p>Setting up:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// index.js | setup
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">canvas</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;c&#34;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ctx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#34;2d&#34;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">CANVAS_WIDTH</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerWidth</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">CANVAS_HEIGHT</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerHeight</span>;
+<span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CANVAS_WIDTH</span>;
+<span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CANVAS_HEIGHT</span>;
+<span style="color:#75715e">// arrays
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">dots</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sticks</span> <span style="color:#f92672">=</span> [];
+<span style="color:#75715e">// forming a BOX
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">dots</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dot</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>, (Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.5</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100.0</span>); <span style="color:#75715e">// x, y, vx, vy
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">dots</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dot</span>(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">100</span>));
+<span style="color:#a6e22e">dots</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dot</span>(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">200</span>));
+<span style="color:#a6e22e">dots</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dot</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>));
+<span style="color:#75715e">// sticks
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">sticks</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Stick</span>(<span style="color:#a6e22e">dots</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">dots</span>[<span style="color:#ae81ff">1</span>]))
+<span style="color:#a6e22e">sticks</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Stick</span>(<span style="color:#a6e22e">dots</span>[<span style="color:#ae81ff">1</span>], <span style="color:#a6e22e">dots</span>[<span style="color:#ae81ff">2</span>]))
+<span style="color:#a6e22e">sticks</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Stick</span>(<span style="color:#a6e22e">dots</span>[<span style="color:#ae81ff">2</span>], <span style="color:#a6e22e">dots</span>[<span style="color:#ae81ff">3</span>]))
+<span style="color:#a6e22e">sticks</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Stick</span>(<span style="color:#a6e22e">dots</span>[<span style="color:#ae81ff">3</span>], <span style="color:#a6e22e">dots</span>[<span style="color:#ae81ff">0</span>]))
+<span style="color:#a6e22e">sticks</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Stick</span>(<span style="color:#a6e22e">dots</span>[<span style="color:#ae81ff">3</span>], <span style="color:#a6e22e">dots</span>[<span style="color:#ae81ff">1</span>]))
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">animate</span>() {
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">CANVAS_WIDTH</span>, <span style="color:#a6e22e">CANVAS_HEIGHT</span>);
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">dots</span>) {
+    <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">update</span>();
+    <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">constrain</span>();
+    <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">ctx</span>);
+  }
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">sticks</span>) {
+    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">update</span>();
+    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">ctx</span>);
+  }
+  <span style="color:#a6e22e">requestAnimationFrame</span>(<span style="color:#a6e22e">animate</span>);
+}
+<span style="color:#a6e22e">animate</span>();
+</code></pre></div><p>Let’s see the results:</p>
+<p><a href="https://codepen.io/anuraghazra/pen/qGmWmZ?default-tab=results">https://codepen.io/anuraghazra/pen/qGmWmZ?default-tab=results</a></p>
+<p>As you can see, we have a box! Well, a box that acts like it’s made of Jello, That’s because, in a single frame, one update per stick is not enough to make the dots rest at their length. We have to iterate the simulation as many times as we can — the more the iterations, the more the rigid box will be.</p>
+<p>Adding these lines to the existing code will make the box rigid:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// index.js | setup
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ITERATION</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span> <span style="color:#75715e">// max physics iterations per frame
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">animate</span>() {
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">CANVAS_WIDTH</span>, <span style="color:#a6e22e">CANVAS_HEIGHT</span>)
+  <span style="color:#75715e">// iterate over the simulation
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">ITERATION</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">dots</span>) {
+      <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">constrain</span>()
+    }
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">sticks</span>) {
+      <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">update</span>()
+    }
+  }
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">dots</span>) {
+    <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">update</span>()
+    <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">ctx</span>)
+  }
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">sticks</span>) {
+    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">update</span>()
+    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">ctx</span>)
+  }
+  <span style="color:#a6e22e">requestAnimationFrame</span>(<span style="color:#a6e22e">animate</span>)
+}
+<span style="color:#a6e22e">animate</span>()
+</code></pre></div><p><a href="https://codepen.io/anuraghazra/pen/gJWpmX?default-tab=results">https://codepen.io/anuraghazra/pen/gJWpmX?default-tab=results</a></p>
+<p>Looks amazing, isn’t it?</p>
+<h2 id="entityjs-managing-dots-and-sticks-in-one-place">Entity.js: managing dots and sticks in one place</h2>
+<p>Okay, now we have Dot.js and Stick.js. Both are working nicely, but the problem is we don&rsquo;t have much control over how we use them.</p>
+<p>We will create an Entity Class that will easily handle the Updates and Renders of the Verlet Object. I&rsquo;m going to paste the whole code here — it’s nothing special:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Entity.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Entity</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">iterations</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">dots</span> <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sticks</span> <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">iterations</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">iterations</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">16</span>
+  }
+  <span style="color:#a6e22e">addDot</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">vx</span>, <span style="color:#a6e22e">vy</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">dots</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dot</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">vx</span>, <span style="color:#a6e22e">vy</span>))
+  }
+  <span style="color:#a6e22e">addStick</span>(<span style="color:#a6e22e">p1</span>, <span style="color:#a6e22e">p2</span>, <span style="color:#a6e22e">length</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sticks</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Stick</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">dots</span>[<span style="color:#a6e22e">p1</span>], <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">dots</span>[<span style="color:#a6e22e">p2</span>], <span style="color:#a6e22e">length</span>))
+  }
+  <span style="color:#a6e22e">updatePoints</span>() {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">dots</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">dots</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">update</span>()
+    }
+  }
+  <span style="color:#a6e22e">updateSticks</span>() {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sticks</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sticks</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">update</span>()
+    }
+  }
+  <span style="color:#a6e22e">updateContrains</span>() {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">dots</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">dots</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">constrain</span>()
+    }
+  }
+  <span style="color:#a6e22e">renderPoints</span>(<span style="color:#a6e22e">ctx</span>) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">dots</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">dots</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">ctx</span>)
+    }
+  }
+  <span style="color:#a6e22e">renderSticks</span>(<span style="color:#a6e22e">ctx</span>) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sticks</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sticks</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">ctx</span>)
+    }
+  }
+  <span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">ctx</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">updatePoints</span>()
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">iterations</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">updateSticks</span>()
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">updateContrains</span>()
+    }
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">renderPoints</span>(<span style="color:#a6e22e">ctx</span>)
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">renderSticks</span>(<span style="color:#a6e22e">ctx</span>)
+  }
+}
+</code></pre></div><p>Using the Entity Class:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// index.js | setup
+</span><span style="color:#75715e"></span>...
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">box</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Entity</span>(<span style="color:#ae81ff">100</span>)
+<span style="color:#75715e">// x, y, vx, vy added random velocity in first dot to make the box rotate a little bit
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">addDot</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>, (Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.5</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100.0</span>)
+<span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">addDot</span>(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">100</span>)
+<span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">addDot</span>(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">200</span>)
+<span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">addDot</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>)
+<span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">addStick</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+<span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">addStick</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+<span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">addStick</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+<span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">addStick</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>)
+<span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">addStick</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>)
+...
+</code></pre></div><p>Yes, this is looking pretty clean and manageable!</p>
+<p>Let&rsquo;s take a look at the final result:</p>
+<p><a href="https://codepen.io/anuraghazra/pen/JqNdQW?default-tab=results">https://codepen.io/anuraghazra/pen/JqNdQW?default-tab=results</a></p>
+<p>Now we can create lots of fun Verlet Shapes with this Entity.js class!</p>
+<h2 id="verlyjs-a-physics-engine-i-wrote">Verly.js: A physics engine I wrote</h2>
+<p>Verly.js is a Robust Verlet physics engine I wrote. It has many cool features:</p>
+<ol>
+<li>Attraction — Repulsion behavior</li>
+<li>Basic Shapes</li>
+<li>Box, Hexagon, Cloth, Rope, Ragdoll</li>
+<li>Cloth Tearing</li>
+<li>Typography and Text</li>
+</ol>
+<p>With Verly.js you can create a tearable cloth in just 15 lines of code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Verly.js | demo
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">canvas</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;c&#34;</span>)
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ctx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#34;2d&#34;</span>)
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">800</span>)
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">600</span>)
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">verly</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Verly</span>(<span style="color:#ae81ff">16</span>)
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cloth</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">verly</span>.<span style="color:#a6e22e">createCloth</span>(<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">250</span>, <span style="color:#ae81ff">250</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">2</span>)
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">animate</span>() {
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">height</span>)
+  <span style="color:#a6e22e">verly</span>.<span style="color:#a6e22e">update</span>()
+  <span style="color:#a6e22e">cloth</span>.<span style="color:#a6e22e">tear</span>(<span style="color:#ae81ff">100</span>) <span style="color:#75715e">// tear threshold
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">requestAnimationFrame</span>(<span style="color:#a6e22e">animate</span>)
+}
+<span style="color:#a6e22e">animate</span>()
+</code></pre></div><p>Demo: <a href="https://anuraghazra.github.io/Verly.js/">https://anuraghazra.github.io/Verly.js/</a></p>
+<p>Source-code: <a href="https://github.com/anuraghazra/Verly.js">https://github.com/anuraghazra/Verly.js</a></p>
+<p>Examples: <a href="https://anuraghazra.github.io/Verly.js/examples">https://anuraghazra.github.io/Verly.js/examples</a></p>
+<p>Take a look at some of the examples in my Verly.js Physics Engine, which I created some time ago. I added almost everything in that engine.</p>
+<p><img src="./images/example1.png" alt="Spherical Shapes anuraghazra.github.io">
+<img src="./images/example2.png" alt="Attraction Repulsion Behavior anuraghazra.github.io">
+<img src="./images/example3.png" alt="RagDoll anuraghazra.github.io">
+<img src="./images/example4.png" alt="Cloth anuraghazra.github.io"></p>
+<p>Codepen examples:</p>
+<p><a href="https://codepen.io/anuraghazra/pen/vwmLKo?default-tab=results">https://codepen.io/anuraghazra/pen/vwmLKo?default-tab=results</a></p>
+<p>Verly.js’s API is easy to use and flexible because of its Entity Component Structure.</p>
+<p>Thanks for reading — I hope you learned something!</p>
+<hr>
+<h3 id="other-places-to-learn-about-verlet-physics">Other places to learn about Verlet physics:</h3>
+<blockquote>
+<p><a href="https://www.youtube.com/watch?v=3HjO_RGIjCU">Keith Peter’s CodingMath Verlet Physics Videos.</a>
+Amazing <a href="http://datagenetics.com/blog/july22018/index.html">Article At DataGenetic</a></p>
+</blockquote>
+</div>
+    </div>
+</body>
+
+</html>
