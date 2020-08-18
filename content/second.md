@@ -1,7 +1,7 @@
 ---
 title: "How to make a hugo theme"
 date: 2020-08-14T13:11:45+05:30
-draft: true
+draft: false
 subtitle: "Hugo theme"
 tags: 
   - hugo

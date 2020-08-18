@@ -1,3 +1,3 @@
-baseURL = "http://example.org/"
+baseURL = "https://hugo-blog0.netlify.app/"
 languageCode = "en-us"
 title = "My New Hugo Site"
