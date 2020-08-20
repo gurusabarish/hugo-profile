@@ -3,6 +3,7 @@ title: "Making a Verlet Physics Engine in Javascript"
 date: 2020-08-14T13:30:29+05:30
 draft: false
 subtitle: "Javascript"
+author: "Gurusabarish"
 tags:
     - blog
     - theme

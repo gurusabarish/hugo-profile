@@ -4,10 +4,27 @@
     font-weight: bold;
 }
 
-.item-title:hover {
+.blog-tags {
     color: rgb(0, 204, 255);
 }
 
-.blog-tags {
-    color: rgb(0, 204, 255);
+.read-more:hover {
+    background-color: transparent;
+    color: #007bff;
+}
+
+.read-more:focus {
+    box-shadow: none;
+}
+
+.img-fluid {
+    width: 100% !important;
+    height: 350px !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .img-fluid {
+        height: 200px !important;
+    }
 }

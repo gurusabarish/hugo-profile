@@ -4,6 +4,7 @@ date: 2020-08-11T23:03:58+05:30
 draft: false
 subtitle: "Javascript"
 bg_image: "images/bg-image.jpg"
+author: "Gurusabarish"
 tags:
   - markdown
   - css
