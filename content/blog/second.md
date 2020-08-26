@@ -4,10 +4,11 @@ date: 2020-08-14T13:11:45+05:30
 draft: false
 subtitle: "Hugo theme"
 author: "Gurusabarish"
+github_link: "https://github.com/gurusabarish/Hugo-blog"
 tags: 
   - hugo
   - blog
-bg_image: "images/bg-image-2.jpg"
+bg_image: "../images/bg-image-2.jpg"
 ---
 
 ## Introduction

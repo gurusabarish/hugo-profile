@@ -1,15 +1,5 @@
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{ .Title }}</title>
-  {{- partial "head.html" . -}}
-</head>
-
-<body>
-
+{{ define "main" }}
+<section>
   {{ range .Pages }}
   <br>
   <div class="container">
@@ -78,7 +68,5 @@
   </div>
   <br>
   {{ end }}
-
-</body>
-
-</html>
+</section>
+{{ end }}

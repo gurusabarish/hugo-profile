@@ -22,9 +22,12 @@
     height: 350px !important;
 }
 
-
 @media only screen and (max-width: 600px) {
     .img-fluid {
         height: 200px !important;
     }
+}
+
+.footer {
+    background: #f2f2f2;
 }

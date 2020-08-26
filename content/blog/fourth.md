@@ -1,15 +1,17 @@
 ---
 title: "Making a Verlet Physics Engine in Javascript"
-date: 2020-08-14T13:30:29+05:30
+date: 2020-08-14T13:22:10+05:30
 draft: false
 subtitle: "Javascript"
+github_link: "https://github.com/gurusabarish/Hugo-blog"
 author: "Gurusabarish"
 tags:
-    - blog
-    - theme
-    - javascript
-bg_image: "images/bg-image-5.jpg"
+  - markdown
+  - css
+  - blog
+bg_image: "../images/bg-image-4.jpg"
 ---
+
 Have you ever wondered if you can make your own physics engine in JavaScript? If so, you have come to the right place. We are going to build a Physics engine from scratch in JavaScript.
 
 Before we start, I should mention that this tutorial assumes you have a good understanding of Vectors.
