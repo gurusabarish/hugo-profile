@@ -2,13 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>{{ .Title }}</title>
-{{ if .Params.favicon }}
-<link rel="icon" href="{{ .favicon }}" type="image/gif" sizes="16x16">
-{{ end }}
 
-<!-- Links and stylesheets -->
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/main.css">
+<link rel="icon" href="{{ .Site.Params.favicon | default "/assets/images/favicon.png"}}" type="image/gif">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+<!-- Header and Footer -->
+<link rel="stylesheet" href="/css/head_foot.css">

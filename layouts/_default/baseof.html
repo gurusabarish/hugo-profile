@@ -3,7 +3,14 @@
 
 <head>
   {{- partial "head.html" . -}}
+  <meta name="description" content="{{ .Params.description }}" />
 
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/blog.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 </head>
 
 <body>

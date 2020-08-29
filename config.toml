@@ -2,12 +2,13 @@ baseURL = "https://hugo-blog0.netlify.app/"
 languageCode = "en-us"
 title = "Hugo-blog"
 
-
+[params]
+  favicon = "/images/hugo.png"
+  description = "Portfolio and personal blog of gurusabarish"
 # Navbar Menus
 [[menu.main]]
 name    = "Blog"
 url     = "blog"
-
 
 [Author]
   name = "Gurusabarish"

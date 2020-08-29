@@ -10,6 +10,7 @@ tags:
   - css
   - blog
 bg_image: "/images/bg-image-4.jpg"
+description: "Making a Verlet Physics Engine in Javascript"
 ---
 
 Have you ever wondered if you can make your own physics engine in JavaScript? If so, you have come to the right place. We are going to build a Physics engine from scratch in JavaScript.

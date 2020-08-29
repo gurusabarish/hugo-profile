@@ -7,12 +7,18 @@
 
 <head>
     {{- partial "head.html" . -}}
+    <meta name="description" content="{{ .Site.Params.description }}" />
 
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
     {{- partial "header.html" . -}}
+
     {{- partial "sections/home.html" . -}}
+
     {{- partial "footer.html" . -}}
     {{- partial "scripts.html" . -}}
 </body>

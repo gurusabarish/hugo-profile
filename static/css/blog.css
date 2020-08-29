@@ -28,16 +28,3 @@
         height: 200px !important;
     }
 }
-
-/*footer*/
-.footer {
-    background: #f2f2f2;
-}
-
-/*home*/
-.home {
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}

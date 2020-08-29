@@ -9,6 +9,7 @@ tags:
   - hugo
   - blog
 bg_image: "/images/bg-image-2.jpg"
+description: "How to make a hugo theme"
 ---
 
 ## Introduction
