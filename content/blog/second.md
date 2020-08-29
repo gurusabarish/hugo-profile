@@ -8,7 +8,7 @@ github_link: "https://github.com/gurusabarish/Hugo-blog"
 tags: 
   - hugo
   - blog
-bg_image: "../images/bg-image-2.jpg"
+bg_image: "/images/bg-image-2.jpg"
 ---
 
 ## Introduction

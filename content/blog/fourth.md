@@ -9,7 +9,7 @@ tags:
   - markdown
   - css
   - blog
-bg_image: "../images/bg-image-4.jpg"
+bg_image: "/images/bg-image-4.jpg"
 ---
 
 Have you ever wondered if you can make your own physics engine in JavaScript? If so, you have come to the right place. We are going to build a Physics engine from scratch in JavaScript.

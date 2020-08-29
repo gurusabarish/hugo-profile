@@ -1,3 +1,4 @@
+/*blog*/
 .item-title {
     font-family: 'Alata', sans-serif;
     color: rgba(0, 0, 0, 0.541);
@@ -28,6 +29,15 @@
     }
 }
 
+/*footer*/
 .footer {
     background: #f2f2f2;
+}
+
+/*home*/
+.home {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
