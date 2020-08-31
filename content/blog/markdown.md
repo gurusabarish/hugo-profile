@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Markdown syntax"
 date: 2020-08-11T23:03:58+05:30
 draft: false
 subtitle: "Javascript"

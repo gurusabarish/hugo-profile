@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>css on Hugo-blog</title>
+    <link>https://hugo-blog0.netlify.app/tags/css/</link>
+    <description>Recent content in css on Hugo-blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Aug 2020 13:22:10 +0530</lastBuildDate>
+    
+	<atom:link href="https://hugo-blog0.netlify.app/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Making a Verlet Physics Engine in Javascript</title>
+      <link>https://hugo-blog0.netlify.app/blog/fourth/</link>
+      <pubDate>Fri, 14 Aug 2020 13:22:10 +0530</pubDate>
+      
+      <guid>https://hugo-blog0.netlify.app/blog/fourth/</guid>
+      <description>Have you ever wondered if you can make your own physics engine in JavaScript? If so, you have come to the right place. We are going to build a Physics engine from scratch in JavaScript.
+Before we start, I should mention that this tutorial assumes you have a good understanding of Vectors. Don’t worry if you do not yet have this understanding — Vectors are simple: get the Vector.js.
+What Is Verlet Physics?</description>
+    </item>
+    
+    <item>
+      <title>Making a Verlet Physics Engine in Javascript</title>
+      <link>https://hugo-blog0.netlify.app/blog/third/</link>
+      <pubDate>Fri, 14 Aug 2020 13:22:10 +0530</pubDate>
+      
+      <guid>https://hugo-blog0.netlify.app/blog/third/</guid>
+      <description>Have you ever wondered if you can make your own physics engine in JavaScript? If so, you have come to the right place. We are going to build a Physics engine from scratch in JavaScript.
+Before we start, I should mention that this tutorial assumes you have a good understanding of Vectors. Don’t worry if you do not yet have this understanding — Vectors are simple: get the Vector.js.
+What Is Verlet Physics?</description>
+    </item>
+    
+    <item>
+      <title>Markdown syntax</title>
+      <link>https://hugo-blog0.netlify.app/blog/markdown/</link>
+      <pubDate>Tue, 11 Aug 2020 23:03:58 +0530</pubDate>
+      
+      <guid>https://hugo-blog0.netlify.app/blog/markdown/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

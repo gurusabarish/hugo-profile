@@ -55,18 +55,12 @@
           {{ end }}
         </div>
         {{ end }}
-
-        <div style="color:grey; font-size:16px;">{{ if .Params.categories }}<strong>Categories:</strong>
-          {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-          {{end}}{{end}}
-        </div>
-        <div style="color:grey; font-size:16px;">{{ if .Params.moods }}<strong>Moods:</strong>
-          {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}
-        </div>
       </div>
     </div>
   </div>
   <br>
   {{ end }}
+
+
 </section>
 {{ end }}
