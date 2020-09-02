@@ -5,6 +5,13 @@ title = "Hugo-blog"
 [params]
   favicon = "/images/hugo.png"
   description = "Portfolio and personal blog of gurusabarish"
+  name = "Gurusabarish"
+  profile = "/images/avatar-370-456322.webp"
+  github = "https://github.com/gurusabarish"
+  linkedin = "https://linkedin.com/in/gurusabarish"
+  twitter = "https://twitter.com/gurusabarishh"
+  instagram = "https://instagram.com/gurusabarishh"
+
 # Navbar Menus
 [[menu.main]]
 name    = "Blog"

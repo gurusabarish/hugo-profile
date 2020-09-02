@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Hugo-blog</title>
+    <link>https://hugo-blog0.netlify.app/tags/</link>
+    <description>Recent content in Tags on Hugo-blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Aug 2020 13:30:29 +0530</lastBuildDate>
+    
+	<atom:link href="https://hugo-blog0.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>blog</title>
+      <link>https://hugo-blog0.netlify.app/tags/blog/</link>
+      <pubDate>Fri, 14 Aug 2020 13:30:29 +0530</pubDate>
+      
+      <guid>https://hugo-blog0.netlify.app/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://hugo-blog0.netlify.app/tags/javascript/</link>
+      <pubDate>Fri, 14 Aug 2020 13:30:29 +0530</pubDate>
+      
+      <guid>https://hugo-blog0.netlify.app/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>theme</title>
+      <link>https://hugo-blog0.netlify.app/tags/theme/</link>
+      <pubDate>Fri, 14 Aug 2020 13:30:29 +0530</pubDate>
+      
+      <guid>https://hugo-blog0.netlify.app/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://hugo-blog0.netlify.app/tags/css/</link>
+      <pubDate>Fri, 14 Aug 2020 13:22:10 +0530</pubDate>
+      
+      <guid>https://hugo-blog0.netlify.app/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://hugo-blog0.netlify.app/tags/markdown/</link>
+      <pubDate>Fri, 14 Aug 2020 13:22:10 +0530</pubDate>
+      
+      <guid>https://hugo-blog0.netlify.app/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://hugo-blog0.netlify.app/tags/hugo/</link>
+      <pubDate>Fri, 14 Aug 2020 13:11:45 +0530</pubDate>
+      
+      <guid>https://hugo-blog0.netlify.app/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://hugo-blog0.netlify.app/tags/html/</link>
+      <pubDate>Tue, 11 Aug 2020 23:03:58 +0530</pubDate>
+      
+      <guid>https://hugo-blog0.netlify.app/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>themes</title>
+      <link>https://hugo-blog0.netlify.app/tags/themes/</link>
+      <pubDate>Tue, 11 Aug 2020 23:03:58 +0530</pubDate>
+      
+      <guid>https://hugo-blog0.netlify.app/tags/themes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

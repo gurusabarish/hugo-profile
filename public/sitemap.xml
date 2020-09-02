@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/tags/blog/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/blog/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/tags/javascript/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/blog/fivth/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/tags/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/tags/theme/</loc>
+    <lastmod>2020-08-14T13:30:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/tags/css/</loc>
+    <lastmod>2020-08-14T13:22:10+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/blog/fourth/</loc>
+    <lastmod>2020-08-14T13:22:10+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/blog/third/</loc>
+    <lastmod>2020-08-14T13:22:10+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/tags/markdown/</loc>
+    <lastmod>2020-08-14T13:22:10+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/blog/second/</loc>
+    <lastmod>2020-08-14T13:11:45+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/tags/hugo/</loc>
+    <lastmod>2020-08-14T13:11:45+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/tags/html/</loc>
+    <lastmod>2020-08-11T23:03:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/blog/markdown/</loc>
+    <lastmod>2020-08-11T23:03:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/tags/themes/</loc>
+    <lastmod>2020-08-11T23:03:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-blog0.netlify.app/categories/</loc>
+  </url>
+  
+</urlset>
