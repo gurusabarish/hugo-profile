@@ -21,3 +21,19 @@
     padding-top: 10%;
     padding-left: 20%;
 }
+
+.home-content {
+    padding-top: 0;
+    padding-left: 18%;
+    padding-right: 5%;
+    background-repeat: no-repeat;
+    background-position-y: bottom 20%;
+    background-position-x: left 50%;
+    background-size: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+    .name-intro {
+        height: 40%;
+    }
+}
