@@ -84,10 +84,10 @@
     }
 }
 
-/* about */
+/* do things */
 
-.about {
-    height: 100vh;
+.do-things {
+    height: auto;
     padding: 0;
     padding-bottom: 0;
     margin: 0;
@@ -96,4 +96,9 @@
 
 .things-i-do {
     font-family: 'Alata', sans-serif;
+}
+
+.things {
+    height: 40vh;
+    overflow: hidden;
 }
