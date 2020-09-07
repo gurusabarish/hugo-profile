@@ -3,10 +3,11 @@
         <div class="container">
             <div class="about-me text-center font-weight-bold text-secondary">About Me</div>
         </div>
+
         <div class="row justify-content-center ">
             <div class="col-md-3 pt-5 text-center">
-                <img src="/images/gurusabarish.jpg" width="200px" alt="..." class="rounded">
-                <div class="about-me jop font-weight-bold text-secondary">web developper</div>
+                <img src="{{ .Site.Params.profile_image }}" width="200px" alt="{{ .Site.Params.name }}" class="rounded">
+                <div class="about-me jop font-weight-bold text-secondary">{{ .Site.Params.jop }}</div>
 
                 {{ if .Site.Params.linkedin }}
                 <a class="text-white" href="{{ .Site.Params.linkedin }}" target="_blank">
@@ -19,19 +20,22 @@
                 {{ end }}
 
             </div>
+
             <div class="col-md-7 pt-5 ">
                 <div class="about-content text-secondary p-3">
-                    Hi, I'm <span class="text-light">Gurusabarish</span>, a passionate <span class="text-light">web
-                        developer and ML engineer</span> from India. I tend to make use
+                    Hi, I'm <span class="text-light">{{ .Site.Params.name }}</span>, a passionate <span
+                        class="text-light">{{ .Site.Params.jops_about | default "Your jop"}}</span> from India. I tend
+                    to make use
                     of modern web technologies to build websites that looks great, feels fantastic, and functions
                     correctly.
 
                     <br><br>
-                    You can check my <a href="/blog">blog</a> and my <a href="https://github.com/gurusabarish"
+                    You can check my <a href="/blog">blog</a> and my <a href="{{ .Site.Params.github | default "#" }}"
                         target="_blank">github</a> for more details.
                 </div>
                 <div class="text-center">
-                    <button type="button" class="btn btn-info">resume</button>
+                    <a href="{{ .Site.Params.resume | default "#" }}" class="btn btn-info" role="button"
+                        aria-pressed="true">Resume</a>
                 </div>
             </div>
         </div>

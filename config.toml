@@ -22,6 +22,12 @@ title = "Hugo-blog"
   thing2_des = "I train robust models for various tasks."
   thing3_des = "I love to build things for web."
 
+  # About
+  profile_image = "/images/gurusabarish.jpg"
+  jop = "Web developer"
+  jops_about = "web developer and ML engineer"
+  resume = ""
+
 # Navbar Menus
 [[menu.main]]
 name    = "Blog"
