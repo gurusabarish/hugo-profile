@@ -96,9 +96,44 @@
 
 .things-i-do {
     font-family: 'Alata', sans-serif;
+    font-size: 25px;
 }
 
 .things {
     height: 40vh;
     overflow: hidden;
+}
+
+/* about */
+
+.about {
+    height: 70vh;
+    background: url("/images/about-background.jpg");
+    background-position: center;
+    /*background-color: #63a4ff;
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);*/
+}
+
+.jop {
+    font-size: 30px;
+}
+
+.about-me {
+    font-family: 'Alata', sans-serif;
+    font-size: 25px;
+}
+
+.about-content {
+    font-size: 20px;
+}
+
+.about-content a:hover {
+    text-decoration-line: none;
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .about {
+        height: auto;
+    }
 }

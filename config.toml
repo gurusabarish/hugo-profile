@@ -5,12 +5,22 @@ title = "Hugo-blog"
 [params]
   favicon = "/images/hugo.png"
   description = "Portfolio and personal blog of gurusabarish"
+
+  # Home
   name = "Gurusabarish"
   profile = "/images/avatar-370-456322.webp"
   github = "https://github.com/gurusabarish"
   linkedin = "https://linkedin.com/in/gurusabarish"
   twitter = "https://twitter.com/gurusabarishh"
   instagram = "https://instagram.com/gurusabarishh"
+
+  # Do things { Please change the svg icons width="3em" height="3em" }
+  thing1 = "Python"
+  thing2 = "Machine learning"
+  thing3 = "Build things for web"
+  thing1_des = "I build something beautiful using python."
+  thing2_des = "I train robust models for various tasks."
+  thing3_des = "I love to build things for web."
 
 # Navbar Menus
 [[menu.main]]
