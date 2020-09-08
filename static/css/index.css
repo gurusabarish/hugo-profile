@@ -137,3 +137,16 @@
         height: auto;
     }
 }
+
+
+/* Skill */
+.skill {
+    height: 80vh;
+}
+
+.skill-heading {
+    font-family: 'Alata', sans-serif;
+    font-size: 25px;
+}
+
+/* Projects */
