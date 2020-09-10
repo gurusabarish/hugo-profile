@@ -142,6 +142,7 @@
 /* Skill */
 .skill {
     height: 80vh;
+    background-color: #e5e9f2;
 }
 
 .skill-heading {
@@ -150,3 +151,22 @@
 }
 
 /* Projects */
+.projects {
+    height: auto;
+}
+
+.project-heading {
+    font-family: 'Alata', sans-serif;
+    font-size: 25px;
+}
+
+.card-img-top {
+    width: 100% !important;
+    height: 350px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .card-img-top {
+        height: 180px !important;
+    }
+}

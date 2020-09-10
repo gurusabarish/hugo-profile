@@ -1,0 +1,56 @@
+projects:
+  
+- title: = "Project 1"
+  image: "/images/project.png"
+  description:  "this is your description"
+
+- title: "Project 1"
+  image: "/images/project.png"
+  description: "this is your description"
+
+baseURL: "https://hugo-blog0.netlify.app/"
+languageCode: "en-us"
+title: "Hugo-blog"
+
+params:
+  favicon: "/images/hugo.png"
+  description: "Portfolio and personal blog of gurusabarish"
+
+  # Home
+  name: "Gurusabarish"
+  profile: "/images/avatar-370-456322.webp"
+  github: "https://github.com/gurusabarish"
+  linkedin: "https://linkedin.com/in/gurusabarish"
+  twitter: "https://twitter.com/gurusabarishh"
+  instagram: "https://instagram.com/gurusabarishh"
+
+  # Do things { Please change the svg icons width="3em" height="3em" }
+  thing1: "Python"
+  thing2: "Machine learning"
+  thing3: "Build things for web"
+  thing1_des: "I build something beautiful using python."
+  thing2_des: "I train robust models for various tasks."
+  thing3_des: "I love to build things for web."
+
+  # About
+  profile_image: "/images/gurusabarish.jpg"
+  jop: "Web developer"
+  jops_about: "web developer and ML engineer"
+  resume: ""
+  
+
+  
+
+# Navbar Menus
+menu.main:
+  name: "Blog"
+  url: "blog"
+
+Author:
+  name: "Gurusabarish"
+  website: "https://github.com/gurusabarish"
+
+
+
+
+  
