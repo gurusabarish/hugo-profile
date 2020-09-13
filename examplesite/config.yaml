@@ -1,21 +1,19 @@
-projects:
-  
-- title: = "Project 1"
-  image: "/images/project.png"
-  description:  "this is your description"
-
-- title: "Project 1"
-  image: "/images/project.png"
-  description: "this is your description"
-
 baseURL: "https://hugo-blog0.netlify.app/"
 languageCode: "en-us"
 title: "Hugo-blog"
+theme: "hugo-profile"
 
+
+  
 params:
   favicon: "/images/hugo.png"
   description: "Portfolio and personal blog of gurusabarish"
 
+  # Navbar Menus
+  customMenus:
+  - name: "Blog"
+    url: "blog"
+ 
   # Home
   name: "Gurusabarish"
   profile: "/images/avatar-370-456322.webp"
@@ -38,13 +36,12 @@ params:
   jops_about: "web developer and ML engineer"
   resume: ""
   
-
+  projects:
+  - title: "Project name"
+    image: "/images/project.png"
+    description:  "This is your description"
+    url: "https://github.com"
   
-
-# Navbar Menus
-menu.main:
-  name: "Blog"
-  url: "blog"
 
 Author:
   name: "Gurusabarish"

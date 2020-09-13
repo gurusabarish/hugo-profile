@@ -5,11 +5,12 @@
         <div class="container p-2">
             {{ range .Site.Params.projects }}
             <div class="card mb-3">
-                <img class="card-img-top" src="{{ .image }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{ .title }}</h5>
+                <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}">
+                <div class="card-body text-center">
+                    <h4 class="card-title">{{ .title }}</h4>
                     <p class="card-text">{{ .description }}</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <p class="card-text"></p>
+                    <a href="{{ .url }}" target="_blank" class="btn btn-primary">Details</a>
                 </div>
             </div>
             {{ end }}
