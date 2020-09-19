@@ -1,7 +1,8 @@
-# <div align="center">hugo-profile</div>
-<div align="center">A simple hugo theme for personal portfolio</div>
+# hugo-profile
 
-<img align="center" src="https://github.com/gurusabarish/hugo-profile/blob/master/static/images/preview.PNG" alt="guru sabarish" />
+A simple hugo theme for personal portfolio
+
+![Thumpnail](https://github.com/gurusabarish/hugo-profile/blob/master/static/images/tn.png)
 
 ### Demo Site: [Hugo-profile](https://hugo-profile.netlify.com)
 
@@ -29,9 +30,9 @@ git submodule add https://github.com/gurusabarish/hugo-profile.git themes/hugo-p
 Configure your `config.yaml` file of your site as below:
 
 ```yaml
-baseURL: "https://hugo-blog0.netlify.app/"
+baseURL: "https://example.com"
 languageCode: "en-us"
-title: "Hugo-blog"
+title: "Hugo-profile"
 theme: "hugo-profile"
 
 params:
