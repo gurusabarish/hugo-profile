@@ -54,8 +54,8 @@
 
 @media only screen and (max-width: 600px) {
     .home {
-        height: 90vh;
-        background-position: center;
+        height: auto;
+        background-position: left bottom;
     }
 
     .name-intro {
@@ -87,6 +87,7 @@
 /* do things */
 
 .do-things {
+    background-color: #e5e9f2;
     height: auto;
     padding: 0;
     padding-bottom: 0;
@@ -104,14 +105,19 @@
     overflow: hidden;
 }
 
+@media only screen and (max-width: 600px) {
+    .do-things-card {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-bottom: 15%;
+        padding-top: 0%;
+    }
+}
+
 /* about */
 
 .about {
-    height: 70vh;
-    background: url("/images/about-background.jpg");
-    background-position: center;
-    /*background-color: #63a4ff;
-    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);*/
+    height: auto;
 }
 
 .jop {
@@ -139,7 +145,7 @@
 }
 
 
-/* Skill */
+/* Skill 
 .skill {
     height: 80vh;
     background-color: #e5e9f2;
@@ -149,6 +155,7 @@
     font-family: 'Alata', sans-serif;
     font-size: 25px;
 }
+*/
 
 /* Projects */
 .projects {

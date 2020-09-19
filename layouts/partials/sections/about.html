@@ -5,7 +5,7 @@
         </div>
 
         <div class="row justify-content-center ">
-            <div class="col-md-3 pt-5 text-center">
+            <div class="col-md-3 pt-4 text-center">
                 <img src="{{ .Site.Params.profile_image }}" width="200px" alt="{{ .Site.Params.name }}" class="rounded">
                 <div class="about-me jop font-weight-bold text-secondary">{{ .Site.Params.jop }}</div>
 
@@ -19,12 +19,14 @@
                 </a>
                 {{ end }}
 
+
+
             </div>
 
-            <div class="col-md-7 pt-5 ">
+            <div class="col-md-7 pt-3 ">
                 <div class="about-content text-secondary p-3">
-                    Hi, I'm <span class="text-light">{{ .Site.Params.name }}</span>, a passionate <span
-                        class="text-light">{{ .Site.Params.jops_about | default "Your jop"}}</span> from India. I tend
+                    Hi, I'm <span class="text-dark">{{ .Site.Params.name }}</span>, a passionate <span
+                        class="text-dark">{{ .Site.Params.jops_about | default "Your jop"}}</span> from India. I tend
                     to make use
                     of modern web technologies to build websites that looks great, feels fantastic, and functions
                     correctly.
@@ -33,7 +35,7 @@
                     You can check my <a href="/blog">blog</a> and my <a href="{{ .Site.Params.github | default "#" }}"
                         target="_blank">github</a> for more details.
                 </div>
-                <div class="text-center">
+                <div class="text-center pb-3">
                     <a href="{{ .Site.Params.resume | default "#" }}" class="btn btn-info" role="button"
                         aria-pressed="true">Resume</a>
                 </div>
