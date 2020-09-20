@@ -1,19 +1,25 @@
 <section>
     <div class="projects p-3" id="projects">
-        <div class="project-heading text-center container">Projects</div>
+        <div class="project-heading text-center text-white container pb-3">Projects</div>
 
         <div class="container p-2">
-            {{ range .Site.Params.projects }}
-            <div class="card mb-3">
-                <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}">
-                <div class="card-body text-center">
-                    <h4 class="card-title">{{ .title }}</h4>
-                    <p class="card-text">{{ .description }}</p>
-                    <p class="card-text"></p>
-                    <a href="{{ .url }}" target="_blank" class="btn btn-primary">Details</a>
+            <div class="row justify-content-md-center">
+                {{ range .Site.Params.projects }}
+                <div class="col-lg-5">
+
+                    <div class="card mb-3">
+                        <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}">
+                        <div class="card-body text-center project-des-back">
+                            <h4 class="card-title">{{ .title }}</h4>
+                            <p class="card-text">{{ .description }}</p>
+                            <p class="card-text"></p>
+                            <a href="{{ .url }}" target="_blank" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
                 </div>
+
+                {{ end }}
             </div>
-            {{ end }}
         </div>
     </div>
 </section>

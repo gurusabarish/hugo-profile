@@ -1,7 +1,7 @@
-baseURL: "https://example.com"
+baseURL: "https://hugo-profile.netlify.app/"
 languageCode: "en-us"
-title: "Hugo-blog"
-theme: "hugo-profile"
+title: "Hugo-profile"
+
 
 
   
@@ -40,7 +40,12 @@ params:
   - title: "Project name"
     image: "/images/project.png"
     description:  "This is your description"
-    url: "https://github.com"
+    url: "https://github.com/gurusabarish/hugo-profile"
+  
+  - title: "Project name"
+    image: "/images/project.png"
+    description:  "This is your description"
+    url: "https://github.com/gurusabarish/hugo-profile"
   
 
 Author:

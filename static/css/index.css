@@ -1,7 +1,7 @@
 /*home*/
 
 .home {
-    height: 100vh;
+    height: 110vh;
     padding: 0;
     padding-bottom: 0;
     margin: 0;
@@ -77,6 +77,7 @@
         padding-top: 10%;
         padding-left: 20%;
         padding-right: 20%;
+        padding-bottom: 10%;
     }
 
     .know-more a {
@@ -118,6 +119,7 @@
 
 .about {
     height: auto;
+    background-color: #e5e9f2;
 }
 
 .jop {
@@ -160,6 +162,7 @@
 /* Projects */
 .projects {
     height: auto;
+    background-color: #101820ff;
 }
 
 .project-heading {
@@ -172,8 +175,26 @@
     height: 350px !important;
 }
 
+.project-des-back {
+    background-color: #F2AA4CFF;
+}
+
 @media only screen and (max-width: 600px) {
     .card-img-top {
         height: 180px !important;
     }
+}
+
+
+/* recent posts */
+.blog-back {
+    background-color: #ebb951;
+}
+
+.post-card a:hover {
+    text-decoration-line: none;
+}
+
+.post-hover :hover {
+    background-color: #17a2b8;
 }
