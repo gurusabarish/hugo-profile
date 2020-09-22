@@ -1,15 +1,13 @@
 /*home*/
 
 .home {
-    height: 110vh;
+    height: auto;
     padding: 0;
     padding-bottom: 0;
     margin: 0;
     background-image: url(/images/background.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right bottom;
-    overflow: hidden;
 }
 
 .name {
@@ -19,16 +17,17 @@
 .name-intro {
     font-size: 20PX;
     padding-top: 10%;
-    padding-left: 25%;
+    padding-left: 20%;
 }
 
 .profile {
-    padding-right: 20%;
+    float: right;
+    padding-right: 22%;
+    padding-bottom: 10%;
 }
 
 .know-more {
-    padding-top: 10%;
-    padding-left: 40%;
+    padding-bottom: 15%;
     font-family: cursive;
 }
 
@@ -42,17 +41,22 @@
     padding-left: 18%;
     padding-right: 5%;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 80%;
-    background-image: url(/images/gif.gif);
+    background-position: bottom;
+    background-image: url(/images/guru.svg);
 }
 
 .social a:hover {
     text-decoration-line: none;
 }
 
+@media only screen and (max-width: 992px) {
+    .profile {
+        padding-right: 35%;
+        text-align: center !important;
+    }
+}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .home {
         height: auto;
         background-position: left bottom;
@@ -61,11 +65,6 @@
     .name-intro {
         height: 200px;
         padding-left: 10%;
-    }
-
-    .profile {
-        padding: 0;
-        text-align: center !important;
     }
 
     .home-content {
@@ -93,7 +92,6 @@
     padding: 0;
     padding-bottom: 0;
     margin: 0;
-    overflow: hidden;
 }
 
 .things-i-do {
@@ -102,11 +100,15 @@
 }
 
 .things {
-    height: 40vh;
+    height: auto;
+}
+
+.things-text {
+    height: 100px;
     overflow: hidden;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .do-things-card {
         padding-left: 15%;
         padding-right: 15%;
@@ -140,7 +142,7 @@
     color: black;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .about {
         height: auto;
     }
@@ -162,27 +164,12 @@
 /* Projects */
 .projects {
     height: auto;
-    background-color: #101820ff;
+    background-color: #A89C94FF;
 }
 
 .project-heading {
     font-family: 'Alata', sans-serif;
     font-size: 25px;
-}
-
-.card-img-top {
-    width: 100% !important;
-    height: 350px !important;
-}
-
-.project-des-back {
-    background-color: #F2AA4CFF;
-}
-
-@media only screen and (max-width: 600px) {
-    .card-img-top {
-        height: 180px !important;
-    }
 }
 
 
