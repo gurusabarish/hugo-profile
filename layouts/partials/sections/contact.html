@@ -1,3 +1,29 @@
+{{ if eq .Site.Params.contact "true"}}
 <section>
+    <div class="contact bg-danger text-white">
+        <div class="text-center p-3 font-weight-bold contact-head">Get In Tough</div>
+        <div class="p-3 container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <form action="https://formspree.io/xzbkbvgg" method="POST">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="example@gmail.com" name="Gmail">
+                        </div>
 
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"
+                                placeholder="Type something"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+{{ end }}

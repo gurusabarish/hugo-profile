@@ -6,6 +6,9 @@ title: "Hugo-profile"
 params:
   favicon: "/images/hugo.png"
   description: "Portfolio and personal blog of gurusabarish"
+  googleanalytics: ""
+  disqus: ""
+  contact: "false"
 
   # Navbar Menus
   customMenus:

@@ -17,7 +17,7 @@
 .name-intro {
     font-size: 20PX;
     padding-top: 10%;
-    padding-left: 20%;
+    padding-left: 17%;
 }
 
 .profile {
@@ -184,4 +184,10 @@
 
 .post-hover :hover {
     background-color: #17a2b8;
+}
+
+/* contact */
+.contact-head {
+    font-family: 'Alata', sans-serif;
+    font-size: 25px;
 }

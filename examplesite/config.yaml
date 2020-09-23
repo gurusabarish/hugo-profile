@@ -1,11 +1,16 @@
 baseURL: "https://example.com"
 languageCode: "en-us"
 title: "Hugo-profile"
+theme: "hugo-profile"
 
 params:
   favicon: "/images/hugo.png"
   description: "Portfolio and personal blog of gurusabarish"
+  googleanalytics: ""
+  disqus: ""
+  contact: "false"
 
+  
   # Navbar Menus
   customMenus:
   - name: "Blog"
