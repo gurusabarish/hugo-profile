@@ -2,6 +2,11 @@ baseURL: "https://hugo-profile.netlify.app/"
 languageCode: "en-us"
 title: "Hugo-profile"
 
+Paginate: 3
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
 
 params:
   favicon: "/images/hugo.png"
@@ -13,8 +18,8 @@ params:
   # Navbar Menus
   customMenus:
   - name: "Blog"
-    url: "blog"
- 
+    Url: "blog"
+    
   # Home
   name: "Gurusabarish"
   profile: "/images/avatar-370-456322.webp"

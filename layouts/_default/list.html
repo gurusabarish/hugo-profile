@@ -1,65 +1,71 @@
 {{ define "main" }}
-<section>
-  {{ range .Pages }}
-  <br>
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-md-8">
-        <div class="img-pre">
-          <a class="text-decoration-none" href="{{ .Permalink }}">
-            <img class="img-fluid" alt="{{ .Title }}" src="{{ .Params.bg_image }}">
-        </div>
-        <div>
-          <h2 class="item-title">
-            {{ .Title }}
-          </h2>
-          <!--{{ if .Params.subtitle }}
-            <h4 class="item-subtitle text-muted">
-              {{ .Params.subtitle }}
-            </h4>
-            {{ end }}-->
-          </a>
-        </div>
+<section class="bg-light">
+  <div class="container-fluid">
 
-        <div class="text-muted">
-          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-              d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z" />
-            <path fill-rule="evenodd"
-              d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z" />
-          </svg>
-          {{ dateFormat "Jan 2, 2006" .Date }}
-
-          {{ if .Params.author }}
-          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-          </svg>
-          {{ .Params.author }}
-          {{ end }}
+    <div class="row justify-content-center pt-3">
+      <div class="col-lg-7 col-md-7">
+        <div class=" mb-4 pt-3">
+          <div class="card shadow ">
+            <h5 class="card-header bg-warning">Tags</h5>
+            <div class=" card-body">
+              {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+              {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+              <a href="{{ .RelPermalink }}" class="btn btn-warning rounded-pill mb-2">{{$name}}</a>
+              {{end}}
+              {{end}}
+            </div>
+            </a>
+          </div>
         </div>
-
-        <div>
-          {{truncate 200 .Summary}}
-          <a class="text-decoration-none" href="{{ .Permalink }}">
-            <button type="button" class="float-right btn btn-outline-primary read-more">Read more</button>
-          </a>
-        </div>
-
-        {{ if .Params.tags }}
-        <div class="blog-tags">
-          <strong class="text-muted">Tags: </strong>
-          {{ range .Params.tags }}
-          #<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{  . }}</a>
-          {{ end }}
-        </div>
-        {{ end }}
       </div>
     </div>
+
+    <div class="row pt-3 justify-content-center">
+      <div class="col-lg-6 col-md-6">
+        {{ range .Paginator.Pages }}
+        <div class=" mb-4">
+          <div class="card border-bottom-primary shadow pb-2">
+            <h5 class="card-header">
+              {{ if .Params.tags }}
+              {{ range .Params.tags }}
+              <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="btn btn-info btn-rounded mb-2">{{  . }}</a>
+              {{ end }}
+              {{ end }}
+            </h5>
+
+            <a class="text-decoration-none" href="{{ .Permalink }}">
+              <div class="card-body">
+                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">{{ .Title }}</div>
+                <div class="text-muted">
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z" />
+                    <path fill-rule="evenodd"
+                      d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z" />
+                  </svg>
+                  {{ dateFormat "Jan 2, 2006" .Date }}
+
+                  {{ if .Params.author }}
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                  </svg>
+                  {{ .Params.author }}
+                  {{ end }}
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        {{ end }}
+        {{ template "_internal/pagination.html" . }}
+      </div>
+
+    </div>
   </div>
-  <br>
-  {{ end }}
+
 
 
 </section>

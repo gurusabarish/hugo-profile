@@ -3,6 +3,12 @@ languageCode: "en-us"
 title: "Hugo-profile"
 theme: "hugo-profile"
 
+Paginate: 3
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
 params:
   favicon: "/images/hugo.png"
   description: "Portfolio and personal blog of gurusabarish"
@@ -10,12 +16,11 @@ params:
   disqus: ""
   contact: "false"
 
-  
   # Navbar Menus
   customMenus:
   - name: "Blog"
-    url: "blog"
- 
+    Url: "blog"
+    
   # Home
   name: "Gurusabarish"
   profile: "/images/avatar-370-456322.webp"
@@ -77,5 +82,7 @@ params:
   
 
 Author:
+  name: "Gurusabarish"
+  website: "https://github.com/gurusabarish"
   name: "Gurusabarish"
   website: "https://github.com/gurusabarish"
