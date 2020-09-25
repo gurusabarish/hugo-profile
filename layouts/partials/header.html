@@ -20,7 +20,7 @@
 
 				{{ range site.Params.customMenus }}
 				<li class="nav-item">
-					<a class="nav-link text-dark" href="{{ .Site.BaseURL }}{{.url}}">{{ .name }}</a>
+					<a class="nav-link text-dark" href="{{.Url}}">{{ .name }}</a>
 				</li>
 				{{ end }}
 			</ul>

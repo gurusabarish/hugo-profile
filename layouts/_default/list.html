@@ -2,24 +2,6 @@
 <section class="bg-light">
   <div class="container-fluid">
 
-    <div class="row justify-content-center pt-3">
-      <div class="col-lg-7 col-md-7">
-        <div class=" mb-4 pt-3">
-          <div class="card shadow ">
-            <h5 class="card-header bg-warning">Tags</h5>
-            <div class=" card-body">
-              {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
-              {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-              <a href="{{ .RelPermalink }}" class="btn btn-warning rounded-pill mb-2">{{$name}}</a>
-              {{end}}
-              {{end}}
-            </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="row pt-3 justify-content-center">
       <div class="col-lg-6 col-md-6">
         {{ range .Paginator.Pages }}
@@ -61,8 +43,26 @@
         </div>
         {{ end }}
         {{ template "_internal/pagination.html" . }}
-      </div>
 
+        <div class="row justify-content-center pt-3">
+          <div class="col-lg-7 col-md-7">
+            <div class=" mb-4 pt-3">
+              <div class="card shadow ">
+                <h5 class="card-header bg-warning">Tags</h5>
+                <div class=" card-body">
+                  {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+                  {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+                  <a href="{{ .RelPermalink }}" class="btn btn-warning rounded-pill mb-2">{{$name}}</a>
+                  {{end}}
+                  {{end}}
+                </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
