@@ -23,7 +23,7 @@ A simple hugo theme for personal portfolio
 
 ## Installation
 
-- [Install Hugo]{https://gohugo.io/overview/installing)
+- [Install Hugo](https://gohugo.io/overview/installing)
 
 - Create your site if you haven't already
 
