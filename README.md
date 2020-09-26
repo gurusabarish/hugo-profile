@@ -6,7 +6,24 @@ A simple hugo theme for personal portfolio
 
 ### Demo Site: [Hugo-profile](https://hugo-profile.netlify.com)
 
+## Features
+- Minimalist Design
+- Fully Responsive
+- Google Analytics Support
+- Disqus Comment Support
+- Contact form using [Formpree](https://formspree.io/)
+
+
+
+## Requirements
+
+- Hugo Version 0.68.0 or higher
+
+
+
 ## Installation
+
+- [Install Hugo]{https://gohugo.io/overview/installing)
 
 - Create your site if you haven't already
 
@@ -35,10 +52,20 @@ languageCode: "en-us"
 title: "Hugo-profile"
 theme: "hugo-profile"
 
+Paginate: 3
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  
+  
 params:
   favicon: "/images/hugo.png"
   description: "Portfolio and personal blog of gurusabarish"
-
+  googleanalytics: "UA-167646412-8"
+  disqus: ""
+  contact: "true"
+  
   # Navbar Menus
   customMenus:
   - name: "Blog"
