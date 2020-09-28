@@ -69,12 +69,17 @@ params:
   description: "Portfolio and personal blog of gurusabarish"
   googleanalytics: "UA-167646412-8"
   disqus: ""
-  contact: "true"
+  
+  # Contact
+  contact: true
+  action: ""
+  emailname: ""
+  messagename: ""
   
   # Navbar Menus
   customMenus:
   - name: "Blog"
-    url: "blog"
+    url: "https://example.com/blog"
  
   # Home
   name: "Gurusabarish"
