@@ -15,6 +15,7 @@ params:
   description: "Portfolio and personal blog of gurusabarish"
   googleanalytics: ""
   disqus: ""
+  copyright: "2020"
   
   # Contact
   contact: true
