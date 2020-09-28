@@ -5,6 +5,7 @@ theme: "hugo-profile"
 
 Paginate: 3
 
+
 taxonomies:
   tag: "tags"
   category: "categories"
@@ -14,8 +15,13 @@ params:
   description: "Portfolio and personal blog of gurusabarish"
   googleanalytics: ""
   disqus: ""
-  contact: "false"
-
+  
+  # Contact
+  contact: true
+  action: "https://formspree.io/xzbkbvgg"
+  emailname: "Gmail"
+  messagename: "message"
+  
   # Navbar Menus
   customMenus:
   - name: "Blog"

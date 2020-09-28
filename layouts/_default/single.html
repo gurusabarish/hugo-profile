@@ -1,15 +1,12 @@
 {{ define "main" }}
-<section>
+<section class="bg-light">
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-md-8">
-
         <!-- title and date -->
-        <div>
-          <br>
+        <div class="p-2">
           <h1>{{.Title}}</h1>
           <div class="text-muted">
-
             <!-- Date -->
             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
@@ -42,44 +39,39 @@
               </svg>
             </a>
             {{ end}}
-
           </div>
         </div>
 
         <!-- image -->
-        <br>
-        <div>
+        <div class="py-2">
           {{ with .Params.bg_image }}
-          <img class="img-fluid" src="{{ . | absURL }}">
+          <img class="img-fluid" src="{{ . }}">
           {{ end }}
         </div>
 
         <!-- content -->
-        <br>
-        <div>{{.Content}}</div>
+        <article>
+          {{.Content}}
+        </article>
 
         <!-- Tags -->
-        <div class="row justify-content-center pt-3">
-          <div class="col-lg-7 col-md-7">
-            <div class=" mb-4 pt-3">
-              <div class="card shadow ">
-                <h5 class="card-header bg-warning">Tags</h5>
-                <div class=" card-body">
-                  {{ if .Params.tags }}
-                  {{ range .Params.tags }}
-                  <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}"
-                    class="btn btn-warning rounded-pill mb-2">{{ . }}</a>
-                  {{end}}
-                  {{end}}
-                </div>
-                </a>
-              </div>
+        <div class="mb-4 pt-3">
+          <div class="card shadow ">
+            <h5 class="card-header bg-warning">Tags</h5>
+            <div class=" card-body">
+              {{ if .Params.tags }}
+              {{ range .Params.tags }}
+              <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}"
+                class="btn btn-warning rounded-pill mb-2">{{ . }}</a>
+              {{end}}
+              {{end}}
             </div>
+            </a>
           </div>
         </div>
 
 
-        <br>
+
         <div id="disqus_thread"></div>
         <script>
           /**
@@ -101,6 +93,7 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
             Disqus.</a></noscript>
+
       </div>
     </div>
   </div>

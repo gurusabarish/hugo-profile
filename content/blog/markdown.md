@@ -35,18 +35,24 @@ Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptio
 
 Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
 
+
 ## Blockquotes
 
 The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
 
 #### Blockquote without attribution
 
+
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.
 > **Note** that you can use *Markdown syntax* within a blockquote.
+
+
 #### Blockquote with attribution
+
 
 > Don't communicate by sharing memory, share memory by communicating.</p>
 > — <cite>Rob Pike[^1]</cite>
+
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
@@ -69,8 +75,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 #### Code block with backticks
 
-```
-html
+``` html
 <!DOCTYPE html>
 <html lang="en">
 <head>

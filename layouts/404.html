@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{- partial "head.html" . -}}
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    {{- partial "header.html" . -}}
+
+    <div class="bg-light row justify-centent-center py-5">
+
+        <div class="display-4 font-weight-bold text-center col p-5">
+            404 page not found
+            <div class="text-center p-5">
+                <a href="{{ .Site.BaseURL }}" class="font-weight-bold btn btn-primary rounded-pill p-3 mb-2">Back to our
+                    site</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="fixed-bottom">
+        {{- partial "footer.html" . -}}
+    </div>
+    </div>
+    {{- partial "scripts.html" . -}}
+</body>
+
+</html>

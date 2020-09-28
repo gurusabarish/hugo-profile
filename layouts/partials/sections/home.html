@@ -19,7 +19,7 @@
                         <li class="nav-item navbar-text">
                             <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#projects">Projects</a>
                         </li>
-                        {{ if eq .Site.Params.contact "true"}}
+                        {{ if .Site.Params.contact }}
                         <li class="nav-item navbar-text">
                             <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#contact">Contact</a>
                         </li>

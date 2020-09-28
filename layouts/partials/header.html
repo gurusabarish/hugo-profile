@@ -17,6 +17,11 @@
 				<li class="nav-item">
 					<a class="nav-link text-dark" href="{{ .Site.BaseURL }}#projects">Projects</a>
 				</li>
+				{{ if .Site.Params.contact }}
+				<li class="nav-item">
+					<a class="nav-link text-dark" href="{{ .Site.BaseURL }}#contact">Contact</a>
+				</li>
+				{{ end }}
 
 				{{ range site.Params.customMenus }}
 				<li class="nav-item">
