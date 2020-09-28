@@ -2,9 +2,14 @@
 
 A simple hugo theme for personal portfolio
 
-![Thumpnail](https://github.com/gurusabarish/hugo-profile/blob/master/static/images/tn.png)
+![Thumpnail](https://github.com/gurusabarish/hugo-profile/blob/master/images/tn.png)
 
 ### Demo Site: [Hugo-profile](https://hugo-profile.netlify.com)
+
+## Performance
+
+![Performance of hugo-profile theme](https://github.com/gurusabarish/hugo-profile/blob/master/static/images/performance.png)
+
 
 ## Features
 - Minimalist Design
