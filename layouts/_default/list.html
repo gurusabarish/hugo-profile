@@ -5,15 +5,15 @@
     <div class="row pt-3 justify-content-center">
       <div class="col-lg-6 col-md-6">
         {{ range .Paginator.Pages }}
-        <div class=" mb-4">
+        <div class="mb-4">
           <div class="card border-bottom-primary shadow pb-2">
+            {{ if .Params.tags }}
             <h5 class="card-header">
-              {{ if .Params.tags }}
               {{ range .Params.tags }}
               <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="btn btn-info btn-rounded mb-2">{{  . }}</a>
               {{ end }}
-              {{ end }}
             </h5>
+            {{ end }}
 
             <a class="text-decoration-none" href="{{ .Permalink }}">
               <div class="card-body">

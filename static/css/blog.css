@@ -82,7 +82,10 @@ article pre {
     margin: 5px;
     background-color: lavender;
     padding: 5%;
-    font-size: 70%;
+    font-size: 15px;
+    max-height: 400px;
+    background-color: lavender !important;
+    color: darkseagreen !important;
 }
 
 article pre>code {

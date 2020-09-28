@@ -1,12 +1,12 @@
 ---
 title: "Markdown syntax"
-date: 2020-08-11T23:03:58+05:30
+date: 2020-08-13T23:03:58+05:30
 draft: false
 subtitle: "Javascript"
 bg_image: "/images/bg-image.jpg"
 description: "Markdown syntax"
 author: "Gurusabarish"
-github_link: "https://github.com/gurusabarish/Hugo-blog"
+github_link: "https://github.com/gurusabarish/hugo-profile"
 tags:
   - markdown
   - css
