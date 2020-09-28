@@ -18,9 +18,9 @@ params:
   
   # Contact
   contact: true
-  action: "https://formspree.io/xzbkbvgg"
-  emailname: "Gmail"
-  messagename: "message"
+  action: ""
+  emailname: ""
+  messagename: ""
   
   # Navbar Menus
   customMenus:
