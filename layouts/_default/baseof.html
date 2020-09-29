@@ -3,7 +3,7 @@
 
 <head>
     {{- partial "head.html" . -}}
-    <meta name="description" content="{{ .Params.description }}" />
+    {{- block "head" . -}}{{- end }}
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">

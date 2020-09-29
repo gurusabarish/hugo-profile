@@ -1,4 +1,11 @@
+{{ define "head"}}
+<meta name="description" content="{{ .Params.description }}" />
+<title>{{ .Title }}</title>
+{{ end }}
+
+
 {{ define "main" }}
+
 <section class="bg-light">
   <div class="container">
     <div class="row justify-content-md-center">
@@ -41,6 +48,25 @@
             {{ end}}
           </div>
         </div>
+
+        {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+        {{ $.Scratch.Add "path" .Site.BaseURL }}
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="/">home</a>
+            </li>
+            {{ range $index, $element := split $url "/" }}
+            {{ $.Scratch.Add "path" $element }}
+            {{ if ne $element "" }}
+            <li class="breadcrumb-item" aria-current="page">
+              <a href='{{ $.Scratch.Get "path" }}'>{{ . }}</a>
+            </li>
+            {{ $.Scratch.Add "path" "/" }}
+            {{ end }}
+            {{ end }}
+          </ol>
+        </nav>
 
         <!-- image -->
         <div class="py-2">
