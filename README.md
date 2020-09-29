@@ -1,10 +1,16 @@
 # hugo-profile
 
 A simple hugo theme for personal portfolio
+## Performance
 
-![Thumpnail](https://github.com/gurusabarish/hugo-profile/blob/master/static/images/tn.png)
+![Performance of hugo-profile theme](https://github.com/gurusabarish/hugo-profile/blob/master/static/images/performance.png)
 
-### Demo Site: [Hugo-profile](https://hugo-profile.netlify.com)
+## Demo
+
+![Thumpnail](https://github.com/gurusabarish/hugo-profile/blob/master/images/tn.png)
+
+### Site: [Hugo-profile](https://hugo-profile.netlify.com)
+
 
 ## Features
 - Minimalist Design
@@ -64,12 +70,17 @@ params:
   description: "Portfolio and personal blog of gurusabarish"
   googleanalytics: "UA-167646412-8"
   disqus: ""
-  contact: "true"
+  
+  # Contact
+  contact: true
+  action: ""
+  emailname: ""
+  messagename: ""
   
   # Navbar Menus
   customMenus:
   - name: "Blog"
-    url: "blog"
+    url: "https://example.com/blog"
  
   # Home
   name: "Gurusabarish"
