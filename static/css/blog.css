@@ -67,7 +67,7 @@ article tbody tr:hover {
 }
 
 article img {
-    max-width: 100%;
+    width: 100%;
 }
 
 article caption,
@@ -79,12 +79,12 @@ figcaption {
 
 article pre {
     margin: 5px;
-    background-color: lavender;
     padding: 5%;
-    font-size: 15px;
+    font-size: 18px;
     max-height: 400px;
-    background-color: lavender !important;
-    color: darkseagreen !important;
+    border-radius: 2%;
+    background-color: #1f618d !important;
+    color: white;
 }
 
 article pre>code {
