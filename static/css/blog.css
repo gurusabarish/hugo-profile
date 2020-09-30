@@ -21,10 +21,9 @@ article blockquote>p {
 article h1,
 h2 {
     margin-top: 1.4rem;
-    font-size: 30px;
-    margin: 0 !;
-    border-left: 4px solid #a6bdc7 !important;
-    background-color: #d2dde015 !important;
+    font-size: 32px;
+    border-left: 4px solid #77ace9 !important;
+    background-color: #b2cad43a !important;
     padding: 0.3rem !important;
     padding-left: 1rem !important;
 }
