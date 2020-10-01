@@ -81,7 +81,7 @@
         </article>
 
         <!-- Tags -->
-        <div class="mb-4 pt-3">
+        <div class="mb-4 p-5">
           <div class="card shadow ">
             <h5 class="card-header bg-warning">Tags</h5>
             <div class=" card-body">
@@ -112,7 +112,7 @@
           (function () { // DON'T EDIT BELOW THIS LINE
             var d = document,
               s = d.createElement('script');
-            s.src = '{{ .Site.Params.disqus }}';
+            s.src = '{{ .Site.Params.disqus }}/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
           })();
