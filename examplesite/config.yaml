@@ -3,7 +3,6 @@ languageCode: "en-us"
 title: "Hugo-profile"
 theme: "hugo-profile"
 
-
 Paginate: 3
 
 taxonomies:
