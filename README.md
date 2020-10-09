@@ -63,13 +63,13 @@ Paginate: 3
 taxonomies:
   tag: "tags"
   category: "categories"
-  
-  
+
 params:
   favicon: "/images/hugo.png"
-  description: "Portfolio and personal blog of gurusabarish"
-  googleanalytics: "UA-167646412-8"
+  description: "Portfolio and personal blog"
+  googleanalytics: ""
   disqus: ""
+  copyright: "2020"
   
   # Contact
   contact: true
@@ -80,40 +80,76 @@ params:
   # Navbar Menus
   customMenus:
   - name: "Blog"
-    url: "https://example.com/blog"
- 
+    Url: "https://example.com/blog"
+    
   # Home
   name: "Gurusabarish"
   profile: "/images/avatar-370-456322.webp"
-  github: "https://github.com/gurusabarish"
-  linkedin: "https://linkedin.com/in/gurusabarish"
-  twitter: "https://twitter.com/gurusabarishh"
-  instagram: "https://instagram.com/gurusabarishh"
+  github: "https://github.com/#"
+  linkedin: "https://linkedin.com/#"
+  twitter: "https://twitter.com/#"
+  instagram: "https://instagram.com/#"
 
-  # Do things { Please change the svg icons width="3em" height="3em" }
+  # Do things 
+  usedefaultlogos: true
+
   thing1: "Python"
   thing2: "Machine learning"
-  thing3: "Build things for web"
-  thing1_des: "I build something beautiful using python."
+  thing3: "Things for web"
+  thing1_des: "I build something beautiful using Python."
   thing2_des: "I train robust models for various tasks."
   thing3_des: "I love to build things for web."
 
   # About
   profile_image: "/images/gurusabarish.jpg"
-  jop: "Web developer"
-  jops_about: "web developer and ML engineer"
+  descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. 
+  I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+  descripe_l2_person: "This is just a example for about section. You can easily change with the help of cofig file."
+  job: "your role"
   resume: ""
   
   projects:
   - title: "Project name"
-    image: "/images/project.png"
+    image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
     description:  "This is your description"
-    url: "https://github.com"
+    url: "https://github.com/gurusabarish/hugo-profile"
+    sourceurl: "https://github.com/gurusabarish/hugo-profile"
+  
+  - title: "Project name"
+    image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
+    description:  "This is your description"
+    url: "https://github.com/gurusabarish/hugo-profile"
+    sourceurl: "https://github.com/gurusabarish/hugo-profile"
+
+  - title: "Project name"
+    image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
+    description:  "This is your description"
+    url: "https://github.com/gurusabarish/hugo-profile"
+    sourceurl: "https://github.com/gurusabarish/hugo-profile"
+
+  - title: "Project name"
+    image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
+    description:  "This is your description"
+    url: "https://github.com/gurusabarish/hugo-profile"
+    sourceurl: "https://github.com/gurusabarish/hugo-profile"
+
+  - title: "Project name"
+    image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
+    description:  "This is your description"
+    url: "https://github.com/gurusabarish/hugo-profile"
+    sourceurl: "https://github.com/gurusabarish/hugo-profile"
+
+  - title: "Project name"
+    image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
+    description:  "This is your description"
+    url: "https://github.com/gurusabarish/hugo-profile"
+    sourceurl: "https://github.com/gurusabarish/hugo-profile"
   
 
 Author:
   name: "Gurusabarish"
   website: "https://github.com/gurusabarish"
+
 ```
 
 <b>Use Yaml as config file</b>
