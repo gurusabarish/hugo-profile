@@ -8,7 +8,7 @@
                 <div class="col-lg-3 pt-4 text-center">
                     <img src="{{ .Site.Params.profile_image }}" width="200px" alt="{{ .Site.Params.name }}"
                         class="rounded">
-                    <div class="about-me jop font-weight-bold text-secondary">{{ .Site.Params.jop }}</div>
+                    <div class="about-me jop font-weight-bold text-secondary">{{ .Site.Params.job }}</div>
 
                     {{ if .Site.Params.linkedin }}
                     <a class="text-white" href="{{ .Site.Params.linkedin }}" target="_blank">
@@ -22,17 +22,10 @@
                 </div>
 
                 <div class="col-lg-7 pt-3 ">
-                    <div class="about-content text-secondary p-3">
-                        Hi, I'm <span class="text-dark">{{ .Site.Params.name }}</span>, a passionate <span
-                            class="text-dark">{{ .Site.Params.jops_about | default "Your jop"}}</span> from India. I
-                        tend
-                        to make use
-                        of modern web technologies to build websites that looks great, feels fantastic, and functions
-                        correctly.
-
+                    <div class="about-content text-dark p-3">
+                        {{ .Site.Params.descripe_l1_person }}
                         <br><br>
-                        You can check my <a href="/blog">blog</a> and my <a
-                            href="{{ .Site.Params.github | default "#" }}" target="_blank">github</a> for more details.
+                        {{ .Site.Params.descripe_l2_person }}
                     </div>
                     <div class="social p-4">
                         <a href="{{ .Site.Params.resume | default "#" }}" class="btn btn-info" role="button"

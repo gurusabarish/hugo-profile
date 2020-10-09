@@ -3,8 +3,8 @@ languageCode: "en-us"
 title: "Hugo-profile"
 theme: "hugo-profile"
 
-Paginate: 3
 
+Paginate: 3
 
 taxonomies:
   tag: "tags"
@@ -12,7 +12,7 @@ taxonomies:
 
 params:
   favicon: "/images/hugo.png"
-  description: "Portfolio and personal blog of gurusabarish"
+  description: "Portfolio and personal blog"
   googleanalytics: ""
   disqus: ""
   copyright: "2020"
@@ -31,12 +31,14 @@ params:
   # Home
   name: "Gurusabarish"
   profile: "/images/avatar-370-456322.webp"
-  github: "https://github.com/gurusabarish"
-  linkedin: "https://linkedin.com/in/gurusabarish"
-  twitter: "https://twitter.com/gurusabarishh"
-  instagram: "https://instagram.com/gurusabarishh"
+  github: "https://github.com/#"
+  linkedin: "https://linkedin.com/#"
+  twitter: "https://twitter.com/#"
+  instagram: "https://instagram.com/#"
 
-  # Do things { Please change the svg icons width="3em" height="3em" }
+  # Do things 
+  usedefaultlogos: true
+
   thing1: "Python"
   thing2: "Machine learning"
   thing3: "Things for web"
@@ -46,8 +48,10 @@ params:
 
   # About
   profile_image: "/images/gurusabarish.jpg"
-  jop: "Web developer"
-  jops_about: "web developer and ML engineer"
+  descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. 
+  I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+  descripe_l2_person: "This is just a example for about section. You can easily change with the help of cofig file."
+  job: "your role"
   resume: ""
   
   projects:
