@@ -1,5 +1,13 @@
+{{ $backgroundImage:= "images/background.png" }}
+{{ $backimg:= "images/guru.svg" }}
+
+{{ if .Site.Params.custombackground }}
+  {{ $backgroundImage = .Site.Params.background }}
+  {{ $backimg = .Site.Params.backimg }}
+{{ end }}
+
 <section>
-    <div class="home">
+    <div class="home" style="background-image: url('{{ $backgroundImage | absURL }}');">
         <nav class="navbar navbar-expand-lg navbar-light bg-transperant">
             <div class="container">
                 <a class="navbar-brand text-dark" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
@@ -96,7 +104,7 @@
 
                 </div>
 
-                <div class="col-lg-3 home-content d-none d-md-block"></div>
+                <div class="col-lg-3 home-content d-none d-md-block" style="background-image: url('{{ $backimg | absURL }}');"></div>
             </div>
             <div class="row know-more ">
                 <div class="container p-3 rounded text-center">

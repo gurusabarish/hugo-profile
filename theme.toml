@@ -1,7 +1,7 @@
 name = "hugo-profile"
 license = "MIT"
 licenselink = "https://github.com/gurusabarish/hugo-profile/blob/master/LICENSE"
-description = "A simple hugo theme for personal portfolio"
+description = "A high performance hugo theme for personal portfolio"
 homepage = "https://hugo-profile.netlify.com"
 tags = ["Responsive","Blog", "Portfolio"]
 features = []

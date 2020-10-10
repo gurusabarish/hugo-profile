@@ -2,8 +2,6 @@
     <div class="projects p-3" id="projects">
         <div class="container">
             <div class="project-heading text-center text-white container pb-3">Projects</div>
-
-
             <div class="pt-5 pb-5">
                 <div class="container">
                     <div class="row">
@@ -18,8 +16,11 @@
                                                 <div class="card-body">
                                                     <h4 class="card-title">{{ .title }}</h4>
                                                     <p class="card-text">{{ .description}}</p>
-                                                    <a href="{{ .url }}" class="btn btn-info">Go to Blog</a>
-
+                                                    
+                                                    {{ if .secoundarylink}}
+                                                    <a href="{{ .secoundaryurl }}" class="btn btn-info">{{ .secoundaryurlname }}</a>
+                                                    {{ end }}
+                                                    
                                                     {{ if .sourceurl }}
                                                     <a class="text-dark" href="{{ .sourceurl }}" target="_blank">
                                                         <svg width="2em" height="2em" fill="currentColor"
