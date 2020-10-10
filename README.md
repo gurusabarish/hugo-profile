@@ -70,6 +70,11 @@ params:
   googleanalytics: ""
   disqus: ""
   copyright: "2020"
+
+  # Background
+  custombackground: false
+  background: ""
+  backimg: ""
   
   # Contact
   contact: true
@@ -91,6 +96,7 @@ params:
   instagram: "https://instagram.com/#"
 
   # Do things 
+  usedothings: true
   usedefaultlogos: true
 
   thing1: "Python"
@@ -108,41 +114,54 @@ params:
   job: "your role"
   resume: ""
   
+  #projects
   projects:
   - title: "Project name"
     image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
     description:  "This is your description"
-    url: "https://github.com/gurusabarish/hugo-profile"
+    secoundarylink: true
+    secoundaryurlname: "Secoundary link"
+    secoundaryurl: ""
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
   
   - title: "Project name"
     image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
     description:  "This is your description"
-    url: "https://github.com/gurusabarish/hugo-profile"
+    secoundarylink: true
+    secoundaryurlname: "Secoundary link"
+    secoundaryurl: ""
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
   - title: "Project name"
     image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
     description:  "This is your description"
-    url: "https://github.com/gurusabarish/hugo-profile"
+    secoundarylink: true
+    secoundaryurlname: "Secoundary link"
+    secoundaryurl: ""
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
   - title: "Project name"
     image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
     description:  "This is your description"
-    url: "https://github.com/gurusabarish/hugo-profile"
+    secoundarylink: true
+    secoundaryurlname: "Secoundary link"
+    secoundaryurl: ""
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
   - title: "Project name"
     image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
     description:  "This is your description"
-    url: "https://github.com/gurusabarish/hugo-profile"
+    secoundarylink: true
+    secoundaryurlname: "Secoundary link"
+    secoundaryurl: ""
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
   - title: "Project name"
     image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
     description:  "This is your description"
-    url: "https://github.com/gurusabarish/hugo-profile"
+    secoundarylink: true
+    secoundaryurlname: "Secoundary link"
+    secoundaryurl: ""
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
   
 
