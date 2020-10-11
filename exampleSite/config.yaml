@@ -30,7 +30,7 @@ params:
   # Navbar Menus
   customMenus:
   - name: "Blog"
-    Url: "https://example.com/blog"
+    Url: "/blog"
     
   # Home
   name: "Gurusabarish"
