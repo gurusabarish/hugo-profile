@@ -1,9 +1,6 @@
 # hugo-profile
 
 A simple hugo theme for personal portfolio
-## Performance
-
-![Performance of hugo-profile theme](https://github.com/gurusabarish/hugo-profile/blob/master/static/images/performance.png)
 
 ## Demo
 
