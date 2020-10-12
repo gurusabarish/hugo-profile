@@ -2,8 +2,8 @@
 {{ $backimg:= "images/guru.svg" }}
 
 {{ if .Site.Params.custombackground }}
-  {{ $backgroundImage = .Site.Params.background }}
-  {{ $backimg = .Site.Params.backimg }}
+{{ $backgroundImage = .Site.Params.background }}
+{{ $backimg = .Site.Params.backimg }}
 {{ end }}
 
 <section>
@@ -25,11 +25,13 @@
                             <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#about" aria-label="about">About</a>
                         </li>
                         <li class="nav-item navbar-text">
-                            <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#projects" aria-label="projects">Projects</a>
+                            <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#projects"
+                                aria-label="projects">Projects</a>
                         </li>
                         {{ if .Site.Params.contact }}
                         <li class="nav-item navbar-text">
-                            <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#contact" aria-label="contact">Contact</a>
+                            <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#contact"
+                                aria-label="contact">Contact</a>
                         </li>
                         {{ end }}
 
@@ -102,7 +104,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 home-content d-none d-md-block" style="background-image: url('{{ $backimg | absURL }}');"></div>
+                <div class="col-lg-3 home-content d-none d-md-block"
+                    style="background-image: url('{{ $backimg | absURL }}');"></div>
             </div>
             <div class="row know-more ">
                 <div class="container p-3 rounded text-center">

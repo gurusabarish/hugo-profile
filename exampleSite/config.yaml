@@ -3,7 +3,7 @@ languageCode: "en-us"
 title: "Hugo-profile"
 theme: "hugo-profile"
 
-googleanalytics: UA-xxxxxxxxx-x
+googleanalytics: UA-xxxxxxxx-x
 disqusShortname: yourdiscussshortname
 Paginate: 3
 
@@ -35,7 +35,7 @@ params:
     
   # Home
   name: "Gurusabarish"
-  profile: "/images/avatar-370-456322.webp"
+  profile: "/images/avatar.webp"
   github: "https://github.com/gurusabarish"
   linkedin: "https://linkedin.com/in/gurusabarish"
   twitter: "https://twitter.com/gurusabarishh"
@@ -53,7 +53,7 @@ params:
   thing3_des: "I love to build things for web."
 
   # About
-  profile_image: "/images/gurusabarish.jpg"
+  profile_image: "/images/gurusabarish.webp"
   descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. 
   I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
   descripe_l2_person: "This is just a example for about section. You can easily change with the help of cofig file."
@@ -63,7 +63,7 @@ params:
   #projects
   projects:
   - title: "Project name"
-    image: "/images/project-preview.jpg"
+    image: "/images/project.webp"
     description:  "This is your description"
     secoundarylink: true
     secoundaryurlname: "Secoundary link"
@@ -71,7 +71,7 @@ params:
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
   
   - title: "Project name"
-    image: "/images/project-preview.jpg"
+    image: "/images/performance.webp"
     description:  "This is your description"
     secoundarylink: true
     secoundaryurlname: "Secoundary link"
@@ -79,7 +79,7 @@ params:
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
   - title: "Project name"
-    image: "/images/project-preview.jpg"
+    image: "/images/project.webp"
     description:  "This is your description"
     secoundarylink: true
     secoundaryurlname: "Secoundary link"
@@ -87,7 +87,7 @@ params:
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
   - title: "Project name"
-    image: "/images/project-preview.jpg"
+    image: "/images/performance.webp"
     description:  "This is your description"
     secoundarylink: true
     secoundaryurlname: "Secoundary link"
@@ -95,7 +95,7 @@ params:
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
   - title: "Project name"
-    image: "/images/project-preview.jpg"
+    image: "/images/project.webp"
     description:  "This is your description"
     secoundarylink: true
     secoundaryurlname: "Secoundary link"
@@ -103,7 +103,7 @@ params:
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
   - title: "Project name"
-    image: "/images/project-preview.jpg"
+    image: "/images/performance.webp"
     description:  "This is your description"
     secoundarylink: true
     secoundaryurlname: "Secoundary link"
