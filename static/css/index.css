@@ -82,6 +82,13 @@
     }
 }
 
+
+/* recent posts */
+.recent-posts {
+    font-family: 'Alata', sans-serif;
+    font-size: 25px;
+}
+
 /* do things */
 
 .do-things {
@@ -170,6 +177,10 @@
     font-size: 25px;
 }
 
+.card-title {
+    font-family: 'Alata', sans-serif;
+    font-size: 28px;
+}
 
 /* recent posts */
 .blog-back {

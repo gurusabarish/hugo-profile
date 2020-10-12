@@ -14,9 +14,13 @@
         <div class="mb-4">
           <div class="card border-bottom-primary shadow pb-2">
             {{ if .Params.tags }}
-            <h5 class="card-header">
-              {{ range .Params.tags }}
-              <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="btn btn-info btn-rounded mb-2">{{  . }}</a>
+            <h5 class="card-header m-0">
+              {{ if .Params.tags }}
+              {{ range $tags := .Params.tags }}
+              {{ with $.Site.GetPage (printf "/tags/%s" $tags) }}
+              <a href="{{ .RelPermalink }}" class="btn btn-info btn-rounded mb-2">{{ $tags }}</a>
+              {{ end }}
+              {{ end }}
               {{ end }}
             </h5>
             {{ end }}
@@ -52,17 +56,16 @@
 
         <div class="row justify-content-center pt-3">
           <div class="col-lg-7 col-md-7">
-            <div class=" mb-4 pt-3">
-              <div class="card shadow ">
-                <h5 class="card-header bg-warning">Tags</h5>
+            <div class=" mb-4">
+              <div class="card shadow p-0">
+                <h5 class="card-header m-0 bg-warning">Tags</h5>
                 <div class=" card-body">
-                  {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+                  {{range $name, $taxonomy := .Site.Taxonomies.tags}}
                   {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
                   <a href="{{ .RelPermalink }}" class="btn btn-warning rounded-pill mb-2">{{$name}}</a>
                   {{end}}
                   {{end}}
                 </div>
-                </a>
               </div>
             </div>
           </div>

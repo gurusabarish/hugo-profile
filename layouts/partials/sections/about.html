@@ -11,7 +11,7 @@
                     <div class="about-me jop font-weight-bold text-secondary">{{ .Site.Params.job }}</div>
 
                     {{ if .Site.Params.linkedin }}
-                    <a class="text-white" href="{{ .Site.Params.linkedin }}" target="_blank">
+                    <a class="text-white" href="{{ .Site.Params.linkedin }}" aria-label="linkedin">
                         <svg class="text-primary" width="2em" height="2em" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path
@@ -34,7 +34,7 @@
                         </a>
 
                         {{ if .Site.Params.github }}
-                        <a class="text-dark" href="{{ .Site.Params.github }}" target="_blank">
+                        <a class="text-dark" href="{{ .Site.Params.github }}" aria-label="github">
                             <svg width="2em" height="2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512">
                                 <path
@@ -44,7 +44,7 @@
                         {{ end }}
 
                         {{ if .Site.Params.twitter }}
-                        <a class="text-info" href="{{ .Site.Params.twitter }}" target="_blank">
+                        <a class="text-info" href="{{ .Site.Params.twitter }}" aria-label="twitter">
                             <svg width="2em" height="2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512">
                                 <path
@@ -54,7 +54,7 @@
                         {{ end }}
 
                         {{ if .Site.Params.instagram }}
-                        <a class="text-danger" href="{{ .Site.Params.instagram }}" target="_blank">
+                        <a class="text-danger" href="{{ .Site.Params.instagram }}" aria-label="instagram">
                             <svg width="2em" height="2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512">
                                 <path

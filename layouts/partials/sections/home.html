@@ -19,23 +19,23 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item navbar-text">
-                            <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#home">Home</a>
+                            <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#home" aria-label="home">Home</a>
                         </li>
                         <li class="nav-item navbar-text">
-                            <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#about">About</a>
+                            <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#about" aria-label="about">About</a>
                         </li>
                         <li class="nav-item navbar-text">
-                            <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#projects">Projects</a>
+                            <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#projects" aria-label="projects">Projects</a>
                         </li>
                         {{ if .Site.Params.contact }}
                         <li class="nav-item navbar-text">
-                            <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#contact">Contact</a>
+                            <a class="nav-link text-dark" href="{{ .Site.BaseURL }}#contact" aria-label="contact">Contact</a>
                         </li>
                         {{ end }}
 
                         {{ range site.Params.customMenus }}
                         <li class="nav-item navbar-text">
-                            <a class="nav-link text-dark" href="{{.Url}}">{{ .name }}</a>
+                            <a class="nav-link text-dark" href="{{.Url}}" aria-label="{{ .name }}">{{ .name }}</a>
                         </li>
                         {{ end }}
                     </ul>
@@ -53,7 +53,7 @@
                         <!-- socialmedia -->
                         <div class="social">
                             {{ if .Site.Params.github }}
-                            <a class="text-white" href="{{ .Site.Params.github }}" target="_blank">
+                            <a class="text-white" href="{{ .Site.Params.github }}" aria-label="github">
                                 <svg width="1.1em" height="1.1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 448 512">
                                     <path
@@ -63,7 +63,7 @@
                             {{ end }}
 
                             {{ if .Site.Params.linkedin }}
-                            <a class="text-white" href="{{ .Site.Params.linkedin }}" target="_blank">
+                            <a class="text-white" href="{{ .Site.Params.linkedin }}" aria-label="linkedin">
                                 <svg width="1.1em" height="1.1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 448 512">
                                     <path
@@ -73,7 +73,7 @@
                             {{ end }}
 
                             {{ if .Site.Params.twitter }}
-                            <a class="text-white" href="{{ .Site.Params.twitter }}" target="_blank">
+                            <a class="text-white" href="{{ .Site.Params.twitter }}" aria-label="twitter">
                                 <svg width="1.1em" height="1.1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 448 512">
                                     <path
@@ -83,7 +83,7 @@
                             {{ end }}
 
                             {{ if .Site.Params.instagram }}
-                            <a class="text-white" href="{{ .Site.Params.instagram }}" target="_blank">
+                            <a class="text-white" href="{{ .Site.Params.instagram }}" aria-label="instagram">
                                 <svg width="1.1em" height="1.1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 448 512">
                                     <path
@@ -100,8 +100,6 @@
                         <img src="{{ .Site.Params.profile | default "/images/avatar-370-456322.webp"}}" width="150px"
                             class="rounded-circle img-fluid" alt="{{ .Site.Params.name }}">
                     </div>
-
-
                 </div>
 
                 <div class="col-lg-3 home-content d-none d-md-block" style="background-image: url('{{ $backimg | absURL }}');"></div>

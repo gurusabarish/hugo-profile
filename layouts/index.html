@@ -2,29 +2,15 @@
 <html lang="en">
 
 <head>
-    {{- partial "head.html" . -}}
     <title>{{- .Site.Title -}}</title>
-    <meta name="description" content="{{ .Site.Params.description }}" />
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleanalytics }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', '{{ .Site.Params.googleanalytics }}');
-    </script>
-
     <!-- stylesheets -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/index.css">
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <meta name="description" content="{{ .Site.Params.description }}">
+    {{ template "_internal/google_analytics.html" . }}
+    {{- partial "head.html" . -}}    
 </head>
 
 <body>

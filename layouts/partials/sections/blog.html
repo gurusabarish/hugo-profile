@@ -2,11 +2,10 @@
     <div class="p-3 blog-back">
         <div class="container">
             <div class="text-center pb-3">
-                <h4>Recent posts</h4>
+                <div class="recent-posts">Recent posts</div>
             </div>
             <div class="container">
                 <div class="row">
-
                     {{ range first 4 (where site.RegularPages.ByDate.Reverse "Type" "in" site.Params.mainSections )}}
                     <div class="col-lg-3 col-md-5 pb-3 post-card">
                         <a href="{{ .RelPermalink }}">
@@ -17,7 +16,6 @@
                         </a>
                     </div>
                     {{ end }}
-
                 </div>
             </div>
         </div>

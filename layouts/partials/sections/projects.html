@@ -14,15 +14,15 @@
                                             <div class="card">
                                                 <img class="img-fluid" src="{{ .image }}" alt="{{ .title }}">
                                                 <div class="card-body">
-                                                    <h4 class="card-title">{{ .title }}</h4>
+                                                    <div class="card-title">{{ .title }}</div>
                                                     <p class="card-text">{{ .description}}</p>
                                                     
                                                     {{ if .secoundarylink}}
-                                                    <a href="{{ .secoundaryurl }}" class="btn btn-info">{{ .secoundaryurlname }}</a>
+                                                    <a href="{{ .secoundaryurl }}" class="btn btn-info" aria-label="{{ .secoundaryurlname }}">{{ .secoundaryurlname }}</a>
                                                     {{ end }}
                                                     
                                                     {{ if .sourceurl }}
-                                                    <a class="text-dark" href="{{ .sourceurl }}" target="_blank">
+                                                    <a class="text-dark" href="{{ .sourceurl }}" aria-label="github">
                                                         <svg width="2em" height="2em" fill="currentColor"
                                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                                             <path
