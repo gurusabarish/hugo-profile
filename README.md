@@ -2,6 +2,8 @@
 
 A simple hugo theme for personal portfolio
 
+## Performance of the website by web.dev
+[check the performance of website](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fhugo-profile.netlify.app%2F)
 ## Demo
 
 ![Thumpnail](https://github.com/gurusabarish/hugo-profile/blob/master/images/tn.png)
@@ -55,6 +57,8 @@ languageCode: "en-us"
 title: "Hugo-profile"
 theme: "hugo-profile"
 
+googleanalytics: UA-xxxxxxxxx-x
+disqusShortname: yourdiscussshortname
 Paginate: 3
 
 taxonomies:
@@ -63,8 +67,7 @@ taxonomies:
 
 params:
   favicon: "/images/hugo.png"
-  description: "Portfolio and personal blog"
-  googleanalytics: ""
+  description: "A hugh performance hugo theme for personal website. It is single page portfolio. It has blog, contact sections also. Contact is powered by formspree."
   disqus: ""
   copyright: "2020"
 
@@ -82,15 +85,15 @@ params:
   # Navbar Menus
   customMenus:
   - name: "Blog"
-    Url: "https://example.com/blog"
+    Url: "/blog"
     
   # Home
   name: "Gurusabarish"
   profile: "/images/avatar-370-456322.webp"
-  github: "https://github.com/#"
-  linkedin: "https://linkedin.com/#"
-  twitter: "https://twitter.com/#"
-  instagram: "https://instagram.com/#"
+  github: "https://github.com/gurusabarish"
+  linkedin: "https://linkedin.com/in/gurusabarish"
+  twitter: "https://twitter.com/gurusabarishh"
+  instagram: "https://instagram.com/gurusabarishh"
 
   # Do things 
   usedothings: true
@@ -114,51 +117,51 @@ params:
   #projects
   projects:
   - title: "Project name"
-    image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
+    image: "/images/project-preview.jpg"
     description:  "This is your description"
     secoundarylink: true
     secoundaryurlname: "Secoundary link"
-    secoundaryurl: ""
+    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
   
   - title: "Project name"
-    image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
+    image: "/images/project-preview.jpg"
     description:  "This is your description"
     secoundarylink: true
     secoundaryurlname: "Secoundary link"
-    secoundaryurl: ""
+    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
   - title: "Project name"
-    image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
+    image: "/images/project-preview.jpg"
     description:  "This is your description"
     secoundarylink: true
     secoundaryurlname: "Secoundary link"
-    secoundaryurl: ""
+    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
   - title: "Project name"
-    image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
+    image: "/images/project-preview.jpg"
     description:  "This is your description"
     secoundarylink: true
     secoundaryurlname: "Secoundary link"
-    secoundaryurl: ""
+    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
   - title: "Project name"
-    image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
+    image: "/images/project-preview.jpg"
     description:  "This is your description"
     secoundarylink: true
     secoundaryurlname: "Secoundary link"
-    secoundaryurl: ""
+    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
   - title: "Project name"
-    image: "https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
+    image: "/images/project-preview.jpg"
     description:  "This is your description"
     secoundarylink: true
     secoundaryurlname: "Secoundary link"
-    secoundaryurl: ""
+    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
     sourceurl: "https://github.com/gurusabarish/hugo-profile"
   
 
