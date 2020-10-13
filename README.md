@@ -1,6 +1,13 @@
+
+<div align="center">
+  
 # hugo-profile
 
 A simple hugo theme for personal portfolio
+
+[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/gurusabarish/hugo-profile/blob/master/LICENSE)
+[![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugo-profile.netlify.app/)
+</div>
 
 ## Performance of the website by web.dev
 [check the performance of website](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fhugo-profile.netlify.app%2F)
