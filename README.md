@@ -23,8 +23,6 @@ A simple hugo theme for personal portfolio
 - Fully Responsive
 - Google Analytics Support
 - Disqus Comment Support
-- Contact form using [Formpree](https://formspree.io/)
-
 
 
 ## Requirements
@@ -64,8 +62,8 @@ languageCode: "en-us"
 title: "Hugo-profile"
 theme: "hugo-profile"
 
-googleanalytics: UA-xxxxxxxxx-x
-disqusShortname: yourdiscussshortname
+googleanalytics: UA-xxxxxxx-x
+disqusShortname: yourdisqusname
 Paginate: 3
 
 taxonomies:
@@ -73,30 +71,17 @@ taxonomies:
   category: "categories"
 
 params:
-  favicon: "/images/hugo.png"
-  description: "A hugh performance hugo theme for personal website. It is single page portfolio. It has blog, contact sections also. Contact is powered by formspree."
-  disqus: ""
+  favicon: "/images/fav.png"
+  description: "A high performance hugo theme for personal website. It is single page portfolio. It has blog."
   copyright: "2020"
 
-  # Background
-  custombackground: false
-  background: ""
-  backimg: ""
-  
-  # Contact
-  contact: true
-  action: ""
-  emailname: ""
-  messagename: ""
-  
   # Navbar Menus
   customMenus:
   - name: "Blog"
     Url: "/blog"
     
-  # Home
+  # social
   name: "Gurusabarish"
-  profile: "/images/avatar-370-456322.webp"
   github: "https://github.com/gurusabarish"
   linkedin: "https://linkedin.com/in/gurusabarish"
   twitter: "https://twitter.com/gurusabarishh"
@@ -114,68 +99,16 @@ params:
   thing3_des: "I love to build things for web."
 
   # About
-  profile_image: "/images/gurusabarish.jpg"
+  profile_image: "/images/gurusabarish.webp"
   descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. 
   I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
   descripe_l2_person: "This is just a example for about section. You can easily change with the help of cofig file."
-  job: "your role"
+  job: "Web developer"
   resume: ""
-  
-  #projects
-  projects:
-  - title: "Project name"
-    image: "/images/project-preview.jpg"
-    description:  "This is your description"
-    secoundarylink: true
-    secoundaryurlname: "Secoundary link"
-    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
-    sourceurl: "https://github.com/gurusabarish/hugo-profile"
-  
-  - title: "Project name"
-    image: "/images/project-preview.jpg"
-    description:  "This is your description"
-    secoundarylink: true
-    secoundaryurlname: "Secoundary link"
-    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
-    sourceurl: "https://github.com/gurusabarish/hugo-profile"
-
-  - title: "Project name"
-    image: "/images/project-preview.jpg"
-    description:  "This is your description"
-    secoundarylink: true
-    secoundaryurlname: "Secoundary link"
-    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
-    sourceurl: "https://github.com/gurusabarish/hugo-profile"
-
-  - title: "Project name"
-    image: "/images/project-preview.jpg"
-    description:  "This is your description"
-    secoundarylink: true
-    secoundaryurlname: "Secoundary link"
-    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
-    sourceurl: "https://github.com/gurusabarish/hugo-profile"
-
-  - title: "Project name"
-    image: "/images/project-preview.jpg"
-    description:  "This is your description"
-    secoundarylink: true
-    secoundaryurlname: "Secoundary link"
-    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
-    sourceurl: "https://github.com/gurusabarish/hugo-profile"
-
-  - title: "Project name"
-    image: "/images/project-preview.jpg"
-    description:  "This is your description"
-    secoundarylink: true
-    secoundaryurlname: "Secoundary link"
-    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
-    sourceurl: "https://github.com/gurusabarish/hugo-profile"
-  
 
 Author:
   name: "Gurusabarish"
   website: "https://github.com/gurusabarish"
-
 ```
 
 <b>Use Yaml as config file</b>
