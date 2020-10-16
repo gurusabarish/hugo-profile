@@ -4,23 +4,87 @@
 <head>
     <title>{{- .Site.Title -}}</title>
     <!-- stylesheets -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" media="all">
     <meta name="description" content="{{ .Site.Params.description }}">
     {{ template "_internal/google_analytics.html" . }}
     {{- partial "head.html" . -}}
+
+    <style>
+        a:hover {
+            text-decoration: none;
+        }
+
+        /* do things */
+
+        .do-things {
+            background-color: #e5e9f2;
+            height: auto;
+            padding: 0;
+            padding-bottom: 0;
+            margin: 0;
+        }
+
+        .things-i-do {
+            font-family: 'Alata', sans-serif;
+            font-size: 25px;
+        }
+
+        .things {
+            height: auto;
+        }
+
+        .things-text {
+            height: 100px;
+            overflow: hidden;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .do-things-card {
+                padding-left: 15%;
+                padding-right: 15%;
+                padding-bottom: 15%;
+                padding-top: 0%;
+            }
+        }
+
+        /* about */
+
+        .about {
+            height: auto;
+            background-color: #e5e9f2;
+        }
+
+        .jop {
+            font-size: 30px;
+        }
+
+        .about-me {
+            font-family: 'Alata', sans-serif;
+            font-size: 25px;
+        }
+
+        .about-content {
+            font-size: 20px;
+        }
+
+        .about-content a:hover {
+            text-decoration-line: none;
+            color: black;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .about {
+                height: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    {{- partial "header.html" . -}}
 
-    {{- partial "sections/home.html" . -}}
-    {{- partial "sections/blog.html" . -}}
     {{- partial "sections/about.html" . -}}
     {{- partial "sections/do_things.html" . -}}
-    {{- partial "sections/projects.html" . -}}
-    {{- partial "sections/contact.html" . -}}
 
     {{- partial "footer.html" . -}}
     {{- partial "scripts.html" . -}}

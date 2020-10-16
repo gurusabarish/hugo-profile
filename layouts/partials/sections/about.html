@@ -1,12 +1,11 @@
 <section>
-    <div class="about p-3" id="about">
+    <div class="p-2"></div>
+    <div class="about p-3 bg-white">
         <div class="container">
-            <div class="about-me text-center font-weight-bold text-secondary">About Me</div>
-
-
+            <h1 class="text-center">{{ .Site.Params.name }}</h1>
             <div class="row justify-content-center ">
                 <div class="col-lg-3 pt-4 text-center">
-                    <img src="{{ .Site.Params.profile_image }}" width="200px" alt="{{ .Site.Params.name }}"
+                    <img src="{{ .Site.Params.profile_image }}" width="200" height="200" alt="{{ .Site.Params.name }}"
                         class="rounded">
                     <div class="about-me jop font-weight-bold text-secondary">{{ .Site.Params.job }}</div>
 

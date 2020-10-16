@@ -1,11 +1,11 @@
 {{ define "head"}}
 <meta name="description" content="blog of {{ .Site.Title}}" />
-<title>blog</title>
+<title>{{ .Title }}</title>
 {{ end }}
 
 
 {{ define "main" }}
-<section class="bg-light">
+<section class="bg-white">
   <div class="container-fluid">
 
     <div class="row pt-3 justify-content-center">
@@ -16,10 +16,8 @@
             {{ if .Params.tags }}
             <h5 class="card-header m-0">
               {{ if .Params.tags }}
-              {{ range $tags := .Params.tags }}
-              {{ with $.Site.GetPage (printf "/tags/%s" $tags) }}
-              <a href="{{ .RelPermalink }}" class="btn btn-info btn-rounded mb-2">{{ $tags }}</a>
-              {{ end }}
+              {{ range .Params.tags }}
+              <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="btn btn-info btn-rounded mb-2">{{  . }}</a>
               {{ end }}
               {{ end }}
             </h5>
