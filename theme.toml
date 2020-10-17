@@ -3,7 +3,7 @@ license = "MIT"
 licenselink = "https://github.com/gurusabarish/hugo-profile/blob/master/LICENSE"
 description = "The fastest hugo theme for personal portfolio"
 homepage = "https://hugo-profile.netlify.com"
-tags = ["Responsive","Blog", "Portfolio", "Personal", "Minimal", "Clean", "Fast", "Single page", "Seo", "Google analytics"]
+tags = ["Responsive","Blog", "Portfolio", "Personal", "Minimal", "Clean", "Fast", "Single page", "Seo", "Google analytics", "100"]
 features = ["Highly customizable"]
 min_version = "0.68.0"
 
