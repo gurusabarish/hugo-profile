@@ -1,7 +1,7 @@
 
 <div align="center">
   
-# hugo-profile
+# hugo-profile (100% performance)
 
 A simple hugo theme for personal portfolio
 
