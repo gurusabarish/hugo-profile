@@ -10,8 +10,8 @@ A simple hugo theme for personal portfolio
 </div>
 
 ## Performance of the website (100)
-[Lighthouse performance](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fhugo-profile.netlify.app%2F)
-[Google pagespeed insights](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhugo-profile.netlify.app%2F&tab=desktop)
+- [Lighthouse performance](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fhugo-profile.netlify.app%2F)
+- [Google pagespeed insights](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhugo-profile.netlify.app%2F&tab=desktop)
 ## Demo
 
 ![Thumpnail](https://github.com/gurusabarish/hugo-profile/blob/master/images/tn.png)
