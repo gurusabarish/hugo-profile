@@ -54,7 +54,7 @@ cd themes
 git clone https://github.com/gurusabarish/hugo-profile.git
 ```
 
-<b>Go to the config file and the line after titile ```theme: "hugo-profile"``` </b>
+<b>Go to the config file and add the line after titile ```theme: "hugo-profile"``` </b>
 
 
 ## Configuration
