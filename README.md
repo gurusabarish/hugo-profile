@@ -9,13 +9,14 @@ A simple hugo theme for personal portfolio
 [![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugo-profile.netlify.app/)
 </div>
 
-## Performance of the website by web.dev
-[check the performance of website](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fhugo-profile.netlify.app%2F)
+## Performance of the website (100)
+[Lighthouse performance](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fhugo-profile.netlify.app%2F)
+[Google pagespeed insights](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhugo-profile.netlify.app%2F&tab=desktop)
 ## Demo
 
 ![Thumpnail](https://github.com/gurusabarish/hugo-profile/blob/master/images/tn.png)
 
-### Site: [Hugo-profile](https://hugo-profile.netlify.com)
+### Site: [Hugo-profile](https://hugo-profile.netlify.app)
 
 
 ## Features
