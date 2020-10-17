@@ -23,8 +23,10 @@
                 <div class="col-lg-7 pt-3 ">
                     <div class="about-content text-dark p-3">
                         {{ .Site.Params.descripe_l1_person }}
+                        {{ if .Site.Params.descripe_l2_person }}
                         <br><br>
                         {{ .Site.Params.descripe_l2_person }}
+                        {{ end }}
                     </div>
                     <div class="social p-4">
                         <a href="{{ .Site.Params.resume | default "#" }}" class="btn btn-info" role="button"
