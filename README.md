@@ -21,6 +21,9 @@ A simple hugo theme for personal portfolio
 
 ### Demo Site: [Hugo-profile (100)](https://hugo-profile.netlify.app)
 
+## Version 1.00
+- [demo](https://5f843562aa98f87597e55bc1--hugo-profile.netlify.app)
+- [download V1.00](https://github.com/gurusabarish/hugo-profile/archive/V1.20.zip)
 
 ## Features
 - High(100) performance
