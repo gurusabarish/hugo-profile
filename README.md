@@ -21,11 +21,6 @@ A simple hugo theme for personal portfolio
 
 ### Demo Site: [Hugo-profile (100)](https://hugo-profile.netlify.app)
 
-## Version 1
-- [demo](https://hugo-profile-v1.netlify.app)
-- [view](https://github.com/gurusabarish/hugo-profile/tree/V1.20)
-- [download V1](https://github.com/gurusabarish/hugo-profile/archive/V1.20.zip)
-
 ## Features
 - High(100) performance
 - Minimalist Design
@@ -123,6 +118,11 @@ Author:
 <b>Use Yaml as config file</b>
 
 You can just copy the content for `config.yaml` files from `theme/toha/exampleSite/config.yaml`.
+
+## Version 1
+- [demo](https://hugo-profile-v1.netlify.app)
+- [view](https://github.com/gurusabarish/hugo-profile/tree/V1.20)
+- [download V1](https://github.com/gurusabarish/hugo-profile/archive/V1.20.zip)
 
 
 ## Contributing
