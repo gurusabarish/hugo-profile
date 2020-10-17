@@ -23,7 +23,7 @@ A simple hugo theme for personal portfolio
 
 ## Version 1.00
 - [demo](https://5f843562aa98f87597e55bc1--hugo-profile.netlify.app)
-- [download V1.00](https://github.com/gurusabarish/hugo-profile/archive/V1.20.zip)
+- [download V1.00](https://github.com/gurusabarish/hugo-profile/tree/V1.20)
 
 ## Features
 - High(100) performance
