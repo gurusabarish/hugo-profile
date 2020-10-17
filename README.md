@@ -12,14 +12,18 @@ A simple hugo theme for personal portfolio
 ## Performance of the website (100)
 - [Lighthouse performance](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fhugo-profile.netlify.app%2F)
 - [Google pagespeed insights](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhugo-profile.netlify.app%2F&tab=desktop)
+
+![High performance of the hugo-profile theme](https://raw.githubusercontent.com/gurusabarish/hugo-profile/master/images/100.png)
+
 ## Demo
 
 ![Thumpnail](https://github.com/gurusabarish/hugo-profile/blob/master/images/tn.png)
 
-### Site: [Hugo-profile](https://hugo-profile.netlify.app)
+### Demo Site: [Hugo-profile](https://hugo-profile.netlify.app)
 
 
 ## Features
+- High(100) performance
 - Minimalist Design
 - Fully Responsive
 - Google Analytics Support
@@ -38,19 +42,19 @@ A simple hugo theme for personal portfolio
 
 - Create your site if you haven't already
 
-```console
+```
 hugo new site my-site -f=yaml
 cd my-site
-git init
 ```
 
-- Add the theme as git sub-module
+- Add the theme as git clone
 
-```console
-git submodule add https://github.com/gurusabarish/hugo-profile.git themes/hugo-profile
+```
+cd themes
+git clone https://github.com/gurusabarish/hugo-profile.git
 ```
 
->Don't use SSH URL of the theme during adding as git sub-module. Also, don't clone the theme in your `themes` directory using `git clone`. They don't work well with Github Action or Netlify.
+<b>Go to the config file and the line after titile ```theme: "hugo-profile"``` </b>
 
 
 ## Configuration
