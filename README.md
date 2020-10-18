@@ -8,7 +8,10 @@ A simple hugo theme for personal portfolio
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/gurusabarish/hugo-profile/blob/master/LICENSE)
 [![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugo-profile.netlify.app/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0a572f1e-5a21-4ad5-8b55-2eee7a626da8/deploy-status)](https://app.netlify.com/sites/hugo-profile/deploys)
+
+### Join our community: [hugo-profile](https://discord.gg/zgTajK4)
 </div>
+
 
 ## Performance of the website (100)
 - [Lighthouse performance (100)](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fhugo-profile.netlify.app%2F)
