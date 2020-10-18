@@ -3,12 +3,13 @@
   
 # hugo-profile (100% performance)
 
+![visitors](https://visitor-badge.glitch.me/badge?page_id=https://github.com/gurusabarish/hugo-profile)
+
 A simple hugo theme for personal portfolio
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/gurusabarish/hugo-profile/blob/master/LICENSE)
 [![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugo-profile.netlify.app/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0a572f1e-5a21-4ad5-8b55-2eee7a626da8/deploy-status)](https://app.netlify.com/sites/hugo-profile/deploys)
-![visitors](https://visitor-badge.glitch.me/badge?page_id=https://github.com/gurusabarish/hugo-profile)
 
 ### 
 </div>
