@@ -11,7 +11,6 @@ A simple hugo theme for personal portfolio
 [![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugo-profile.netlify.app/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0a572f1e-5a21-4ad5-8b55-2eee7a626da8/deploy-status)](https://app.netlify.com/sites/hugo-profile/deploys)
 
-### 
 </div>
 
 ## Queries
@@ -70,7 +69,7 @@ git clone https://github.com/gurusabarish/hugo-profile.git
 
 Configure your `config.yaml` file of your site as below:
 
-```yaml
+```
 baseURL: "https://example.com"
 languageCode: "en-us"
 title: "Hugo-profile"
