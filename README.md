@@ -9,8 +9,7 @@ A simple hugo theme for personal portfolio
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/gurusabarish/hugo-profile/blob/master/LICENSE)
 [![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugo-profile.netlify.app/)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0a572f1e-5a21-4ad5-8b55-2eee7a626da8/deploy-status)](https://app.netlify.com/sites/hugo-profile/deploys)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5c1dcb34-cada-4c80-82b7-cfdbdbd7c774/deploy-status)](https://app.netlify.com/sites/hugo-profile/deploys)
 </div>
 
 ## Queries
@@ -138,6 +137,21 @@ Author:
 <b>Use Yaml as config file</b>
 
 You can just copy the content for `config.yaml` files from `theme/toha/exampleSite/config.yaml`.
+
+## Archetypes support
+```
+---
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+draft: true
+github_link: "https://github.com/gurusabarish/hugo-profile"
+author: ""
+tags:
+  - 
+bg_image: ""
+description: ""
+---
+```
 
 ## Version 1
 - [demo](https://hugo-profile-v1.netlify.app)
