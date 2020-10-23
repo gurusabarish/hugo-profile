@@ -1,4 +1,4 @@
-baseURL: "https://hugo-profile.app"
+baseURL: "https://hugo-profile.netlify.app"
 languageCode: "en-us"
 title: "Hugo-profile"
 
