@@ -22,16 +22,22 @@
     margin-bottom: 0.5rem !important;
   }
 
-  article h1,
-  h2 {
-    font-size: 52px;
+  article h1 {
+    font-size: 55px !important;
   }
 
-  article h3,
-  h4,
+  article h2 {
+    font-size: 42px !important;
+  }
+
+  article h3 {
+    font-size: 35px !important;
+  }
+
+  article h4,
   h5,
   h6 {
-    margin-top: 1.3rem;
+    font-size: 30px !important;
   }
 
   article table {
@@ -166,6 +172,12 @@
             </a>
             {{ end}}
           </div>
+
+          {{ if .Site.Params.showdescription }}
+          <div class="text-dark py-2">
+            {{ .Params.description }}
+          </div>
+          {{ end }}
         </div>
 
 

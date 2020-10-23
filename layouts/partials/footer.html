@@ -1,11 +1,17 @@
 <footer class="footer py-3 text-muted text-center">
 
 
-    <p>
 
-    <div class="footer-site text-uppercase pb-2 font-weight-bold"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+
+    <div class="footer-site  pb-2 font-weight-bold">
+        {{ if .Site.Params.embed }}
+        <iframe class="footer">{{ .Site.Params.embed }}</iframe>
+        <br>
+        {{ end }}
+
+        <a class="text-uppercase" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+
     </div>
-
     &copy; {{ .Site.Params.copyright }} All Rights Reserved<br>
 
     Made with
@@ -27,6 +33,5 @@
     {{ else }}
     <a href="https://github.com/gurusabarish" aria-label="github handle">GuruSabarish</a>
     {{ end }}
-    </p>
 
 </footer>

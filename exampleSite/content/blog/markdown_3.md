@@ -1,14 +1,15 @@
 ---
 title: "Markdown syntax"
-date: 2020-09-28T16:19:06+05:30
+date: 2020-08-15T13:22:10+05:30
 draft: false
-subtitle: ""
 github_link: "https://github.com/gurusabarish/hugo-profile"
-author: ""
+author: "Gurusabarish"
 tags:
   - markdown
+  - css
+  - blog
 bg_image: ""
-description: "Markdown syntax"
+description: "This is a description of Markdown syntax "
 ---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.

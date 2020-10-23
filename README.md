@@ -100,17 +100,6 @@ params:
   twitter: "https://twitter.com/gurusabarishh"
   instagram: "https://instagram.com/gurusabarishh"
 
-  # Do things 
-  usedothings: true
-  usedefaultlogos: true
-
-  thing1: "Python"
-  thing2: "Machine learning"
-  thing3: "Things for web"
-  thing1_des: "I build something beautiful using Python."
-  thing2_des: "I train robust models for various tasks."
-  thing3_des: "I love to build things for web."
-
   # About
   profile_image: "/images/gurusabarish.webp"
   descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. 
@@ -119,9 +108,31 @@ params:
   job: "Web developer"
   resume: ""
 
+  # Things I do
+  usedothings: true
+  Things:
+    - logo: fab fa-python
+      title: Python
+      description: I build something beautiful using Python.
+
+    - logo: fas fa-robot
+      title:  Machine learning 
+      description: I train robust models for various tasks. 
+
+    - logo: fab fa-html5
+      title: Things for web 
+      description: I love to build things for web
+
+  #footer
+  embed:  
+
+  #blog ( Description for seo. If you want to show description in your blog post, let's make it true)
+  showdescription: false
+
 Author:
   name: "Gurusabarish"
   website: "https://github.com/gurusabarish"
+
 ```
 
 <b>Use Yaml as config file</b>
