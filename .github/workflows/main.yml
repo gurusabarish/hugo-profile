@@ -1,30 +1,25 @@
-name: github pages
-
-on:
-  push:
-    branches:
-      - master  # Set a branch to deploy
-
+name: CI
+on: push
 jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+      - name: Git checkout
+        uses: actions/checkout@v2
 
-      - name: Setup Hugo
+      - name: Setup hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.75.1'
-          # extended: true
+          hugo-version: "0.64.0"
 
       - name: Build
+        # remove --minify tag if you do not need it
+        # docs: https://gohugo.io/hugo-pipes/minification/
         run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: HUGO_DEPLOY
+          personal_token: ${{ secrets.TOKEN }}
           publish_dir: ./public
+          publish_branch: master
