@@ -20,6 +20,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.TOKEN }}
+          personal_token: HUGO_DEPLOY
           publish_dir: ./public
           publish_branch: master
