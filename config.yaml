@@ -50,9 +50,6 @@ params:
       title: Things for web 
       description: I love to build things for web
 
-  #footer
-  embed:  
-
   #blog ( Description for seo. If you want to show description in your blog post, let's make it true)
   showdescription: false
 

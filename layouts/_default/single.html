@@ -180,26 +180,26 @@
           {{ end }}
         </div>
 
+        <div>
+          {{ $siteUrl := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+          {{ $.Scratch.Add "sitePath" .Site.BaseURL }}
 
-        {{ $siteUrl := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-        {{ $.Scratch.Add "sitePath" .Site.BaseURL }}
+          {{ $.Scratch.Add "siteBreadcrumbs" (slice (dict "url" .Site.BaseURL "name" "home" "position" 1 )) }}
+          {{ range $index, $element := split $siteUrl "/" }}
+          {{ $.Scratch.Add "sitePath" $element }}
+          {{ $.Scratch.Add "sitePath" "/" }}
+          {{ if ne $element "" }}
+          {{ $.Scratch.Add "siteBreadcrumbs" (slice (dict "url" ($.Scratch.Get "sitePath") "name" . "position" (add $index 2))) }}
+          {{ end }}
+          {{ end }}
 
-        {{ $.Scratch.Add "siteBreadcrumbs" (slice (dict "url" .Site.BaseURL "name" "home" "position" 1 )) }}
-        {{ range $index, $element := split $siteUrl "/" }}
-        {{ $.Scratch.Add "sitePath" $element }}
-        {{ $.Scratch.Add "sitePath" "/" }}
-        {{ if ne $element "" }}
-        {{ $.Scratch.Add "siteBreadcrumbs" (slice (dict "url" ($.Scratch.Get "sitePath") "name" . "position" (add $index 2))) }}
-        {{ end }}
-        {{ end }}
-
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            {{ range $.Scratch.Get "siteBreadcrumbs" }}
-            <li class="breadcrumb-item" aria-current="page"><a href="{{ .url }}"> {{ .name }} </a></li>
-            {{ end }}
-        </nav>
-
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              {{ range $.Scratch.Get "siteBreadcrumbs" }}
+              <li class="breadcrumb-item" aria-current="page"><a href="{{ .url }}"> {{ .name }} </a></li>
+              {{ end }}
+          </nav>
+        </div>
         <!-- image -->
         <div class="py-2">
           {{ with .Params.bg_image }}
