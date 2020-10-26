@@ -74,7 +74,7 @@ languageCode: "en-us"
 title: "Hugo-profile"
 theme: "hugo-profile"
 
-googleanalytics: UA-xxxxxxx-x
+googleanalytics: UA-xxxxxxxx-x
 disqusShortname: yourdisqusname
 Paginate: 3
 
@@ -83,7 +83,7 @@ taxonomies:
   category: "categories"
 
 params:
-  favicon: "/images/fav.png"
+  favicon: ""
   description: "A high performance hugo theme for personal website. It is single page portfolio. It has blog."
   copyright: "2020"
 
@@ -93,18 +93,19 @@ params:
     Url: "/blog"
     
   # social
-  name: "Gurusabarish"
-  github: "https://github.com/gurusabarish"
-  linkedin: "https://linkedin.com/in/gurusabarish"
-  twitter: "https://twitter.com/gurusabarishh"
-  instagram: "https://instagram.com/gurusabarishh"
+  name: "Hugo-profile"
+  github: "https://github.com"
+  linkedin: "https://linkedin.com"
+  twitter: "https://twitter.com"
+  instagram: "https://instagram.com"
+  facebook: "https://facebook.com"
 
   # About
-  profile_image: "/images/gurusabarish.webp"
-  descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. 
-  I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+  profile_image: ""
+  descripe_l1_person: "A high performance hugo theme for personal website and blog. It is a single page portfolio."
   descripe_l2_person: "This is just a example for about section. You can easily change with the help of cofig file."
-  job: "Web developer"
+  job: "Your job"
+  useresume: true
   resume: ""
 
   # Things I do
@@ -122,11 +123,8 @@ params:
       title: Things for web 
       description: I love to build things for web
 
-  #footer
-  embed:  
-
   #blog ( Description for seo. If you want to show description in your blog post, let's make it true)
-  showdescription: false
+  showdescription: true
 
 Author:
   name: "Gurusabarish"
