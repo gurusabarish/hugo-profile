@@ -29,6 +29,8 @@ A simple hugo theme for personal portfolio
 
 ### Demo Site: [Hugo-profile (100)](https://hugo-profile.netlify.app)
 
+*NOTE: If you are using this site as a template for your own portfolio and blog, I would be very glad if you add a link to the original site with my name in footer*
+
 ## Features
 - High(100) performance
 - Minimalist Design
