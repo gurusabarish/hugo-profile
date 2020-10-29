@@ -18,8 +18,8 @@ params:
 
   # Navbar Menus
   customMenus:
-  - name: "Blog"
-    Url: "/blog"
+  - name: "Posts"
+    Url: "/post"
     
   # social
   name: "Hugo-profile"
