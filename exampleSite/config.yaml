@@ -22,18 +22,18 @@ params:
     Url: "/post"
     
   # social
-  name: "Hugo-profile"
-  github: "https://github.com"
-  linkedin: "https://linkedin.com"
-  twitter: "https://twitter.com"
-  instagram: "https://instagram.com"
+  name: "Gurusabarish"
+  github: "https://github.com/gurusabarish"
+  linkedin: "https://linkedin.com/in/gurusabarish"
+  twitter: "https://twitter.com/gurusabarishh"
+  instagram: "https://instagram.com/gurusabarishh"
   facebook: "https://facebook.com"
 
   # About
-  profile_image: "/images/profile.webp"
-  descripe_l1_person: "A high performance hugo theme for personal website and blog. It is a single page portfolio."
+  profile_image: "/images/gurusabarish.webp"
+  descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
   descripe_l2_person: "This is just a example for about section. You can easily change with the help of cofig file."
-  job: "Your job"
+  job: "Web developer"
   useresume: true
   resume: ""
 
@@ -52,7 +52,7 @@ params:
       title: Things for web 
       description: I love to build things for web
 
-  #blog ( Description for seo. If you want to show description in your blog post, let's make it true)
+  #blog ( Description for seo. If you want to show description in your listing or single page, let's make it true)
   showdescription: false
 
 Author:
