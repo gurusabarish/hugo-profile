@@ -2,16 +2,16 @@
 <section>
     <div class="do-things text-center bg-white" id="do-things">
         <div class="container">
-            <div class="things-i-do text-primary font-weight-bold">
+            <div class="things-i-do text-primary py-3 font-weight-bold">
                 Things I do
             </div>
 
             <div class="do-things-card">
-                <div class="row pb-5 justify-content-center">
+                <div class="row pb-2 justify-content-center">
                     {{ range .Site.Params.Things }}
                     <!-- Thing 1 -->
                     <div class="col-lg-3 col-md-4">
-                        <div class="things shadow rounded p-4 mt-5 bg-warning">
+                        <div class="things shadow rounded p-4 my-2 mb-4 bg-warning">
                             <i class="{{ .logo }} fa-3x" width="3em" height="3em"></i>
                             <div class="p-2 font-weight-bold">
                                 {{ .title }}

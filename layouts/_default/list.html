@@ -12,7 +12,7 @@
       <div class="col-lg-6 col-md-6">
         {{ range .Paginator.Pages }}
         <div class="mb-4">
-          <div class="card border-bottom-primary shadow pb-2">
+          <div class="card border-bottom-primary pb-2">
             {{ if .Params.tags }}
             <h5 class="card-header m-0">
               {{ if .Params.tags }}
@@ -62,7 +62,7 @@
         <div class="row justify-content-center pt-3">
           <div class="col-lg-7 col-md-7">
             <div class=" mb-4">
-              <div class="card shadow p-0">
+              <div class="card p-0">
                 <h5 class="card-header m-0 bg-warning">Tags</h5>
                 <div class=" card-body">
                   {{range $name, $taxonomy := .Site.Taxonomies.tags}}

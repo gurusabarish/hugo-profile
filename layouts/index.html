@@ -5,6 +5,8 @@
     <title>{{- .Site.Title -}}</title>
     <!-- stylesheets -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="/css/fontawesome.min.css" media="all">
+    <link rel="stylesheet" href="/css/all.min.css" media="all">
     <meta name="description" content="{{ .Site.Params.description }}">
     {{ template "_internal/google_analytics.html" . }}
     {{- partial "head.html" . -}}
@@ -39,10 +41,14 @@
         }
 
         @media only screen and (max-width: 768px) {
+            .things-i-do {
+                padding-top: 7% !important;
+            }
+
             .do-things-card {
                 padding-left: 15%;
                 padding-right: 15%;
-                padding-bottom: 15%;
+                padding-bottom: 0%;
                 padding-top: 0%;
             }
         }
@@ -88,7 +94,6 @@
 
     {{- partial "footer.html" . -}}
     {{- partial "scripts.html" . -}}
-    <script src="https://kit.fontawesome.com/c4be8004cd.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -18,9 +18,9 @@ params:
 
   # Navbar Menus
   customMenus:
-  - name: "Posts"
-    Url: "/post"
-    
+    - name: "Posts"
+      Url: "/post"
+
   # social
   name: "Gurusabarish"
   github: "https://github.com/gurusabarish"
@@ -33,7 +33,6 @@ params:
   profile_image: "/images/gurusabarish.webp"
   descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
   descripe_l2_person: "This is just a example for about section. You can easily change with the help of cofig file."
-  job: "Web developer"
   useresume: true
   resume: ""
 
@@ -45,11 +44,11 @@ params:
       description: I build something beautiful using Python.
 
     - logo: fas fa-robot
-      title:  Machine learning 
-      description: I train robust models for various tasks. 
+      title: Machine learning
+      description: I train robust models for various tasks.
 
     - logo: fab fa-html5
-      title: Things for web 
+      title: Things for web
       description: I love to build things for web
 
   #blog ( Description for seo. If you want to show description in your listing or single page, let's make it true)
