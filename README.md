@@ -51,14 +51,14 @@ A simple hugo theme for personal portfolio
 
 - Create your site if you haven't already
 
-```
+```bash
 hugo new site my-site -f=yaml
 cd my-site
 ```
 
 - Add the theme as git clone
 
-```
+```bash
 cd themes
 git clone https://github.com/gurusabarish/hugo-profile.git
 ```
@@ -70,7 +70,7 @@ git clone https://github.com/gurusabarish/hugo-profile.git
 
 Configure your `config.yaml` file of your site as below:
 
-```
+```yaml
 baseURL: "https://example.com"
 languageCode: "en-us"
 title: "Hugo-profile"
@@ -139,7 +139,8 @@ Author:
 You can just copy the content for `config.yaml` files from `theme/toha/exampleSite/config.yaml`.
 
 ## Archetypes support
-```
+
+```yaml
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
