@@ -1,5 +1,5 @@
 <section>
-    <div class="about pt-2 bg-white">
+    <div class="about pt-2">
         <div class="container">
 
             <div class="row justify-content-center ">
@@ -28,7 +28,7 @@
                     </div>
                     <div class="social px-3">
                         {{ if .Site.Params.useresume }}
-                        <a href="{{ .Site.Params.resume | default "#" }}" class="btn btn-info" role="button"
+                        <a href="{{ .Site.Params.resume | default " #" }}" class="btn btn-info" role="button"
                             aria-pressed="true">
                             Resume
                         </a>

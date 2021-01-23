@@ -1,30 +1,18 @@
 <footer>
     <div class="container bg-transparent py-4">
-        <div class="row row-eq-height align-items-center">
-            <div class="col-md-4 nav-link text-center font-weight-bold">
-                <a class="text-uppercase" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-            </div>
+        <div class="row justify-content-center">
             <div class="col-md-4 text-center order-2 order-lg-1 order-md-1">
-                <div class="d-none d-sm-none d-md-block">
+                <div>
                     <a href="{{ .Site.BaseURL }}">
-                        <img alt="Footer logo" src="{{ .Site.Params.favicon | default "/images/favicon.png"}}"
+                        <img alt="Footer logo" src="{{ .Site.Params.favicon | default " /images/favicon.png"}}"
                             height="40px" width="40px">
                     </a>
                 </div>
                 &copy; {{ .Site.Params.copyright }} All Rights Reserved
                 <div class="text-secondary">
                     Powered by
-                    <a class="text-secondary" href="https://themes.gohugo.io/hugo-profile">Hugo-profile</a>
+                    <a class="text-secondary" href="https://github.com/gurusabarish/hugo-profile">Hugo-profile</a>
                 </div>
-            </div>
-            <div class="col-md-4 font-weight-bold order-1">
-                <ul class="nav justify-content-center">
-                    {{ range site.Params.customMenus }}
-                    <li class="nav-link">
-                        <a href="{{.Url}}" aria-label="{{ .name }}">{{ .name }}</a>
-                    </li>
-                    {{ end }}
-                </ul>
             </div>
         </div>
     </div>

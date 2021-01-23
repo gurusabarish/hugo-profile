@@ -3,7 +3,7 @@ languageCode: "en-us"
 title: "Hugo-profile"
 
 googleanalytics: UA-167646412-8
-disqusShortname: 
+disqusShortname:
 Paginate: 3
 
 taxonomies:
@@ -17,9 +17,9 @@ params:
 
   # Navbar Menus
   customMenus:
-  - name: "Blog"
-    Url: "/blog"
-    
+    - name: "Blog"
+      Url: "/blog"
+
   # social
   name: "Hugo-profile"
   github: "https://github.com"
@@ -43,15 +43,15 @@ params:
       description: I build something beautiful using Python.
 
     - logo: fas fa-robot
-      title:  Machine learning 
-      description: I train robust models for various tasks. 
+      title: Machine learning
+      description: I train robust models for various tasks.
 
     - logo: fab fa-html5
-      title: Things for web 
+      title: Things for web
       description: I love to build things for web
 
   #blog ( Description for seo. If you want to show description in your blog post, let's make it true)
-  showdescription: true
+  showdescription: false
 
 Author:
   name: "Gurusabarish"

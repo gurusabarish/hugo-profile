@@ -4,28 +4,13 @@
 <head>
     {{- partial "head.html" . -}}
     {{- block "head" . -}}{{- end }}
-
-    <!-- stylesheets -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css" media="all">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Peddana&display=swap" rel="stylesheet" media="all">
-    <style>
-        footer {
-            background-color: #1c2d41;
-            color: #8392a5;
-            border-top-width: 1px !important;
-            border-color: #8392a5;
-        }
-    </style>
 </head>
 
-<body>
+<body class="bg-white">
     {{- partial "header.html" . -}}
     {{- block "main" . -}}{{- end }}
     {{- partial "footer.html" . -}}
     {{- partial "scripts.html" . -}}
-
 </body>
 
 </html>
