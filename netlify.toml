@@ -1,6 +1,6 @@
 [build]
-publish = "public"
-command = "hugo --gc --minify"
+publish = "exampleSite/public"
+command = "cd exampleSite && hugo --gc --minify --themesDir ../.."
 
 [context.production.environment]
 HUGO_VERSION = "0.76.5"
@@ -8,20 +8,20 @@ HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
 [context.split1]
-command = "hugo --gc --minify --enableGitInfo"
+command = "cd exampleSite && hugo --gc --minify --enableGitInfo --themesDir ../.."
 
 [context.split1.environment]
 HUGO_VERSION = "0.76.5"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+command = "cd exampleSite && hugo --gc --minify --buildFuture --themesDir ../.. -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.76.5"
 
 [context.branch-deploy]
-command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+command = "cd exampleSite && hugo --gc --minify --themesDir ../.. -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
 HUGO_VERSION = "0.76.5"
