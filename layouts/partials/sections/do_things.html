@@ -9,9 +9,8 @@
             <div class="do-things-card">
                 <div class="row pb-2 justify-content-center">
                     {{ range .Site.Params.Things }}
-                    <!-- Thing 1 -->
                     <div class="col-lg-3 col-md-4">
-                        <div class="things shadow rounded p-4 my-2 mb-4 bg-warning">
+                        <div class="things shadow rounded p-4 my-2 mb-4 card btn-outline-primary">
                             <i class="{{ .logo }} fa-3x" width="3em" height="3em"></i>
                             <div class="p-2 font-weight-bold">
                                 {{ .title }}

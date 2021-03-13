@@ -84,6 +84,12 @@ footer a {
   color: #8392a5;
 }
 
+/* news */
+.news a {
+  color: #1c2d41;
+  text-decoration: none;
+}
+
 /*navbar*/
 .navbar-color {
   color: #101820ff;
@@ -111,10 +117,6 @@ footer {
 
 .blog-title {
   font-size: 48px;
-}
-
-.leftside-blog {
-  padding-top: 10% !important;
 }
 
 article {

@@ -57,11 +57,11 @@
           <div class="col-lg-7 col-md-7">
             <div class=" mb-4">
               <div class="card p-0">
-                <h5 class="card-header m-0 bg-warning">Tags</h5>
+                <h5 class="card-header m-0 btn-outline-danger">Tags</h5>
                 <div class=" card-body">
                   {{range $name, $taxonomy := .Site.Taxonomies.tags}}
                   {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-                  <a href="{{ .RelPermalink }}" class="btn btn-warning rounded-pill mb-2">{{$name}}</a>
+                  <a href="{{ .RelPermalink }}" class="btn btn-outline-danger rounded-pill mb-2">{{$name}}</a>
                   {{end}}
                   {{end}}
                 </div>
