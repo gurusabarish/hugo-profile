@@ -11,6 +11,7 @@ taxonomies:
   tag: "tags"
   category: "categories"
 
+enableEmoji: true
 params:
   favicon: "/images/fav.png"
   description: "A high performance hugo theme for personal website. It is single page portfolio. It has blog."

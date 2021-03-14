@@ -119,6 +119,10 @@ footer {
   font-size: 48px;
 }
 
+.mincho-font {
+  font-family: "Shippori Mincho B1", serif;
+}
+
 article {
   line-height: 1.756;
   font-size: 18px;
@@ -204,12 +208,12 @@ figcaption {
 
 article pre {
   margin: 5px;
-  padding-top: 0% !important;
-  padding-bottom: 1% !important;
   padding: 5%;
+  padding-left: 7%;
   font-size: 18px;
   background-color: #1f618d !important;
   color: white;
+  border-radius: 1.5% !important;
 }
 
 article pre > code {

@@ -1,6 +1,5 @@
 ---
 title: "Markdown syntax"
-title: "Markdown syntax"
 date: 2020-08-15T13:22:10+05:30
 draft: false
 github_link: "https://github.com/gurusabarish/hugo-profile"
@@ -44,13 +43,11 @@ The blockquote element represents content that is quoted from another source, op
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.
 > **Note** that you can use *Markdown syntax* within a blockquote.
 
-
 #### Blockquote with attribution
 
 
 > Don't communicate by sharing memory, share memory by communicating.</p>
 > — <cite>Rob Pike[^1]</cite>
-
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
