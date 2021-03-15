@@ -64,9 +64,9 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 #### Inline Markdown within tables
 
-| Inline&nbsp;&nbsp;&nbsp; | Markdown&nbsp;&nbsp;&nbsp; | In&nbsp;&nbsp;&nbsp;                | Table  |
-| ------------------------ | -------------------------- | ----------------------------------- | ------ |
-| *italics*                | **bold**                   | ~~strikethrough~~&nbsp;&nbsp;&nbsp; | `code` |
+| Inline&nbsp;&nbsp;&nbsp; | Markdown&nbsp;&nbsp;&nbsp; | In&nbsp;&nbsp;&nbsp;                | 
+| ------------------------ | -------------------------- | ----------------------------------- | 
+| *italics*                | **bold**                   | ~~strikethrough~~&nbsp;&nbsp;&nbsp; |
 
 ## Code Blocks
 

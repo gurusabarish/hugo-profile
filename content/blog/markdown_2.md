@@ -43,11 +43,13 @@ The blockquote element represents content that is quoted from another source, op
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.
 > **Note** that you can use *Markdown syntax* within a blockquote.
 
+
 #### Blockquote with attribution
 
 
 > Don't communicate by sharing memory, share memory by communicating.</p>
 > — <cite>Rob Pike[^1]</cite>
+
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
@@ -62,9 +64,9 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 #### Inline Markdown within tables
 
-| Inline&nbsp;&nbsp;&nbsp; | Markdown&nbsp;&nbsp;&nbsp; | In&nbsp;&nbsp;&nbsp;                | Table  |
-| ------------------------ | -------------------------- | ----------------------------------- | ------ |
-| *italics*                | **bold**                   | ~~strikethrough~~&nbsp;&nbsp;&nbsp; | `code` |
+| Inline&nbsp;&nbsp;&nbsp; | Markdown&nbsp;&nbsp;&nbsp; | In&nbsp;&nbsp;&nbsp;                | 
+| ------------------------ | -------------------------- | ----------------------------------- | 
+| *italics*                | **bold**                   | ~~strikethrough~~&nbsp;&nbsp;&nbsp; |
 
 ## Code Blocks
 
