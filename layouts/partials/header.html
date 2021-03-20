@@ -2,8 +2,7 @@
 	<div class="container">
 		<a class="navbar-brand font-weight-bold" href="{{ .Site.BaseURL | relURL }}">
 			{{ if .Site.Params.favicon }}
-			<img src="{{ .Site.Params.favicon }}" width="30" height="30" class="d-inline-block align-top"
-				alt="{{ .Site.Title }}">
+			<img src="{{ .Site.Params.favicon }}" width="30" height="30" class="d-inline-block align-top">
 			{{ .Site.Title }}
 			{{ else }}
 			{{ .Site.Title }}
