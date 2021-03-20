@@ -3,8 +3,8 @@ languageCode: "en-us"
 title: "Hugo-profile"
 theme: "hugo-profile"
 
-googleanalytics: UA-xxxxxxx-x
-disqusShortname:
+googleanalytics: UA-167646412-8
+disqusShortname: gurusabarish
 Paginate: 3
 
 taxonomies:
@@ -14,13 +14,13 @@ taxonomies:
 enableEmoji: true
 params:
   favicon: "/images/fav.png"
-  description: "A high performance hugo theme for personal website. It is single page portfolio. It has blog."
+  description: "A high performance hugo theme for personal portfolio and blog."
   copyright: "2021"
 
   # Navbar Menus
   customMenus:
-    - name: "Posts"
-      Url: "/post"
+    - name: "Blog"
+      Url: "/blog"
 
   # social
   name: "Gurusabarish"
@@ -33,7 +33,7 @@ params:
   # About
   profile_image: "/images/gurusabarish.webp"
   descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
-  descripe_l2_person: "This is just a example for about section. You can easily change with the help of cofig file."
+  descripe_l2_person: ""
   useresume: true
   resume: ""
 
