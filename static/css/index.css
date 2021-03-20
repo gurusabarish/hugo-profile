@@ -1,5 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 a:hover {
@@ -117,6 +119,14 @@ footer {
 
 .blog-title {
   font-size: 48px;
+}
+
+#TableOfContents > ul li {
+  list-style-type: none;
+}
+
+#TableOfContents > ul li a {
+  color: black;
 }
 
 .mincho-font {
