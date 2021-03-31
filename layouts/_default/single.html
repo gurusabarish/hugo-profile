@@ -38,11 +38,13 @@
         {{ .Params.author }}
         {{ end }}
 
+        {{ if .Site.Params.tweet }}
         <div class="pt-3">
           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size=large class="twitter-share-button"
             data-show-count="false">Tweet my work</a>
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
+        {{ end }}
       </div>
 
       {{ if .Site.Params.showdescription }}

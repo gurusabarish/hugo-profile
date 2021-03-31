@@ -27,15 +27,13 @@
                         {{ .Site.Params.descripe_l2_person }}
                         {{ end }}
                     </div>
-                    <div class="social px-3 text-center">
+                    <div class="social px-3 text-center pb-4">
                         {{ if .Site.Params.useresume }}
                         <a href="{{ .Site.Params.resume | default " #" }}" class="btn btn-outline-danger" role="button"
                             aria-pressed="true">
                             Resume
                         </a>
                         {{ end }}
-
-
                     </div>
                 </div>
             </div>

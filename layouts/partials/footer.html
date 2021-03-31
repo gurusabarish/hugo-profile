@@ -1,6 +1,7 @@
 <footer>
     <!-- recent posts -->
     <div class="news container py-3">
+        {{ if .Site.Params.recentposts }}
         <div class="h3 text-center text-light font-weight-bold">Recent posts</div>
         <div class="row justify-content-center">
             {{ range ( where .Site.RegularPages "Type" "blog" | first 3 ) }}
@@ -20,6 +21,7 @@
             </div>
             {{ end }}
         </div>
+        {{ end }}
     </div>
     <div class="text-center">
         {{ if .Site.Params.github }}
