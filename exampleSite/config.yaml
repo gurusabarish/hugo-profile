@@ -1,7 +1,6 @@
 baseURL: "https://example.com"
 languageCode: "en-us"
 title: "Hugo-profile"
-theme: "hugo-profile"
 
 googleanalytics: UA-167646412-8
 disqusShortname: gurusabarish
@@ -34,8 +33,10 @@ params:
   profile_image: "/images/gurusabarish.webp"
   descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
   descripe_l2_person: ""
+
   useresume: true
-  resume: ""
+  customname: ""
+  resumelink: ""
 
   # Things I do
   usedothings: true
@@ -54,3 +55,5 @@ params:
 
   #Description for seo. If you want to show description in your listing or single page, let's make it true
   showdescription: false
+  tweet: true
+  recentposts: true

@@ -29,9 +29,14 @@
                     </div>
                     <div class="social px-3 text-center pb-4">
                         {{ if .Site.Params.useresume }}
-                        <a href="{{ .Site.Params.resume | default " #" }}" class="btn btn-outline-danger" role="button"
-                            aria-pressed="true">
+                        <a href="{{ .Site.Params.resumelink | default " #" }}" class="btn btn-outline-danger"
+                            role="button" aria-pressed="true">
+                            {{ if .Site.Params.customname }}
+                            {{ .Site.Params.customname }}
+                            {{ else }}
                             Resume
+                            {{ end }}
+
                         </a>
                         {{ end }}
                     </div>
