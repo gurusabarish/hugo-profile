@@ -1,0 +1,59 @@
+baseURL: "https://example.com"
+languageCode: "en-us"
+title: "Hugo-profile"
+
+googleanalytics: UA-167646412-8
+disqusShortname: gurusabarish
+Paginate: 3
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+enableEmoji: true
+params:
+  favicon: "/images/fav.png"
+  description: "A high performance hugo theme for personal portfolio and blog."
+  copyright: "2021"
+
+  # Navbar Menus
+  customMenus:
+    - name: "Blog"
+      Url: "/blog"
+
+  # social
+  name: "Gurusabarish"
+  github: "https://github.com/gurusabarish"
+  linkedin: "https://linkedin.com/in/gurusabarish"
+  twitter: "https://twitter.com/gurusabarishh"
+  instagram: "https://instagram.com/gurusabarishh"
+  facebook: "https://facebook.com"
+
+  # About
+  profile_image: "/images/gurusabarish.webp"
+  descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+  descripe_l2_person: ""
+
+  useresume: true
+  customname: ""
+  resumelink: ""
+
+  # Things I do
+  usedothings: true
+  Things:
+    - logo: fab fa-python
+      title: Python
+      description: I build something beautiful using Python.
+
+    - logo: fas fa-robot
+      title: Machine learning
+      description: I train robust models for various tasks.
+
+    - logo: fab fa-html5
+      title: Things for web
+      description: I love to build things for web
+
+  #Description for seo. If you want to show description in your listing or single page, let's make it true
+  showdescription: false
+  tweet: true
+  recentposts: true
