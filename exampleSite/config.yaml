@@ -2,8 +2,8 @@ baseURL: "https://example.com"
 languageCode: "en-us"
 title: "Hugo-profile"
 
-googleanalytics: UA-167646412-8
-disqusShortname: gurusabarish
+googleanalytics: UA-XXXXX-X
+disqusShortname:
 Paginate: 3
 
 taxonomies:
