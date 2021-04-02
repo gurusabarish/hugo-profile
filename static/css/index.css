@@ -54,7 +54,7 @@ a:hover {
 
 .about-me {
   font-family: "Alata", sans-serif;
-  font-size: 25px;
+  font-size: 27px;
 }
 
 .about-content {
@@ -121,10 +121,11 @@ footer {
 
 #TableOfContents > ul li {
   list-style-type: none;
+  font-size: 15px;
 }
 
 #TableOfContents > ul li a {
-  color: black;
+  text-decoration: none;
 }
 
 .mincho-font {

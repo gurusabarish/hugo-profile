@@ -22,6 +22,8 @@ params:
       Url: "/blog"
 
   # social
+  socialicontop: false
+  socialiconfooter: true
   name: "Gurusabarish"
   github: "https://github.com/gurusabarish"
   linkedin: "https://linkedin.com/in/gurusabarish"

@@ -54,27 +54,36 @@
       {{ end }}
     </div>
   </div>
-
   <div class="container">
     <div class="row justify-content-center ">
-
-      <div class="col-md-9 p-3">
-        <div class="px-md-3">
-
+      <div class="col-md-9">
+        <div class="">
           <!-- image -->
           <div class="py-2">
             {{ with .Params.bg_image }}
             <img class="img-fluid" src="{{ . }}">
             {{ end }}
           </div>
-
+          {{ if .Params.toc }}
+          <div class="row justify-content-center">
+            <div class="col-md-8 py-3 px-4">
+              <div class="card">
+                <button class="TOC btn btn-outline-info py-2 text-center">
+                  Table Of Contents
+                </button>
+                <div class="TOC-content d-none card-body">
+                  {{.TableOfContents}}
+                </div>
+              </div>
+            </div>
+          </div>
+          {{ end }}
           <!-- content -->
           <article>
             {{.Content}}
           </article>
-          <div class="card">
-            {{.TableOfContents}}
-          </div>
+
+
         </div>
         <!-- Tags -->
         <div class="p-5">
@@ -99,4 +108,10 @@
     </div>
   </div>
 </section>
+
+<script>
+  $('.TOC').on('click', function () {
+    $('.TOC-content').removeClass('d-none');
+  });
+</script>
 {{ end }}

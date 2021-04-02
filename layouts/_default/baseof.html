@@ -7,10 +7,10 @@
 </head>
 
 <body class="bg-white">
+    {{- partial "scripts.html" . -}}
     {{- partial "header.html" . -}}
     {{- block "main" . -}}{{- end }}
     {{- partial "footer.html" . -}}
-    {{- partial "scripts.html" . -}}
 </body>
 
 </html>

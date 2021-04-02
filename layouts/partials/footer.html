@@ -23,6 +23,8 @@
         </div>
         {{ end }}
     </div>
+    {{ if .Site.Params.socialiconfooter }}
+
     <div class="text-center">
         {{ if .Site.Params.github }}
         <span class="px-1">
@@ -119,6 +121,7 @@
         </a>
         {{ end }}
     </div>
+    {{ end }}
     <div class="container bg-transparent py-4">
         <div class="row justify-content-center">
             <div class="col-md-4 text-center order-2 order-lg-1 order-md-1">
