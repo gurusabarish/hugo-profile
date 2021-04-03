@@ -173,34 +173,38 @@ h6 {
   line-height: 1.45;
 }
 
-article table {
+article > table {
   border-radius: 0.1rem;
   background: #e5e9f2;
   border: 1px solid #c0ccda;
   padding: 0.1rem;
 }
 
-article table tr {
+article > table > tr {
   height: 40px !important;
 }
 
-article table th,
-td {
-  padding: 0.5rem;
+article > table > thead > tr > th {
+  padding: 0.5rem !important;
+  border-left: 1px solid #8392a5;
+  border-bottom: 1px solid #8392a5;
+}
+article > table > tbody > tr > td {
+  padding: 0.5rem !important;
   border-left: 1px solid #8392a5;
   border-bottom: 1px solid #8392a5;
 }
 
-article table thead tr {
+article > table > thead > tr {
   background: #248aaa;
   color: #e5e9f2;
 }
 
-article tbody tr:nth-child(odd) {
+article > tbody > tr:nth-child(odd) {
   background-color: #e5e9f2;
 }
 
-article tbody tr:hover {
+article > tbody > tr:hover {
   background: #c0ccda;
 }
 
@@ -217,12 +221,9 @@ figcaption {
 
 article pre {
   margin: 5px;
-  padding: 5%;
-  padding-left: 7%;
-  font-size: 18px;
+  padding: 2%;
   background-color: #1f618d !important;
   color: white;
-  border-radius: 1.5% !important;
 }
 
 article pre > code {

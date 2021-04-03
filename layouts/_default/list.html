@@ -20,7 +20,7 @@
             <h5 class="card-header m-0">
               {{ if .Params.tags }}
               {{ range .Params.tags }}
-              <a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}" class="btn btn-info btn-rounded mb-2">{{ . }}</a>
+              <a href={{ "/tags/" | relLangURL }}{{ . | urlize }} class="btn btn-info btn-rounded mb-2">{{ . }}</a>
               {{ end }}
               {{ end }}
             </h5>

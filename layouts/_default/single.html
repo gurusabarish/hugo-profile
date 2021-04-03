@@ -82,8 +82,6 @@
           <article>
             {{.Content}}
           </article>
-
-
         </div>
         <!-- Tags -->
         <div class="p-5">
@@ -92,7 +90,7 @@
             <div class="card-body">
               {{ if .Params.tags }}
               {{ range .Params.tags }}
-              <a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}" class="btn btn-outline-danger btn-rounded mb-2">
+              <a href={{ "/tags/" | relLangURL }}{{ . | urlize }} class="btn btn-outline-danger btn-rounded mb-2">
                 {{ . }}
               </a>
               {{ end }}

@@ -1,10 +1,15 @@
-baseURL: "https://hugo-profile.netlify.app"
+baseURL: "https://example.com"
 languageCode: "en-us"
 title: "Hugo-profile"
 
 googleanalytics: UA-167646412-8
 disqusShortname: gurusabarish
 Paginate: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 taxonomies:
   tag: "tags"
@@ -51,12 +56,12 @@ params:
     - logo: fas fa-robot
       title: Machine learning
       description: I train robust models for various tasks.
-      #url: https://example.com
+      #url: https://guru.com
 
     - logo: fab fa-html5
       title: Things for web
       description: I love to build things for web
-      #url: https://example.com
+      #url: https://guru.com
 
   #Description for seo. If you want to show description in your listing or single page, let's make it true
   showdescription: false
