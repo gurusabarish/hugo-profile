@@ -61,7 +61,7 @@ git clone https://github.com/gurusabarish/hugo-profile.git
 
 ## Configuration
 
-Configure your `config.yaml` file of your site as [here](https://github.com/gurusabarish/hugo-profile/blob/master/exampleSite/config.yaml):
+Configure your `config.yaml` file of your site as [here](https://github.com/gurusabarish/hugo-profile/blob/master/netlifysite/config.yaml)
 
 
 ## Archetypes support
@@ -70,12 +70,11 @@ Configure your `config.yaml` file of your site as [here](https://github.com/guru
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-github_link: "https://github.com/gurusabarish/hugo-profile"
 author: ""
-tags:
-  - 
+tags: 
 bg_image: ""
 description: ""
+toc: 
 ---
 ```
 
