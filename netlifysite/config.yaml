@@ -46,14 +46,17 @@ params:
     - logo: fab fa-python
       title: Python
       description: I build something beautiful using Python.
+      #url: https://example.com
 
     - logo: fas fa-robot
       title: Machine learning
       description: I train robust models for various tasks.
+      #url: https://example.com
 
     - logo: fab fa-html5
       title: Things for web
       description: I love to build things for web
+      #url: https://example.com
 
   #Description for seo. If you want to show description in your listing or single page, let's make it true
   showdescription: false

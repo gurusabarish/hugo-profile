@@ -121,18 +121,18 @@
                 <div class="col-md-8 text-center">
                     <div class="about-content text-dark p-3">
                         {{ if .Site.Params.descripe_l1_person }}
-                        {{ .Site.Params.descripe_l1_person }}
+                        {{ .Site.Params.descripe_l1_person | markdownify }}
                         {{ end }}
 
                         {{ if .Site.Params.descripe_l2_person }}
                         <br><br>
-                        {{ .Site.Params.descripe_l2_person }}
+                        {{ .Site.Params.descripe_l2_person | markdownify }}
                         {{ end }}
                     </div>
                     <div class="social px-3 text-center pb-4">
                         {{ if .Site.Params.useresume }}
-                        <a href="{{ .Site.Params.resumelink | default " #" }}" class="btn btn-outline-danger"
-                            role="button" aria-pressed="true">
+                        <a href={{ .Site.Params.resumelink | default "#" }} class="btn btn-outline-danger" role="button"
+                            aria-pressed="true">
                             {{ if .Site.Params.customname }}
                             {{ .Site.Params.customname }}
                             {{ else }}
