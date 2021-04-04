@@ -1,9 +1,9 @@
-baseURL: "https://hugo-profile.netlify.app"
+baseURL: "https://example.com"
 languageCode: "en-us"
 title: "Hugo-profile"
 
-googleanalytics: UA-167646412-8
-disqusShortname: gurusabarish
+googleanalytics: UA-xxxxxx-x
+disqusShortname:
 Paginate: 3
 
 markup:
