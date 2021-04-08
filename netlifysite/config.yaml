@@ -25,6 +25,8 @@ params:
   customMenus:
     - name: "Blog"
       Url: "/blog"
+    - name: "About"
+      Url: "/#"
 
   # social
   socialicontop: false

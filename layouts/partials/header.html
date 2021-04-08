@@ -15,10 +15,6 @@
 
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav ml-auto text-center">
-				<li class="nav-item navbar-text">
-					<a class="nav-link" href="{{ .Site.BaseURL | relURL }}#" aria-label="about">About</a>
-				</li>
-
 				{{ range site.Params.customMenus }}
 				<li class="nav-item  navbar-text">
 					<a class="nav-link" href="{{.Url}}" aria-label="{{ .name }}">{{ .name }}</a>
