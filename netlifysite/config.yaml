@@ -67,5 +67,5 @@ params:
 
   #Description for seo. If you want to show description in your listing or single page, let's make it true
   showdescription: false
-  tweet: true
+  tweet: false
   recentposts: true
