@@ -1,0 +1,45 @@
+{{ if .Site.Params.usedothings }}
+<section>
+  <div class="do-things text-center" id="do-things">
+    <div class="container">
+      <div class="things-i-do text-primary py-3 font-weight-bold">
+        Things I do
+      </div>
+
+      <div class="do-things-card">
+        <div class="row pb-2 justify-content-center">
+          {{ range .Site.Params.Things }}
+          {{ if .url }}
+          <div class="col-lg-3 col-md-4">
+            <a id="nothing" href={{ .url | default "#" }} class="">
+              <div class="things shadow rounded p-4 my-2 mb-4 card btn-outline-primary">
+                <i class="{{ .logo }} fa-3x" width="3em" height="3em"></i>
+                <div class="p-2 font-weight-bold">
+                  {{ .title }}
+                </div>
+                <div class="py-4 things-text">
+                  {{ .description }}
+                </div>
+              </div>
+            </a>
+          </div>
+          {{ else }}
+          <div class="col-lg-3 col-md-4">
+            <div class="things shadow rounded p-4 my-2 mb-4 card btn-outline-primary">
+              <i class="{{ .logo }} fa-3x" width="3em" height="3em"></i>
+              <div class="p-2 font-weight-bold">
+                {{ .title }}
+              </div>
+              <div class="py-4 things-text">
+                {{ .description }}
+              </div>
+            </div>
+          </div>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

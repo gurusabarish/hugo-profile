@@ -1,0 +1,27 @@
+<section id="education">
+  <div class="container-fluid py-3">
+    <div class="text-light text-center h3">Education</div>
+    <div class="row row-eq-height justify-content-center">
+      <div class="col-md-5 pl-5 py-3 pb-0 v-center">
+        <ul class="edu">
+          {{ range .Site.Params.education }}
+          <li class="py-2 edu-item">
+            <h5 style="font-size: 20px;">{{ .degree }} - {{ .branch }}</h5>
+            <div style="font-size: 15px;">
+              {{ .university }}
+            </div>
+            <div class="">
+              <small>{{ .startedyear }}</small>
+              -
+              <small>{{ .graduation}}</small>
+            </div>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="col-md-5 overflow-hidden py-3 d-none d-md-block">
+        <img class="edu-img" src="/education.svg">
+      </div>
+    </div>
+  </div>
+</section>

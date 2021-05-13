@@ -1,0 +1,143 @@
+.blog-title {
+  font-size: 48px;
+}
+
+#TableOfContents > ul li {
+  list-style-type: none;
+  font-size: 15px;
+}
+
+#TableOfContents > ul li a {
+  text-decoration: none;
+}
+
+.mincho-font {
+  font-family: "Shippori Mincho B1", serif;
+}
+
+article {
+  line-height: 1.756;
+  font-size: 18px;
+}
+
+article blockquote {
+  margin: 0 !;
+  border-left: 4px solid #248aaa !important;
+  background-color: #248baa15 !important;
+  padding: 0.3rem !important;
+  padding-left: 1rem !important;
+}
+
+article blockquote > p {
+  color: #3c4858 !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+article h1 {
+  font-size: 52px !important;
+  line-height: 1.15;
+}
+
+article h2 {
+  font-size: 32px;
+  line-height: 1.333;
+}
+
+article h3 {
+  font-size: 24px;
+  line-height: 1.45;
+}
+
+article h4,
+h5,
+h6 {
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+article > table {
+  border-radius: 0.1rem;
+  background: #e5e9f2;
+  border: 1px solid #c0ccda;
+  padding: 0.1rem;
+}
+
+article > table > tr {
+  height: 40px !important;
+}
+
+article > table > thead > tr > th {
+  padding: 0.5rem !important;
+  border-left: 1px solid #8392a5;
+  border-bottom: 1px solid #8392a5;
+}
+article > table > tbody > tr > td {
+  padding: 0.5rem !important;
+  border-left: 1px solid #8392a5;
+  border-bottom: 1px solid #8392a5;
+}
+
+article > table > thead > tr {
+  background: #248aaa;
+  color: #e5e9f2;
+}
+
+article > tbody > tr:nth-child(odd) {
+  background-color: #e5e9f2;
+}
+
+article > tbody > tr:hover {
+  background: #c0ccda;
+}
+
+article img {
+  width: 100%;
+}
+
+article caption,
+figcaption {
+  caption-side: bottom;
+  text-align: center;
+  color: #8392a5;
+}
+
+article pre {
+  margin: 5px;
+  padding: 2%;
+  background-color: #1f618d !important;
+  color: white;
+}
+
+article pre > code {
+  color: white;
+}
+
+article a.header-anchor {
+  text-decoration: none;
+  color: #1c2d41;
+}
+
+article a.header-anchor i {
+  font-size: 10pt;
+  color: #3c4858;
+  display: none;
+  margin-left: 0.5rem;
+}
+
+article a.header-anchor:hover i {
+  display: inline-block;
+}
+
+article a.header-anchor code {
+  color: #e83e8c;
+}
+
+article kbd {
+  background-color: #248aaa !important;
+  color: #f9fafc;
+}
+
+article mark {
+  background-color: #ffc21280;
+}

@@ -1,0 +1,129 @@
+baseURL: "https://example.com"
+languageCode: "en-us"
+title: "Hugo-profile"
+
+googleanalytics: UA-xxxxxx-x
+disqusShortname:
+Paginate: 3
+ignoreErrors: ["error-remote-getjson"]
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+enableEmoji: true
+params:
+  version: 3
+
+  favicon: "/images/fav.png"
+  description: "A high performance hugo theme for personal portfolio and blog."
+
+  # Navbar Menus
+  customMenus:
+    - name: "About"
+      Url: "/#about"
+    - name: "Experience"
+      Url: "/#experience"
+    - name: "Education"
+      Url: "/#education"
+    - name: "Projects"
+      Url: "/#projects"
+    - name: "Contact"
+      Url: "/#contact"
+    - name: Achievements
+      Url: "/#achievements"
+    - name: "Blog"
+      Url: "/blog"
+
+  # home
+  socialiconfooter: true
+  disablehome: false
+  profile_image: "/images/gurusabarish.webp"
+  name: "Gurusabarish"
+  profession: "Full stack developer"
+  github: "https://github.com/gurusabarish"
+  linkedin: "https://linkedin.com/in/gurusabarish"
+  twitter: "https://twitter.com/gurusabarishh"
+  instagram: "https://instagram.com/gurusabarishh"
+  facebook: "https://facebook.com"
+
+  # About
+  descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+  descripe_l2_person: "I started my career as a web developer back in 2020 when try to make a blog for me. You can find my works [here](#projects)"
+  skills:
+    - name: CSS
+      percentage: 90
+    - name: Django
+      percentage: 85
+    - name: Hugo
+      percentage: 80
+    - name: React JS
+      percentage: 70
+
+  # Experience
+  experience:
+    - company: "Google"
+      role: "Software developer"
+      startdate: Feb 2021
+      enddate: April 2021
+      featuredpoints:
+        - point: It's a very good experience.
+        - point: It's a very good experience.
+        - point: It's a very good experience.
+    - company: "Googlye"
+      role: "Software developer"
+      startdate: Feb 2021
+      enddate: April 2021
+      featuredpoints:
+        - point: It's a very good experience.It's a very good experience.It's a very good experience.
+        - point: It's a very good experience.
+        - point: It's a very good experience.
+    - company: "Gootgle"
+      role: "Software developer"
+      startdate: Feb 2021
+      enddate: April 2021
+      featuredpoints:
+        - point: It's a very good experience.
+        - point: It's a very good experience.
+        - point: It's a very good experience.
+
+  # Education
+  education:
+    - degree: "B.tech"
+      branch: "Information Technology"
+      university: "Bannari Amman Institute Of Technology"
+      startedyear: "2021"
+      graduation: "2023"
+    - degree: "B.tech"
+      branch: "Information Technology"
+      university: "Bannari Amman Institute Of Technology"
+      startedyear: "2021"
+      graduation: "2023"
+    - degree: "B.tech"
+      branch: "Information Technology"
+      university: "Bannari Amman Institute Of Technology"
+      startedyear: "2021"
+      graduation: "2023"
+
+  # Projects
+  projects:
+    - name: "hugo profile"
+      img: https://blog.gurusabarish.tech/blog/deploy-hugo/hero.jpg
+      githublink: ""
+      featuredlink: ""
+      description: ""
+
+  # Achievements
+  achievements:
+    - title: Techfest winner
+      description: It's a great experience.
+      img: https://blog.gurusabarish.tech/blog/deploy-hugo/hero.jpg
+
+  #Description for seo. If you want to show description in your listing or single page, let's make it true
+  showdescription: false
+  tweet: true
+  recentposts: true

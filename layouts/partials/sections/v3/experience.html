@@ -1,0 +1,100 @@
+<section id="experience">
+  <div class="container-fluid pt-3">
+    <div class="text-light text-center h3">Experience</div>
+
+    <div class="row justify-content-center py-md-5">
+      <div class="d-md-none d-lg-none d-sm-block">
+        <ol class="ex-ol pl-5 pr-3">
+          {{ range .Site.Params.experience }}
+          <li class="ex-ol-li">
+            <h4>
+              <span class="text-primary">{{ .company }}</span> - {{ .role }}
+            </h4>
+            <div>
+              <small>{{ .startdate}}</small>
+              -
+              <small>{{ .enddate }}</small>
+            </div>
+            <ul class="py-2 ex-ol-ul">
+              {{ range .featuredpoints }}
+              <li class="ex-ol-item">{{ .point }}</li>
+              {{ end }}
+            </ul>
+          </li>
+          {{ end }}
+
+        </ol>
+      </div>
+
+      <div id="nav-pills-out" class="d-none d-md-block nav flex-column nav-pills col-md-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        {{ range $index, $element := .Site.Params.experience }}
+        {{ if (eq $index 0) }}
+        <a class="nav-link active" id="{{ .company }}-tab" data-toggle="pill" href="#{{ .company }}" role="tab" aria-controls="{{ .company }}" aria-selected="true">
+          {{ .company }}
+        </a>
+        {{ else }}
+        <a class="nav-link" id="{{ .company }}-tab" data-toggle="pill" href="#{{ .company }}" role="tab" aria-controls="{{ .company }}" aria-selected="false">
+          {{ .company }}
+        </a>
+        {{ end }}
+        {{ end }}
+      </div>
+
+      <div class="tab-content col-md-5 d-none d-md-block" id="v-pills-tabContent">
+        {{ range $index, $element := .Site.Params.experience }}
+        {{ if (eq $index 0) }}
+        <div class="tab-pane fade show active" id="{{ .company }}" role="tabpanel" aria-labelledby="{{ .company }}-tab">
+          <div class="h4">
+            <span class="text-primary">{{ .company }}</span> - {{ .role }}
+          </div>
+          <div>
+            <small>{{ .startdate }}</small>
+            -
+            <small>{{ .enddate }}</small>
+          </div>
+          <ul class="py-2 ex">
+            {{ range .featuredpoints }}
+            <li class="ex-item">{{ .point }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ else }}
+        <div class="tab-pane fade" id="{{ .company }}" role="tabpanel" aria-labelledby="{{ .company }}-tab">
+          <div class="h4">
+            <span class="text-primary">{{ .company }}</span> - {{ .role }}
+          </div>
+          <div>
+            <small>{{ .startdate }}</small>
+            -
+            <small>{{ .enddate }}</small>
+          </div>
+          <ul class="py-2 ex">
+            {{ range .featuredpoints }}
+            <li class="ex-item">{{ .point }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+
+        {{ end }}
+
+        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+          <div class="h4">
+            <span class="text-primary">Google</span> - Software developer
+          </div>
+          <div>
+            <small>Feb 2019</small>
+            -
+            <small>Sep 2020</small>
+          </div>
+          <ul class="py-2 ex">
+            <li class="ex-item">Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+            <li class="ex-item">Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

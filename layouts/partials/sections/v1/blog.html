@@ -1,0 +1,23 @@
+<section>
+  <div class="p-3 blog-back">
+    <div class="container">
+      <div class="text-center pb-3">
+        <div class="recent-posts">Recent posts</div>
+      </div>
+      <div class="container">
+        <div class="row">
+          {{ range first 4 (where site.RegularPages.ByDate.Reverse "Type" "in" site.Params.mainSections )}}
+          <div class="col-lg-3 col-md-5 pb-3 post-card text-center">
+            <a href="{{ .RelPermalink }}">
+              <span class="text-secondary">{{ .Date.Format "January 2, 2006" }}</span>
+              <div class="text-dark">
+                {{ .Title }}
+              </div>
+            </a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+{{ if .Site.Params.contact }}
+<section id="contact">
+  <div class="contact bg-danger text-white">
+    <div class="text-center p-3 font-weight-bold contact-head">Get In Tough</div>
+    <div class="p-3 container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <form action="{{ .Site.Params.action }}">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your name" name="{{ .Site.Params.emailname }}">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="example@gmail.com" name="{{ .Site.Params.emailname }}">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="3" name="{{ .Site.Params.messagename }}" placeholder="Type something"></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,15 +1,87 @@
-{{ define "head" }}
-<title>{{- .Site.Title -}}</title>
-<meta name="description" content="{{ .Site.Params.description }}">
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"
-    media="all">
-{{ template "_internal/google_analytics.html" . }}
+<!DOCTYPE html>
+<html lang="en">
+{{ if eq .Site.Params.version 1 }}
+
+<head>
+  <title>{{- .Site.Title -}}</title>
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/all.min.css" media="all">
+  <link rel="stylesheet" href="/css/fontawesome.min.css" media="all">
+  <link rel="stylesheet" href="/css/v1/v1.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <meta name="description" content="{{ .Site.Params.description }}">
+  {{ template "_internal/google_analytics.html" . }}
+  {{- partial "sections/v1/head.html" . -}}
+</head>
+
+<body>
+  {{- partial "sections/v1/home.html" . -}}
+  {{- partial "sections/v1/blog.html" . -}}
+  {{- partial "sections/v1/about.html" . -}}
+  {{- partial "sections/v1/do_things.html" . -}}
+  {{- partial "sections/v1/projects.html" . -}}
+  {{- partial "sections/v1/contact.html" . -}}
+
+  {{- partial "sections/v1/footer.html" . -}}
+  {{- partial "sections/v1/scripts.html" . -}}
+</body>
+{{ else if eq .Site.Params.version 2 }}
+
+<head>
+  <title>{{- .Site.Title -}}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" media="all">
+  {{ template "_internal/google_analytics.html" . }}
+  {{- partial "sections/v2/head.html" . -}}
+</head>
+
+<body>
+  {{- partial "sections/v2/header.html" . -}}
+  {{- partial "sections/v2/about.html" . -}}
+  {{- partial "sections/v2/do_things.html" . -}}
+  {{- partial "sections/v2/footer.html" . -}}
+  {{- partial "sections/v2/scripts.html" . -}}
+</body>
+
+{{ else if eq .Site.Params.version 3 }}
+
+<head>
+  <title>{{- .Site.Title -}}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" media="all">
+  {{ template "_internal/google_analytics.html" . }}
+  {{- partial "sections/v3/head.html" . -}}
+</head>
+
+<body>
+
+  {{- partial "sections/v3/navbar.html" . -}}
+
+  {{ if .Site.Params.disablehome }}
+  {{ else }}
+  {{- partial "sections/v3/home.html" . -}}
+  {{ end }}
+  {{- partial "sections/v3/about.html" . -}}
+  {{- partial "sections/v3/experience.html" . -}}
+  {{- partial "sections/v3/education.html" . -}}
+  {{- partial "sections/v3/projects.html" . -}}
+  {{- partial "sections/v3/contact.html" . -}}
+  {{- partial "sections/v3/achievements.html" . -}}
+  {{- partial "sections/v3/footer.html" . -}}
+  {{- partial "sections/v3/scripts.html" . -}}
+
+  <script src="js/contact.js"></script>
+</body>
+{{ else }}
+guru{{ .Site.Params.github }}
+
 {{ end }}
 
-
-{{ define "main" }}
-{{- partial "sections/about.html" . -}}
-{{- partial "sections/do_things.html" . -}}
-{{ end }}
+</html>

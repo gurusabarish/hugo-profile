@@ -2,15 +2,39 @@
 <html lang="en">
 
 <head>
-    {{- partial "head.html" . -}}
-    {{- block "head" . -}}{{- end }}
+  {{ if eq .Site.Params.version 1 }}
+  {{- partial "sections/v1/head.html" . -}}
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/v1/head_foot.css" rel="stylesheet">
+  {{- block "head" . -}}{{- end }}
+
+  {{ else if eq .Site.Params.version 2 }}
+  {{- partial "sections/v2/head.html" . -}}
+  {{- block "head" . -}}{{- end }}
+  {{ else if eq .Site.Params.version 3 }}
+  {{ else }}
+  {{ end }}
+
 </head>
 
-<body class="bg-white">
-    {{- partial "scripts.html" . -}}
-    {{- partial "header.html" . -}}
-    {{- block "main" . -}}{{- end }}
-    {{- partial "footer.html" . -}}
+<body>
+  {{ if eq .Site.Params.version 1 }}
+  {{- partial "sections/v1/scripts.html" . -}}
+  {{- partial "sections/v1/header1.html" . -}}
+  {{- block "main" . -}}{{- end }}
+  {{- partial "sections/v1/footer.html" . -}}
+
+  {{ else if eq .Site.Params.version 2 }}
+  {{- partial "sections/v2/scripts.html" . -}}
+  {{- partial "sections/v2/header.html" . -}}
+  {{- block "main" . -}}{{- end }}
+  {{- partial "sections/v2/footer.html" . -}}
+
+  {{ else if eq .Site.Params.version 3 }}
+  {{ else }}
+  {{ end }}
+
+
 </body>
 
 </html>

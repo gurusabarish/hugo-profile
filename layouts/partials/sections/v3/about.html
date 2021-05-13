@@ -1,0 +1,33 @@
+<div id="about" class="pt-3">
+  <div class="container-fluid">
+    <div class="text-light text-center h3">About Me</div>
+    <div class="row justify-content-center about">
+      <div class="col-md-6 about-content">
+        <div class="px-2" style="color: #8892b0;">
+          {{ .Site.Params.descripe_l1_person | markdownify }}
+          <br>
+          <br>
+          {{ .Site.Params.descripe_l2_person | markdownify }}
+        </div>
+        <div class="py-3 pl-2">
+          <a href="#contact" class="contact-btn btn">
+            Get In Touch
+          </a>
+        </div>
+
+      </div>
+      <div class="col-md-5 about-skill">
+        <div class="text-secondary text-center h4">Skills</div>
+        {{ range .Site.Params.skills }}
+        <div style="color: rgb(230, 241, 255)">
+          {{ .name }}
+        </div>
+        <div class="progress mb-4">
+          <div class="progress-bar" role="progressbar" style="width: {{ .percentage }}%;" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</div>
