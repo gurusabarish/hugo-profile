@@ -9,11 +9,14 @@
           <br>
           {{ .Site.Params.descripe_l2_person | markdownify }}
         </div>
+        {{ if .Site.Params.email }}
         <div class="py-3 pl-2">
-          <a href="#contact" class="contact-btn btn">
+          <a href="mailto:{{ .Site.Params.email }}?subject=Say hi!" class="contact-btn btn">
             Get In Touch
           </a>
         </div>
+        {{ end }}
+
 
       </div>
       <div class="col-md-5 about-skill">

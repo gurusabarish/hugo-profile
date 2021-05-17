@@ -123,6 +123,9 @@ params:
       description: It's a great experience.
       img: https://blog.gurusabarish.tech/blog/deploy-hugo/hero.jpg
 
+  # Contact
+  email: "gurusabarisha@gmail.com"
+
   #Description for seo. If you want to show description in your listing or single page, let's make it true
   showdescription: false
   tweet: true

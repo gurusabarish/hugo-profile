@@ -2,32 +2,19 @@
   <div class="container-fluid py-3">
     <div class="text-light text-center h3">Get In Touch</div>
     <div class="row justify-content-center px-md-5">
-      <div class="py-5 overflow-hidden col-md-4 d-none d-md-block">
-        <img class="contact-img" src="/contact.svg" />
+      <div class="col-md-6 py-3">
+        <div class=" text-center">
+          Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+        </div>
+        {{ if .Site.Params.email }}
+        <div class="text-center pt-3">
+          <a href="mailto:{{ .Site.Params.email }}?subject=Say hi!" class="contact-btn btn">
+            Get In Touch
+          </a>
+        </div>
+        {{ end }}
       </div>
-      <div class="py-5 col-md-5">
-        <form class="text-secondary px-3" method="get">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
-          </div>
 
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="example@email.com">
-            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-
-          <div class="form-group">
-            <label for="text">Content</label>
-            <textarea class="form-control" placeholder="Type Something ...." id="text" rows="3"></textarea>
-          </div>
-
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </form>
-      </div>
     </div>
   </div>
 </section>
