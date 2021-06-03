@@ -1,19 +1,22 @@
 <div class="container-fluid home">
   <div class="py-5">
-    <div class="row justify-content-center intro">
+    <div class="row justify-content-center intro" data-aos="fade-down" data-aos-easing="linear"
+      data-aos-duration="1000">
       <div class="col-md-7 name-container">
-        <div class="name">
-          <div class="text-warning" style="font-size: 15px;">
+        <div class="name" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000">
+          <div class="text-warning" style="font-size: 15px;" data-aos="fade-up" data-aos-offset="50" data-aos-delay="50"
+            data-aos-duration="900">
             Hi there, I'm
           </div>
-          <h1 class="text-primary">
+          <h1 class="text-primary" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="900">
             {{ .Site.Params.name }}
           </h1>
-          <h5 class="text-light">
+          <h5 class="text-light" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="900">
             {{ .Site.Params.profession }}
           </h5>
         </div>
-        <div class="row social pt-4">
+        <div class="row social pt-4" data-aos="fade-up" data-aos-offset="50" data-aos-delay="50"
+          data-aos-duration="900">
           {{ if .Site.Params.github }}
           <a href="{{ .Site.Params.github }}" class="social-icon">
             <i class="fab fa-lg fa-github"></i>
@@ -50,7 +53,8 @@
       </div>
       <div class="col-md-5 text-center">
         {{ if .Site.Params.profile_image }}
-        <img class="profile rounded shadow-lg" src="{{ .Site.Params.profile_image }}" alt="{{ .Site.Params.name }}" class="rounded">
+        <img class="profile rounded shadow-lg" data-aos="zoom-in" data-aos-once="true"
+          src="{{ .Site.Params.profile_image }}" alt="{{ .Site.Params.name }}" class="rounded">
         {{ end }}
       </div>
 

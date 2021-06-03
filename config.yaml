@@ -112,16 +112,16 @@ params:
   # Projects
   projects:
     - name: "hugo profile"
-      img: https://blog.gurusabarish.tech/blog/deploy-hugo/hero.jpg
-      githublink: ""
-      featuredlink: ""
-      description: ""
+      img: https://gurusabarish.tech/static/d6ef67298140446c6f2e94b8b38ff25c/15384/hugo.webp
+      githublink: "https://github.com/gurusabarish/hugo-profile"
+      featuredlink: "https://github.com/gurusabarish/hugo-profile"
+      description: "Build your website with “Hugo” comment Go to the terminal and type “hugo” "
 
   # Achievements
   achievements:
     - title: Techfest winner
       description: It's a great experience.
-      img: https://blog.gurusabarish.tech/blog/deploy-hugo/hero.jpg
+      img: https://gurusabarish.tech/static/d6ef67298140446c6f2e94b8b38ff25c/15384/hugo.webp
 
   # Contact
   email: "gurusabarisha@gmail.com"

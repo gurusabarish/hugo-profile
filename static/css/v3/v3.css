@@ -1,5 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #0a192f;
 }
 a:hover {
   text-decoration: none;
@@ -23,9 +27,6 @@ a:hover {
 }
 
 /* v3 home */
-.home {
-  background-color: #0a192f;
-}
 .name {
   padding-left: 3%;
   border-left: 5px solid #f9fafc;
@@ -89,9 +90,6 @@ a:hover {
 }
 
 /* v3 about */
-#about {
-  background-color: #0a192f;
-}
 .about {
   padding-top: 3% !important;
   padding-bottom: 3% !important;
@@ -128,9 +126,6 @@ a:hover {
 }
 
 /* v3 projects */
-#projects {
-  background-color: #0a192f;
-}
 .bg-pro {
   padding: 0 !important;
   opacity: 0.6;
@@ -178,7 +173,7 @@ a:hover {
     color: #f9fafc;
   }
   .card-text {
-    color: #8892b0;
+    color: #faf9f6;
   }
   .pro:hover .content-pro {
     background-color: transparent !important;
@@ -196,7 +191,6 @@ a:hover {
 /* v3 experience */
 #experience {
   color: #8892b0;
-  background-color: #0a192f;
 }
 #nav-pills-out {
   border-left: 1px solid #f9fafc;
@@ -261,7 +255,6 @@ a:hover {
 
 /* v3 education */
 #education {
-  background-color: #0a192f;
   color: #8892b0;
 }
 .v-center {
@@ -297,7 +290,7 @@ a:hover {
     color: #f9fafc;
   }
   .edu-item {
-    padding-left: 0%;
+    padding-left: 2%;
     list-style: none;
   }
   .edu-img {
@@ -326,9 +319,6 @@ a:hover {
 }
 
 /* v3 Achievements */
-#achievements {
-  background-color: #0a192f;
-}
 .achiv-card {
   height: 300px;
   width: 100%;
@@ -359,14 +349,12 @@ a:hover {
 
 /* v3 contact */
 #contact {
-  background-color: #0a192f;
   color: #8892b0;
   font-size: 17px;
 }
 
 /* v2 and v3 footer */
 footer {
-  background-color: #0a192f;
   color: #8392a5;
   border-top-width: 1px !important;
   border-color: #8392a5;

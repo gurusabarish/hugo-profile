@@ -1,9 +1,9 @@
-<section id="projects">
-  <div class="container-fluid py-3">
+<section id="projects" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+  <div class="container-fluid py-3 pt-5">
     <div class="text-light text-center h3">Projects</div>
     <div class="row justify-content-center pt-2">
       {{ range ( where .Site.RegularPages "Type" "project" ) }}
-      <div class="col-md-8 pro m-3 shadow">
+      <div class="col-md-8 pro m-3 shadow" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
         <div class="row">
           <div class="col-md-6 bg-pro">
             <img src='{{ .Params.img }}' alt="{{ .Title }}">
@@ -35,7 +35,7 @@
       </div>
       {{ end }}
       {{ range .Site.Params.projects }}
-      <div class="col-md-8 pro m-3 shadow">
+      <div class="col-md-8 pro m-3 shadow" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
         <div class="row">
           <div class="col-md-6 bg-pro">
             <img src='{{ .img }}' alt="{{ .name }}">

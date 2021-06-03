@@ -1,4 +1,5 @@
-<nav style="background-color: #0a192f;" class="pt-3 navbar-home navbar navbar-expand-lg navbar-dark">
+<nav style="background-color: #0a192f;" class="pt-3 navbar-home navbar navbar-expand-lg navbar-dark"
+  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
   <div class="container">
     <a class="navbar-brand" href="{{ .Site.BaseURL | relURL }}">
       {{ if .Site.Params.favicon }}
@@ -8,7 +9,8 @@
       {{ .Site.Title }}
       {{ end }}
     </a>
-    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -16,7 +18,7 @@
       <ul class="navbar-nav ml-auto text-center">
         {{ range site.Params.customMenus }}
         <li class="nav-item navbar-text">
-          <a class="nav-link " href="{{.Url}}" aria-label="{{ .name }}">{{ .name }}</a>
+          <a class="nav-link" href="{{.Url}}" aria-label="{{ .name }}">{{ .name }}</a>
         </li>
         {{ end }}
       </ul>

@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="/css/all.min.css" media="all">
   <link rel="stylesheet" href="/css/fontawesome.min.css" media="all">
   <link rel="stylesheet" href="/css/v1/v1.css">
-
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
   <meta name="description" content="{{ .Site.Params.description }}">
@@ -35,7 +34,8 @@
   <meta name="description" content="{{ .Site.Params.description }}">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" media="all">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"
+    media="all">
   {{ template "_internal/google_analytics.html" . }}
   {{- partial "sections/v2/head.html" . -}}
 </head>
@@ -55,28 +55,36 @@
   <meta name="description" content="{{ .Site.Params.description }}">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" media="all">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"
+    media="all">
   {{ template "_internal/google_analytics.html" . }}
   {{- partial "sections/v3/head.html" . -}}
+
+  <!-- aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <div>
+    {{- partial "sections/v3/navbar.html" . -}}
 
-  {{- partial "sections/v3/navbar.html" . -}}
-
-  {{ if .Site.Params.disablehome }}
-  {{ else }}
-  {{- partial "sections/v3/home.html" . -}}
-  {{ end }}
-  {{- partial "sections/v3/about.html" . -}}
-  {{- partial "sections/v3/experience.html" . -}}
-  {{- partial "sections/v3/education.html" . -}}
-  {{- partial "sections/v3/projects.html" . -}}
-  {{- partial "sections/v3/achievements.html" . -}}
-  {{- partial "sections/v3/contact.html" . -}}
-  {{- partial "sections/v3/footer.html" . -}}
-  {{- partial "sections/v3/scripts.html" . -}}
-
+    {{ if .Site.Params.disablehome }}
+    {{ else }}
+    {{- partial "sections/v3/home.html" . -}}
+    {{ end }}
+    {{- partial "sections/v3/about.html" . -}}
+    {{- partial "sections/v3/experience.html" . -}}
+    {{- partial "sections/v3/education.html" . -}}
+    {{- partial "sections/v3/projects.html" . -}}
+    {{- partial "sections/v3/achievements.html" . -}}
+    {{- partial "sections/v3/contact.html" . -}}
+    {{- partial "sections/v3/footer.html" . -}}
+    {{- partial "sections/v3/scripts.html" . -}}
+  </div>
 </body>
 {{ else }}
 

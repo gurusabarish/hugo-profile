@@ -1,4 +1,4 @@
-<div id="about" class="pt-3">
+<div id="about" class="pt-3" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
   <div class="container-fluid">
     <div class="text-light text-center h3">About Me</div>
     <div class="row justify-content-center about">
@@ -26,7 +26,8 @@
           {{ .name }}
         </div>
         <div class="progress mb-4">
-          <div class="progress-bar" role="progressbar" style="width: {{ .percentage }}%;" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="progress-bar" role="progressbar" style="width: {{ .percentage }}%;" aria-valuemin="0"
+            aria-valuemax="100"></div>
         </div>
         {{ end }}
       </div>
