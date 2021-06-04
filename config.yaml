@@ -24,24 +24,11 @@ params:
 
   # Navbar Menus
   customMenus:
-    - name: "About"
-      Url: "/#about"
-    - name: "Experience"
-      Url: "/#experience"
-    - name: "Education"
-      Url: "/#education"
-    - name: "Projects"
-      Url: "/#projects"
-    - name: "Contact"
-      Url: "/#contact"
-    - name: Achievements
-      Url: "/#achievements"
     - name: "Blog"
       Url: "/blog"
 
   # home
-  socialiconfooter: true
-  disablehome: false
+  disable_home: false
   profile_image: "/images/gurusabarish.webp"
   name: "Gurusabarish"
   profession: "Full stack developer"
@@ -52,6 +39,7 @@ params:
   facebook: "https://facebook.com"
 
   # About
+  disable_about: false
   descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
   descripe_l2_person: "I started my career as a web developer back in 2020 when try to make a blog for me. You can find my works [here](#projects)"
   skills:
@@ -65,6 +53,7 @@ params:
       percentage: 70
 
   # Experience
+  disable_experience: false
   experience:
     - company: "Google"
       role: "Software developer"
@@ -92,6 +81,7 @@ params:
         - point: It's a very good experience.
 
   # Education
+  disable_education: false
   education:
     - degree: "B.tech"
       branch: "Information Technology"
@@ -110,6 +100,7 @@ params:
       graduation: "2023"
 
   # Projects
+  disable_projects: false
   projects:
     - name: "hugo profile"
       img: https://gurusabarish.tech/static/d6ef67298140446c6f2e94b8b38ff25c/15384/hugo.webp
@@ -118,13 +109,27 @@ params:
       description: "Build your website with “Hugo” comment Go to the terminal and type “hugo” "
 
   # Achievements
+  disable_achievements: false
   achievements:
+    - title: Techfest winner
+      description: It's a great experience.
+      img: https://gurusabarish.tech/static/d6ef67298140446c6f2e94b8b38ff25c/15384/hugo.webp
+    - title: Techfest winner
+      description: It's a great experience.
+      img: https://gurusabarish.tech/static/d6ef67298140446c6f2e94b8b38ff25c/15384/hugo.webp
+    - title: Techfest winner
+      description: It's a great experience.
+      img: https://gurusabarish.tech/static/d6ef67298140446c6f2e94b8b38ff25c/15384/hugo.webp
     - title: Techfest winner
       description: It's a great experience.
       img: https://gurusabarish.tech/static/d6ef67298140446c6f2e94b8b38ff25c/15384/hugo.webp
 
   # Contact
+  disable_contact: false
   email: "gurusabarisha@gmail.com"
+
+  # Footer
+  socialiconfooter: true
 
   #Description for seo. If you want to show description in your listing or single page, let's make it true
   showdescription: false

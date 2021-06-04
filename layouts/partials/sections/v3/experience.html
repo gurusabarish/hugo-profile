@@ -1,4 +1,4 @@
-<section id="experience" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+<section id="experience" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
   <div class="container-fluid pt-5">
     <div class="text-light text-center h3">Experience</div>
 
@@ -6,7 +6,7 @@
       <div class="d-md-none d-lg-none d-sm-block">
         <ol class="ex-ol pl-5 pr-3">
           {{ range .Site.Params.experience }}
-          <li class="ex-ol-li">
+          <li class="ex-ol-li" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
             <h4>
               <span class="text-primary">{{ .company }}</span> - {{ .role }}
             </h4>
@@ -80,23 +80,6 @@
         {{ end }}
 
         {{ end }}
-
-        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-          <div class="h4">
-            <span class="text-primary">Google</span> - Software developer
-          </div>
-          <div>
-            <small>Feb 2019</small>
-            -
-            <small>Sep 2020</small>
-          </div>
-          <ul class="py-2 ex">
-            <li class="ex-item">Write modern, performant, maintainable code for a diverse array of client and internal
-              projects</li>
-            <li class="ex-item">Write modern, performant, maintainable code for a diverse array of client and internal
-              projects</li>
-          </ul>
-        </div>
       </div>
 
     </div>

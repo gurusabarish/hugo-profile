@@ -9,6 +9,32 @@ a:hover {
   text-decoration: none;
 }
 
+/*loader */
+#loader {
+  position: fixed;
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 /* v3 navbar */
 .navbar-brand {
   color: #007bff !important;
@@ -18,9 +44,6 @@ a:hover {
 }
 .navbar .nav-link:hover {
   color: #007bff !important;
-}
-.navbar-home {
-  border-top: 5px solid #ff69b4;
 }
 .navbar-text {
   font-size: 16px !important;
@@ -61,10 +84,6 @@ a:hover {
   padding-left: 15%;
 }
 .profile {
-  filter: gray;
-  -webkit-filter: sepia(70%);
-  filter: sepia(70%);
-  cursor: pointer;
   padding: 1%;
   border: 1px solid #f9fafc;
   width: 250px;
@@ -319,16 +338,15 @@ a:hover {
 }
 
 /* v3 Achievements */
+.achiv-card:hover {
+  filter: grayscale(100%);
+}
 .achiv-card {
   height: 300px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  filter: grayscale(100%);
-}
-.achiv-card:hover {
-  filter: none;
 }
 .achiv {
   min-height: 40%;

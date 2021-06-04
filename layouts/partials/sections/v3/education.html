@@ -1,11 +1,12 @@
-<section id="education" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+<section id="education" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
   <div class="container-fluid py-3 pt-5">
     <div class="text-light text-center h3">Education</div>
     <div class="row row-eq-height justify-content-center">
       <div class="col-md-5 pl-5 py-3 pb-0 v-center">
         <ul class="edu">
           {{ range .Site.Params.education }}
-          <li class="py-2 edu-item">
+          <li class="py-2 edu-item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600"
+            data-aos-once="true">
             <h5 style="font-size: 20px;">{{ .degree }} - {{ .branch }}</h5>
             <div style="font-size: 15px;">
               {{ .university }}
