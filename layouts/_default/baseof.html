@@ -12,6 +12,8 @@
   {{- partial "sections/v2/head.html" . -}}
   {{- block "head" . -}}{{- end }}
   {{ else if eq .Site.Params.version 3 }}
+  {{- partial "sections/v3/head.html" . -}}
+  {{- block "head" . -}}{{- end }}
   {{ else }}
   {{ end }}
 
@@ -31,6 +33,10 @@
   {{- partial "sections/v2/footer.html" . -}}
 
   {{ else if eq .Site.Params.version 3 }}
+  {{- partial "sections/v3/scripts.html" . -}}
+  {{- partial "sections/v3/navbar.html" . -}}
+  {{- block "main" . -}}{{- end }}
+  {{- partial "sections/v3/footer.html" . -}}
   {{ else }}
   {{ end }}
 

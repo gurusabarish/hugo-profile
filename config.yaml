@@ -5,7 +5,6 @@ title: "Hugo-profile"
 googleanalytics: UA-xxxxxx-x
 disqusShortname:
 Paginate: 3
-ignoreErrors: ["error-remote-getjson"]
 markup:
   goldmark:
     renderer:
@@ -29,19 +28,19 @@ params:
 
   # home
   disable_home: false
-  profile_image: "/images/gurusabarish.webp"
-  name: "Gurusabarish"
-  profession: "Full stack developer"
-  github: "https://github.com/gurusabarish"
-  linkedin: "https://linkedin.com/in/gurusabarish"
-  twitter: "https://twitter.com/gurusabarishh"
-  instagram: "https://instagram.com/gurusabarishh"
+  profile_image: "/images/profile.webp"
+  name: "Example name"
+  profession: "Profession"
+  github: "https://github.com"
+  linkedin: "https://linkedin.com"
+  twitter: "https://twitter.com/"
+  instagram: "https://instagram.com/"
   facebook: "https://facebook.com"
 
   # About
   disable_about: false
-  descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
-  descripe_l2_person: "I started my career as a web developer back in 2020 when try to make a blog for me. You can find my works [here](#projects)"
+  descripe_l1_person: "Hi, I'm Profile, a passionate web developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+  descripe_l2_person: "This is a example template for about section. You can find my works [here](#projects)"
   skills:
     - name: CSS
       percentage: 90
@@ -58,80 +57,78 @@ params:
     - company: "Google"
       role: "Software developer"
       startdate: Feb 2021
-      enddate: April 2021
+      enddate: present
       featuredpoints:
-        - point: It's a very good experience.
-        - point: It's a very good experience.
-        - point: It's a very good experience.
-    - company: "Googlye"
-      role: "Software developer"
-      startdate: Feb 2021
-      enddate: April 2021
+        - point: Lead backend developer for a product.
+        - point: Created a frontend design for a product.
+    - company: "Facebook"
+      role: "Fullstack developer"
+      startdate: Mar 2020
+      enddate: Dec 2020
       featuredpoints:
-        - point: It's a very good experience.It's a very good experience.It's a very good experience.
-        - point: It's a very good experience.
-        - point: It's a very good experience.
-    - company: "Gootgle"
-      role: "Software developer"
-      startdate: Feb 2021
-      enddate: April 2021
+        - point: Lead backend developer for a product.
+        - point: Created a frontend design for a product.
+    - company: "Amazon"
+      role: "Fullstack developer"
+      startdate: Feb 2019
+      enddate: Jan 2020
       featuredpoints:
-        - point: It's a very good experience.
-        - point: It's a very good experience.
-        - point: It's a very good experience.
+        - point: Lead backend developer for a product.
+        - point: Created a frontend design for a product.
 
   # Education
   disable_education: false
   education:
     - degree: "B.tech"
       branch: "Information Technology"
-      university: "Bannari Amman Institute Of Technology"
-      startedyear: "2021"
-      graduation: "2023"
-    - degree: "B.tech"
-      branch: "Information Technology"
-      university: "Bannari Amman Institute Of Technology"
-      startedyear: "2021"
-      graduation: "2023"
-    - degree: "B.tech"
-      branch: "Information Technology"
-      university: "Bannari Amman Institute Of Technology"
-      startedyear: "2021"
-      graduation: "2023"
+      university: "Example university"
+      startedyear: "2013"
+      graduation: "2018"
+    - degree: "Degree"
+      branch: "Branch"
+      university: "Example university"
+      startedyear: "year"
+      graduation: "year"
+    - degree: "Degree"
+      branch: "Branch"
+      university: "Example university"
+      startedyear: "year"
+      graduation: "year"
 
   # Projects
   disable_projects: false
   projects:
-    - name: "hugo profile"
-      img: https://gurusabarish.tech/static/d6ef67298140446c6f2e94b8b38ff25c/15384/hugo.webp
-      githublink: "https://github.com/gurusabarish/hugo-profile"
-      featuredlink: "https://github.com/gurusabarish/hugo-profile"
-      description: "Build your website with “Hugo” comment Go to the terminal and type “hugo” "
+    - name: "Example project without details"
+      img: /images/project.jpg
+      githublink: "https://github.com/"
+      featuredlink: "/"
+      description: "Description of project"
 
   # Achievements
   disable_achievements: false
   achievements:
-    - title: Techfest winner
-      description: It's a great experience.
-      img: https://gurusabarish.tech/static/d6ef67298140446c6f2e94b8b38ff25c/15384/hugo.webp
-    - title: Techfest winner
-      description: It's a great experience.
-      img: https://gurusabarish.tech/static/d6ef67298140446c6f2e94b8b38ff25c/15384/hugo.webp
-    - title: Techfest winner
-      description: It's a great experience.
-      img: https://gurusabarish.tech/static/d6ef67298140446c6f2e94b8b38ff25c/15384/hugo.webp
-    - title: Techfest winner
-      description: It's a great experience.
-      img: https://gurusabarish.tech/static/d6ef67298140446c6f2e94b8b38ff25c/15384/hugo.webp
+    - title: Competition winner
+      description: We are developed a product which can help others.
+      img: /images/achiv.jpg
+    - title: Competition winner
+      description: We are developed a product which can help others.
+      img: /images/achiv.jpg
+    - title: Competition winner
+      description: We are developed a product which can help others.
+      img: /images/achiv.jpg
+    - title: Competition winner
+      description: We are developed a product which can help others.
+      img: /images/achiv.jpg
 
   # Contact
   disable_contact: false
-  email: "gurusabarisha@gmail.com"
+  contact_content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+  email: "example@mail.com"
 
   # Footer
   socialiconfooter: true
+  recentposts: true
 
-  #Description for seo. If you want to show description in your listing or single page, let's make it true
+  # Blog
   showdescription: false
   tweet: true
-  recentposts: true

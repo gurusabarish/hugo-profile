@@ -1,14 +1,21 @@
 {{ define "head"}}
-<meta name="description" content="blog of {{ .Site.Title}}" />
+
+{{ if eq .Site.Params.version 3 }}
+{{ else }}
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"
   media="all">
+{{ end }}
+
+<meta name="description" content="{{ .Title }}" />
 <title>{{ .Title }}</title>
 {{ end }}
 
 
 {{ define "main" }}
+{{ if eq .Site.Params.version 3 }}
+{{ else }}
 <section>
   <div class="container-fluid">
     <div class="row pt-3 justify-content-center">
@@ -81,4 +88,7 @@
     </div>
   </div>
 </section>
+{{ end }}
+
+
 {{ end }}

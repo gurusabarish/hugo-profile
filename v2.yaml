@@ -5,7 +5,6 @@ title: "Hugo-profile"
 googleanalytics: UA-xxxxxx-x
 disqusShortname:
 Paginate: 3
-ignoreErrors: ["error-remote-getjson"]
 markup:
   goldmark:
     renderer:
@@ -32,22 +31,21 @@ params:
 
   # social
   socialicontop: false
-  socialiconfooter: true
-  name: "Gurusabarish"
-  github: "https://github.com/gurusabarish"
-  linkedin: "https://linkedin.com/in/gurusabarish"
-  twitter: "https://twitter.com/gurusabarishh"
-  instagram: "https://instagram.com/gurusabarishh"
+  name: "Examble name"
+  github: "https://github.com"
+  linkedin: "https://linkedin.com"
+  twitter: "https://twitter.com/"
+  instagram: "https://instagram.com/"
   facebook: "https://facebook.com"
 
   # About
-  profile_image: "/images/gurusabarish.webp"
-  descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+  profile_image: "/images/profile.webp"
+  descripe_l1_person: "Hi, I'm Profile, a passionate web developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly. This is a example template for about section."
   descripe_l2_person: ""
 
   useresume: true
   customname: ""
-  resumelink: ""
+  resumelink: "/resume.pdf"
 
   # Things I do
   usedothings: true
@@ -67,7 +65,10 @@ params:
       description: I love to build things for web
       #url: https://guru.com
 
-  #Description for seo. If you want to show description in your listing or single page, let's make it true
+  # Footer
+  socialiconfooter: true
+  recentposts: true
+
+  # Blog
   showdescription: false
   tweet: true
-  recentposts: true

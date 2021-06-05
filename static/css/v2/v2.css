@@ -8,6 +8,10 @@ footer {
 
 footer a {
   color: #8392a5;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: none;
 }
 
 /* v2 and v3 news */

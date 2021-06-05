@@ -12,11 +12,13 @@ a:hover {
 /*loader */
 #loader {
   position: fixed;
-  border: 10px solid #f3f3f3;
+  border: 5px solid #007bff;
   border-radius: 50%;
-  border-top: 12px solid #444444;
-  width: 70px;
-  height: 70px;
+  border-top: 5px solid #444444;
+  border-bottom: 5px solid #444444;
+  border-right: 5px solid #444444;
+  width: 50px;
+  height: 50px;
   animation: spin 1s linear infinite;
 }
 

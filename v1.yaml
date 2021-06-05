@@ -30,16 +30,16 @@ params:
 
   # Navbar Menus
   customMenus:
-  - name: "Blog"
-    Url: "/blog"
+    - name: "Blog"
+      Url: "/blog"
 
   # Home
-  name: "Gurusabarish"
+  name: "Example name"
   profile: "/images/v1/avatar.webp"
-  github: "https://github.com/gurusabarish"
-  linkedin: "https://linkedin.com/in/gurusabarish"
-  twitter: "https://twitter.com/gurusabarishh"
-  instagram: "https://instagram.com/gurusabarishh"
+  github: "https://github.com/"
+  linkedin: "https://linkedin.com/"
+  twitter: "https://twitter.com/"
+  instagram: "https://instagram.com/"
 
   # Things I do
   usedothings: true
@@ -59,64 +59,63 @@ params:
       description: I love to build things for web
       #url: https://guru.com
 
-
   # About
-  profile_image: "/images/gurusabarish.webp"
-  descripe_l1_person: "Hi, I'm Gurusabarish, a passionate web developer and ML engineer.
-  I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+  profile_image: "/images/profile.webp"
+  descripe_l1_person: "Hi, I'm Profile, a passionate web developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
   descripe_l2_person: "This is just a example for about section. You can easily change with the help of cofig file."
   job: "your role"
-  resume: ""
+  resume: "/resume.pdf"
 
   #projects
   projects:
-  - title: "Project name"
-    image: "/images/v1/project.webp"
-    description:  "This is your description"
-    secoundarylink: true
-    secoundaryurlname: "Featured link"
-    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
-    sourceurl: "https://github.com/gurusabarish/hugo-profile"
+    - title: "Project name"
+      image: "/images/project.jpg"
+      description: "This is your description"
+      secoundarylink: true
+      secoundaryurlname: "Featured link"
+      secoundaryurl: "/"
+      sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
-  - title: "Project name"
-    image: "/images/v1/performance.webp"
-    description:  "This is your description"
-    secoundarylink: true
-    secoundaryurlname: "Featured link"
-    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
-    sourceurl: "https://github.com/gurusabarish/hugo-profile"
+    - title: "Project name"
+      image: "/images/project.jpg"
+      description: "This is your description"
+      secoundarylink: true
+      secoundaryurlname: "Featured link"
+      secoundaryurl: "/"
+      sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
-  - title: "Project name"
-    image: "/images/v1/project.webp"
-    description:  "This is your description"
-    secoundarylink: true
-    secoundaryurlname: "Featured link"
-    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
-    sourceurl: "https://github.com/gurusabarish/hugo-profile"
+    - title: "Project name"
+      image: "/images/project.jpg"
+      description: "This is your description"
+      secoundarylink: true
+      secoundaryurlname: "Featured link"
+      secoundaryurl: "/"
+      sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
-  - title: "Project name"
-    image: "/images/v1/performance.webp"
-    description:  "This is your description"
-    secoundarylink: true
-    secoundaryurlname: "Featured link"
-    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
-    sourceurl: "https://github.com/gurusabarish/hugo-profile"
+    - title: "Project name"
+      image: "/images/project.jpg"
+      description: "This is your description"
+      secoundarylink: true
+      secoundaryurlname: "Featured link"
+      secoundaryurl: "/"
+      sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
-  - title: "Project name"
-    image: "/images/v1/project.webp"
-    description:  "This is your description"
-    secoundarylink: true
-    secoundaryurlname: "Featured link"
-    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
-    sourceurl: "https://github.com/gurusabarish/hugo-profile"
+    - title: "Project name"
+      image: "/images/project.jpg"
+      description: "This is your description"
+      secoundarylink: true
+      secoundaryurlname: "Featured link"
+      secoundaryurl: "/"
+      sourceurl: "https://github.com/gurusabarish/hugo-profile"
 
-  - title: "Project name"
-    image: "/images/v1/performance.webp"
-    description:  "This is your description"
-    secoundarylink: true
-    secoundaryurlname: "Featured link"
-    secoundaryurl: "https://github.com/gurusabarish/hugo-profile"
-    sourceurl: "https://github.com/gurusabarish/hugo-profile"
-  #Description for seo. If you want to show description in your listing or single page, let's make it true
+    - title: "Project name"
+      image: "/images/project.jpg"
+      description: "This is your description"
+      secoundarylink: true
+      secoundaryurlname: "Featured link"
+      secoundaryurl: "/"
+      sourceurl: "https://github.com/gurusabarish/hugo-profile"
+
+  #Blog
   showdescription: false
   tweet: true
