@@ -13,6 +13,10 @@
   {{- block "head" . -}}{{- end }}
   {{ else if eq .Site.Params.version 3 }}
   {{- partial "sections/v3/head.html" . -}}
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/v3/navbar-footer.css" media="all">
   {{- block "head" . -}}{{- end }}
   {{ else }}
   {{ end }}

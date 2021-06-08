@@ -9,48 +9,6 @@ a:hover {
   text-decoration: none;
 }
 
-/*loader */
-#loader {
-  position: fixed;
-  border: 5px solid #007bff;
-  border-radius: 50%;
-  border-top: 5px solid #444444;
-  border-bottom: 5px solid #444444;
-  border-right: 5px solid #444444;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.center {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-/* v3 navbar */
-.navbar-brand {
-  color: #007bff !important;
-}
-.navbar .nav-link {
-  color: #f9fafc !important;
-}
-.navbar .nav-link:hover {
-  color: #007bff !important;
-}
-.navbar-text {
-  font-size: 16px !important;
-}
-
 /* v3 home */
 .name {
   padding-left: 3%;
@@ -371,21 +329,4 @@ a:hover {
 #contact {
   color: #8892b0;
   font-size: 17px;
-}
-
-/* v2 and v3 footer */
-footer {
-  color: #8392a5;
-  border-top-width: 1px !important;
-  border-color: #8392a5;
-}
-
-footer a {
-  color: #8392a5;
-}
-
-/* v2 and v3 news */
-.news a {
-  color: #1c2d41;
-  text-decoration: none;
 }

@@ -59,13 +59,16 @@
     media="all">
   {{ template "_internal/google_analytics.html" . }}
   {{- partial "sections/v3/head.html" . -}}
+  <link rel="stylesheet" href="/css/v3/v3.css" media="all">
+  <link rel="stylesheet" href="/css/v3/navbar-footer.css" media="all">
+  <link rel="stylesheet" href="/css/v3/loader.css" />
 
   <!-- aos -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-  <div id="loader" class="center"></div>
+  <!--<div id="loader" class="center"></div>-->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -112,6 +115,7 @@
     {{- partial "sections/v3/scripts.html" . -}}
   </div>
   <script>
+    /*
     document.onreadystatechange = function () {
       if (document.readyState !== "complete") {
         document.querySelector(
@@ -125,6 +129,7 @@
           "body").style.visibility = "visible";
       }
     };
+    */
   </script>
 </body>
 {{ else }}

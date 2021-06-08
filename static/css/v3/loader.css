@@ -1,0 +1,26 @@
+#loader {
+  position: fixed;
+  border: 5px solid #007bff;
+  border-radius: 50%;
+  border-top: 5px solid #444444;
+  border-bottom: 5px solid #444444;
+  border-right: 5px solid #444444;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
