@@ -1,0 +1,140 @@
+<footer data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+  <!-- recent posts -->
+  <div class="news container py-3">
+    {{ if .Site.Params.recentposts }}
+    <div class="h3 text-center text-light py-3 font-weight-bold">Recent posts</div>
+    <div class="row justify-content-center">
+      {{ range ( where .Site.RegularPages "Type" "blog" | first 3 ) }}
+      <div class="col-lg-4 col-md-6 pt-2">
+        <a href="{{ .RelPermalink }}" class="post-card-link">
+          <div class="card px-2 h-100">
+            <div class="card-head py-3">
+              <h5 class="card-title font-weight-bold px-2">{{ .Title }}</h5>
+              <div class="px-2">{{ .Summary | truncate 300}}</div>
+            </div>
+            <div class="mt-auto card-footer">
+              <span class="float-left">{{ .Date.Format "January 2, 2006" }}</span>
+              <a href="{{ .RelPermalink }}" class="float-right btn btn-outline-info btn-sm">Read</a>
+            </div>
+          </div>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ if .Site.Params.socialiconfooter }}
+
+  <div class="text-center">
+    {{ if .Site.Params.github }}
+    <span class="px-1">
+      <a class="text-dark" href="{{ .Site.Params.github }}" aria-label="github">
+        <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+          <path
+            d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+          <metadata>
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+              xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+              <rdf:Description about="https://iconscout.com/legal#licenses"
+                dc:title="Github, Online, Project, Hosting, Square"
+                dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout" dc:date="2016-12-14"
+                dc:format="image/svg+xml" dc:language="en">
+                <dc:creator>
+                  <rdf:Bag>
+                    <rdf:li>Font Awesome</rdf:li>
+                  </rdf:Bag>
+                </dc:creator>
+              </rdf:Description>
+            </rdf:RDF>
+          </metadata>
+        </svg>
+      </a>
+    </span>
+    {{ end }}
+
+    {{ if .Site.Params.linkedin }}
+    <span class="px-1">
+      <a class="text-white" href="{{ .Site.Params.linkedin }}" aria-label="linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+          viewBox="0 0 512 512">
+          <rect width="512" height="512" fill="#0077b5" rx="15%" />
+          <circle cx="142" cy="138" r="37" />
+          <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+          <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+        </svg>
+      </a>
+    </span>
+    {{ end }}
+
+    {{ if .Site.Params.twitter }}
+    <a class="text-info" href="{{ .Site.Params.twitter }}" aria-label="twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+        <path fill="#03a9f4"
+          d="M42,37c0,2.762-2.239,5-5,5H11c-2.762,0-5-2.238-5-5V11c0-2.762,2.238-5,5-5h26c2.761,0,5,2.238,5,5 V37z" />
+        <path fill="#fff"
+          d="M36,17.12c-0.882,0.391-1.999,0.758-3,0.88c1.018-0.604,2.633-1.862,3-3 c-0.951,0.559-2.671,1.156-3.793,1.372C31.311,15.422,30.033,15,28.617,15C25.897,15,24,17.305,24,20v2c-4,0-7.9-3.047-10.327-6 c-0.427,0.721-0.667,1.565-0.667,2.457c0,1.819,1.671,3.665,2.994,4.543c-0.807-0.025-2.335-0.641-3-1c0,0.016,0,0.036,0,0.057 c0,2.367,1.661,3.974,3.912,4.422C16.501,26.592,16,27,14.072,27c0.626,1.935,3.773,2.958,5.928,3c-1.686,1.307-4.692,2-7,2 c-0.399,0-0.615,0.022-1-0.023C14.178,33.357,17.22,34,20,34c9.057,0,14-6.918,14-13.37c0-0.212-0.007-0.922-0.018-1.13 C34.95,18.818,35.342,18.104,36,17.12" />
+      </svg>
+    </a>
+    {{ end }}
+
+    {{ if .Site.Params.instagram }}
+    <a class="text-danger" href="{{ .Site.Params.instagram }}" aria-label="instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+        <radialGradient id="yOrnnhliCrdS2gy~4tD8ma" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#fd5" />
+          <stop offset=".328" stop-color="#ff543f" />
+          <stop offset=".348" stop-color="#fc5245" />
+          <stop offset=".504" stop-color="#e64771" />
+          <stop offset=".643" stop-color="#d53e91" />
+          <stop offset=".761" stop-color="#cc39a4" />
+          <stop offset=".841" stop-color="#c837ab" />
+        </radialGradient>
+        <path fill="url(#yOrnnhliCrdS2gy~4tD8ma)"
+          d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" />
+        <radialGradient id="yOrnnhliCrdS2gy~4tD8mb" cx="11.786" cy="5.54" r="29.813"
+          gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#4168c9" />
+          <stop offset=".999" stop-color="#4168c9" stop-opacity="0" />
+        </radialGradient>
+        <path fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
+          d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" />
+        <path fill="#fff"
+          d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z" />
+        <circle cx="31.5" cy="16.5" r="1.5" fill="#fff" />
+        <path fill="#fff"
+          d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z" />
+      </svg>
+    </a>
+    {{ end }}
+
+    {{ if .Site.Params.facebook }}
+    <a class="text-info" href="{{ .Site.Params.facebook }}" aria-label="facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+        <path fill="#3F51B5"
+          d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z" />
+        <path fill="#FFF"
+          d="M34.368,25H31v13h-5V25h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H35v4h-2.287C31.104,17,31,17.6,31,18.723V21h4L34.368,25z" />
+      </svg>
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+  <div class="container bg-transparent py-4">
+    <div class="row justify-content-center">
+      <div class="col-md-4 text-center order-2 order-lg-1 order-md-1">
+        <div class="pb-2">
+          <a href="{{ .Site.BaseURL }}">
+            <img alt="Footer logo" src="{{ .Site.Params.favicon | default " /images/favicon.png"}}" height="40px"
+              width="40px">
+          </a>
+        </div>
+        &copy; {{ dateFormat "2006" now }} All Rights Reserved
+        <div>
+          Designed and Developed by
+          <a href="https://gurusabarish.tech" target="_blank">Gurusabarish</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,72 @@
+<div class="container">
+  <nav style="background-color: #0a192f;" class="pt-3 navbar navbar-expand-lg navbar-dark" data-aos="fade-down"
+    data-aos-easing="linear" data-aos-duration="500">
+    <a class="navbar-brand" href="{{ .Site.BaseURL | relURL }}">
+      {{ if .Site.Params.favicon }}
+      <img src="{{ .Site.Params.favicon }}" width="30" height="30" class="d-inline-block align-top">
+      {{ .Site.Title }}
+      {{ else }}
+      {{ .Site.Title }}
+      {{ end }}
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto text-center">
+
+        {{ if .Site.Params.disable_about }}
+        {{ else }}
+        <li class="nav-item navbar-text">
+          <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#about" aria-label="about">About</a>
+        </li>
+        {{ end }}
+
+        {{ if .Site.Params.disable_experience }}
+        {{ else }}
+        <li class="nav-item navbar-text">
+          <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#experience" aria-label="experience">Experience</a>
+        </li>
+        {{ end }}
+
+        {{ if .Site.Params.disable_education }}
+        {{ else }}
+        <li class="nav-item navbar-text">
+          <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#education" aria-label="education">Education</a>
+        </li>
+        {{ end }}
+
+        {{ if .Site.Params.disable_projects }}
+        {{ else }}
+        <li class="nav-item navbar-text">
+          <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#projects" aria-label="projects">Projects</a>
+        </li>
+        {{ end }}
+
+        {{ if .Site.Params.disable_achievements }}
+        {{ else }}
+        <li class="nav-item navbar-text">
+          <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#achievements"
+            aria-label="achievements">Achievements</a>
+        </li>
+        {{ end }}
+
+        {{ if .Site.Params.disable_contact }}
+        {{ else }}
+        <li class="nav-item navbar-text">
+          <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#contact" aria-label="contact">Contact</a>
+        </li>
+        {{ end }}
+
+        {{ range site.Params.customMenus }}
+        <li class="nav-item navbar-text">
+          <a class="nav-link" href="{{.Url}}" aria-label="{{ .name }}">{{ .name }}</a>
+        </li>
+        {{ end }}
+
+      </ul>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,122 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #0a192f;
+}
+
+#TableOfContents {
+  padding: 3%;
+}
+#TableOfContents > ul > li > ul {
+  display: none;
+}
+
+#TableOfContents > ul {
+  padding-left: 7%;
+}
+article {
+  line-height: 1.756;
+  font-size: 18px;
+}
+
+article blockquote {
+  margin: 0 !;
+  border-left: 4px solid #248aaa !important;
+  background-color: #248baa15 !important;
+  padding: 0.3rem !important;
+  padding-left: 1rem !important;
+}
+
+article blockquote > p {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+article > table {
+  border-radius: 0.1rem;
+  background: #e5e9f2;
+  border: 1px solid #c0ccda;
+  padding: 0.1rem;
+}
+
+article > table > tr {
+  height: 40px !important;
+}
+
+article > table > thead > tr > th {
+  padding: 0.5rem !important;
+  border-left: 1px solid #8392a5;
+  border-bottom: 1px solid #8392a5;
+}
+article > table > tbody > tr > td {
+  padding: 0.5rem !important;
+  border-left: 1px solid #8392a5;
+  border-bottom: 1px solid #8392a5;
+}
+
+article > table > thead > tr {
+  background: #248aaa;
+  color: #e5e9f2;
+}
+
+article > tbody > tr:nth-child(odd) {
+  background-color: #e5e9f2;
+}
+
+article > tbody > tr:hover {
+  background: #c0ccda;
+}
+
+article img {
+  width: 100%;
+}
+
+article caption,
+figcaption {
+  caption-side: bottom;
+  text-align: center;
+  color: #8392a5;
+}
+
+article pre {
+  border-radius: 0.5rem !important;
+  margin: 5px;
+  padding: 2%;
+  background-color: #1f618d !important;
+  color: white;
+}
+
+article pre > code {
+  color: white;
+}
+
+article a.header-anchor {
+  text-decoration: none;
+  color: #1c2d41;
+}
+
+article a.header-anchor i {
+  font-size: 10pt;
+  color: #3c4858;
+  display: none;
+  margin-left: 0.5rem;
+}
+
+article a.header-anchor:hover i {
+  display: inline-block;
+}
+
+article a.header-anchor code {
+  color: #e83e8c;
+}
+
+article kbd {
+  background-color: #248aaa !important;
+  color: #f9fafc;
+}
+
+article mark {
+  background-color: #ffc21280;
+}

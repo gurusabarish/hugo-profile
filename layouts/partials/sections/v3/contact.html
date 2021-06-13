@@ -1,0 +1,20 @@
+<section id="contact" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+  <div class="container-fluid py-3">
+    <div class="text-light text-center h3">Get In Touch</div>
+    <div class="row justify-content-center px-md-5">
+      <div class="col-md-6 py-3">
+        <div class=" text-center">
+          {{ .Site.Params.contact_content }}
+        </div>
+        {{ if .Site.Params.email }}
+        <div class="text-center pt-3">
+          <a href="mailto:{{ .Site.Params.email }}?subject=Say hi!" class="contact-btn btn">
+            Get In Touch
+          </a>
+        </div>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</section>

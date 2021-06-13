@@ -1,14 +1,57 @@
 {{ define "head"}}
-<meta name="description" content="blog of {{ .Site.Title}}" />
+
+{{ if eq .Site.Params.version 3 }}
+<link rel="stylesheet" href="/css/v3/list.css" media="all">
+{{ else }}
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"
   media="all">
+{{ end }}
+
+<meta name="description" content="{{ .Title }}" />
 <title>{{ .Title }}</title>
 {{ end }}
 
 
 {{ define "main" }}
+{{ if eq .Site.Params.version 3 }}
+<section style="font-family: 'Roboto', sans-serif; color: #8392a5">
+  <div class="container pt-5">
+    <h3 class="text-center">{{.Title}}</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-7 py-2">
+          <ol class="post-ol">
+            {{ range .Paginator.Pages }}
+            <li>
+
+              <h1 style="font-size: 25px;" class="font-weight-bold">
+                <a class="text-decoration-none" href="{{ .Permalink }}">
+                  {{ .Title }}
+                </a>
+              </h1>
+              <div class="post-sum">
+                {{- .Summary | truncate 150 | safeHTML -}}
+              </div>
+              {{ if .Params.tags }}
+              {{ range .Params.tags }}
+              <a href={{ "/tags/" | relLangURL }}{{ . | urlize }} class="text-info text-decoration-none m-1"
+                style="color: #8392a5">
+                <small># {{ . }}</small>
+              </a>
+              {{ end }}
+              {{ end }}
+            </li>
+            {{ end }}
+          </ol>
+          <div class="p-3">
+            {{ template "_internal/pagination.html" . }}
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+{{ else }}
 <section>
   <div class="container-fluid">
     <div class="row pt-3 justify-content-center">
@@ -81,4 +124,7 @@
     </div>
   </div>
 </section>
+{{ end }}
+
+
 {{ end }}

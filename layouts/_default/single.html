@@ -1,13 +1,71 @@
 {{ define "head"}}
 <meta name="description" content="{{ .Params.description }}" />
+<title>{{ .Title }}</title>
+{{ if eq .Site.Params.version 1 }}
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700&display=swap" rel="stylesheet">
-<title>{{ .Title }}</title>
-
+<link href="/css/v1/blog.css" rel="stylesheet">
+{{ else if eq .Site.Params.version 2 }}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700&display=swap" rel="stylesheet">
+<link href="/css/v2/post.css" rel="stylesheet">
+{{ else if eq .Site.Params.version 3 }}
+<link href="/css/v3/post.css" rel="stylesheet">
+{{ else }}
+{{ end }}
 {{ end }}
 
 
 {{ define "main" }}
+
+{{ if eq .Site.Params.version 3 }}
+<section style="font-family: 'Roboto', sans-serif; color: #8392a5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 py-4 px-0">
+        <div class="rounded bg-light p-3 px-md-5" style="background-color: #1A283C !important;">
+          <h1 class="pb-2 text-center">{{ .Title }}</h1>
+          <article>
+            {{.Content}}
+          </article>
+        </div>
+      </div>
+      <div class="col-md-3 py-4">
+        <div class="bg-light shadow p-4 rounded mb-2" style="background-color: #1A283C !important;">
+          <h4>Table of content</h4>
+          {{.TableOfContents}}
+        </div>
+
+        <div class="bg-light shadow p-4 rounded mt-2" style="background-color: #1A283C !important;">
+          <h4>Share</h4>
+          <span class="rounded-circle p-1 m-1">
+            <a target="blank" class="text-decoration-none"
+              href="https://twitter.com/share?text={{ .Title }}&url={{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
+              <i class="fab fa-twitter text-primary" style="font-size: 1.6em;"></i>
+            </a>
+          </span>
+          <span class="rounded-circle m-1">
+            <a target="blank" class="text-decoration-none"
+              href="https://api.whatsapp.com/send?text={{ .Title }}: {{ .Site.Params.hostName }}{{ .Permalink | absURL }}"
+              data-action="share/whatsapp/share">
+              <i class="fab fa-whatsapp text-success" style="font-size: 1.6em;"></i>
+            </a>
+          </span>
+          <span class="rounded-circle m-1">
+            <a target="blank" class="text-decoration-none"
+              href="mailto:?subject={{ .Title }}&amp;body=Check out this site {{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
+              <i class="fa fa-envelope text-danger" style="font-size: 1.6em;"></i>
+            </a>
+          </span>
+
+        </div>
+      </div>
+      {{ template "_internal/disqus.html" . }}
+    </div>
+  </div>
+</section>
+{{ else }}
+
 
 <section class="mincho-font">
   <div class="py-4 bg-info text-center">
@@ -39,6 +97,7 @@
         {{ end }}
 
         {{ if .Site.Params.tweet }}
+
         <div class="pt-3">
           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size=large class="twitter-share-button"
             data-show-count="false">Tweet my work</a>
@@ -111,5 +170,8 @@
   $('.TOC').on('click', function () {
     $('.TOC-content').removeClass('d-none');
   });
+
 </script>
+{{ end }}
+
 {{ end }}

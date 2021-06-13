@@ -1,0 +1,67 @@
+<div class="container-fluid home">
+  <div class="py-5">
+    <div class="row justify-content-center intro" data-aos="fade-down" data-aos-easing="linear"
+      data-aos-duration="1000">
+      <div class="col-md-7 name-container">
+        <div class="name" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+          data-aos-once="true">
+          <div class="text-warning" style="font-size: 15px;" data-aos="fade-up" data-aos-offset="50" data-aos-delay="50"
+            data-aos-once="true" data-aos-duration="900">
+            Hi there, I'm
+          </div>
+          <h1 class="text-primary" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="900"
+            data-aos-once="true">
+            {{ .Site.Params.name }}
+          </h1>
+          <h5 class="text-light" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="900"
+            data-aos-once="true">
+            {{ .Site.Params.profession }}
+          </h5>
+        </div>
+        <div class="row social pt-4" data-aos="fade-up" data-aos-offset="50" data-aos-delay="50" data-aos-duration="900"
+          data-aos-once="true">
+          {{ if .Site.Params.github }}
+          <a href="{{ .Site.Params.github }}" class="social-icon">
+            <i class="fab fa-lg fa-github"></i>
+          </a>
+          <span class="px-1"></span>
+          {{ end }}
+
+          {{ if .Site.Params.twitter }}
+          <a href="{{ .Site.Params.twitter }}" class="social-icon">
+            <i class="fab fa-lg fa-twitter"></i>
+          </a>
+          <span class="px-1"></span>
+          {{ end }}
+
+          {{ if .Site.Params.linkedin }}
+          <a href="{{ .Site.Params.linkedin }}" class="social-icon">
+            <i class="fab fa-lg fa-linkedin"></i>
+          </a>
+          <span class="px-1"></span>
+          {{ end }}
+
+          {{ if .Site.Params.facebook }}
+          <a href="{{ .Site.Params.facebook }}" class="social-icon">
+            <i class="fab fa-lg fa-facebook"></i>
+          </a>
+          {{ end }}
+        </div>
+        <div class="pt-4 btn-intro">
+          <a href="#about" class="btn-know btn btn-outline-info" data-aos="zoom-in" data-aos-offset="50"
+            data-aos-delay="50" data-aos-duration="900" data-aos-once="true">
+            About me
+          </a>
+        </div>
+
+      </div>
+      <div class="col-md-5 text-center">
+        {{ if .Site.Params.profile_image }}
+        <img class="profile rounded shadow-lg" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000"
+          src="{{ .Site.Params.profile_image }}" alt="{{ .Site.Params.name }}" class="rounded">
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</div>

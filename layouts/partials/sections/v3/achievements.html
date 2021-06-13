@@ -1,0 +1,29 @@
+{{ $img:= "images/v1/background.png" }}
+
+<section class="py-3 pt-5" id="achievements" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600"
+  data-aos-once="true">
+  <div class="container-fluid">
+    <div class="text-light text-center h3">Achievements</div>
+    <div class="row justify-content-center py-3 mx-2">
+      {{ range .Site.Params.achievements }}
+      {{ if .img }}
+      {{ $img = .img }}
+      {{ end }}
+      <div class="col-md-5 achiv-out px-4 px-md-2 my-2" data-aos="fade-up" data-aos-easing="linear"
+        data-aos-duration="600" data-aos-once="true">
+        <div class="achiv-card d-flex align-items-end shadow-lg rounded" style="background-image: url({{ .img }});">
+          <div class="p-3 w-100 achiv overflow-hidden">
+            <h4 class="text-center">
+              {{ .title }}
+            </h4>
+            <div class="text-secondary">
+              {{ .description }}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+</section>

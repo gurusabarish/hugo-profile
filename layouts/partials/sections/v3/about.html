@@ -1,0 +1,39 @@
+<div id="about" class="pt-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+  <div class="container-fluid">
+    <div class="text-light text-center h3">About Me</div>
+    <div class="row justify-content-center about">
+      <div class="col-md-6 about-content">
+        <div class="px-2" style="color: #8892b0;" data-aos="zoom-in" data-aos-offset="50" data-aos-delay="50"
+          data-aos-once="true" data-aos-duration="900">
+          {{ .Site.Params.descripe_l1_person | markdownify }}
+          <br>
+          <br>
+          {{ .Site.Params.descripe_l2_person | markdownify }}
+        </div>
+        {{ if .Site.Params.email }}
+        <div class="py-3 pl-2">
+          <a href="mailto:{{ .Site.Params.email }}?subject=Say hi!" class="contact-btn btn" data-aos="zoom-in"
+            data-aos-offset="50" data-aos-delay="50" data-aos-once="true" data-aos-duration="1000">
+            Get In Touch
+          </a>
+        </div>
+        {{ end }}
+      </div>
+      <div class="col-md-5 about-skill">
+        <div class="text-secondary text-center h4">Skills</div>
+        {{ range .Site.Params.skills }}
+        <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+          <div style="color: rgb(230, 241, 255)">
+            {{ .name }}
+          </div>
+          <div class="progress mb-4">
+            <div class="progress-bar" role="progressbar" style="width: {{ .percentage }}%;" aria-valuemin="0"
+              aria-valuemax="100"></div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</div>

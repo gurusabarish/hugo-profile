@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #0a192f;
+}
+.post-ol {
+  list-style-type: decimal-leading-zero;
+  padding-top: 1%;
+}
+.post-ol li {
+  padding-top: 3%;
+}
+.post-sum p {
+  margin: 0;
+}

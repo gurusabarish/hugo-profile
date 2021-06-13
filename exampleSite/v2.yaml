@@ -1,0 +1,74 @@
+baseURL: "https://example.com"
+languageCode: "en-us"
+title: "Hugo-profile"
+
+googleanalytics: UA-xxxxxx-x
+disqusShortname:
+Paginate: 3
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+enableEmoji: true
+params:
+  version: 2
+
+  favicon: "/images/fav.png"
+  description: "A high performance hugo theme for personal portfolio and blog."
+  copyright: "2021"
+
+  # Navbar Menus
+  customMenus:
+    - name: "About"
+      Url: "/#"
+    - name: "Blog"
+      Url: "/blog"
+
+  # social
+  socialicontop: false
+  name: "Examble name"
+  github: "https://github.com"
+  linkedin: "https://linkedin.com"
+  twitter: "https://twitter.com/"
+  instagram: "https://instagram.com/"
+  facebook: "https://facebook.com"
+
+  # About
+  profile_image: "/images/profile.webp"
+  descripe_l1_person: "Hi, I'm Profile, a passionate web developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly. This is a example template for about section."
+  descripe_l2_person: ""
+
+  useresume: true
+  customname: ""
+  resumelink: "/resume.pdf"
+
+  # Things I do
+  usedothings: true
+  Things:
+    - logo: fab fa-python
+      title: Python
+      description: I build something beautiful using Python.
+      #url: https://example.com
+
+    - logo: fas fa-robot
+      title: Machine learning
+      description: I train robust models for various tasks.
+      #url: https://guru.com
+
+    - logo: fab fa-html5
+      title: Things for web
+      description: I love to build things for web
+      #url: https://guru.com
+
+  # Footer
+  socialiconfooter: true
+  recentposts: true
+
+  # Blog
+  showdescription: false
+  tweet: true

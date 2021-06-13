@@ -1,0 +1,88 @@
+<section id="experience" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+  <div class="container-fluid pt-5">
+    <div class="text-light text-center h3">Experience</div>
+
+    <div class="row justify-content-center py-md-5">
+      <div class="d-md-none d-lg-none d-sm-block">
+        <ol class="ex-ol pl-5 pr-3">
+          {{ range .Site.Params.experience }}
+          <li class="ex-ol-li" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+            <h4>
+              <span class="text-primary">{{ .company }}</span> - {{ .role }}
+            </h4>
+            <div>
+              <small>{{ .startdate}}</small>
+              -
+              <small>{{ .enddate }}</small>
+            </div>
+            <ul class="py-2 ex-ol-ul">
+              {{ range .featuredpoints }}
+              <li class="ex-ol-item">{{ .point }}</li>
+              {{ end }}
+            </ul>
+          </li>
+          {{ end }}
+
+        </ol>
+      </div>
+
+      <div id="nav-pills-out" class="d-none d-md-block nav flex-column nav-pills col-md-2" id="v-pills-tab"
+        role="tablist" aria-orientation="vertical">
+        {{ range $index, $element := .Site.Params.experience }}
+        {{ if (eq $index 0) }}
+        <a class="nav-link active" id="{{ .company }}-tab" data-toggle="pill" href="#{{ .company }}" role="tab"
+          aria-controls="{{ .company }}" aria-selected="true">
+          {{ .company }}
+        </a>
+        {{ else }}
+        <a class="nav-link" id="{{ .company }}-tab" data-toggle="pill" href="#{{ .company }}" role="tab"
+          aria-controls="{{ .company }}" aria-selected="false">
+          {{ .company }}
+        </a>
+        {{ end }}
+        {{ end }}
+      </div>
+
+      <div class="tab-content col-md-5 d-none d-md-block" id="v-pills-tabContent">
+        {{ range $index, $element := .Site.Params.experience }}
+        {{ if (eq $index 0) }}
+        <div class="tab-pane fade show active" id="{{ .company }}" role="tabpanel" aria-labelledby="{{ .company }}-tab">
+          <div class="h4">
+            <span class="text-primary">{{ .company }}</span> - {{ .role }}
+          </div>
+          <div>
+            <small>{{ .startdate }}</small>
+            -
+            <small>{{ .enddate }}</small>
+          </div>
+          <ul class="py-2 ex">
+            {{ range .featuredpoints }}
+            <li class="ex-item">{{ .point }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ else }}
+        <div class="tab-pane fade" id="{{ .company }}" role="tabpanel" aria-labelledby="{{ .company }}-tab">
+          <div class="h4">
+            <span class="text-primary">{{ .company }}</span> - {{ .role }}
+          </div>
+          <div>
+            <small>{{ .startdate }}</small>
+            -
+            <small>{{ .enddate }}</small>
+          </div>
+          <ul class="py-2 ex">
+            {{ range .featuredpoints }}
+            <li class="ex-item">{{ .point }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+
+        {{ end }}
+      </div>
+
+    </div>
+
+  </div>
+</section>
