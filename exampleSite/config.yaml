@@ -25,7 +25,10 @@ params:
   customMenus:
     - name: "Blog"
       Url: "/blog"
-
+    - name: "V2"
+      Url: "https://v2.profile.gurusabarish.tech/blog/"
+    - name: "V1"
+      Url: "https://v1.profile.gurusabarish.tech/blog/"
   # home
   disable_home: false
   profile_image: "/images/profile.png"
