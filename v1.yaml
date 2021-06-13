@@ -1,0 +1,121 @@
+baseURL: "https://example.com"
+languageCode: "en-us"
+title: "Hugo-profile"
+
+googleanalytics: UA-xxxxxxxx-x
+disqusShortname: yourdiscussshortname
+Paginate: 3
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+params:
+  version: 1
+
+  favicon: "/images/fav.png"
+  description: "A hugh performance hugo theme for personal website. It is single page portfolio. It has blog, contact sections also. Contact is powered by formspree."
+  disqus: ""
+
+  # Background
+  custombackground: false
+  background: ""
+  backimg: ""
+
+  # Contact
+  contact: true
+  action: ""
+  emailname: ""
+  messagename: ""
+
+  # Navbar Menus
+  customMenus:
+    - name: "Blog"
+      Url: "/blog"
+
+  # Home
+  name: "Example name"
+  profile: "/images/v1/avatar.webp"
+  github: "https://github.com/"
+  linkedin: "https://linkedin.com/"
+  twitter: "https://twitter.com/"
+  instagram: "https://instagram.com/"
+
+  # Things I do
+  usedothings: true
+  Things:
+    - logo: fab fa-python
+      title: Python
+      description: I build something beautiful using Python.
+      #url: https://example.com
+
+    - logo: fas fa-robot
+      title: Machine learning
+      description: I train robust models for various tasks.
+      #url: https://guru.com
+
+    - logo: fab fa-html5
+      title: Things for web
+      description: I love to build things for web
+      #url: https://guru.com
+
+  # About
+  profile_image: "/images/profile.webp"
+  descripe_l1_person: "Hi, I'm Profile, a passionate web developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+  descripe_l2_person: "This is just a example for about section. You can easily change with the help of cofig file."
+  job: "your role"
+  resume: "/resume.pdf"
+
+  #projects
+  projects:
+    - title: "Project name"
+      image: "/images/project.jpg"
+      description: "This is your description"
+      secoundarylink: true
+      secoundaryurlname: "Featured link"
+      secoundaryurl: "/"
+      sourceurl: "https://github.com/gurusabarish/hugo-profile"
+
+    - title: "Project name"
+      image: "/images/project.jpg"
+      description: "This is your description"
+      secoundarylink: true
+      secoundaryurlname: "Featured link"
+      secoundaryurl: "/"
+      sourceurl: "https://github.com/gurusabarish/hugo-profile"
+
+    - title: "Project name"
+      image: "/images/project.jpg"
+      description: "This is your description"
+      secoundarylink: true
+      secoundaryurlname: "Featured link"
+      secoundaryurl: "/"
+      sourceurl: "https://github.com/gurusabarish/hugo-profile"
+
+    - title: "Project name"
+      image: "/images/project.jpg"
+      description: "This is your description"
+      secoundarylink: true
+      secoundaryurlname: "Featured link"
+      secoundaryurl: "/"
+      sourceurl: "https://github.com/gurusabarish/hugo-profile"
+
+    - title: "Project name"
+      image: "/images/project.jpg"
+      description: "This is your description"
+      secoundarylink: true
+      secoundaryurlname: "Featured link"
+      secoundaryurl: "/"
+      sourceurl: "https://github.com/gurusabarish/hugo-profile"
+
+    - title: "Project name"
+      image: "/images/project.jpg"
+      description: "This is your description"
+      secoundarylink: true
+      secoundaryurlname: "Featured link"
+      secoundaryurl: "/"
+      sourceurl: "https://github.com/gurusabarish/hugo-profile"
+
+  #Blog
+  showdescription: false
+  tweet: true

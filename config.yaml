@@ -13,7 +13,7 @@ taxonomies:
 params:
   version: 1
 
-  favicon: "/images/hugo.png"
+  favicon: "/images/fav.png"
   description: "A hugh performance hugo theme for personal website. It is single page portfolio. It has blog, contact sections also. Contact is powered by formspree."
   disqus: ""
 
