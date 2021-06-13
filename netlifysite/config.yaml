@@ -28,7 +28,7 @@ params:
 
   # home
   disable_home: false
-  profile_image: "/images/profile.webp"
+  profile_image: "/images/profile.png"
   name: "Example name"
   profession: "Profession"
   github: "https://github.com"

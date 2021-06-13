@@ -6,6 +6,16 @@ body {
   background-color: #0a192f;
 }
 
+#TableOfContents {
+  padding: 3%;
+}
+#TableOfContents > ul > li > ul {
+  display: none;
+}
+
+#TableOfContents > ul {
+  padding-left: 7%;
+}
 article {
   line-height: 1.756;
   font-size: 18px;
@@ -20,31 +30,8 @@ article blockquote {
 }
 
 article blockquote > p {
-  color: #3c4858 !important;
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
-}
-
-article h1 {
-  font-size: 52px !important;
-  line-height: 1.15;
-}
-
-article h2 {
-  font-size: 32px;
-  line-height: 1.333;
-}
-
-article h3 {
-  font-size: 24px;
-  line-height: 1.45;
-}
-
-article h4,
-h5,
-h6 {
-  font-size: 18px;
-  line-height: 1.45;
 }
 
 article > table {
