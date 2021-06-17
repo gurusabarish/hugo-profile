@@ -2,9 +2,7 @@
 .navbar-brand {
   color: #007bff !important;
 }
-.navbar .nav-link {
-  color: #f9fafc !important;
-}
+
 .navbar .nav-link:hover {
   color: #007bff !important;
 }

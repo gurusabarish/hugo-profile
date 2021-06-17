@@ -1,20 +1,20 @@
 <div class="container-fluid home">
-  <div class="py-5">
+  <div class="pt-5 pb-3 pt-md-0">
     <div class="row justify-content-center intro" data-aos="fade-down" data-aos-easing="linear"
       data-aos-duration="1000">
-      <div class="col-md-7 name-container">
+      <div class="col-md-7 pb-2 name-container">
         <div class="name" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
           data-aos-once="true">
-          <div class="text-warning" style="font-size: 15px;" data-aos="fade-up" data-aos-offset="50" data-aos-delay="50"
+          <div class="text-warning hi-text" data-aos="fade-up" data-aos-offset="50" data-aos-delay="50"
             data-aos-once="true" data-aos-duration="900">
             Hi there, I'm
           </div>
-          <h1 class="text-primary" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="900"
-            data-aos-once="true">
+          <h1 class="text-primary name-text" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"
+            data-aos-duration="900" data-aos-once="true">
             {{ .Site.Params.name }}
           </h1>
-          <h5 class="text-light" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="900"
-            data-aos-once="true">
+          <h5 class="text-muted pro-text" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"
+            data-aos-duration="900" data-aos-once="true">
             {{ .Site.Params.profession }}
           </h5>
         </div>
@@ -55,7 +55,7 @@
         </div>
 
       </div>
-      <div class="col-md-5 text-center">
+      <div class="col-md-5 text-center pt-2 pt-md-0 position-relative">
         {{ if .Site.Params.profile_image }}
         <img class="profile rounded shadow-lg" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000"
           src="{{ .Site.Params.profile_image }}" alt="{{ .Site.Params.name }}" class="rounded">
