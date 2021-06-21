@@ -9,13 +9,7 @@
       {{ .Site.Title }}
       {{ end }}
     </a>
-    <div class="custom-control custom-switch">
-      <input type="checkbox" class="custom-control-input" id="customSwitch1" autocomplete="on">
-      <label class="pt-2 darkmode-label" for="customSwitch1">
-        <i class="fas fa-lg fa-moon"></i>
-        <i class="fas fa-lg fa-sun d-none text-warning"></i>
-      </label>
-    </div>
+
 
     <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,7 +69,15 @@
           <a class="nav-link text-dark" href="{{.Url}}" aria-label="{{ .name }}">{{ .name }}</a>
         </li>
         {{ end }}
-
+        <li class="nav-item navbar-text">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1" autocomplete="on">
+            <label class="pt-2 darkmode-label" for="customSwitch1" style="cursor: pointer;">
+              <i class="fas fa-lg fa-moon"></i>
+              <i class="fas fa-lg fa-sun d-none text-warning"></i>
+            </label>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>

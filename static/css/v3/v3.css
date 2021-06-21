@@ -148,9 +148,13 @@ a:hover {
   border-bottom-right-radius: 0.5rem !important;
 }
 .content-pro-top {
+  color: #3a3b3c !important;
   height: 80%;
 }
+.pro-github{
+  color: #3a3b3c !important;
 
+}
 .pro:hover .pro-btn {
   background-color: #3498db !important;
   color: #f9fafc;
@@ -201,7 +205,7 @@ a:hover {
 }
 .nav-pills .active {
   padding-left: 20%;
-  color: #343a40 !important;
+  color: #818181 !important;
   background-color: transparent !important;
 }
 .nav-pills .active::before {
@@ -341,6 +345,9 @@ a:hover {
 }
 .achiv-out {
   max-width: 35% !important;
+}
+.achiv-head {
+  color: #3a3b3c !important;
 }
 @media only screen and (max-width: 768px) {
   .achiv-out {

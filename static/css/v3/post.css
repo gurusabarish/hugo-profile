@@ -5,7 +5,9 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #eaedf0;
 }
-
+.blog-page-color{
+  color: #3a3b3c !important;
+}
 #TableOfContents {
   padding: 3%;
 }
