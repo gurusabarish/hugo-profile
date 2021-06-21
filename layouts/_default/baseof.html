@@ -23,28 +23,57 @@
 
 </head>
 
+{{ if eq .Site.Params.version 1 }}
+
 <body>
-  {{ if eq .Site.Params.version 1 }}
   {{- partial "sections/v1/scripts.html" . -}}
   {{- partial "sections/v1/header1.html" . -}}
   {{- block "main" . -}}{{- end }}
   {{- partial "sections/v1/footer.html" . -}}
+</body>
+{{ else if eq .Site.Params.version 2 }}
 
-  {{ else if eq .Site.Params.version 2 }}
+<body>
   {{- partial "sections/v2/scripts.html" . -}}
   {{- partial "sections/v2/header.html" . -}}
   {{- block "main" . -}}{{- end }}
   {{- partial "sections/v2/footer.html" . -}}
+</body>
+{{ else if eq .Site.Params.version 3 }}
 
-  {{ else if eq .Site.Params.version 3 }}
+<body class="text-dark">
   {{- partial "sections/v3/scripts.html" . -}}
   {{- partial "sections/v3/navbar.html" . -}}
   {{- block "main" . -}}{{- end }}
   {{- partial "sections/v3/footer.html" . -}}
-  {{ else }}
-  {{ end }}
-
-
+  <script>
+    $('.darkmode-label').click(function () {
+      $("body").toggleClass("darkmode");
+      $(".fa-moon").toggleClass("d-none");
+      $(".fa-sun").toggleClass("d-none");
+      $("nav").toggleClass("navbar-dark");
+      $("nav").toggleClass("navbar-light");
+      $('.text-dark').addClass('darkmode-text-dark').removeClass('text-dark');
+      $('.text-muted').addClass('darkmode-text-muted').removeClass('text-muted');
+      if ($('input.custom-control-input').is(':checked')) {
+        $('.darkmode-text-dark').addClass('text-dark').removeClass('darkmode-text-dark');
+        $('.darkmode-text-muted').addClass('text-muted').removeClass('darkmode-text-muted');
+      };
+    });
+    if ($('input.custom-control-input').is(':checked')) {
+      $("body").toggleClass("darkmode");
+      $(".fa-moon").addClass("d-none");
+      $(".fa-sun").removeClass("d-none");
+      $("nav").toggleClass("navbar-dark");
+      $("nav").toggleClass("navbar-light");
+      $('.text-dark').addClass('darkmode-text-dark').removeClass('text-dark');
+      $('.text-muted').addClass('darkmode-text-muted').removeClass('text-muted');
+    };
+  </script>
 </body>
+{{ else }}
+
+<body></body>
+{{ end }}
 
 </html>

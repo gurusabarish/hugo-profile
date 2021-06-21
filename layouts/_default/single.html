@@ -19,11 +19,11 @@
 {{ define "main" }}
 
 {{ if eq .Site.Params.version 3 }}
-<section style="font-family: 'Roboto', sans-serif; color: #8392a5">
+<section style="font-family: 'Roboto', sans-serif;">
   <div class="container">
-    <div class="row">
+    <div class="row blog-page-color">
       <div class="col-md-9 py-4 px-0">
-        <div class="rounded bg-light p-3 px-md-5" style="background-color: #1A283C !important;">
+        <div class="rounded shadow bg-light p-3 px-md-5 bg-light">
           <h1 class="pb-2 text-center">{{ .Title }}</h1>
           <article>
             {{.Content}}
@@ -31,32 +31,36 @@
         </div>
       </div>
       <div class="col-md-3 py-4">
-        <div class="bg-light shadow p-4 rounded mb-2" style="background-color: #1A283C !important;">
+        <div class="bg-light shadow p-4 rounded mb-2 bg-light">
           <h4>Table of content</h4>
           {{.TableOfContents}}
         </div>
 
-        <div class="bg-light shadow p-4 rounded mt-2" style="background-color: #1A283C !important;">
-          <h4>Share</h4>
-          <span class="rounded-circle p-1 m-1">
-            <a target="blank" class="text-decoration-none"
-              href="https://twitter.com/share?text={{ .Title }}&url={{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
-              <i class="fab fa-twitter text-primary" style="font-size: 1.6em;"></i>
-            </a>
-          </span>
-          <span class="rounded-circle m-1">
-            <a target="blank" class="text-decoration-none"
-              href="https://api.whatsapp.com/send?text={{ .Title }}: {{ .Site.Params.hostName }}{{ .Permalink | absURL }}"
-              data-action="share/whatsapp/share">
-              <i class="fab fa-whatsapp text-success" style="font-size: 1.6em;"></i>
-            </a>
-          </span>
-          <span class="rounded-circle m-1">
-            <a target="blank" class="text-decoration-none"
-              href="mailto:?subject={{ .Title }}&amp;body=Check out this site {{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
-              <i class="fa fa-envelope text-danger" style="font-size: 1.6em;"></i>
-            </a>
-          </span>
+        <div class="bg-light shadow p-4 rounded mt-2 bg-light">
+          <h4>Share article with</h4>
+          <ul>
+            <li>
+              <a target="blank" class="text-info"
+                href="https://twitter.com/share?text={{ .Title }}&url={{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a target="blank" class="text-success"
+                href="https://api.whatsapp.com/send?text={{ .Title }}: {{ .Site.Params.hostName }}{{ .Permalink | absURL }}"
+                data-action="share/whatsapp/share">
+                Whatsapp
+              </a>
+            </li>
+            <li>
+              <a class="text-danger" target="blank"
+                href="mailto:?subject={{ .Title }}&amp;body=Check out this site {{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
+                Email
+              </a>
+            </li>
+          </ul>
+
+
 
         </div>
       </div>

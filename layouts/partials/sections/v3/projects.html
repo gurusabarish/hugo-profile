@@ -1,9 +1,10 @@
-<section id="projects" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
-  <div class="container-fluid py-3 pt-5">
-    <div class="text-light text-center h3">Projects</div>
+<section id="projects">
+  <div class="container-fluid py-3 pt-5" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600"
+    data-aos-once="true">
+    <div class="text-dark text-center h3">Projects</div>
     <div class="row justify-content-center pt-2">
       {{ range ( where .Site.RegularPages "Type" "project" ) }}
-      <div class="col-md-8 pro m-3 shadow" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+      <div class="col-md-8 pro m-3 shadow" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
         <div class="row">
           <div class="col-md-6 bg-pro">
             <img src='{{ .Params.img }}' alt="{{ .Title }}">
@@ -23,7 +24,7 @@
               {{ end }}
               {{ if .Params.github }}
               <a href="{{ .Params.github }}" class="px-1 pr-2">
-                <i class="fab text-dark fa-lg fa-github"></i>
+                <i class="fab text-dark fa-lg fa-github pro-github"></i>
               </a>
               {{ end }}
               <a class="btn btn-sm pro-btn btn-outline-info" target="_blank" href="{{ .Permalink }}">
@@ -35,7 +36,7 @@
       </div>
       {{ end }}
       {{ range .Site.Params.projects }}
-      <div class="col-md-8 pro m-3 shadow" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+      <div class="col-md-8 pro m-3 shadow" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
         <div class="row">
           <div class="col-md-6 bg-pro">
             <img src='{{ .img }}' alt="{{ .name }}">
@@ -55,7 +56,7 @@
               {{ end }}
               {{ if .githublink }}
               <a href="{{ .githublink }}" class="px-1 pr-2">
-                <i class="fab text-dark fa-lg fa-github"></i>
+                <i class="fab text-dark fa-lg fa-github pro-github"></i>
               </a>
               {{ end }}
 

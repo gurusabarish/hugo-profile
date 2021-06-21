@@ -3,7 +3,7 @@ html {
 }
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #0a192f;
+  background-color: #eaedf0;
 }
 a:hover {
   text-decoration: none;
@@ -12,7 +12,16 @@ a:hover {
 /* v3 home */
 .name {
   padding-left: 3%;
-  border-left: 5px solid #f9fafc;
+  border-left: 1.2px solid #007bff;
+}
+.hi-text {
+  font-size: 20px;
+}
+.name-text {
+  font-size: 70px;
+}
+.pro-text {
+  font-size: 30px;
 }
 .btn-intro {
   padding-left: 3%;
@@ -29,13 +38,16 @@ a:hover {
 }
 .social-icon {
   padding: 2%;
-  background-color: #f9fafc;
+  background-color: #007bff;
+  color: #f9fafc !important;
   border-radius: 50%;
   transition: 0.3s;
+  border: 1px solid;
 }
 .social-icon:hover {
-  background-color: #007bff !important;
-  color: #f9fafc !important;
+  background-color: #f9fafc !important;
+  color: #007bff !important;
+  border: 1px solid #007bff;
 }
 .intro {
   padding: 8% 0 8% 0;
@@ -46,8 +58,8 @@ a:hover {
 .profile {
   padding: 1%;
   border: 1px solid #f9fafc;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
 }
 .profile:hover {
   -webkit-filter: grayscale(0);
@@ -60,6 +72,15 @@ a:hover {
   .profile {
     width: 220px;
     height: 220px;
+  }
+  .hi-text {
+    font-size: 15px;
+  }
+  .name-text {
+    font-size: 2.5rem;
+  }
+  .pro-text {
+    font-size: 1.25rem;
   }
 }
 @media only screen and (max-width: 768px) and (orientation: landscape) {
@@ -81,13 +102,17 @@ a:hover {
   padding-right: 10% !important;
 }
 .contact-btn {
-  padding: 2%;
+  padding: 1.5%;
+  padding-left: 2%;
+  padding-right: 2%;
   font-size: 17px;
-  color: #f9fafc;
-  border: 1px solid #f9fafc;
+  border: 1px solid #007bff;
 }
 .contact-btn:hover {
-  color: #8892b0;
+  color: #007bff !important;
+}
+.progress {
+  background-color: #f9fafc !important;
 }
 @media only screen and (max-width: 768px) {
   .about-content {
@@ -107,7 +132,7 @@ a:hover {
 /* v3 projects */
 .bg-pro {
   padding: 0 !important;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 .bg-pro img {
   height: 250px;
@@ -123,9 +148,13 @@ a:hover {
   border-bottom-right-radius: 0.5rem !important;
 }
 .content-pro-top {
+  color: #3a3b3c !important;
   height: 80%;
 }
+.pro-github{
+  color: #3a3b3c !important;
 
+}
 .pro:hover .pro-btn {
   background-color: #3498db !important;
   color: #f9fafc;
@@ -149,10 +178,10 @@ a:hover {
   }
   .content-pro-top {
     height: 80%;
-    color: #f9fafc;
+    color: #6c757d;
   }
   .card-text {
-    color: #faf9f6;
+    color: #343a40;
   }
   .pro:hover .content-pro {
     background-color: transparent !important;
@@ -160,7 +189,6 @@ a:hover {
   }
   .pro:hover .pro-btn {
     color: #f9fafc;
-    border: none;
   }
   .pro:hover .bg-pro {
     opacity: 0.3;
@@ -169,20 +197,25 @@ a:hover {
 
 /* v3 experience */
 #experience {
-  color: #8892b0;
 }
 #nav-pills-out {
-  border-left: 1px solid #f9fafc;
+  border-left: 1px solid #007bff;
 }
 .nav-pills .nav-link {
-  color: #8892b0 !important;
 }
 .nav-pills .active {
-  color: #f9fafc !important;
-  background-color: #0a192f !important;
+  padding-left: 20%;
+  color: #818181 !important;
+  background-color: transparent !important;
+}
+.nav-pills .active::before {
+  padding-left: 8%;
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: #007bff;
 }
 .tab-pane {
-  color: #8892b0;
 }
 .ex {
   list-style-type: none;
@@ -234,7 +267,6 @@ a:hover {
 
 /* v3 education */
 #education {
-  color: #8892b0;
 }
 .v-center {
   display: flex;
@@ -245,16 +277,13 @@ a:hover {
   padding: 0;
 }
 .edu-item {
-  padding-left: 20%;
+  padding-right: 8%;
   list-style: none;
 }
 .edu-item::before {
-  padding: 0%;
-  padding-left: 20%;
-  content: "▹";
+  content: "\25C3";
   position: absolute;
-  left: 0px;
-  color: #f9fafc;
+  right: 0px;
 }
 .edu-img {
   width: 100%;
@@ -262,15 +291,14 @@ a:hover {
 @media only screen and (max-width: 768px) {
   .edu-item::before {
     padding: 0%;
-    padding-left: 8%;
     content: "▹";
     position: absolute;
     left: 0px;
-    color: #f9fafc;
   }
   .edu-item {
-    padding-left: 2%;
+    padding-left: 5%;
     list-style: none;
+    padding-right: 2%;
   }
   .edu-img {
     width: 100%;
@@ -284,7 +312,6 @@ a:hover {
     content: "▹";
     position: absolute;
     left: 0px;
-    color: #f9fafc;
   }
   .edu-item {
     padding-right: 18%;
@@ -319,6 +346,9 @@ a:hover {
 .achiv-out {
   max-width: 35% !important;
 }
+.achiv-head {
+  color: #3a3b3c !important;
+}
 @media only screen and (max-width: 768px) {
   .achiv-out {
     max-width: 100% !important;
@@ -327,6 +357,5 @@ a:hover {
 
 /* v3 contact */
 #contact {
-  color: #8892b0;
   font-size: 17px;
 }

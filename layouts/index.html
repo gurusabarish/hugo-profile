@@ -67,7 +67,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-<body>
+<body class="text-dark">
   <!--<div id="loader" class="center"></div>-->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
@@ -130,6 +130,28 @@
       }
     };
     */
+    $('.darkmode-label').click(function () {
+      $("body").toggleClass("darkmode");
+      $(".fa-moon").toggleClass("d-none");
+      $(".fa-sun").toggleClass("d-none");
+      $("nav").toggleClass("navbar-dark");
+      $("nav").toggleClass("navbar-light");
+      $('.text-dark').addClass('darkmode-text-dark').removeClass('text-dark');
+      $('.text-muted').addClass('darkmode-text-muted').removeClass('text-muted');
+      if ($('input.custom-control-input').is(':checked')) {
+        $('.darkmode-text-dark').addClass('text-dark').removeClass('darkmode-text-dark');
+        $('.darkmode-text-muted').addClass('text-muted').removeClass('darkmode-text-muted');
+      };
+    });
+    if ($('input.custom-control-input').is(':checked')) {
+      $("body").toggleClass("darkmode");
+      $(".fa-moon").addClass("d-none");
+      $(".fa-sun").removeClass("d-none");
+      $("nav").toggleClass("navbar-dark");
+      $("nav").toggleClass("navbar-light");
+      $('.text-dark').addClass('darkmode-text-dark').removeClass('text-dark');
+      $('.text-muted').addClass('darkmode-text-muted').removeClass('text-muted');
+    };
   </script>
 </body>
 {{ else }}
