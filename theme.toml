@@ -2,7 +2,8 @@ name = "Hugo Profile"
 license = "MIT"
 licenselink = "https://github.com/gurusabarish/hugo-profile/blob/master/LICENSE"
 description = "A high performance hugo theme for personal portfolio and blog."
-homepage = "https://profile.gurusabarish.tech"
+homepage = "https://github.com/gurusabarish/hugo-profile"
+demosite = "https://profile.gurusabarish.tech"
 tags = ["Responsive","Blog", "Portfolio", "Clean", "Fast", "Seo"]
 min_version = "0.68.0"
 
