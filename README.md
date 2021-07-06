@@ -11,8 +11,6 @@ A high performance hugo theme for personal portfolio and blog
   
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5c1dcb34-cada-4c80-82b7-cfdbdbd7c774/deploy-status)](https://app.netlify.com/sites/hugo-profile/deploys)
 ![Repository Size](https://img.shields.io/github/repo-size/gurusabarish/hugo-profile)
-![Lines of Codes](https://img.shields.io/tokei/lines/github/gurusabarish/hugo-profile)
-![Contributor](https://img.shields.io/github/contributors/gurusabarish/hugo-profile)
 ![Latest Release](https://img.shields.io/github/v/release/gurusabarish/hugo-profile?include_prereleases)
 ![Last Commit](https://img.shields.io/github/last-commit/gurusabarish/hugo-profile)
 ![Open Issues](https://img.shields.io/github/issues/gurusabarish/hugo-profile?color=important)
