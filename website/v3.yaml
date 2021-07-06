@@ -1,6 +1,7 @@
 baseURL: "https://example.com"
 languageCode: "en-us"
 title: "Hugo-profile"
+theme: "hugo-profile"
 
 googleanalytics: UA-xxxxxx-x
 disqusShortname:

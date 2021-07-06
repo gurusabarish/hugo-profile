@@ -65,6 +65,7 @@ git clone https://github.com/gurusabarish/hugo-profile.git
 baseURL: "https://example.com"
 languageCode: "en-us"
 title: "Hugo-profile"
+theme: "hugo-profile"
 
 googleanalytics: UA-xxxxxxxx-x
 disqusShortname: yourdiscussshortname
@@ -190,6 +191,7 @@ params:
 baseURL: "https://example.com"
 languageCode: "en-us"
 title: "Hugo-profile"
+theme: "hugo-profile"
 
 googleanalytics: UA-xxxxxx-x
 disqusShortname:
@@ -268,6 +270,7 @@ params:
 baseURL: "https://example.com"
 languageCode: "en-us"
 title: "Hugo-profile"
+theme: "hugo-profile"
 
 googleanalytics: UA-xxxxxx-x
 disqusShortname:
