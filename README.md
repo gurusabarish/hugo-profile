@@ -23,6 +23,8 @@ A high performance hugo theme for personal portfolio and blog
 ## Queries
 - If you have any queries or bugs, feel free to open an issue in [github](https://github.com/gurusabarish/hugo-profile/issues)
 
+## Quick deployment
+**Fork this repo or create your own github repo using "*use this template*" button. Edit the content inside website folder and connect your repo to netlify**
 ## Demos
 
 ### [Demo Site V3(latest)](https://profile.gurusabarish.tech)
