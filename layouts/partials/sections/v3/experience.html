@@ -1,4 +1,4 @@
-<section id="experience" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+<section id="experience">
   <div class="container-fluid pt-5">
     <div class="text-dark text-center h3">Experience</div>
 
@@ -6,7 +6,13 @@
       <div class="d-md-none d-lg-none d-sm-block">
         <ol class="ex-ol pl-5 pr-3">
           {{ range .Site.Params.experience }}
-          <li class="ex-ol-li" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+          <li
+            class="ex-ol-li"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="600"
+            data-aos-once="true"
+          >
             <h4 class="text-muted">
               <span class="text-primary">{{ .company }}</span> - {{ .role }}
             </h4>
@@ -22,31 +28,56 @@
             </ul>
           </li>
           {{ end }}
-
         </ol>
       </div>
 
-      <div id="nav-pills-out" class="d-none d-md-block nav flex-column nav-pills col-md-2" id="v-pills-tab"
-        role="tablist" aria-orientation="vertical">
-        {{ range $index, $element := .Site.Params.experience }}
-        {{ if (eq $index 0) }}
-        <a class="nav-link active" id="{{ .company }}-tab" data-toggle="pill" href="#{{ .company }}" role="tab"
-          aria-controls="{{ .company }}" aria-selected="true">
+      <div
+        id="nav-pills-out"
+        class="d-none d-md-block nav flex-column nav-pills col-md-2"
+        id="v-pills-tab"
+        role="tablist"
+        aria-orientation="vertical"
+      >
+        {{ range $index, $element := .Site.Params.experience }} {{ if (eq $index
+        0) }}
+        <a
+          class="nav-link active"
+          id="{{ .company }}-tab"
+          data-toggle="pill"
+          href="#{{ .company }}"
+          role="tab"
+          aria-controls="{{ .company }}"
+          aria-selected="true"
+        >
           {{ .company }}
         </a>
         {{ else }}
-        <a class="nav-link" id="{{ .company }}-tab" data-toggle="pill" href="#{{ .company }}" role="tab"
-          aria-controls="{{ .company }}" aria-selected="false">
+        <a
+          class="nav-link"
+          id="{{ .company }}-tab"
+          data-toggle="pill"
+          href="#{{ .company }}"
+          role="tab"
+          aria-controls="{{ .company }}"
+          aria-selected="false"
+        >
           {{ .company }}
         </a>
-        {{ end }}
-        {{ end }}
+        {{ end }} {{ end }}
       </div>
 
-      <div class="tab-content col-md-4 d-none d-md-block" id="v-pills-tabContent">
-        {{ range $index, $element := .Site.Params.experience }}
-        {{ if (eq $index 0) }}
-        <div class="tab-pane fade show active" id="{{ .company }}" role="tabpanel" aria-labelledby="{{ .company }}-tab">
+      <div
+        class="tab-content col-md-4 d-none d-md-block"
+        id="v-pills-tabContent"
+      >
+        {{ range $index, $element := .Site.Params.experience }} {{ if (eq $index
+        0) }}
+        <div
+          class="tab-pane fade show active"
+          id="{{ .company }}"
+          role="tabpanel"
+          aria-labelledby="{{ .company }}-tab"
+        >
           <div class="h4 text-muted">
             <span class="text-primary">{{ .company }}</span> - {{ .role }}
           </div>
@@ -62,7 +93,12 @@
           </ul>
         </div>
         {{ else }}
-        <div class="tab-pane fade" id="{{ .company }}" role="tabpanel" aria-labelledby="{{ .company }}-tab">
+        <div
+          class="tab-pane fade"
+          id="{{ .company }}"
+          role="tabpanel"
+          aria-labelledby="{{ .company }}-tab"
+        >
           <div class="h4 text-muted">
             <span class="text-primary">{{ .company }}</span> - {{ .role }}
           </div>
@@ -77,12 +113,8 @@
             {{ end }}
           </ul>
         </div>
-        {{ end }}
-
-        {{ end }}
+        {{ end }} {{ end }}
       </div>
-
     </div>
-
   </div>
 </section>

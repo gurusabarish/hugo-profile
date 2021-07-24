@@ -12,16 +12,16 @@ a:hover {
 /* v3 home */
 .name {
   padding-left: 3%;
-  border-left: 1.2px solid #007bff;
+  border-left: 3px solid #007bff;
 }
 .hi-text {
   font-size: 20px;
 }
 .name-text {
-  font-size: 70px;
+  font-size: 60px;
 }
 .pro-text {
-  font-size: 30px;
+  font-size: 25px;
 }
 .btn-intro {
   padding-left: 3%;
@@ -38,15 +38,15 @@ a:hover {
 }
 .social-icon {
   padding: 2%;
-  background-color: #007bff;
-  color: #f9fafc !important;
-  border-radius: 50%;
-  transition: 0.3s;
-  border: 1px solid;
-}
-.social-icon:hover {
   background-color: #f9fafc !important;
   color: #007bff !important;
+  border: 1px solid #007bff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.social-icon:hover {
+  background-color: #007bff !important;
+  color: #f9fafc !important;
   border: 1px solid #007bff;
 }
 .intro {
@@ -90,6 +90,9 @@ a:hover {
 }
 
 /* v3 about */
+.about-back {
+  background-color: #dce6f1;
+}
 .about {
   padding-top: 3% !important;
   padding-bottom: 3% !important;
@@ -130,6 +133,7 @@ a:hover {
 }
 
 /* v3 projects */
+
 .bg-pro {
   padding: 0 !important;
   opacity: 0.9;
@@ -151,9 +155,8 @@ a:hover {
   color: #3a3b3c !important;
   height: 80%;
 }
-.pro-github{
+.pro-github {
   color: #3a3b3c !important;
-
 }
 .pro:hover .pro-btn {
   background-color: #3498db !important;
@@ -266,7 +269,8 @@ a:hover {
 }
 
 /* v3 education */
-#education {
+.education-back {
+  background-color: #e1e0e5;
 }
 .v-center {
   display: flex;
@@ -293,7 +297,7 @@ a:hover {
     padding: 0%;
     content: "▹";
     position: absolute;
-    left: 0px;
+    left: 30px;
   }
   .edu-item {
     padding-left: 5%;
@@ -325,6 +329,9 @@ a:hover {
 }
 
 /* v3 Achievements */
+.achievements-back {
+  background-color: #e5e6df;
+}
 .achiv-card:hover {
   filter: grayscale(100%);
 }
