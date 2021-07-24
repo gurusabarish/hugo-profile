@@ -38,8 +38,8 @@
         role="tablist"
         aria-orientation="vertical"
       >
-        {{ range $index, $element := .Site.Params.experience }} {{ if (eq $index
-        0) }}
+        {{ range $index, $element := .Site.Params.experience }} 
+        {{ if (eq $index 0) }}
         <a
           class="nav-link active"
           id="{{ .company }}-tab"
@@ -70,8 +70,8 @@
         class="tab-content col-md-4 d-none d-md-block"
         id="v-pills-tabContent"
       >
-        {{ range $index, $element := .Site.Params.experience }} {{ if (eq $index
-        0) }}
+        {{ range $index, $element := .Site.Params.experience }} 
+        {{ if (eq $index 0) }}
         <div
           class="tab-pane fade show active"
           id="{{ .company }}"
@@ -113,7 +113,8 @@
             {{ end }}
           </ul>
         </div>
-        {{ end }} {{ end }}
+        {{ end }} 
+        {{ end }}
       </div>
     </div>
   </div>
