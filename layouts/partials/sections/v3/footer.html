@@ -7,8 +7,8 @@
       {{ range ( where .Site.RegularPages "Type" "blog" | first 3 ) }}
       <div class="col-lg-4 col-md-6 pt-2">
         <a href="{{ .RelPermalink }}" class="post-card-link">
-          <div class="card px-2 h-100">
-            <div class="card-head py-3">
+          <div class="card h-100">
+            <div class="card-head px-2 py-3">
               <h5 class="card-title font-weight-bold px-2">{{ .Title }}</h5>
               <div class="px-2">{{ .Summary | truncate 300}}</div>
             </div>
