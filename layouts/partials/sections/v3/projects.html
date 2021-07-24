@@ -3,12 +3,7 @@
     <div class="text-dark text-center h3">Projects</div>
     <div class="row justify-content-center pt-2">
       {{ range ( where .Site.RegularPages "Type" "project" ) }}
-      <div
-        class="col-md-8 pro m-3 shadow"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-        data-aos-once="true"
-      >
+      <div class="col-md-8 pro m-3 shadow" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
         <div class="row">
           <div class="col-md-6 bg-pro">
             <img src="{{ .Params.img }}" alt="{{ .Title }}" />
@@ -28,11 +23,7 @@
                 <i class="fab text-dark fa-lg fa-github pro-github"></i>
               </a>
               {{ end }}
-              <a
-                class="btn btn-sm pro-btn btn-outline-info"
-                target="_blank"
-                href="{{ .Permalink }}"
-              >
+              <a class="btn btn-sm pro-btn btn-outline-info" target="_blank" href="{{ .Permalink }}">
                 Know more...
               </a>
             </span>
@@ -40,12 +31,7 @@
         </div>
       </div>
       {{ end }} {{ range .Site.Params.projects }}
-      <div
-        class="col-md-8 pro m-3 shadow"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-        data-aos-once="true"
-      >
+      <div class="col-md-8 pro m-3 shadow" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
         <div class="row">
           <div class="col-md-6 bg-pro">
             <img src="{{ .img }}" alt="{{ .name }}" />
