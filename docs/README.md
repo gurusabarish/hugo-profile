@@ -1,12 +1,8 @@
-<div align="center">
-  
-# hugo-profile
-  
-[Live Demo](https://profile.gurusabarish.tech) - [Live Demo V2](https://v2.profile.gurusabarish.tech) 
 
 A high performance and mobile first hugo template for personal portfolio and blog
 
-</div>
+[Live Demo](https://profile.gurusabarish.tech) - [Live Demo V2](https://v2.profile.gurusabarish.tech) 
+
 
 ## Queries
 
