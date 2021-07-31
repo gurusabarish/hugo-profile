@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   background-color: #eaedf0;
 }
 a:hover {
@@ -12,7 +12,7 @@ a:hover {
 /* v3 home */
 .name {
   padding-left: 3%;
-  border-left: 3px solid #007bff;
+  border-left: 4px solid #007bff;
 }
 .hi-text {
   font-size: 20px;
@@ -35,6 +35,8 @@ a:hover {
   border-radius: 50px !important;
   cursor: pointer;
   font-size: 18px;
+  font-weight: 500 !important;
+  border: 2px solid;
 }
 .social-icon {
   padding: 2%;
@@ -110,6 +112,8 @@ a:hover {
   padding-right: 2%;
   font-size: 17px;
   border: 1px solid #007bff;
+  border-radius: 5%;
+  border-radius: 10px !important;
 }
 .contact-btn:hover {
   color: #007bff !important;
@@ -330,7 +334,7 @@ a:hover {
 
 /* v3 Achievements */
 .achievements-back {
-  background-color: #e5e6df;
+  background-color: #dce6f1;
 }
 .achiv-card:hover {
   filter: grayscale(100%);

@@ -53,10 +53,12 @@
 <head>
   <title>{{- .Site.Title -}}</title>
   <meta name="description" content="{{ .Site.Params.description }}">
+
+
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"
-    media="all">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   {{ template "_internal/google_analytics.html" . }}
   {{- partial "sections/v3/head.html" . -}}
   <link rel="stylesheet" href="/css/v3/v3.css" media="all">
@@ -162,6 +164,9 @@
       $(".text-muted")
         .addClass("darkmode-text-muted")
         .removeClass("text-muted");
+      $(".about-backdark").toggleClass("about-back");
+      $(".education-backdark").toggleClass("education-back");
+      $(".achievements-backdark").toggleClass("achievements-back");
     }
   </script>
 </body>

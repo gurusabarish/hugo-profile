@@ -5,7 +5,20 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #eaedf0;
 }
-.blog-page-color{
+
+.bottom-share {
+  position: fixed;
+  z-index: 1000;
+  bottom: 20px;
+  right: 25px;
+}
+.bottom-share button {
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.blog-page-color {
   color: #3a3b3c !important;
 }
 #TableOfContents {
