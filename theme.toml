@@ -4,7 +4,7 @@ licenselink = "https://github.com/gurusabarish/hugo-profile/blob/master/LICENSE"
 description = "A high performance and mobile first hugo template for personal portfolio and blog."
 homepage = "https://github.com/gurusabarish/hugo-profile"
 demosite = "https://profile.gurusabarish.tech"
-tags = ["Responsive","Blog", "Portfolio", "Clean", "Fast", "Seo"]
+tags = ["Responsive","Blog", "Portfolio", "Personal"]
 min_version = "0.68.0"
 
 [author]
