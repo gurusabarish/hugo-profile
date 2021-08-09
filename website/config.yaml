@@ -2,9 +2,8 @@ baseURL: "https://profile.gurusabarish.tech"
 languageCode: "en-us"
 title: "Hugo-profile"
 theme: "./.."
-relativeURLs: true
 
-googleanalytics: UA-167646412-8
+googleanalytics: UA-xxxxxx-x
 disqusShortname:
 Paginate: 3
 markup:
@@ -27,25 +26,22 @@ params:
   customMenus:
     - name: "Blog"
       Url: "/blog"
-    - name: "Version2"
-      Url: "https://v2.profile.gurusabarish.tech"
-    - name: "Version1"
-      Url: "https://v1.profile.gurusabarish.tech"
+
   # home
   disable_home: false
   profile_image: "/images/profile.png"
-  name: "Guru Sabarish"
-  profession: "Full Stack Developer"
-  github: "https://github.com/gurusabarish"
-  linkedin: "https://linkedin.com/in/gurusabarish"
-  twitter: "https://twitter.com/gurusabarishh"
-  instagram: "https://instagram.com/gurusabarishh"
-  facebook: "https://facebook.com/gurusabarish01"
+  name: "Example name"
+  profession: "Profession"
+  github: "https://github.com"
+  linkedin: "https://linkedin.com"
+  twitter: "https://twitter.com/"
+  instagram: "https://instagram.com/"
+  facebook: "https://facebook.com"
 
   # About
   disable_about: false
-  descripe_l1_person: "Hi, I'm Guru sabarish, a passionate web developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
-  descripe_l2_person: "Check out my blogs [here](https://blog.gurusabarish.tech)"
+  descripe_l1_person: "Hi, I'm Profile, a passionate web developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+  descripe_l2_person: "This is a example template for about section. You can find my works [here](#projects)"
   skills:
     - name: CSS
       percentage: 90
@@ -89,16 +85,16 @@ params:
       university: "Example university"
       startedyear: "2013"
       graduation: "2018"
-    - degree: "B.tech"
-      branch: "Information Technology"
+    - degree: "Degree"
+      branch: "Branch"
       university: "Example university"
-      startedyear: "2013"
-      graduation: "2018"
-    - degree: "B.tech"
-      branch: "Information Technology"
+      startedyear: "year"
+      graduation: "year"
+    - degree: "Degree"
+      branch: "Branch"
       university: "Example university"
-      startedyear: "2013"
-      graduation: "2018"
+      startedyear: "year"
+      graduation: "year"
 
   # Projects
   disable_projects: false
