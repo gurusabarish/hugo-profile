@@ -22,12 +22,19 @@ A high performance and mobile first hugo template for personal portfolio and blo
 - [Live demo V1](https://v1.profile.gurusabarish.tech)
 - [Live demo V2](https://v2.profile.gurusabarish.tech)
 - [Live demo V3 (latest)](https://profile.gurusabarish.tech)
+- [Github pages demo](https://gurusabarish.github.io/hugo-profile)
+
 
 ## Requirements
 
 - Hugo Version 0.68.0 or higher
 
 ## How to use this template
+ - [Hugo theme format](./#Hugo-theme-format)
+ - [Local Development](./#Local-Development)
+ - [Direct deployment using netlify](./#Direct-deployment-using-netlify)
+ - [Direct deployment using Github Pages and action](./#Direct-deployment-using-Github-Pages-and-action)
+
 
 ### Hugo theme format
 
@@ -59,6 +66,12 @@ cd hugo-profile
 - You can customize the config file, content and everything inside website folder. Netlify will automatically deploy your changes every time you modify the repo.
 
 **[What is netlify?](https://www.netlify.com/about/)** An intuitive Git-based workflow and powerful serverless platform to build, deploy, and collaborate on web apps
+
+
+### Direct deployment using Github Pages and action
+
+- Fork this repo or create new repo using `use this template` button. Github action will generate all files and push to demo branch. Now, you have to connect your github pages to that `demo` branch. _No need to create demo branch. Github action will take care of it_
+- You can customize the config file, content and everything inside website folder. Github action will automatically deploy your changes to demo branch every time you modify the repo.
 
 ## Deployment
 
