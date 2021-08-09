@@ -1,0 +1,85 @@
+/* v2 and v3 footer */
+footer {
+  background-color: #1c2d41;
+  color: #8392a5;
+  border-top-width: 1px !important;
+  border-color: #8392a5;
+}
+
+footer a {
+  color: #8392a5;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: none;
+}
+
+/* v2 and v3 news */
+.news a {
+  color: #1c2d41;
+  text-decoration: none;
+}
+
+/* v2 do things */
+.do-things {
+  height: auto;
+  padding: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.things-i-do {
+  font-family: "Alata", sans-serif;
+  font-size: 25px;
+}
+
+.things {
+  height: auto;
+}
+
+.things-text {
+  height: 100px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .things-i-do {
+    padding-top: 7% !important;
+  }
+
+  .do-things-card {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 0%;
+    padding-top: 0%;
+  }
+}
+
+/* v2 about */
+.about {
+  height: auto;
+}
+
+.jop {
+  font-size: 30px;
+}
+
+.about-me {
+  font-family: "Alata", sans-serif;
+  font-size: 27px;
+}
+
+.about-content {
+  font-size: 20px;
+}
+
+.about-content a:hover {
+  text-decoration-line: none;
+  color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .about {
+    height: auto;
+  }
+}

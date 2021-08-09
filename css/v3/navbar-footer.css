@@ -1,0 +1,28 @@
+/* v3 navbar */
+.navbar-brand {
+  color: #007bff !important;
+}
+
+.navbar .nav-link:hover {
+  color: #007bff !important;
+}
+.navbar-text {
+  font-size: 16px !important;
+}
+
+/* v2 and v3 footer */
+footer {
+  color: #8392a5;
+  border-top-width: 1px !important;
+  border-color: #8392a5;
+}
+
+footer a {
+  color: #8392a5;
+}
+
+/* v2 and v3 news */
+.news a {
+  color: #1c2d41;
+  text-decoration: none;
+}
