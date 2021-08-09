@@ -1,9 +1,10 @@
 baseURL: "https://profile.gurusabarish.tech"
 languageCode: "en-us"
 title: "Hugo-profile"
+relativeURLs: true
 
 googleanalytics: UA-167646412-8
-disqusShortname: 
+disqusShortname:
 Paginate: 3
 markup:
   goldmark:
