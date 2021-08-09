@@ -30,10 +30,10 @@ A high performance and mobile first hugo template for personal portfolio and blo
 - Hugo Version 0.68.0 or higher
 
 ## How to use this template
- - [Hugo theme format](./#Hugo-theme-format)
- - [Local Development](./#Local-Development)
- - [Direct deployment using netlify](./#Direct-deployment-using-netlify)
- - [Direct deployment using Github Pages and action](./#Direct-deployment-using-Github-Pages-and-action)
+ - [Hugo theme format](#Hugo-theme-format)
+ - [Local Development](#Local-Development)
+ - [Direct deployment using netlify](#Direct-deployment-using-netlify)
+ - [Direct deployment using Github Pages and action](#Direct-deployment-using-Github-Pages-and-action)
 
 
 ### Hugo theme format
