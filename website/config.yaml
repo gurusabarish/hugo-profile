@@ -2,6 +2,7 @@ baseURL: "https://profile.gurusabarish.tech"
 languageCode: "en-us"
 title: "Hugo-profile"
 theme: "./.."
+relativeURLs: true
 
 googleanalytics: UA-xxxxxx-x
 disqusShortname:
