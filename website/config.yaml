@@ -4,7 +4,7 @@ title: "Hugo-profile"
 theme: "./.."
 relativeURLs: true
 
-googleanalytics: UA-xxxxxx-x
+googleanalytics: UA-167646412-8
 disqusShortname:
 Paginate: 3
 markup:
