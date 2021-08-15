@@ -4,7 +4,7 @@ title: "Hugo-profile"
 theme: "./.."
 relativeURLs: true
 
-googleanalytics: UA-xxxxxx-x
+googleanalytics: UA-167646412-8
 disqusShortname:
 Paginate: 3
 markup:
@@ -57,6 +57,7 @@ params:
   disable_experience: false
   experience:
     - company: "Google"
+      # id: "google-developer"   // use this, when you want to change the id(used for navigation)
       role: "Software developer"
       startdate: Feb 2021
       enddate: present
@@ -64,6 +65,7 @@ params:
         - point: Lead backend developer for a product.
         - point: Created a frontend design for a product.
     - company: "Facebook"
+      # id: "facebook-developer" // use this, when you want to change the id(used for navigation)
       role: "Fullstack developer"
       startdate: Mar 2020
       enddate: Dec 2020
@@ -71,6 +73,7 @@ params:
         - point: Lead backend developer for a product.
         - point: Created a frontend design for a product.
     - company: "Amazon"
+      # id: "amazon-developer" // use this, when you want to change the id(used for navigation)
       role: "Fullstack developer"
       startdate: Feb 2019
       enddate: Jan 2020

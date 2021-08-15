@@ -29,8 +29,23 @@
         role="tablist" aria-orientation="vertical">
         {{ range $index, $element := .Site.Params.experience }}
         {{ if (eq $index 0) }}
+        {{ if .id }}
+        <a class="nav-link active" id="{{ .id }}-tab" data-toggle="pill" href="#{{ .id }}" role="tab"
+          aria-controls="{{ .id }}" aria-selected="true">
+          {{ .company }}
+        </a>
+        {{ else }}
         <a class="nav-link active" id="{{ .company }}-tab" data-toggle="pill" href="#{{ .company }}" role="tab"
           aria-controls="{{ .company }}" aria-selected="true">
+          {{ .company }}
+        </a>
+        {{ end }}
+
+
+        {{ else }}
+        {{ if .id }}
+        <a class="nav-link" id="{{ .id }}-tab" data-toggle="pill" href="#{{ .id }}" role="tab" aria-controls="{{ .id }}"
+          aria-selected="false">
           {{ .company }}
         </a>
         {{ else }}
@@ -38,13 +53,51 @@
           aria-controls="{{ .company }}" aria-selected="false">
           {{ .company }}
         </a>
+        {{ end }}
+
         {{ end }} {{ end }}
       </div>
 
       <div class="tab-content col-md-4 d-none d-md-block" id="v-pills-tabContent">
         {{ range $index, $element := .Site.Params.experience }}
         {{ if (eq $index 0) }}
+        {{ if .id }}
+        <div class="tab-pane fade show active" id="{{ .id }}" role="tabpanel" aria-labelledby="{{ .id }}-tab">
+          <div class="h4 text-muted">
+            <span class="text-primary">{{ .company }}</span> - {{ .role }}
+          </div>
+          <div>
+            <small>{{ .startdate }}</small>
+            -
+            <small>{{ .enddate }}</small>
+          </div>
+          <ul class="py-2 ex">
+            {{ range .featuredpoints }}
+            <li class="ex-item">{{ .point }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ else }}
         <div class="tab-pane fade show active" id="{{ .company }}" role="tabpanel" aria-labelledby="{{ .company }}-tab">
+          <div class="h4 text-muted">
+            <span class="text-primary">{{ .company }}</span> - {{ .role }}
+          </div>
+          <div>
+            <small>{{ .startdate }}</small>
+            -
+            <small>{{ .enddate }}</small>
+          </div>
+          <ul class="py-2 ex">
+            {{ range .featuredpoints }}
+            <li class="ex-item">{{ .point }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+
+        {{ else }}
+        {{ if .id }}
+        <div class="tab-pane fade" id="{{ .id }}" role="tabpanel" aria-labelledby="{{ .id }}-tab">
           <div class="h4 text-muted">
             <span class="text-primary">{{ .company }}</span> - {{ .role }}
           </div>
@@ -75,6 +128,8 @@
             {{ end }}
           </ul>
         </div>
+        {{ end }}
+
         {{ end }}
         {{ end }}
       </div>
