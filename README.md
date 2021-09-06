@@ -4,7 +4,6 @@
  
 [![Twitter](https://img.shields.io/twitter/url?label=Tweet&style=social&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile) [![GitHub forks](https://img.shields.io/github/forks/gurusabarish/hugo-profile?style=plastic)](https://github.com/gurusabarish/hugo-profile/network) [![GitHub stars](https://img.shields.io/github/stars/gurusabarish/hugo-profile?style=plastic)](https://github.com/gurusabarish/hugo-profile/stargazers)
 
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5c1dcb34-cada-4c80-82b7-cfdbdbd7c774/deploy-status)](https://app.netlify.com/sites/hugo-profile/deploys)
 ![Repository Size](https://img.shields.io/github/repo-size/gurusabarish/hugo-profile)
 ![Latest Release](https://img.shields.io/github/v/release/gurusabarish/hugo-profile?include_prereleases)
@@ -18,27 +17,26 @@
 A high performance and mobile first hugo template for personal portfolio and blog
 
 ### Credit
-I spent a non-trivial amount of effort building this template. It's always disheartening whenever I find that someone use this template without giving me credit. Please, give me proper credit in footer.
 
+I spent a non-trivial amount of effort building this template. It's always disheartening whenever I find that someone use this template without giving me credit. Please, give me proper credit in footer.
 
 ### Demo
 
-- [Live demo V1](https://v1.profile.gurusabarish.tech)
-- [Live demo V2](https://v2.profile.gurusabarish.tech)
-- [Live demo V3 (latest)](https://profile.gurusabarish.tech)
+- [Live demo V1](https://hugo-profile-1.netlify.app)
+- [Live demo V2](https://hugo-profile-2.netlify.app)
+- [Live demo V3 (latest)](https://hugo-profile.netlify.app)
 - [Github pages demo](https://gurusabarish.github.io/hugo-profile)
-
 
 ## Requirements
 
 - Hugo Version 0.68.0 or higher
 
 ## How to use this template
- - [Hugo theme format](#Hugo-theme-format)
- - [Local Development](#Local-Development)
- - [Direct deployment using netlify](#Direct-deployment-using-netlify)
- - [Direct deployment using Github Pages and action](#Direct-deployment-using-Github-Pages-and-action)
 
+- [Hugo theme format](#Hugo-theme-format)
+- [Local Development](#Local-Development)
+- [Direct deployment using netlify](#Direct-deployment-using-netlify)
+- [Direct deployment using Github Pages and action](#Direct-deployment-using-Github-Pages-and-action)
 
 ### Hugo theme format
 
@@ -70,7 +68,6 @@ cd hugo-profile
 - You can customize the config file, content and everything inside website folder. Netlify will automatically deploy your changes every time you modify the repo.
 
 **[What is netlify?](https://www.netlify.com/about/)** An intuitive Git-based workflow and powerful serverless platform to build, deploy, and collaborate on web apps
-
 
 ### Direct deployment using Github Pages and action
 
