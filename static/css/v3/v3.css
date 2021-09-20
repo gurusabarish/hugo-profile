@@ -143,14 +143,14 @@ a:hover {
   opacity: 0.9;
 }
 .bg-pro img {
-  height: 250px;
+  height: 300px;
   width: 100%;
   border-radius: 0.5rem !important;
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
 .content-pro {
-  height: 250px;
+  height: 300px;
   background-color: #e5e4e2 !important;
   border-top-right-radius: 0.5rem !important;
   border-bottom-right-radius: 0.5rem !important;
@@ -176,9 +176,11 @@ a:hover {
     margin-right: 10% !important;
   }
   .bg-pro img {
+    height: 250px;
     border-radius: 0.5rem !important;
   }
   .content-pro {
+    height: 250px;
     background-color: transparent !important;
     position: absolute;
     top: 8px;

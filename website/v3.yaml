@@ -32,6 +32,7 @@ params:
   disable_home: false
   profile_image: "/images/profile.png"
   name: "Example name"
+  namecolor: ffc107
   profession: "Profession"
   github: "https://github.com"
   linkedin: "https://linkedin.com"
