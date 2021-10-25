@@ -18,7 +18,7 @@ A high performance and mobile first hugo template for personal portfolio and blo
 
 ### Credit
 
-I spent a non-trivial amount of effort building this template. It's always disheartening whenever I find that someone use this template without giving me credit. Please, give me proper credit in footer.
+I spent an amount of effort building this template. It's always disheartening whenever I find that someone use this template without giving me credit. Please, give me proper credit in footer.
 
 ### Demo
 
