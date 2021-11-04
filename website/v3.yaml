@@ -35,6 +35,7 @@ params:
   namecolor: ffc107
   profession: "Profession"
   github: "https://github.com"
+  gitlab: "https://gitlab.com"
   linkedin: "https://linkedin.com"
   twitter: "https://twitter.com/"
   instagram: "https://instagram.com/"
