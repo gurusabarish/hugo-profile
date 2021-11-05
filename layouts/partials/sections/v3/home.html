@@ -27,6 +27,13 @@
           <span class="px-1"></span>
           {{ end }}
 
+          {{ if .Site.Params.gitlab }}
+          <a href="{{ .Site.Params.gitlab }}" class="social-icon">
+            <i class="fab fa-lg fa-gitlab"></i>
+          </a>
+          <span class="px-1"></span>
+          {{ end }}
+
           {{ if .Site.Params.twitter }}
           <a href="{{ .Site.Params.twitter }}" class="social-icon">
             <i class="fab fa-lg fa-twitter"></i>
@@ -46,6 +53,7 @@
             <i class="fab fa-lg fa-facebook"></i>
           </a>
           {{ end }}
+
         </div>
         <div class="pt-4 btn-intro">
           <a href="#about" class="btn-know btn btn-outline-info" data-aos="zoom-in" data-aos-offset="50"
