@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   {{ if eq .Site.Params.version 1 }}
   {{- partial "sections/v1/head.html" . -}}
   <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -22,6 +23,8 @@
   {{- block "head" . -}}{{- end }}
   {{ else }}
   {{ end }}
+
+
 
 </head>
 

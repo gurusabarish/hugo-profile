@@ -8,3 +8,9 @@
 <link rel="stylesheet" href="/css/all.min.css" media="all">
 <link rel="stylesheet" href="/css/fontawesome.min.css" media="all">
 <link rel="stylesheet" href="/css/v2/v2.css" media="all">
+
+
+<!-- Custom Styles -->
+{{ if .Site.Params.customCSS }}
+<link rel="stylesheet" href="/style.css">
+{{ end }}

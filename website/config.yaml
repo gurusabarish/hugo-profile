@@ -19,6 +19,7 @@ taxonomies:
 enableEmoji: true
 params:
   version: 3
+  customCSS: false
 
   favicon: "/images/fav.png"
   description: "A high performance hugo theme for personal portfolio and blog."
@@ -117,9 +118,11 @@ params:
     - title: Competition winner
       description: We are developed a product which can help others.
       img: /images/achiv.jpg
+      url: https://example.com
     - title: Competition winner
       description: We are developed a product which can help others.
       img: /images/achiv.jpg
+      # url: https://example.com
     - title: Competition winner
       description: We are developed a product which can help others.
       img: /images/achiv.jpg
