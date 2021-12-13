@@ -42,6 +42,13 @@ params:
   instagram: "https://instagram.com/"
   facebook: "https://facebook.com"
 
+  # Custom social links
+  customSocialLinks:
+    - imageURL: "https://hugo-profile.netlify.app/images/fav.png"
+      url: "https://gohugo.com"
+    - fontAwesomeIconName: "fa fa-envelope"
+      url: "https://gmail.com"
+
   # About
   disable_about: false
   descripe_l1_person: "Hi, I'm Profile, a passionate web developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
