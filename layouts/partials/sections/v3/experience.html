@@ -29,26 +29,17 @@
       <div id="nav-pills-out" class="d-none d-md-block nav flex-column nav-pills col-md-2" id="v-pills-tab"
         role="tablist" aria-orientation="vertical">
         {{ range $index, $element := .Site.Params.experience }}
-          {{ if .id }}
-            <a class="nav-link {{ if (eq $index 0) }}active{{ end }}" id="{{ .id }}-tab" data-toggle="pill" href="#{{ .id }}" role="tab"
-              aria-controls="{{ .id }}" aria-selected="{{ if (eq $index 0) }}true{{ else }}false{{ end }}">
-              <small><i class="far fa-calendar-alt"></i> {{ .startdate }}</small> 
-              <div>{{ .company }}</div>
-            </a>
-          {{ else }}
-            <a class="nav-link {{ if (eq $index 0) }}active{{ end }}" id="{{ .company }}-tab" data-toggle="pill" href="#{{ .company }}" role="tab"
-              aria-controls="{{ .company }}" aria-selected="{{ if (eq $index 0) }}true{{ else }}false{{ end }}">
-              <small><i class="far fa-calendar-alt"></i> {{ .startdate }}</small> 
-              <div>{{ .company }}</div>
-            </a>
-          {{ end }}
+          <a class="nav-link {{ if (eq $index 0) }}active{{ end }}" id="{{ cond (eq .id "") .company .id }}-tab" data-toggle="pill" href="#{{ cond (eq .id "") .company .id }}" role="tab"
+            aria-controls="{{ cond (eq .id "") .company .id }}" aria-selected="{{ if (eq $index 0) }}true{{ else }}false{{ end }}">
+            <small><i class="far fa-calendar-alt"></i> {{ .startdate }}</small> 
+            <div>{{ .company }}</div>
+          </a>
         {{ end }}
       </div>
 
       <div class="tab-content col-md-4 d-none d-md-block" id="v-pills-tabContent">
         {{ range $index, $element := .Site.Params.experience }}
-          {{ if .id }}
-          <div class="tab-pane fade {{ if (eq $index 0) }}show active{{ end }}" id="{{ .id }}" role="tabpanel" aria-labelledby="{{ .id }}-tab">
+          <div class="tab-pane fade {{ if (eq $index 0) }}show active{{ end }}" id="{{ cond (eq .id "") .company .id }}" role="tabpanel" aria-labelledby="{{ cond (eq .id "") .company .id }}-tab">
             <div class="h6 text-muted">
               <span class="text-primary">{{ .company }}</span>
               <div class="h5">{{ .role }}</div>
@@ -64,24 +55,6 @@
               {{ end }}
             </ul>
           </div>
-          {{ else }}
-          <div class="tab-pane fade {{ if (eq $index 0) }}show active{{ end }}" id="{{ .company }}" role="tabpanel" aria-labelledby="{{ .company }}-tab">
-            <div class="h6 text-muted">
-              <span class="text-primary">{{ .company }}</span>
-              <div class="h5">{{ .role }}</div>
-            </div>
-            <div>
-              <small><i class="far fa-calendar-alt"></i> {{ .startdate }}</small>
-              -
-              <small>{{ .enddate }}</small>
-            </div>
-            <ul class="py-2 ex">
-              {{ range .featuredpoints }}
-              <li class="ex-item">{{ .point }}</li>
-              {{ end }}
-            </ul>
-          </div>
-          {{ end }}
         {{ end }}
       </div>
     </div>
