@@ -7,7 +7,7 @@
           data-aos-once="true">
           <div style="color: #{{ .Site.Params.namecolor }};" class="hi-text" data-aos="fade-up" data-aos-offset="50"
             data-aos-delay="50" data-aos-once="true" data-aos-duration="900">
-            Hi there, I'm
+            {{ .Site.Params.hitext | default "Hi there, I'm" }}
           </div>
           <h1 class="text-primary name-text" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"
             data-aos-duration="900" data-aos-once="true">
