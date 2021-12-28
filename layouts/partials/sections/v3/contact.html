@@ -7,7 +7,7 @@
         {{ if .Site.Params.email }}
         <div class="text-center pt-3">
           <a href="mailto:{{ .Site.Params.email }}?subject=Say hi!" class="contact-btn btn text-muted">
-            Get In Touch
+            {{ .Site.Params.getintouch | default "Get in Touch" }}
           </a>
         </div>
         {{ end }}
