@@ -4,26 +4,11 @@
 
     <div class="row justify-content-center py-md-5">
       <div class="d-md-none d-lg-none d-sm-block">
-        <ol class="ex-ol pl-5 pr-3">
           {{ range .Site.Params.experience }}
-            <li class="ex-ol-li" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
-              <h6 class="text-muted">
-                <span class="text-primary">{{ .company }}</span>
-                <div class="h5">{{ .role }}</div>
-              </h4>
-              <div>
-                <small><i class="far fa-calendar-alt"></i> {{ .startdate}}</small>
-                -
-                <small>{{ .enddate }}</small>
-              </div>
-              <ul class="py-2 ex-ol-ul">
-                {{ range .featuredpoints }}
-                <li class="ex-ol-item">{{ .point }}</li>
-                {{ end }}
-              </ul>
-            </li>
+            <div class="col-sm">
+              {{ partial "sections/v3/experience_details.html" . }}
+            </div>
           {{ end }}
-        </ol>
       </div>
 
       <div id="nav-pills-out" class="d-none d-md-block nav flex-column nav-pills col-md-2" id="v-pills-tab"
@@ -40,20 +25,7 @@
       <div class="tab-content col-md-4 d-none d-md-block" id="v-pills-tabContent">
         {{ range $index, $element := .Site.Params.experience }}
           <div class="tab-pane fade {{ if (eq $index 0) }}show active{{ end }}" id="{{ cond (eq .id "") .company .id }}" role="tabpanel" aria-labelledby="{{ cond (eq .id "") .company .id }}-tab">
-            <div class="h6 text-muted">
-              <span class="text-primary">{{ .company }}</span>
-              <div class="h5">{{ .role }}</div>
-            </div>
-            <div>
-              <small><i class="far fa-calendar-alt"></i> {{ .startdate }}</small>
-              -
-              <small>{{ .enddate }}</small>
-            </div>
-            <ul class="py-2 ex">
-              {{ range .featuredpoints }}
-              <li class="ex-item">{{ .point }}</li>
-              {{ end }}
-            </ul>
+            {{ partial "sections/v3/experience_details.html" . }}
           </div>
         {{ end }}
       </div>

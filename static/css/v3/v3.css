@@ -228,50 +228,15 @@ a:hover {
 }
 .ex {
   list-style-type: none;
+  padding-left: 60px;
 }
-.ex .ex-item {
-  padding-left: 30px;
-}
+
 .ex-item::before {
-  padding-left: 8%;
+  padding-left: 30px;
   content: "▹";
   position: absolute;
   left: 0px;
   color: #007bff;
-}
-.ex-ol {
-  list-style-type: decimal-leading-zero;
-  padding-top: 7%;
-}
-.ex-ol .ex-ol-li {
-  padding-bottom: 3%;
-}
-.ex-ol-ul {
-  max-width: 100%;
-  list-style-type: none;
-  padding-left: 0;
-}
-.ex-ol-ul li {
-  max-width: 100%;
-  padding-left: 10%;
-}
-.ex-ol-item::before {
-  padding-left: 15%;
-  content: "▹";
-  position: absolute;
-  left: 0px;
-  color: #007bff;
-}
-@media only screen and (max-width: 768px) and (orientation: landscape) {
-  .ex-ol {
-    list-style-type: decimal-leading-zero;
-    padding-left: 15% !important;
-    padding-right: 15% !important;
-  }
-  .ex-ol-item::before {
-    padding-left: 17%;
-    content: "▹";
-  }
 }
 
 /* v3 education */

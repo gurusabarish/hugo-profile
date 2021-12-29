@@ -1,0 +1,14 @@
+<div class="h6 text-muted">
+    <span class="text-primary">{{ .company }}</span>
+    <div class="h5">{{ .role }}</div>
+</div>
+<div>
+    <small><i class="far fa-calendar-alt"></i> {{ .startdate }}</small>
+    -
+    <small>{{ .enddate }}</small>
+</div>
+<ul class="py-2 ex">
+    {{ range .featuredpoints }}
+    <li class="ex-item">{{ .point }}</li>
+    {{ end }}
+</ul>
