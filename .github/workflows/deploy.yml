@@ -10,10 +10,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@my-site
         with:
           submodules: true
-          fetch-depth: my-site
+          fetch-depth: 0
 
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
