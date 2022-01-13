@@ -71,9 +71,10 @@ cd hugo-profile
 
 ### Direct deployment using Github Pages and action
 
-- Fork this repo or create new repo using `use this template` button. Github action will generate all files and push to demo branch. Now, you have to connect your github pages to that `demo` branch. _No need to create demo branch. Github action will take care of it_
-- You can customize the config file, content and everything inside website folder. Github action will automatically deploy your changes to demo branch every time you modify the repo.
-- When using your own domain create a file in the static dir called `CNAME` and put your domain in it.
+- Fork this repo. Create a new branch called `my-site`, customize the config file, content and everything inside website folder. 
+- Github action will generate all files (from `my-site` branch) and push to demo branch. Now, you have to connect your github pages to that `demo` branch. _No need to create demo branch. Github action will take care of it_
+- Github action will automatically deploy your changes to demo branch every time you modify the repo.
+- When using your own domain create a file in website/static dir called `CNAME` and put your domain in it.
 - If you clone the repo locally, you can veiw the local change with `hugo  --gc --minify --themesDir . serve` from within the website dir.
 
 ## Deployment
