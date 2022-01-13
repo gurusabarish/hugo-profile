@@ -13,6 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
   <meta name="description" content="{{ .Site.Params.description }}">
   {{ template "_internal/google_analytics.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
   {{- partial "sections/v1/head.html" . -}}
 </head>
 
@@ -37,6 +39,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"
     media="all">
   {{ template "_internal/google_analytics.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
   {{- partial "sections/v2/head.html" . -}}
 </head>
 
@@ -59,6 +63,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  {{ template "_internal/google_analytics.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
   {{- partial "sections/v3/head.html" . -}}
   <link rel="stylesheet" href="/css/v3/v3.css" media="all">
   <link rel="stylesheet" href="/css/v3/navbar-footer.css" media="all">
