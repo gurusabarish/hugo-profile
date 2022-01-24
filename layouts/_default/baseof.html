@@ -69,6 +69,7 @@
         $('.darkmode-text-dark').addClass('text-dark').removeClass('darkmode-text-dark');
         $('.darkmode-text-muted').addClass('text-muted').removeClass('darkmode-text-muted');
       };
+      switchDarkmodeSetting();
     });
     if ($('input.custom-control-input').is(':checked')) {
       $("body").toggleClass("darkmode");
@@ -78,6 +79,7 @@
       $("nav").toggleClass("navbar-light");
       $('.text-dark').addClass('darkmode-text-dark').removeClass('text-dark');
       $('.text-muted').addClass('darkmode-text-muted').removeClass('text-muted');
+      switchDarkmodeSetting();
     };
   </script>
   {{- partial "sections/v3/auto_darkmode.html" . -}}

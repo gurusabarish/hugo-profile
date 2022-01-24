@@ -152,6 +152,7 @@
           .addClass("text-muted")
           .removeClass("darkmode-text-muted");
       }
+      switchDarkmodeSetting();
     });
     if ($("input.custom-control-input").is(":checked")) {
       $("body").toggleClass("darkmode");
@@ -166,6 +167,7 @@
       $(".about-backdark").toggleClass("about-back");
       $(".education-backdark").toggleClass("education-back");
       $(".achievements-backdark").toggleClass("achievements-back");
+      switchDarkmodeSetting();
     }
   </script>
   {{- partial "sections/v3/auto_darkmode.html" . -}}
