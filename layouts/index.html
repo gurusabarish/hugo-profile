@@ -167,12 +167,8 @@
       $(".education-backdark").toggleClass("education-back");
       $(".achievements-backdark").toggleClass("achievements-back");
     }
-
-    let darkmode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (darkmode) {
-      $(".darkmode-label").click();
-    }
   </script>
+  {{- partial "sections/v3/auto_darkmode.html" . -}}
 </body>
 {{ else }}
 

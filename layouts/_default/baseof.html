@@ -79,12 +79,8 @@
       $('.text-dark').addClass('darkmode-text-dark').removeClass('text-dark');
       $('.text-muted').addClass('darkmode-text-muted').removeClass('text-muted');
     };
-
-    let darkmode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (darkmode) {
-      $(".darkmode-label").click();
-    }
   </script>
+  {{- partial "sections/v3/auto_darkmode.html" . -}}
 </body>
 {{ else }}
 
