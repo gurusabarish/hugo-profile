@@ -56,6 +56,20 @@
       $('[data-toggle="tooltip"]').tooltip()
     })
   </script>
+
+  <!-- Darkmode -->
+  <script>
+    function autoDarkMode() {
+      $("body").toggleClass("darkmode");
+      $(".fa-moon").addClass("d-none");
+      $(".fa-sun").removeClass("d-none");
+      $("nav").toggleClass("navbar-dark");
+      $("nav").toggleClass("navbar-light");
+      $('.text-dark').toggleClass('darkmode-text-dark');
+      $('.text-muted').toggleClass('darkmode-text-muted');
+    };
+  </script>
+  <script src="/js/auto_darkmode.js"></script>
   <script>
     $('.darkmode-label').click(function () {
       $("body").toggleClass("darkmode");
@@ -63,23 +77,13 @@
       $(".fa-sun").toggleClass("d-none");
       $("nav").toggleClass("navbar-dark");
       $("nav").toggleClass("navbar-light");
-      $('.text-dark').addClass('darkmode-text-dark').removeClass('text-dark');
-      $('.text-muted').addClass('darkmode-text-muted').removeClass('text-muted');
-      if ($('input.custom-control-input').is(':checked')) {
-        $('.darkmode-text-dark').addClass('text-dark').removeClass('darkmode-text-dark');
-        $('.darkmode-text-muted').addClass('text-muted').removeClass('darkmode-text-muted');
-      };
+      $('.text-dark').toggleClass('darkmode-text-dark');
+      $('.text-muted').toggleClass('darkmode-text-muted');
+
+      switchDarkmodeSetting();
     });
-    if ($('input.custom-control-input').is(':checked')) {
-      $("body").toggleClass("darkmode");
-      $(".fa-moon").addClass("d-none");
-      $(".fa-sun").removeClass("d-none");
-      $("nav").toggleClass("navbar-dark");
-      $("nav").toggleClass("navbar-light");
-      $('.text-dark').addClass('darkmode-text-dark').removeClass('text-dark');
-      $('.text-muted').addClass('darkmode-text-muted').removeClass('text-muted');
-    };
   </script>
+
 </body>
 {{ else }}
 
