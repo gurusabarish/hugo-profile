@@ -16,7 +16,7 @@
             <div class="py-3 pl-2">
               <a href="mailto:{{ .Site.Params.email }}?subject=Say hi!" target="_blank"
                 class="contact-btn btn text-muted">
-                Get In Touch
+                {{ .Site.Params.getintouch | default "Get in Touch" }}
               </a>
             </div>
             {{ end }}
