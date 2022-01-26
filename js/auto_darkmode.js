@@ -7,6 +7,7 @@ function setCookie(name,value,days) {
     }
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
 }
+
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -51,7 +52,6 @@ function switchDarkmodeSetting() {
             break;
     } 
 }
-
 
 const check_darkmode = getDarkmodeSetting();
 const darkmode_prefer = window.matchMedia('(prefers-color-scheme: dark)').matches;

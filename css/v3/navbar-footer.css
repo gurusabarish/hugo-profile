@@ -9,6 +9,9 @@
 .navbar-text {
   font-size: 16px !important;
 }
+li> .dropdown-toggle:focus{
+  color: #007bff !important;
+}
 
 /* v2 and v3 footer */
 footer {
