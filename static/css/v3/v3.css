@@ -205,12 +205,8 @@ a:hover {
 }
 
 /* v3 experience */
-#experience {
-}
 #nav-pills-out {
   border-left: 1px solid #007bff;
-}
-.nav-pills .nav-link {
 }
 .nav-pills .active {
   padding-left: 20%;
@@ -223,8 +219,6 @@ a:hover {
   position: absolute;
   left: 0px;
   color: #007bff;
-}
-.tab-pane {
 }
 .ex {
   list-style-type: none;

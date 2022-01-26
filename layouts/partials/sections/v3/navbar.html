@@ -64,11 +64,47 @@
         </li>
         {{ end }}
 
-        {{ range site.Params.customMenus }}
-        <li class="nav-item navbar-text">
-          <a class="nav-link text-dark" href="{{.Url}}" aria-label="{{ .name }}">{{ .name }}</a>
+        {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+        <!-- Dropdown menu -->
+        <li class="nav-item dropdown navbar-text">
+          <a class="nav-link text-dark dropdown-toggle" href="#" title="{{ .Title }}" id="navbarDropdownMenuLink"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ .Name }}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            {{ range .Children }}
+            <a class="dropdown-item text-dark" href="{{ .URL }}" title="{{ .Title }}">
+              {{ .Name }}
+            </a>
+            {{ end }}
+          </div>
         </li>
-        {{ end }}
+
+        {{/*
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="{{ .URL }}" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ .Title }}">
+            {{ .Name }}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {{ range .Children }}
+            <a class="dropdown-item" href="{{ .URL }}" title="{{ .Title }}">
+              {{ .Name }}</a>
+            {{ end }}
+          </div>
+        </li> */}}
+        {{else}}
+        <!-- Single menu item -->
+        <li class="nav-item navbar-text">
+          <a class="nav-link text-dark" href="{{.URL}}" title="{{ .Title }}">
+            {{ .Pre }}
+            <span>{{ .Name }}</span>
+          </a>
+        </li>
+        {{end}}
+        {{end}}
+
         <li class="nav-item navbar-text">
           <div class="custom-control custom-switch">
             <input type="checkbox" class="custom-control-input" id="customSwitch1" autocomplete="on">

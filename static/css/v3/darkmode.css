@@ -10,5 +10,6 @@
   color: #b0b3b8 !important;
 }
 
-
-
+.darkmode-dropdown-menu {
+  background-color: #212121 !important;
+}
