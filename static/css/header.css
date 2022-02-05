@@ -1,0 +1,28 @@
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+.navbar-toggler svg {
+    fill: currentColor;
+}
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 .05em;
+}
+.navbar-text {
+    font-size: 16px !important;
+}
+.nav-link{
+    transition: none !important;
+}
+.navbar-brand {
+    color: var(--primary-color) !important;
+} 
+.navbar .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+li> .dropdown-toggle:focus{
+    color: var(--primary-color) !important;
+}
+.dropdown-item:hover {
+    background-color: var(--secondary-color) !important;
+}

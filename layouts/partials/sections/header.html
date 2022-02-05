@@ -1,0 +1,153 @@
+{{- /* theme-toggle is enabled */}}
+{{- if (not .Site.Params.theme.disableThemeToggle) }}
+{{- /* theme is auto */}}
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+{{- /* theme-toggle is disabled and theme is auto */}}
+{{- else if (and (ne .Site.Params.theme.defaultTheme "light") (ne .Site.Params.theme.defaultTheme "dark"))}}
+<script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+{{- end }}
+
+
+<!-- Navbar -->
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg">
+        <div class="container">
+            <!-- navbar brand -->
+            <a class="navbar-brand primary-font text-wrap" href="{{ .Site.BaseURL | relURL }}">
+                {{ if or (.Site.Params.favicon) (.Site.Params.navbar.brandLogo) }}
+                <img src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}" width="30" height="30"
+                    class="d-inline-block align-top">
+                {{ .Site.Params.navbar.brandName | default .Site.Params.title }}
+                {{ else }}
+                {{ .Site.Params.navbar.brandName | default .Site.Params.title }}
+                {{ end }}
+            </a>
+
+            <!-- navbar toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            <!-- navbar content -->
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav {{ .Site.Params.navbar.align | default " ms-auto"}} text-center">
+                    {{ if .Site.Params.disable_about }}
+                    {{ else }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#about" aria-label="about">About</a>
+                    </li>
+                    {{ end }}
+
+                    {{ if .Site.Params.disable_experience }}
+                    {{ else }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#experience"
+                            aria-label="experience">Experience</a>
+                    </li>
+                    {{ end }}
+
+                    {{ if .Site.Params.disable_education }}
+                    {{ else }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#education"
+                            aria-label="education">Education</a>
+                    </li>
+                    {{ end }}
+
+                    {{ if .Site.Params.disable_projects }}
+                    {{ else }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#projects"
+                            aria-label="projects">Projects</a>
+                    </li>
+                    {{ end }}
+
+                    {{ if .Site.Params.disable_achievements }}
+                    {{ else }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#achievements"
+                            aria-label="achievements">Achievements</a>
+                    </li>
+                    {{ end }}
+
+                    {{ if .Site.Params.disable_contact }}
+                    {{ else }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#contact"
+                            aria-label="contact">Contact</a>
+                    </li>
+                    {{ end }}
+
+                    <!-- custom menus from the user -->
+                    {{ range .Site.Menus.main }}
+                    {{ if .HasChildren }}
+                    <!-- Dropdown menu -->
+                    <li class="nav-item navbar-text dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{ .URL }}" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ .Title }}">
+                            {{ .Name }}
+                        </a>
+                        <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
+                            {{ range .Children }}
+                            <a class="dropdown-item text-center nav-link" href="{{ .URL }}"
+                                title="{{ .Title }}">
+                                {{ .Name }}
+                            </a>
+                            {{ end }}
+                        </div>
+                    </li>
+                    {{else}}
+                    <!-- Single menu item -->
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{.URL}}" title="{{ .Title }}">
+                            {{ .Pre }}
+                            {{ .Name }}
+                        </a>
+                    </li>
+                    {{end}}
+                    {{end}}
+                </ul>
+
+                <!-- darkmode mode toggle -->
+                {{ if (not .Site.Params.theme.disableThemeToggle) }}
+                <div class="text-center">
+                    <button id="theme-toggle">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+                </div>
+            
+                {{ end }}
+            </div>
+        </div>
+    </nav>
+</header>

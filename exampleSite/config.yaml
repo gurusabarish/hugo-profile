@@ -1,0 +1,62 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "en-us"
+title: "Hugo Profile"
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blog
+      weight: 1
+
+    #Dropdown menu
+    - identifier: dropdown
+      title: Example dropdown menu
+      name: Dropdown
+      weight: 2
+    - identifier: dropdown1
+      title: example dropdown 1
+      name: example 1
+      url: /#
+      parent: dropdown
+      weight: 1
+    - identifier: dropdown2
+      title: example dropdown 2
+      name: example 2
+      url: /#
+      parent: dropdown
+      weight: 2
+
+params:
+  title: "Hugo Profile"
+  description: Text about my cool site
+  favicon: "/fav.png"
+
+  theme:
+    disableThemeToggle: false
+
+  # font:
+  #   fontSize: 1.5rem # default: 1rem
+  #   fontWeight: 500 # default: 400
+  #   lineHeight: 1 # default: 1.5
+  #   textAlign: right # default: left
+
+  # color preference
+  # color:
+  #   textColor: 
+  #   backgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor: 
+  #     backgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  # navbar:
+  #   align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+  #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+  #   brandName: "Profile" # Brand name for the brand | default is the title variable
