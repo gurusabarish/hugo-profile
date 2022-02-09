@@ -45,12 +45,14 @@ params:
   # color preference
   # color:
   #   textColor: 
+  #   secondaryTextColor:
   #   backgroundColor:
   #   primaryColor:
   #   secondaryColor:
 
   #   darkmode:
   #     textColor: 
+  #     secondaryTextColor:
   #     backgroundColor:
   #     primaryColor:
   #     secondaryColor:
@@ -60,3 +62,13 @@ params:
   #   align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
   #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
   #   brandName: "Profile" # Brand name for the brand | default is the title variable
+  footer:
+    # recentPosts: false
+    socialNetworks:
+      github: https://github.com
+      linkedin: https://linkedin.com
+      twitter: https://twitter.com
+      instagram: https://instagram.com
+      facebook: https://facebook.com
+
+
