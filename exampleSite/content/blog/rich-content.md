@@ -24,10 +24,10 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ## Twitter Simple Shortcode
 ```
-{{</* tweet 877500564405444608 */>}}
+{{</* tweet user="GoHugoIO" id="1315233626070503424" */>}}
 ```
 <br>
-{{< tweet 877500564405444608 >}}
+{{< tweet user="GoHugoIO" id="1315233626070503424" >}}
 <br>
 
 

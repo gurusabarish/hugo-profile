@@ -2,6 +2,8 @@ baseURL: "https://hugo-profile.netlify.app"
 languageCode: "en-us"
 title: "Hugo Profile"
 
+Paginate: 3
+
 Menus:
   main:
     - identifier: blog
