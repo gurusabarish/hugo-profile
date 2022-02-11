@@ -1,0 +1,23 @@
+#achievements a {
+    text-decoration: none;
+}
+
+#achievements .card {
+    background-color: var(--secondary-color) !important;
+    border-radius: .75rem;
+    box-shadow: 0 0 36px rgba(0,0,0,0.1);
+    cursor: alias;
+    /* transform: translate3d(0, 0, 0); */
+    transition: box-shadow .2s linear,opacity .2s linear;
+}
+
+#achievements .card:hover {
+    border: 1px solid var(--text-color);
+    transition: .4s;
+}
+
+#achievements .card-text {
+    background-color: var(--secondary-color) !important;
+    color: var(--text-secondary-color) !important;
+}
+

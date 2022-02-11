@@ -64,6 +64,27 @@ params:
   #   align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
   #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
   #   brandName: "Profile" # Brand name for the brand | default is the title variable
+
+  # Achievements
+  achievements:
+    enable: true
+    items:  
+      - title: Competition winner
+        content: We are developed a product which can help others.
+        url: https://example.com
+      - title: Competition winner
+        content: We are developed a product which can help others.
+        url: "!#"
+      - title: Competition winner
+        content: We are developed a product which can help others.
+        url: "#"
+      - title: Competition winner
+        content: We are developed a product which can help others.
+        url: "!#"
+      - title: Competition winner
+        content: We are developed a product which can help others.
+        url: https://example.com
+
   footer:
     # recentPosts: false
     socialNetworks:

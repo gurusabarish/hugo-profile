@@ -1,6 +1,6 @@
 {{ define "head" }}
 <meta name="description" content={{ .Site.Params.description }}>
-<!-- <link rel="stylesheet" href="/css/index.css" media="all"> -->
+<link rel="stylesheet" href="/css/index.css" media="all">
 
 <!-- fontawesome -->
 <script defer src="/fontawesome-5/all-5.15.4.js"></script>
@@ -11,5 +11,5 @@
 {{ end }}
 
 {{ define "main" }}
-
+{{- partial "sections/achievements.html" . -}}
 {{ end }}

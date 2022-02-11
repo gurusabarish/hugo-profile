@@ -79,8 +79,7 @@
                     </li>
                     {{ end }}
 
-                    {{ if .Site.Params.disable_achievements }}
-                    {{ else }}
+                    {{ if .Site.Params.achievements.enable | default false }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#achievements"
                             aria-label="achievements">Achievements</a>
