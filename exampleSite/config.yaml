@@ -9,7 +9,7 @@ Menus:
     - identifier: blog
       name: Blog
       title: Blog posts
-      url: /blog
+      url: /blogs
       weight: 1
 
     #Dropdown menu
@@ -65,6 +65,14 @@ params:
   #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
   #   brandName: "Profile" # Brand name for the brand | default is the title variable
 
+  #   menus:
+  #     disableAbout: true
+  #     disableExperience: true
+  #     disableEducation: true
+  #     disableProjects: true
+  #     disableAchievements: true
+  #     disableContact: true
+
   # Achievements
   achievements:
     enable: true
@@ -84,6 +92,52 @@ params:
       - title: Competition winner
         content: We are developed a product which can help others.
         url: https://example.com
+
+  # projects
+  projects:
+    enable: true
+    items:
+      - title: Project 1
+        content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        image: https://hugo-toha.github.io/posts/shortcodes/boat.jpg
+        featured:
+          name: featured
+          link: https://example.com
+        badges:
+          - "HTML"
+          - "CSS"
+          - "JavaScript"
+        links:
+          - icon: fa fa-envelope
+            url: https://example.com
+          - icon: fab fa-github
+            url: https://example.com
+          - icon: fab fa-twitter
+            url: https://example.com
+      - title: Project 2
+        content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        image: https://hugo-toha.github.io/posts/shortcodes/boat.jpg
+        featured:
+          name: featured
+          link: https://example.com
+        badges:
+          - "HTML"
+          - "CSS"
+          - "JavaScript"
+        links:
+          - icon: fa fa-envelope
+            url: https://example.com
+          - icon: fab fa-github
+            url: https://example.com
+          - icon: fab fa-twitter
+            url: https://example.com
+
+  #Contact
+  contact:
+    enable: true
+    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    email: gurusabarisha@gmail.com
+    btnName: Mail me
 
   footer:
     # recentPosts: false

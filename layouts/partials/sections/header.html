@@ -48,46 +48,53 @@
             <!-- navbar content -->
             <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
                 <ul class="navbar-nav {{ .Site.Params.navbar.align | default " ms-auto"}} text-center">
-                    {{ if .Site.Params.disable_about }}
-                    {{ else }}
+                    {{ if not (.Site.Params.navbar.menus.disableAbout | default false) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#about" aria-label="about">About</a>
                     </li>
                     {{ end }}
 
-                    {{ if .Site.Params.disable_experience }}
-                    {{ else }}
+                    {{ if not (.Site.Params.navbar.menus.disableExperience | default false) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#experience"
                             aria-label="experience">Experience</a>
                     </li>
                     {{ end }}
 
-                    {{ if .Site.Params.disable_education }}
-                    {{ else }}
+                    {{ if not (.Site.Params.navbar.menus.disableEducation | default false) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#education"
                             aria-label="education">Education</a>
                     </li>
                     {{ end }}
 
-                    {{ if .Site.Params.disable_projects }}
-                    {{ else }}
+                    {{
+                    if and
+                    (.Site.Params.projects.enable | default false)
+                    (not (.Site.Params.navbar.menus.disableEducation | default false))
+                    }}
+                    {{/* {{ if .Site.Params.projects.enable | default false }} */}}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#projects"
                             aria-label="projects">Projects</a>
                     </li>
                     {{ end }}
 
-                    {{ if .Site.Params.achievements.enable | default false }}
+                    {{
+                    if and
+                    (.Site.Params.achievements.enable | default false)
+                    (not (.Site.Params.navbar.menus.disableAchievements | default false))
+                    }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#achievements"
                             aria-label="achievements">Achievements</a>
                     </li>
                     {{ end }}
 
-                    {{ if .Site.Params.disable_contact }}
-                    {{ else }}
+                    {{ if and
+                    (.Site.Params.contact.enable | default false)
+                    (not (.Site.Params.navbar.menus.disableContact | default false))
+                    }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#contact"
                             aria-label="contact">Contact</a>

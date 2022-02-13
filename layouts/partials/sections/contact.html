@@ -1,0 +1,23 @@
+{{ if .Site.Params.contact.enable | default false }}
+<section id="contact" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Get In Touch</h3>
+        <div class="px-0 px-md-5 px-lg-5">
+            <div class="row justify-content-center px-md-5">
+                <div class="col-md-8 py-3">
+                    <div class="text-center">
+                        {{ .Site.Params.contact.content | emojify | markdownify }}
+                    </div>
+                    {{ if .Site.Params.contact.email }}
+                    <div class="text-center pt-3">
+                        <a href="mailto:{{ .Site.Params.contact.email }}" class="btn">
+                            {{ .Site.Params.contact.btnName | default "Get in Touch" }}
+                        </a>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
