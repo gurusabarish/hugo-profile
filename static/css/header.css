@@ -10,12 +10,14 @@
 }
 .navbar-text {
     font-size: 16px !important;
+    opacity: 0.95;
 }
 .nav-link{
     transition: none !important;
 }
 .navbar-brand {
     color: var(--primary-color) !important;
+    opacity: 0.95;
 } 
 .navbar .nav-link:hover {
     color: var(--primary-color) !important;

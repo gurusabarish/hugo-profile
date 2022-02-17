@@ -73,6 +73,19 @@ params:
   #     disableAchievements: true
   #     disableContact: true
 
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Hugo Profile."
+    subtitle: "I build things for the web."
+    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+    button:
+      enable: true
+      name: "Get in touch"
+      url: "#contact"
+
+
   # Achievements
   achievements:
     enable: true
@@ -99,7 +112,7 @@ params:
     items:
       - title: Project 1
         content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        image: https://hugo-toha.github.io/posts/shortcodes/boat.jpg
+        image: /images/project.jpg
         featured:
           name: featured
           link: https://example.com
@@ -116,7 +129,7 @@ params:
             url: https://example.com
       - title: Project 2
         content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        image: https://hugo-toha.github.io/posts/shortcodes/boat.jpg
+        image: /images/project.jpg
         featured:
           name: featured
           link: https://example.com

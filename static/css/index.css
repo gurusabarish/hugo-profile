@@ -1,3 +1,79 @@
+/* hero */
+
+#hero {
+    min-height: 100vh;
+    line-height: 2rem;
+    max-width: 100%;
+}
+
+#hero .hero-bottom-svg {
+    opacity: 0.5;
+    position: absolute;
+    bottom: 20px;
+    left: -130px;
+}
+
+#hero .subtitle {
+    font-size: clamp(14px,5vw,16px);
+    opacity: 0.6;
+}
+
+#hero h2 {
+    font-size: clamp(40px, 8vw, 80px);
+    color: var(--primary-color) !important;
+}
+
+#hero h3 {
+    font-size: clamp(40px, 8vw, 80px);
+    /* color: var(--primary-color) !important; */
+    opacity: 0.5;
+}
+
+#hero p {
+    margin: 20px 0px 0px;
+    max-width: 540px;
+    opacity: 0.8;
+}
+
+#hero a.btn {
+    margin-top: 50px;
+    padding: 1rem 1.75rem;
+    border: 1px solid var(--primary-color);
+    border-radius: .75rem;
+    transition: none;
+}
+
+#hero a.btn:focus {
+    box-shadow: none;
+}
+
+#hero a.btn:hover {
+    background-color: var(--secondary-color) !important;
+    color: var(--text-color) !important;
+    opacity: 0.9;
+}
+
+#hero .hero-content > a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color) !important;
+}
+
+#hero .hero-content > a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    opacity: 0.5;
+}
+
+#hero .hero-content > a:hover::after, #hero .hero-content > a:focus::after, #hero .hero-content > a:active::after {
+    width: 100%;
+}
+
 /* achievements */
 
 #achievements a {

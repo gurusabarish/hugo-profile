@@ -4,7 +4,7 @@ date: 2021-05-04T11:30:13+05:30
 draft: false
 # showInHome: false
 description: "Description of project"
-image: https://hugo-toha.github.io/posts/shortcodes/boat.jpg
+image: /images/project.jpg
 badges:
     - "HTML"
     - "CSS"
