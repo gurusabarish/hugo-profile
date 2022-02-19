@@ -1,9 +1,9 @@
 {{ if .Site.Params.about.enable | default false }}
-<section id="about" class="py-5">
+<section id="about" class="py-0 py-sm-5">
     <div class="container bg-transparent">
         <h3 class="text-center bg-transparent">{{ .Site.Params.about.title }}</h3>
         <div class="bg-transparent row justify-content-center px-3 py-5">
-            <div class="col-md-6 h-100 content">
+            <div class="col-sm-12 col-md-12 col-lg-6 content">
                 {{ .Site.Params.about.content | markdownify }}
 
                 {{ if .Site.Params.about.skills.enable }}
@@ -16,8 +16,8 @@
                 {{ end }}
             </div>
             {{ if .Site.Params.about.image }}
-            <div class="col-md-4 mt-sm-5 mt-md-0">
-                <div class="image d-flex">
+            <div class="col-sm-12 col-md-8 col-lg-4 mt-5 mt-sm-0 mt-md-5 mt-lg-0">
+                <div class="image d-flex px-5">
                     <img src="{{ .Site.Params.about.image }}" class="img-thumbnail mx-auto rounded-circle" alt="">
                 </div>
             </div>
