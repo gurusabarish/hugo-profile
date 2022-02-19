@@ -84,8 +84,18 @@ params:
     content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
     button:
       enable: true
-      name: "Get in touch"
-      url: "#contact"
+      name: "Resume"
+      url: "#"
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://example.com
+        - icon: fab fa-twitter
+          url: https://example.com
+      customIcons:
+        - icon: /fav.png
+          url: "https://example.com"
+
 
   # About
   about:
@@ -116,13 +126,13 @@ params:
         url: https://example.com
       - title: Competition winner
         content: We are developed a product which can help others.
-        url: "!#"
+        url: "#"
       - title: Competition winner
         content: We are developed a product which can help others.
         url: "#"
       - title: Competition winner
         content: We are developed a product which can help others.
-        url: "!#"
+        url: "#"
       - title: Competition winner
         content: We are developed a product which can help others.
         url: https://example.com
