@@ -12,7 +12,7 @@
     font-size: 16px !important;
     opacity: 0.95;
 }
-.nav-link{
+header .nav-link{
     transition: none !important;
 }
 .navbar-brand {
