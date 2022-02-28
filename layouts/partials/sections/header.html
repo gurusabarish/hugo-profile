@@ -58,14 +58,22 @@
                     </li>
                     {{ end }}
 
-                    {{ if not (.Site.Params.navbar.menus.disableExperience | default false) }}
+                    {{ 
+                    if and
+                    (.Site.Params.experience.enable | default false)
+                    (not (.Site.Params.navbar.menus.disableExperience | default false))
+                    }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#experience"
                             aria-label="experience">Experience</a>
                     </li>
                     {{ end }}
 
-                    {{ if not (.Site.Params.navbar.menus.disableEducation | default false) }}
+                    {{
+                    if and
+                    (.Site.Params.education.enable | default false)
+                    (not (.Site.Params.navbar.menus.disableEducation | default false))
+                    }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#education"
                             aria-label="education">Education</a>

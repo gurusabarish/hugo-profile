@@ -1,3 +1,4 @@
+{{ if .Site.Params.experience.enable | default false }}
 <section id="experience" class="py-5">
     <div class="container">
         <h3 class="text-center">Experience</h3>
@@ -57,6 +58,7 @@
                                     {{ if .info.enable | default true }}
                                     <span class="p-2">
                                         <span 
+                                            style="cursor: pointer;" 
                                             data-bs-toggle="tooltip" 
                                             data-bs-placement="top" 
                                             data-bs-original-title={{ .info.content | default (print "Working as a " .job " at " .company ) }}
@@ -95,6 +97,7 @@
                                     {{ if .info.enable | default true }}
                                     <span class="p-2">
                                         <span 
+                                            style="cursor: pointer;" 
                                             data-bs-toggle="tooltip" 
                                             data-bs-placement="top" 
                                             data-bs-original-title={{ .info.content | default (print "Worked as a " .job " at " .company ) }}
@@ -120,48 +123,10 @@
                         </div>
                         {{ end }}
                         {{ end }}
-
-                        <!-- <div class="tab-pane fade show active bg-transparent" id="pills-home" role="tabpanel"
-                            aria-labelledby="pills-home-tab">
-                            <h4>Software developer</h4>
-                            <small>Feb 2021 - present</small>
-                            <p>
-                                Home is some placeholder content the Contact tab's associated content. Clicking another
-                                tab
-                                will
-                                toggle the visibility
-                                of this one for the next.
-                            </p>
-                            <ul>
-                                <li>Lead backend developer for a product.</li>
-                                <li>Created a frontend design for a product.</li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade bg-transparent" id="pills-profile" role="tabpanel"
-                            aria-labelledby="pills-profile-tab">
-                            Profile is some placeholder content the Contact tab's associated content. Clicking another
-                            tab
-                            will
-                            toggle the visibility
-                            of this one for the next. The tab JavaScript swaps classes to control the content visibility
-                            and
-                            styling. You can use it
-                            with tabs, pills, and any other .nav-powered navigation.
-                        </div>
-                        <div class="tab-pane fade bg-transparent" id="pills-contact" role="tabpanel"
-                            aria-labelledby="pills-contact-tab">
-                            Contact is some placeholder content the Contact tab's associated content. Clicking another
-                            tab
-                            will
-                            toggle the visibility
-                            of this one for the next. The tab JavaScript swaps classes to control the content visibility
-                            and
-                            styling. You can use it
-                            with tabs, pills, and any other .nav-powered navigation.
-                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+{{ end }}
