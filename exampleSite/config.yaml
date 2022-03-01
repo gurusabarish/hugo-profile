@@ -196,8 +196,6 @@ params:
           Extracurricular Activities
             - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
       - title: "Bachelor of Science in Computer Science"
         school:
           name: "Massachusetts Institute of Technology"
@@ -212,8 +210,6 @@ params:
           Extracurricular Activities
             - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
         featuredLink:
           enable: true
           name: "My academic record"
@@ -225,67 +221,74 @@ params:
         GPA: "4.2 out of 5.0"
         featuredLink:
           enable: true
-          name: "My academic record"
           url: "https://example.com"
       
   # Achievements
   achievements:
     enable: true
     items:  
-      - title: Competition winner
-        content: We are developed a product which can help others.
+      - title: Google kickstart runner
+        content: I solved all problems with optimal solution.
         url: https://example.com
-      - title: Competition winner
+      - title: Facebook Hackathon Winner
+        content: Developed a product using Artificial Intelligence.
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: "https://github.com/gurusabarish/hugo-profile"
+      - title:  Microsoft Imagine Runner
         content: We are developed a product which can help others.
-        url: "#"
-      - title: Competition winner
-        content: We are developed a product which can help others.
-        url: "#"
-      - title: Competition winner
-        content: We are developed a product which can help others.
-        url: "#"
-      - title: Competition winner
-        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
         url: https://example.com
 
   # projects
   projects:
     enable: true
     items:
-      - title: Project 1
-        content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        image: /images/project.jpg
+      - title: Hugo Profile
+        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
+        image: /images/projects/profile.png
         featured:
-          name: featured
-          link: https://example.com
+          name: Demo
+          link: https://hugo-profile.netlify.app
         badges:
-          - "HTML"
-          - "CSS"
-          - "JavaScript"
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
         links:
           - icon: fa fa-envelope
-            url: https://example.com
+            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
           - icon: fab fa-github
-            url: https://example.com
+            url: https://github.com/gurusabarish/hugo-profile
           - icon: fab fa-twitter
-            url: https://example.com
-      - title: Project 2
-        content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        image: /images/project.jpg
+            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+      
+      - title: Image Converter
+        content:  A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
+        image: /images/projects/converter.jpg
         featured:
-          name: featured
-          link: https://example.com
+          name: Demo
+          link: https://django-converter.herokuapp.com
         badges:
-          - "HTML"
-          - "CSS"
-          - "JavaScript"
+          - "Django"
+          - "Bootstrap"
         links:
-          - icon: fa fa-envelope
-            url: https://example.com
           - icon: fab fa-github
-            url: https://example.com
-          - icon: fab fa-twitter
-            url: https://example.com
+            url: https://github.com/gurusabarish/converter
+      
+      - title: Hugo Profile V2
+        content: A clean and simple Hugo template for personal portfolio and blog.
+        image: /images/projects/profile2.jpg
+        featured:
+          name: Demo V2
+          link: https://hugo-profile-2.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/HugoProfileV2
 
   #Contact
   contact:

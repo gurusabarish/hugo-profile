@@ -2,7 +2,7 @@
 <section id="projects" class="py-5">
     <div class="container">
         <h3 class="text-center">Projects</h3>
-        <div class="row justify-content-center px-3 px-md-5 px-lg-5">
+        <div class="row justify-content-center px-3 ">
             {{ range .Site.Params.projects.items }}
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="{{ .title }}">
@@ -15,7 +15,7 @@
                             <span class="badge badge-secondary">{{ . }}</span>
                             {{ end }}
                         </div>
-                        <h5 class="card-title bg-transparent">{{ .title }}</h5>
+                        <h5 class="card-title bg-transparent mt-1">{{ .title }}</h5>
                         <div class="card-text bg-transparent secondary-font">
                             {{ .content }}
                         </div>
@@ -24,7 +24,7 @@
                     <div class="card-footer py-3">
                         {{ range .links }}
                         <span class="m-1 mx-2">
-                            <a href="{{ .url }}">
+                            <a href="{{ .url }}" target="_blank">
                                 <i class="{{ .icon }}"></i>
                             </a>
                         </span>
