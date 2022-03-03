@@ -6,7 +6,9 @@ github_link: "https://github.com/gurusabarish/hugo-profile"
 author: "Gurusabarish"
 tags:
   - Placeholder text
-bg_image: ""
+  - Sample
+  - example
+image: /images/post.jpg
 description: ""
 toc: 
 ---

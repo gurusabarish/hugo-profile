@@ -1,5 +1,5 @@
 /* light mode */
-.light, *{
+.light > *{
     background-color: var(--background-color) !important;
     color: var(--text-color) !important;
 }

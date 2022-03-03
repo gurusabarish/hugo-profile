@@ -55,9 +55,9 @@
 }
 
 #hero a.btn.social-icon {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
     line-height: 0%;
-    border-radius: 50% ;
+    border-radius: 50%;
     margin-top: 50px;
     padding: 0.7rem;
     border: 1px solid var(--primary-color);
@@ -76,6 +76,7 @@
     margin-top: 50px;
     padding: 0.7rem 1.75rem;
     border: 1px solid var(--primary-color);
+    color: var(--text-color) !important;
     border-radius: .75rem;
     transition: none;
 }
@@ -157,7 +158,8 @@
 }
 
 #about .content {
-    opacity: 0.95 !important;
+    font-weight: 500;
+    opacity: 0.9 !important;
     line-height: 1.7rem !important;
 }
 
@@ -193,7 +195,7 @@
 }
 
 #experience .tab-pane > * {
-    opacity: 0.95;
+    opacity: 0.9;
 }
 
 #experience .tab-pane small {
@@ -217,12 +219,14 @@
 }
 
 #experience .nav-item .nav-link {
+    color: var(--text-color) !important;
     border-bottom: 2px solid transparent; 
     border-radius: 0%;
     transition: none;
 }
 
-#experience .nav-item .nav-link.active { 
+#experience .nav-item .nav-link.active {
+    color: var(--text-color) !important;
     border-bottom: 2px solid var(--primary-color); 
     opacity: 0.8;
 }
@@ -231,7 +235,7 @@
     transition: none !important;
 }
 
-#experience .nav-item .nav-link:hover  {
+#experience .nav-item .nav-link:hover {
     border-bottom: 2px solid var(--primary-color);
     opacity: 0.8;
 }
@@ -349,6 +353,12 @@
     border: 2px solid var(--primary-color) !important;
 }
 
+#education .card .card-body .education-content a {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
 #education .card .card-body > a h6 {
     display: inline-block;
     text-decoration: none;
@@ -373,6 +383,7 @@
 #education .card .card-body a.btn {
     opacity: 0.9;
     border: 1px solid var(--primary-color) !important;
+    color: var(--text-color) !important;
     border-radius: .75rem;
     box-shadow: none;
     transition: none;
@@ -405,6 +416,11 @@
     cursor: alias;
 }
 
+#achievements .card h5 {
+    color: var(--text-color) !important;
+    opacity: 0.9;
+}
+
 #achievements .card:hover {
     border: 2px solid var(--text-color);
     transition: .3s;
@@ -425,13 +441,13 @@
     color: var(--text-secondary-color) !important;
 }
 
-
 #contact .btn {
     transition: none;
     transition: opacity 0.3s;
     border-radius: .5rem !important;
     border-color: var(--primary-color) !important;
     background-color: var(--secondary-color) !important;
+    color: var(--text-color) !important;
 }
 
 #contact .btn:hover {

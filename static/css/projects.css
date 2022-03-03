@@ -6,6 +6,13 @@
 
 #projects a {
     text-decoration: none;
+    color: var(--text-color) !important;
+}
+
+#projects .badge {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    margin: 0 1%;
 }
 
 #projects .card {
@@ -14,6 +21,7 @@
     min-height: 400px;
     overflow: hidden;
     border-radius: 1rem;
+    border: none !important;
 }
 
 #projects .card:hover {
@@ -28,6 +36,7 @@
     overflow: hidden;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    border: none !important;
 }
 
 #projects .card .card-footer {

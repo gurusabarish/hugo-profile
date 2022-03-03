@@ -1,5 +1,9 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Title }}">
+<link rel="stylesheet" href="/css/single.css">
+
+<!-- fontawesome -->
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
 {{ end }}
 
 {{ define "title" }}
@@ -7,4 +11,80 @@
 {{ end }}
 
 {{ define "main" }}
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">{{ .Title }}</h1>
+            <div class="text-center">
+              {{ .Params.author }} 
+              <small>|</small>
+              {{ .Date.Format "Jan 2, 2006" }}
+            </div>
+          </div>
+          {{ if .Params.image }}
+          <div class="featured-image">
+            <img class="img-fluid" src="{{ .Params.image }}" alt="{{ .Title }}">
+          </div>
+          {{ end }}
+          <article class="page-content">
+          {{ .Content | emojify }}
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          {{ if .Params.toc | default true}}
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                {{.TableOfContents}}
+              </div>
+          </aside>
+          {{ end }}
+
+          {{ if .Params.tags }}
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              {{range .Params.tags}}
+              <li class="list-inline-item"><a href="{{`tags` | absURL}}/{{.| urlize}}" target="_blank">{{.}}</a></li>
+              {{end}}
+            </ul>
+          </aside>
+          {{end}}
+
+          {{ if .Params.socialShare | default true }}
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text={{ .Title }}&url={{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text={{ .Title }}: {{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="mailto:?subject={{ .Title }}&amp;body=Check out this site {{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {{ end }}

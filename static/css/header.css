@@ -1,3 +1,12 @@
+header .navbar .navbar-nav a {
+    color: var(--text-color) !important;
+}
+
+#theme-toggle {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
 .navbar-toggler {
     border: none;
     outline: none;
@@ -22,9 +31,20 @@ header .nav-link{
 .navbar .nav-link:hover {
     color: var(--primary-color) !important;
 }
-li> .dropdown-toggle:focus{
+
+li > .dropdown-toggle:focus{
     color: var(--primary-color) !important;
 }
+
+.dropdown-menu {
+    background-color: var(--background-color) !important;
+    border-color: var(--text-secondary-color) !important;
+}
+
 .dropdown-item:hover {
+    background-color: var(--secondary-color) !important;
+}
+
+.dropdown-item:focus, .dropdown-item:active {
     background-color: var(--secondary-color) !important;
 }

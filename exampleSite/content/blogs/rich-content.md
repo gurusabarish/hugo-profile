@@ -5,7 +5,9 @@ draft: false
 author: "Gurusabarish"
 tags:
   - Rich content
-bg_image: ""
+  - Sample
+  - example
+image: /images/post.jpg
 description: ""
 toc: 
 ---

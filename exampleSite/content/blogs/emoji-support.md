@@ -6,12 +6,14 @@ github_link: "https://github.com/gurusabarish/hugo-profile"
 author: "Gurusabarish"
 tags:
   - Emoji support
-bg_image: ""
+  - Sample
+  - example
+image: /images/post.jpg
 description: ""
 toc: 
 ---
 
-Emoji can be enabled in a Hugo project in a number of ways.
+Emoji can be enabled in a Hugo project in a number of ways. :zap:
 
 The [emojify](https://gohugo.io/functions/emojify/) function can be called directly in templates or [Inline Shortcodes](https://gohugo.io/templates/shortcode-templates/#inline-shortcodes).
 
@@ -28,7 +30,3 @@ The [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) is a useful reference
   font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
 }
 ```
-
-<br>
-
-[Markdown format for emoji](https://gist.github.com/rxaviers/7360908)

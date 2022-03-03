@@ -10,6 +10,10 @@
     text-decoration: none;
 }
 
+#list-page .card a h5 {
+    color: var(--text-color) !important;
+}
+
 #list-page .card:hover {
     border: 1px solid var(--secondary-color);
     transition: all 0.3s ease-out;
@@ -23,8 +27,9 @@
 #list-page .post-footer {
     padding: .5rem 1rem;
     background-color: var(--secondary-color) !important;
-    color: var(--text-secondary-color) !important;
+    color: var(--text-color) !important;
     border-top: 1px solid rgba(15, 80, 100, 0.16);
+    opacity: 0.9;
 }
 
 #list-page .post-footer a {
@@ -47,6 +52,8 @@
 #list-page ul li a {
     transition: none;
     border-color: var(--secondary-color);
+    background-color: var(--secondary-color) !important;
+    color: var(--text-color) !important;
 }
 
 #list-page ul li a:focus {
@@ -55,4 +62,6 @@
 
 #list-page .page-item.active .page-link {
     border-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
 }
