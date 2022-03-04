@@ -10,9 +10,11 @@ header .navbar .navbar-nav a {
 .navbar-toggler {
     border: none;
     outline: none;
+    color: var(--text-color);
 }
 .navbar-toggler svg {
     fill: currentColor;
+    color: var(--text-color);
 }
 .navbar-toggler:focus {
     box-shadow: 0 0 0 .05em;
