@@ -42,6 +42,7 @@ params:
 
   theme:
     disableThemeToggle: false
+    # defaultTheme: "light" # dark
 
   # font:
   #   fontSize: 1.5rem # default: 1rem
@@ -84,9 +85,10 @@ params:
   hero:
     enable: true
     intro: "Hi, my name is"
-    title: "Hugo Profile."
-    subtitle: "I build things for the web."
+    title: "Isabella."
+    subtitle: "I build things for the web"
     content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+    image: /images/hero.svg
     button:
       enable: true
       name: "Resume"
@@ -310,3 +312,5 @@ params:
       twitter: https://twitter.com
       instagram: https://instagram.com
       facebook: https://facebook.com
+
+

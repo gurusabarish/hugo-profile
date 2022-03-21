@@ -1,32 +1,43 @@
 {{ if .Site.Params.hero.enable | default false }}
 <section id="hero" class="py-5">
-    <div class="container px-3 px-sm-5 px-md-5 px-lg-5">
-        <div id="primary-font">
-            <span class="subtitle">
-                {{ .Site.Params.hero.intro }}
-            </span>
-            <h2>
-                {{ .Site.Params.hero.title }}
-            </h2>
-            <h3>
-                {{ .Site.Params.hero.subtitle }}
-            </h3>
-            <p class="hero-content">
-                {{ .Site.Params.hero.content | markdownify }}
-            </p>
-            <div class="row">
-                <div class="col-auto h-100">
-                    {{ if .Site.Params.hero.button.enable }}
-                    <a href="{{ .Site.Params.hero.button.url }}" class="btn">
-                        {{ .Site.Params.hero.button.name }}
-                    </a>
-                    {{ end }}
-                </div>
-                <div class="col-auto px-0 h-100">
-                    {{- partial "sections/hero/social.html" . -}}
+    <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8" id="primary-font">
+                <span class="subtitle">
+                    {{ .Site.Params.hero.intro }}
+                </span>
+                <h2>
+                    {{ .Site.Params.hero.title }}
+                </h2>
+                <h3>
+                    {{ .Site.Params.hero.subtitle }}
+                </h3>
+                <p class="hero-content">
+                    {{ .Site.Params.hero.content | markdownify }}
+                </p>
+                <div class="row">
+                    <div class="col-auto h-100">
+                        {{ if .Site.Params.hero.button.enable }}
+                        <a href="{{ .Site.Params.hero.button.url }}" class="btn">
+                            {{ .Site.Params.hero.button.name }}
+                        </a>
+                        {{ end }}
+                    </div>
+                    <div class="col-auto px-0 h-100">
+                        {{- partial "sections/hero/social.html" . -}}
+                    </div>
                 </div>
             </div>
-
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-9 pt-5 image px-5 px-md-5 px-lg-0 text-center">
+                        <img src="{{ .Site.Params.hero.image }}" 
+                            class="img-thumbnail mx-auto" 
+                            alt=""
+                        >
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="hero-bottom-svg d-md-block d-lg-block d-none">
