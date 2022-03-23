@@ -1,0 +1,15 @@
+{{ define "head" }}
+<meta name="description" content={{ .Site.Params.description }}>
+<link rel="stylesheet" href="/css/index.css" media="all">
+{{ end }}
+
+{{ define "title" }}
+{{ .Site.Title }} | 404 page not found
+{{ end }}
+
+{{ define "main" }}
+<div class="container py-5 text-center">
+    <img src="/404.png" alt="404 page not found" class="img-fluid" width="40%">
+    <h1>404 Page Not Found</h1>
+</div>
+{{ end }}
