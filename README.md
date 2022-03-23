@@ -4,28 +4,9 @@
  
 [![Twitter](https://img.shields.io/twitter/url?label=Tweet&style=social&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile) [![GitHub forks](https://img.shields.io/github/forks/gurusabarish/hugo-profile?style=plastic)](https://github.com/gurusabarish/hugo-profile/network) [![GitHub stars](https://img.shields.io/github/stars/gurusabarish/hugo-profile?style=plastic)](https://github.com/gurusabarish/hugo-profile/stargazers)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5c1dcb34-cada-4c80-82b7-cfdbdbd7c774/deploy-status)](https://app.netlify.com/sites/hugo-profile/deploys)
-![Repository Size](https://img.shields.io/github/repo-size/gurusabarish/hugo-profile)
-![Latest Release](https://img.shields.io/github/v/release/gurusabarish/hugo-profile?include_prereleases)
-![Last Commit](https://img.shields.io/github/last-commit/gurusabarish/hugo-profile)
-![Open Issues](https://img.shields.io/github/issues/gurusabarish/hugo-profile?color=important)
-![Open Pull Requests](https://img.shields.io/github/issues-pr/gurusabarish/hugo-profile?color=yellowgreen)
-![License](https://img.shields.io/github/license/gurusabarish/hugo-profile)
-
 </div>
 
 A high performance and mobile first hugo template for personal portfolio and blog
-
-### Credit
-
-I spent an amount of effort building this template. It's always disheartening whenever I find that someone use this template without giving me credit. Please, give me proper credit in footer.
-
-### Demo
-
-- [Live demo V1](https://hugo-profile-1.netlify.app)
-- [Live demo V2](https://hugo-profile-2.netlify.app)
-- [Live demo V3 (latest)](https://hugo-profile.netlify.app)
-- [Github pages demo](https://gurusabarish.github.io/hugo-profile)
 
 ## Requirements
 
@@ -41,7 +22,7 @@ I spent an amount of effort building this template. It's always disheartening wh
 ### Hugo theme format
 
 - Install Hugo and create a site using `hugo new site my-site -f=yaml`
-- Clone this repo inside your themes folder and create config.yaml (_I am not much aware about toml. So, I am using yaml format._) inside root folder and use one of these [v1config](https://github.com/gurusabarish/hugo-profile/blob/master/website/v1.yaml), [v2config](https://github.com/gurusabarish/hugo-profile/blob/master/website/v2.yaml), [v3config](https://github.com/gurusabarish/hugo-profile/blob/master/website/v3.yaml) as base template.
+- Clone this repo inside your themes folder and create config.yaml (_I am not much aware about toml. So, I am using yaml format._) inside root folder and use one of these [v1config](https://github.com/gurusabarish/hugo-profile/blob/version3/exampleSite/v1.yaml), [v2config](https://github.com/gurusabarish/hugo-profile/blob/version3/exampleSite/v2.yaml), [v3config](https://github.com/gurusabarish/hugo-profile/blob/version3/exampleSite/v3.yaml) as base template.
 
 ```
 cd themes
@@ -59,22 +40,22 @@ git clone https://github.com/gurusabarish/hugo-profile.git
 cd hugo-profile
 ```
 
-- Now create config.yaml file in your root folder and use one of these [v1config](https://github.com/gurusabarish/hugo-profile/blob/master/website/v1.yaml), [v2config](https://github.com/gurusabarish/hugo-profile/blob/master/website/v2.yaml), [v3config](https://github.com/gurusabarish/hugo-profile/blob/master/website/v3.yaml) as base template.
+- Now create config.yaml file in your root folder and use one of these [v1config](https://github.com/gurusabarish/hugo-profile/blob/version3/exampleSite/v1.yaml), [v2config](https://github.com/gurusabarish/hugo-profile/blob/version3/exampleSite/v2.yaml), [v3config](https://github.com/gurusabarish/hugo-profile/blob/version3/exampleSite/v3.yaml) as base template.
 - Run your site using `hugo serve` commend
 
 ### Direct deployment using netlify
 
 - Fork this repo or create new repo using `use this template` button and connect repo to netlify.
-- You can customize the config file, content and everything inside website folder. Netlify will automatically deploy your changes every time you modify the repo.
+- You can customize the config file, content and everything inside exampleSite folder. Netlify will automatically deploy your changes every time you modify the repo.
 
 **[What is netlify?](https://www.netlify.com/about/)** An intuitive Git-based workflow and powerful serverless platform to build, deploy, and collaborate on web apps
 
 ### Direct deployment using Github Pages and action
 
 - Fork this repo or create new repo using `use this template` button. Github action will generate all files and push to demo branch. Now, you have to connect your github pages to that `demo` branch. _No need to create demo branch. Github action will take care of it_
-- You can customize the config file, content and everything inside website folder. Github action will automatically deploy your changes to demo branch every time you modify the repo.
+- You can customize the config file, content and everything inside exampleSite folder. Github action will automatically deploy your changes to demo branch every time you modify the repo.
 - When using your own domain create a file in the static dir called `CNAME' and put your domain in it.
-- If you clone the repo locally, you can veiw the local change with `hugo  --gc --minify --themesDir . serve` from within the website dir.
+- If you clone the repo locally, you can view the local change with `hugo  --gc --minify --themesDir . serve` from within the exampleSite dir.
 
 ## Deployment
 
