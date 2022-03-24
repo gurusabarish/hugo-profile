@@ -1,8 +1,10 @@
-baseURL: "https://hugo-profile.netlify.app"
+baseURL: "https://example.org"
 languageCode: "en-us"
 title: "Hugo Profile"
+theme: hugo-profile
 
 Paginate: 3
+disqusShortname: gurusabarish
 
 markup:
   goldmark:

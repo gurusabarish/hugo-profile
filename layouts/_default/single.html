@@ -1,5 +1,5 @@
 {{ define "head" }}
-<meta name="description" content="{{ .Title }}">
+<meta name="description" content="{{ .Params.description }}">
 <link rel="stylesheet" href="/css/single.css">
 
 <!-- fontawesome -->
@@ -83,6 +83,11 @@
           </aside>
           {{ end }}
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-2">
+        {{ template "_internal/disqus.html" . }}
       </div>
     </div>
   </div>
