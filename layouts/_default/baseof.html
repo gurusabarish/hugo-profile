@@ -1,95 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-
-  {{ if eq .Site.Params.version 1 }}
-  {{- partial "sections/v1/head.html" . -}}
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/css/v1/head_foot.css" rel="stylesheet">
-  {{- block "head" . -}}{{- end }}
-
-  {{ else if eq .Site.Params.version 2 }}
-  {{- partial "sections/v2/head.html" . -}}
-  {{- block "head" . -}}{{- end }}
-  {{ else if eq .Site.Params.version 3 }}
-  {{- partial "sections/v3/head.html" . -}}
-  <link rel="stylesheet" href="/css/v3/navbar-footer.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap"
-    rel="stylesheet">
-  <script src="/js/popper.min.js"></script>
-
-  {{- block "head" . -}}{{- end }}
-  {{ else }}
-  {{ end }}
-
-
-
+  {{- partial "head.html" . -}}
+  {{- block "head" . }} {{- end }}
+  <title>
+    {{- block "title" . }} {{- end }}
+  </title>
 </head>
 
-{{ if eq .Site.Params.version 1 }}
+<body class="light" onload="loading()">
+  <!-- javascripts -->
+  <!-- <script src="/js/jquery-3.6.0.min.js"></script> -->
+  <script src="/bootstrap-5/js/bootstrap.bundle.js"></script>
 
-<body>
-  {{- partial "sections/v1/scripts.html" . -}}
-  {{- partial "sections/v1/header1.html" . -}}
-  {{- block "main" . -}}{{- end }}
-  {{- partial "sections/v1/footer.html" . -}}
+  {{- partial "sections/header.html" . -}}
+  <div id="content">
+    {{- block "main" . }}{{- end }}
+  </div>
+  {{- partial "sections/footer/index.html" . -}}
+  {{- partial "scripts.html" . -}}
 </body>
-{{ else if eq .Site.Params.version 2 }}
-
-<body>
-  {{- partial "sections/v2/scripts.html" . -}}
-  {{- partial "sections/v2/header.html" . -}}
-  {{- block "main" . -}}{{- end }}
-  {{- partial "sections/v2/footer.html" . -}}
-</body>
-{{ else if eq .Site.Params.version 3 }}
-
-<body class="text-dark">
-  {{- partial "sections/v3/scripts.html" . -}}
-  {{- partial "sections/v3/navbar.html" . -}}
-  {{- block "main" . -}}{{- end }}
-  {{- partial "sections/v3/footer.html" . -}}
-  <script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
-
-  <!-- Darkmode -->
-  <script>
-    function autoDarkMode() {
-      $("body").toggleClass("darkmode");
-      $(".fa-moon").addClass("d-none");
-      $(".fa-sun").removeClass("d-none");
-      $("nav").toggleClass("navbar-dark");
-      $("nav").toggleClass("navbar-light");
-      $('.text-dark').toggleClass('darkmode-text-dark');
-      $('.text-muted').toggleClass('darkmode-text-muted');
-      $(".dropdown-menu").toggleClass('darkmode-dropdown-menu');
-    };
-  </script>
-  <script src="/js/auto_darkmode.js"></script>
-  <script>
-    $('.darkmode-label').click(function () {
-      $("body").toggleClass("darkmode");
-      $(".fa-moon").toggleClass("d-none");
-      $(".fa-sun").toggleClass("d-none");
-      $("nav").toggleClass("navbar-dark");
-      $("nav").toggleClass("navbar-light");
-      $('.text-dark').toggleClass('darkmode-text-dark');
-      $('.text-muted').toggleClass('darkmode-text-muted');
-      $(".dropdown-menu").toggleClass('darkmode-dropdown-menu');
-
-      switchDarkmodeSetting();
-    });
-  </script>
-
-</body>
-{{ else }}
-
-<body></body>
-{{ end }}
 
 </html>

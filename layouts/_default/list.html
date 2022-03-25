@@ -1,130 +1,39 @@
-{{ define "head"}}
-
-{{ if eq .Site.Params.version 3 }}
-<link rel="stylesheet" href="/css/v3/list.css" media="all">
-{{ else }}
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"
-  media="all">
+{{ define "head" }}
+<meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
+<link rel="stylesheet" href="/css/list.css" media="all">
 {{ end }}
 
-<meta name="description" content="{{ .Title }}" />
-<title>{{ .Title }}</title>
+{{ define "title" }}
+{{.Title }} | {{ .Site.Title }}
 {{ end }}
-
 
 {{ define "main" }}
-{{ if eq .Site.Params.version 3 }}
-<section style="font-family: 'Roboto', sans-serif;5">
-  <div class="container pt-5">
-    <h3 class="text-center">{{.Title}}</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-7 py-2">
-          <ol class="post-ol">
-            {{ range .Paginator.Pages }}
-            <li>
-
-              <h1 style="font-size: 25px;" class="font-weight-bold">
-                <a class="text-decoration-none" href="{{ .RelPermalink }}">
-                  {{ .Title }}
-                </a>
-              </h1>
-              <div class="post-sum">
-                {{- .Summary | truncate 150 | safeHTML -}}
-              </div>
-              {{ if .Params.tags }}
-              {{ range .Params.tags }}
-              <a href={{ "/tags/" | relLangURL }}{{ . | urlize }} class="text-info text-decoration-none m-1"
-                style="color: #8392a5">
-                <small># {{ . }}</small>
-              </a>
-              {{ end }}
-              {{ end }}
-            </li>
-            {{ end }}
-          </ol>
-          <div class="p-3">
-            {{ template "_internal/pagination.html" . }}
-          </div>
-        </div>
-      </div>
-  </div>
-</section>
-{{ else }}
-<section>
-  <div class="container-fluid">
-    <div class="row pt-3 justify-content-center">
-      <div class="col-lg-6 col-md-6">
+<div class="container pt-5" id="list-page">
+    <h2 class="text-center pb-2">{{.Title}}</h2>
+    <div class="row">
         {{ range .Paginator.Pages }}
-        <div class="mb-4">
-          <div class="card border-bottom-primary pb-2">
-            {{ if .Params.tags }}
-            <h5 class="card-header m-0">
-              {{ if .Params.tags }}
-              {{ range .Params.tags }}
-              <a href={{ "/tags/" | relLangURL }}{{ . | urlize }} class="btn btn-info btn-rounded mb-2">{{ . }}</a>
-              {{ end }}
-              {{ end }}
-            </h5>
-            {{ end }}
-            <a class="text-decoration-none" href="{{ .RelPermalink }}">
-              <div class="card-body">
-                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">{{ .Title }}</div>
-                {{ if .Site.Params.showdescription }}
-                <div class="text-muted py-2">
-                  {{ .Params.description }}
+        <div class="col-lg-4 col-md-6 my-3">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    <a href="{{ .RelPermalink }}" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 25 }}</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>{{ .Summary | truncate 300}}</p>
+                    </div>
                 </div>
-                {{ end }}
-                <div class="text-dark">
-                  <span class="px-1">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar" fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z" />
-                      <path fill-rule="evenodd"
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z" />
-                    </svg>
-                  </span>
-                  {{ dateFormat "Jan 2, 2006" .Date }}
-                  {{ if .Params.author }}
-                  <span class="px-1">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                    </svg>
-                  </span>
-                  {{ .Params.author }}
-                  {{ end }}
+                <div class="mt-auto post-footer bg-transparent py-3">
+                    <span class="float-start bg-transparent">{{ .Date.Format "January 2, 2006" }}</span>
+                    <a href="{{ .RelPermalink }}" class="float-end btn btn-outline-info btn-sm">Read</a>
                 </div>
-              </div>
-            </a>
-          </div>
+            </div>
         </div>
         {{ end }}
-        {{ template "_internal/pagination.html" . }}
-        <div class="row justify-content-center pt-3">
-          <div class="col-lg-7 col-md-7">
-            <div class=" mb-4">
-              <div class="card p-0">
-                <h5 class="card-header m-0 btn-outline-danger">Tags</h5>
-                <div class=" card-body">
-                  {{range $name, $taxonomy := .Site.Taxonomies.tags}}
-                  {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-                  <a href="{{ .RelPermalink }}" class="btn btn-outline-danger rounded-pill mb-2">{{$name}}</a>
-                  {{end}}
-                  {{end}}
-                </div>
-              </div>
+        <div class="row justify-content-center">
+            <div class="col-auto m-3">
+                {{template "_internal/pagination.html" . }}
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</section>
-{{ end }}
-
-
+</div>
 {{ end }}

@@ -1,24 +1,14 @@
-{{ define "main" }}
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
+{{ define "head" }}
+<meta name="description" content={{ .Site.Params.description }}>
+{{ end }}
 
-  body {
-    font-family: "Roboto", sans-serif;
-    background-color: #eaedf0;
-  }
-</style>
-<div class="container">
-  <div class="row justify-centent-center py-5">
-    <div class="display-4 font-weight-bold text-center col p-5">
-      {{ if eq .Site.Params.version 3 }}
-      <span class="text-dark">404 page not found</span>
-      {{ else }} 404 page not found {{ end }}
-      <div class="text-center p-5">
-        <a href="{{ .Site.BaseURL }}" class="font-weight-bold btn btn-primary rounded-pill p-3 mb-2">Back to Home</a>
-      </div>
-    </div>
-  </div>
+{{ define "title" }}
+{{ .Site.Title }} | 404 page not found
+{{ end }}
+
+{{ define "main" }}
+<div class="container py-5 text-center">
+    <img src="/404.png" alt="404 page not found" class="img-fluid" width="40%">
+    <h1>404 Page Not Found</h1>
 </div>
 {{ end }}

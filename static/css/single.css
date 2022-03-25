@@ -1,0 +1,283 @@
+#single {
+    padding: 60px 0;
+    line-height: 1.7em;
+    font-size: 17px;
+}
+
+#single .title > h1 {
+    opacity: 0.8;
+    color: var(--text-color) !important;
+}
+
+#single .title small {
+    opacity: 0.7;
+}
+
+#single .featured-image {
+    padding: 1rem;
+    padding-top: 0;
+}
+
+#single .featured-image img {
+    border-radius: 1rem;
+    box-shadow: 0px 8px 56px rgba(15, 80, 100, 0.16);
+    margin-bottom: 1rem;
+}
+
+#single .page-content a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color) !important;
+}
+
+#single .page-content a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    opacity: 0.5;
+}
+
+#single .page-content a:hover::after, #single .page-content a:focus::after, #single .page-content a:active::after {
+    width: 100%;
+}
+
+#single .page-content h1, #single .page-content h2, #single .page-content h3, #single .page-content h4, #single .page-content h5, #single .page-content h6 {
+    color: var(--primary-color) !important;
+    margin-bottom: 0.7em;
+    opacity: 0.9;
+}
+
+#single .page-content blockquote {
+    padding: 20px 30px;
+    border-left: 6px solid var(--primary-color) !important;
+    color: var(--text-secondary-color) !important;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+#single .page-content blockquote, #single .page-content blockquote * {
+    background-color: var(--secondary-color) !important;
+}
+
+/* table */
+#single .page-content table {
+    width: auto;
+    border-radius: 5px;
+    padding: 0.1rem;
+    margin-bottom: 1.2em;
+    max-width: 100%;
+    display: block;
+    overflow-x: auto;
+    opacity: 0.8;
+}
+
+#single .page-content table > tr {
+    height: 40px !important;
+}
+
+#single .page-content table > thead > tr > th {
+    padding: 0.5rem !important;
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+    border: 1px solid var(--secondary-color);
+    opacity: 0.9;
+}
+#single .page-content table > tbody > tr > td {
+    padding: 0.5rem !important;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color) !important;
+    opacity: 0.9;
+}
+
+#single .page-content table > thead > tr {
+    background-color: var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+/* code */
+
+#single .page-content pre {
+  border-radius: 0.7em !important;
+  margin: 5px;
+  margin-bottom: 2em;
+  padding: 2em;
+  background-color: var(--secondary-color) !important;
+  color: var(--text-secondary-color) !important;
+  max-height: 450px;
+}
+
+#single .page-content pre > code {
+  color: var(--text-secondary-color) !important;
+}
+
+#single .page-content code {
+  color: var(--primary-color) !important;
+}
+
+/* kbd and mark */
+
+#single .page-content kbd {
+  color: var(--primary-color) !important;
+  background-color: var(--secondary-color) !important;
+}
+
+#single .page-content mark {
+  color: var(--primary-color) !important;
+  background-color: var(--secondary-color) !important;
+}
+
+/* list */
+
+#single .page-content ol, #single .page-content ul {
+    margin-bottom: 1.2em;
+    padding-left: 1.5em;
+    list-style-position: inside;
+    opacity: 0.9;
+}
+
+#single .page-content ol li li, #single .page-content ul li li {
+    margin-bottom: 0.5em;
+    padding-left: 1.5em;
+}
+
+/* sidebar */
+
+#single aside {
+    background-color: var(--secondary-color);
+    border-radius: .7rem;
+    padding: .7rem 1rem;
+    margin-bottom: 1em;
+}
+
+#single .sticky-sidebar {
+  position: sticky;
+  top: 50px;
+}
+
+/* Tags */
+#single aside.tags h5 {
+    margin: .7em 0;
+    margin-bottom: 1em;
+}
+
+
+#single aside.tags ul.tags-ul li a {
+    padding: 10px 15px;
+    margin-bottom: 2px;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#single aside.tags ul.tags-ul li {
+    margin-bottom: 1.2rem;
+}
+
+#single aside.tags ul.tags-ul li:hover {
+    opacity: 0.8;
+}
+
+
+/*TOC*/
+#single aside.toc {
+    padding: .7rem 1rem;
+}
+
+#single aside.toc h5 {
+    margin: .7em 0;
+    margin-bottom: 1em;
+    color: var(--text-color);
+}
+
+#single aside.toc .toc-content ol, #single aside.toc .toc-content ul {
+    margin-bottom: 1em;
+    padding-left: .5em;
+    list-style: none;
+    opacity: 0.9;
+}
+
+#single aside.toc .toc-content ol li a, #single aside.toc .toc-content ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+#single aside.toc .toc-content ol li a:hover, #single aside.toc .toc-content ul li a:hover {
+    color: var(--primary-color);
+    opacity: 1.2;
+}
+
+#single aside.toc .toc-content ol li li, #single aside.toc .toc-content ul li li {
+    padding-left: .7em;
+}
+
+/* Social */
+
+#single aside.social {
+    padding: .7rem 1rem;
+}
+
+#single aside.social h5 {
+    margin: .7em 0;
+    margin-bottom: 1em;
+    color: var(--text-color);
+}
+
+#single aside.social .social-content {
+    margin-bottom: 1em;
+    opacity: 0.9;
+}
+
+#single aside.social .social-content ul {
+    margin-bottom: 1em;
+    opacity: 0.9;
+}
+
+#single aside.social .social-content ul li a {
+    border: 1px solid var(--primary-color);
+    padding: .7rem;
+    color: var(--text-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#single aside.social .social-content ul li {
+    margin: .7rem .5rem;
+    margin-left: 0;
+}
+
+#single aside.social .social-content ul li:hover a {
+    opacity: .8;
+    color: var(--primary-color);
+}
+
+/* Top scroll */
+
+#single #topScroll {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#single #topScroll:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: .5s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}

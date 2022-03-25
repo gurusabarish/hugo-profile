@@ -1,176 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-{{ if eq .Site.Params.version 1 }}
+{{ define "head" }}
+<meta name="description" content={{ .Site.Params.description }}>
+<link rel="stylesheet" href="/css/index.css" media="all">
+<link rel="stylesheet" href="/css/projects.css" media="all">
 
-<head>
-  <title>{{- .Site.Title -}}</title>
-  <!-- stylesheets -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/all.min.css" media="all">
-  <link rel="stylesheet" href="/css/fontawesome.min.css" media="all">
-  <link rel="stylesheet" href="/css/v1/v1.css">
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
-  <meta name="description" content="{{ .Site.Params.description }}">
-  {{ template "_internal/google_analytics.html" . }}
-  {{- partial "sections/v1/head.html" . -}}
-</head>
-
-<body>
-  {{- partial "sections/v1/home.html" . -}}
-  {{- partial "sections/v1/blog.html" . -}}
-  {{- partial "sections/v1/about.html" . -}}
-  {{- partial "sections/v1/do_things.html" . -}}
-  {{- partial "sections/v1/projects.html" . -}}
-  {{- partial "sections/v1/contact.html" . -}}
-
-  {{- partial "sections/v1/footer.html" . -}}
-  {{- partial "sections/v1/scripts.html" . -}}
-</body>
-{{ else if eq .Site.Params.version 2 }}
-
-<head>
-  <title>{{- .Site.Title -}}</title>
-  <meta name="description" content="{{ .Site.Params.description }}">
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"
-    media="all">
-  {{ template "_internal/google_analytics.html" . }}
-  {{- partial "sections/v2/head.html" . -}}
-</head>
-
-<body>
-  {{- partial "sections/v2/header.html" . -}}
-  {{- partial "sections/v2/about.html" . -}}
-  {{- partial "sections/v2/do_things.html" . -}}
-  {{- partial "sections/v2/footer.html" . -}}
-  {{- partial "sections/v2/scripts.html" . -}}
-</body>
-
-{{ else if eq .Site.Params.version 3 }}
-
-<head>
-  <title>{{- .Site.Title -}}</title>
-  <meta name="description" content="{{ .Site.Params.description }}">
-
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-  {{- partial "sections/v3/head.html" . -}}
-  <link rel="stylesheet" href="/css/v3/v3.css" media="all">
-  <link rel="stylesheet" href="/css/v3/navbar-footer.css" media="all">
-  <link rel="stylesheet" href="/css/v3/loader.css" />
-
-  <!-- aos -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-</head>
-
-<body class="text-dark">
-  <!--<div id="loader" class="center"></div>-->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <div>
-    {{- partial "sections/v3/navbar.html" . -}}
-
-    {{ if .Site.Params.disable_home }}
-    {{ else }}
-    {{- partial "sections/v3/home.html" . -}}
-    {{ end }}
-
-    {{ if .Site.Params.disable_about }}
-    {{ else }}
-    {{- partial "sections/v3/about.html" . -}}
-    {{ end }}
-
-    {{ if .Site.Params.disable_experience }}
-    {{ else }}
-    {{- partial "sections/v3/experience.html" . -}}
-    {{ end }}
-
-    {{ if .Site.Params.disable_education }}
-    {{ else }}
-    {{- partial "sections/v3/education.html" . -}}
-    {{ end }}
-
-    {{ if .Site.Params.disable_projects }}
-    {{ else }}
-    {{- partial "sections/v3/projects.html" . -}}
-    {{ end }}
-
-    {{ if .Site.Params.disable_achievements }}
-    {{ else }}
-    {{- partial "sections/v3/achievements.html" . -}}
-    {{ end }}
-
-    {{ if .Site.Params.disable_contact }}
-    {{ else }}
-    {{- partial "sections/v3/contact.html" . -}}
-    {{ end }}
-
-    {{- partial "sections/v3/footer.html" . -}}
-    {{- partial "sections/v3/scripts.html" . -}}
-  </div>
-
-  <!-- Darkmode -->
-  <script>
-    function autoDarkMode() {
-      $("body").toggleClass("darkmode");
-      $(".fa-moon").addClass("d-none");
-      $(".fa-sun").removeClass("d-none");
-      $("nav").toggleClass("navbar-dark");
-      $("nav").toggleClass("navbar-light");
-      $(".text-dark").toggleClass("darkmode-text-dark");
-      $(".text-muted").toggleClass("darkmode-text-muted")
-      $(".about-backdark").toggleClass("about-back");
-      $(".education-backdark").toggleClass("education-back");
-      $(".achievements-backdark").toggleClass("achievements-back");
-      $(".dropdown-menu").toggleClass('darkmode-dropdown-menu');
-    }
-  </script>
-  <script src="/js/auto_darkmode.js"></script>
-  <script>
-    /*
-    document.onreadystatechange = function () {
-      if (document.readyState !== "complete") {
-        document.querySelector(
-          "body").style.visibility = "hidden";
-        document.querySelector(
-          "#loader").style.visibility = "visible";
-      } else {
-        document.querySelector(
-          "#loader").style.display = "none";
-        document.querySelector(
-          "body").style.visibility = "visible";
-      }
-    };
-    */
-
-    $(".darkmode-label").click(function () {
-      $("body").toggleClass("darkmode");
-      $(".fa-moon").toggleClass("d-none");
-      $(".fa-sun").toggleClass("d-none");
-      $(".about-backdark").toggleClass("about-back");
-      $(".education-backdark").toggleClass("education-back");
-      $(".achievements-backdark").toggleClass("achievements-back");
-      $("nav").toggleClass("navbar-dark");
-      $("nav").toggleClass("navbar-light");
-      $(".text-dark").toggleClass("darkmode-text-dark");
-      $(".text-muted").toggleClass("darkmode-text-muted")
-      $(".dropdown-menu").toggleClass('darkmode-dropdown-menu');
-
-      switchDarkmodeSetting();
-    });
-
-
-  </script>
-</body>
-{{ else }}
-
+<!-- fontawesome -->
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
 {{ end }}
 
-</html>
+{{ define "title" }}
+{{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+{{- partial "sections/hero/index.html" . -}}
+{{- partial "sections/about.html" . -}}
+{{- partial "sections/experience.html" . -}}
+{{- partial "sections/education.html" . -}}
+{{- partial "sections/projects.html" . -}}
+{{- partial "sections/achievements.html" . -}}
+{{- partial "sections/contact.html" . -}}
+{{ end }}

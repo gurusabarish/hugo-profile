@@ -1,0 +1,52 @@
+header .navbar .navbar-nav a {
+    color: var(--text-color) !important;
+}
+
+#theme-toggle {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+    color: var(--text-color);
+}
+.navbar-toggler svg {
+    fill: currentColor;
+    color: var(--text-color);
+}
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 .05em;
+}
+.navbar-text {
+    font-size: 16px !important;
+    opacity: 0.95;
+}
+header .nav-link{
+    transition: none !important;
+}
+.navbar-brand {
+    color: var(--primary-color) !important;
+    opacity: 0.95;
+} 
+.navbar .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+li > .dropdown-toggle:focus{
+    color: var(--primary-color) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--background-color) !important;
+    border-color: var(--text-secondary-color) !important;
+}
+
+.dropdown-item:hover {
+    background-color: var(--secondary-color) !important;
+}
+
+.dropdown-item:focus, .dropdown-item:active {
+    background-color: var(--secondary-color) !important;
+}
