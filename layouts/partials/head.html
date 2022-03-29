@@ -11,7 +11,7 @@
     rel="stylesheet">
 
 <!-- font configuration -->
-<link rel="stylesheet" href="/css/font.css" media="all">
+<link rel="stylesheet" href="{{ .Site.Params.Statics }}/css/font.css" media="all">
 
 <!-- Internal templates -->
 {{ template "_internal/google_analytics_async.html" . }}
@@ -19,16 +19,16 @@
 {{ template "_internal/twitter_cards.html" . }}
 
 <!-- stylesheets -->
-<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all">
-<link rel="stylesheet" href="/css/header.css" media="all">
-<link rel="stylesheet" href="/css/footer.css" media="all">
+<link rel="stylesheet" href="{{ .Site.Params.Statics }}/bootstrap-5/css/bootstrap.min.css" media="all">
+<link rel="stylesheet" href="{{ .Site.Params.Statics }}/css/header.css" media="all">
+<link rel="stylesheet" href="{{ .Site.Params.Statics }}/css/footer.css" media="all">
 
 <!-- theme -->
-<link rel="stylesheet" href="/css/theme.css" media="all">
+<link rel="stylesheet" href="{{ .Site.Params.Statics }}/css/theme.css" media="all">
 
 <!-- Custom Styles -->
 {{ if .Site.Params.customCSS }}
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="{{ .Site.Params.Statics }}/style.css">
 {{ end }}
 
 <style>

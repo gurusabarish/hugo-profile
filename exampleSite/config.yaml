@@ -41,6 +41,7 @@ Menus:
 params:
   title: "Hugo Profile"
   description: Text about my cool site
+  static: ""
   favicon: "/fav.png"
 
   theme:
