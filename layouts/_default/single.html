@@ -1,9 +1,9 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Params.description }}">
-<link rel="stylesheet" href="/css/single.css">
+<link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
 
 <!-- fontawesome -->
-<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+<script defer src="{{.Site.Params.staticPath}}/fontawesome-5/all-5.15.4.js"></script>
 {{ end }}
 
 {{ define "title" }}
@@ -100,7 +100,6 @@
   var topScroll = document.getElementById("topScroll");
   window.onscroll = function() {scrollFunction()};
 
-  console.log(topScroll);
   function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       topScroll.style.display = "block";

@@ -41,6 +41,7 @@ Menus:
 params:
   title: "Hugo Profile"
   description: Text about my cool site
+  # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
 
   theme:
@@ -55,15 +56,15 @@ params:
 
   # color preference
   # color:
-  #   textColor: 
-  #   secondaryTextColor: 
-  #   backgroundColor: 
-  #   secondaryBackgroundColor: 
-  #   primaryColor: 
-  #   secondaryColor: 
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
 
   #   darkmode:
-  #     textColor: 
+  #     textColor:
   #     secondaryTextColor:
   #     backgroundColor:
   #     secondaryBackgroundColor:
@@ -106,15 +107,14 @@ params:
         - icon: /fav.png
           url: "https://example.com"
 
-
   # About
   about:
     enable: true
     title: "About Me"
-    image: '/images/me.png'
+    image: "/images/me.png"
     content: |-
       I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. 
-      
+
       I am currently working on a project that will be used to help people find the best way to get around the city.
     skills:
       enable: true
@@ -140,7 +140,7 @@ params:
           name: "View the project"
           url: "https://example.com"
         content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
-      
+
       - job: "Software Developer"
         company: "Amazon"
         companyUrl: "https://example.com"
@@ -156,7 +156,7 @@ params:
 
           - Lead backend developer for a product.
           - Created a frontend design for a product.
-      
+
       - job: "Junior Software Developer"
         company: "Apple"
         companyUrl: "https://example.com"
@@ -190,7 +190,7 @@ params:
         companyUrl: "https://example.com"
         date: "Feb 2016 - Mar 2017"
         content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
-  
+
   # Education
   education:
     enable: true
@@ -202,7 +202,7 @@ params:
           url: "https://example.org"
         date: "2013 - 2015"
         GPA: "3.8 out of 5.0"
-        content: |-          
+        content: |-
           Extracurricular Activities
             - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
@@ -216,7 +216,7 @@ params:
           I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
           - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
           - Face mask detection using a single convolutional neural network.
-          
+
           Extracurricular Activities
             - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
@@ -232,11 +232,11 @@ params:
         featuredLink:
           enable: true
           url: "https://example.com"
-      
+
   # Achievements
   achievements:
     enable: true
-    items:  
+    items:
       - title: Google kickstart runner
         content: I solved all problems with optimal solution.
         url: https://example.com
@@ -245,7 +245,7 @@ params:
       - title: Hugo Profile
         content: Developed a theme and getting 1K+ downloads per month.
         url: "https://github.com/gurusabarish/hugo-profile"
-      - title:  Microsoft Imagine Runner
+      - title: Microsoft Imagine Runner
         content: We are developed a product which can help others.
       - title: Google Summer of Code
         content: Contributed to a open source project.
@@ -272,9 +272,9 @@ params:
             url: https://github.com/gurusabarish/hugo-profile
           - icon: fab fa-twitter
             url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
-      
+
       - title: Image Converter
-        content:  A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
+        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
         image: /images/projects/converter.jpg
         featured:
           name: Demo
@@ -285,7 +285,7 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/gurusabarish/converter
-      
+
       - title: Hugo Profile V2
         content: A clean and simple Hugo template for personal portfolio and blog.
         image: /images/projects/profile2.jpg
@@ -315,5 +315,3 @@ params:
       twitter: https://twitter.com
       instagram: https://instagram.com
       facebook: https://facebook.com
-
-
