@@ -75,11 +75,6 @@ header .navbar {
     line-height: 2rem;
     max-width: 100%;
 }
-@media screen and (min-width: 1280px) {
-    #hero {
-        min-height: 60vh;
-    }
-}
 #hero .content {
     animation: fade-left 1s ease-out;
 }
