@@ -1,3 +1,8 @@
+header {
+    z-index: 10;
+    position: relative;
+}
+
 header .navbar .navbar-nav a {
     color: var(--text-color) !important;
 }
@@ -39,6 +44,8 @@ li > .dropdown-toggle:focus{
 }
 
 .dropdown-menu {
+    overflow: auto;
+    /* z-index: 100; */
     background-color: var(--background-color) !important;
     border-color: var(--text-secondary-color) !important;
 }
