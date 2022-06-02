@@ -29,7 +29,7 @@
             <img class="img-fluid" src="{{ .Params.image }}" alt="{{ .Title }}">
           </div>
           {{ end }}
-          <article class="page-content">
+          <article class="page-content  p-2">
           {{ .Content | emojify }}
           </article>
         </div>
@@ -86,7 +86,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-9 p-2">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
         {{ template "_internal/disqus.html" . }}
       </div>
     </div>
