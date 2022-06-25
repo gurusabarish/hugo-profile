@@ -1,0 +1,29 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
+<!-- <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/list.css" media="all"> -->
+{{ end }}
+
+{{ define "title" }}
+{{.Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<div class="container pt-5" id="list-page">
+    <h2 class="text-center pb-2">{{.Title}}</h2>
+    <h6 class="text-center">{{ .Params.description | emojify }}</h6>
+    <div class="row p-4">
+        {{ .Content | emojify }}
+    </div>
+    <div class="card-group p-4">
+        <div class="row justify-content-center">
+            {{ range .Params.images }}
+            <div class="col-md-4 p-0 m-0">
+                <div class="card p-0 m-0 border-0">
+                    <img class="w-100" height="280px" src="{{ .src }}">
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}
