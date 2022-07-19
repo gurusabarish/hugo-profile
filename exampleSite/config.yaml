@@ -136,6 +136,8 @@ params:
   # Experience
   experience:
     enable: true
+    # title: Work Experience
+    # menu: Experience
     items:
       - job: "Senior Software Developer"
         company: "Facebook"
@@ -242,6 +244,8 @@ params:
   # Achievements
   achievements:
     enable: true
+    # title: Invited Talks
+    # menu: Talks
     items:
       - title: Google kickstart runner
         content: I solved all problems with optimal solution.
@@ -260,6 +264,8 @@ params:
   # projects
   projects:
     enable: true
+    # title: Research
+    # menu: Research
     items:
       - title: Hugo Profile
         content: A highly customizable and mobile first Hugo template for personal portfolio and blog.

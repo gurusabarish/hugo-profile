@@ -57,7 +57,7 @@
                     {{ if and (.Site.Params.experience.enable | default false) (not (.Site.Params.navbar.menus.disableExperience | default false)) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#experience"
-                            aria-label="experience">Experience</a>
+                        	aria-label="experience">{{ .Site.Params.experience.menu | default "Experience" }}</a>
                     </li>
                     {{ end }}
 
@@ -71,14 +71,14 @@
                     {{ if and (.Site.Params.projects.enable | default false) (not (.Site.Params.navbar.menus.disableEducation | default false)) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#projects"
-                            aria-label="projects">Projects</a>
+                        	aria-label="projects">{{ .Site.Params.projects.menu | default "Projects" }}</a>
                     </li>
                     {{ end }}
 
                     {{ if and (.Site.Params.achievements.enable | default false) (not (.Site.Params.navbar.menus.disableAchievements | default false)) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#achievements"
-                            aria-label="achievements">Achievements</a>
+                        	aria-label="achievements">{{ .Site.Params.achievements.menu | default "Achievements" }}</a>
                     </li>
                     {{ end }}
 
