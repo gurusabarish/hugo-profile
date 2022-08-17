@@ -141,6 +141,7 @@ params:
   # Experience
   experience:
     enable: true
+    # title: "Custom Name"
     items:
       - job: "Senior Software Developer"
         company: "Facebook"
@@ -205,6 +206,7 @@ params:
   # Education
   education:
     enable: true
+    # title: "Custom Name"
     # index: true
     items:
       - title: "Master of Business Administration"
@@ -247,6 +249,7 @@ params:
   # Achievements
   achievements:
     enable: true
+    # title: "Custom Name"
     items:
       - title: Google kickstart runner
         content: I solved all problems with optimal solution.
@@ -265,6 +268,7 @@ params:
   # projects
   projects:
     enable: true
+    # title: "Custom Name"
     items:
       - title: Hugo Profile
         content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
@@ -314,6 +318,7 @@ params:
   #Contact
   contact:
     enable: true
+    #title: "Custom name"
     content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
     email: gurusabarisha@gmail.com
     btnName: Mail me
