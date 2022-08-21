@@ -1,7 +1,7 @@
 {{ if .Site.Params.contact.enable | default false }}
 <section id="contact" class="py-5">
     <div class="container">
-        <h3 class="text-center">Get In Touch</h3>
+        <h3 class="text-center">{{ .Site.Params.contact.title | default "Get in Touch" }}</h3>
         <div class="px-0 px-md-5 px-lg-5">
             <div class="row justify-content-center px-md-5">
                 <div class="col-md-8 py-3">

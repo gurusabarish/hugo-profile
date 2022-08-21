@@ -1,7 +1,7 @@
 {{ if .Site.Params.education.enable | default false }}
 <section id="education" class="py-5">
     <div class="container">
-        <h3 class="text-center">Education</h3>
+        <h3 class="text-center">{{ .Site.Params.education.title | default "Education" }}</h3>
         <div class="row justify-content-center py-5">
             {{ $indexMenu := .Site.Params.education.index }}
             {{ range $index, $element := .Site.Params.education.items }}
