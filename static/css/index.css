@@ -294,6 +294,7 @@ header .navbar {
     border-bottom: 2px solid transparent; 
     border-radius: 0%;
     transition: none;
+    cursor: pointer;
 }
 
 #experience .nav-item .nav-link.active {
