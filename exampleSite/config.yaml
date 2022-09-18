@@ -4,7 +4,7 @@ title: "Hugo Profile"
 theme: hugo-profile
 
 Paginate: 3
-disqusShortname: gurusabarish
+disqusShortname: nikhitkale
 googleAnalytics: G-DWJJVE27WD
 
 markup:
@@ -45,10 +45,10 @@ Menus:
     #   weight: 2
 
 params:
-  title: "Hugo Profile"
-  description: Text about my cool site
-  # staticPath: ""  # The path to serve the static files from
-  favicon: "/fav.png"
+  # title: "Hugo Profile"
+  # description: Text about my cool site
+  # # staticPath: ""  # The path to serve the static files from
+  # favicon: "/fav.png"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -100,9 +100,9 @@ params:
   hero:
     enable: true
     intro: "Hi, my name is"
-    title: "Isabella."
-    subtitle: "I build things for the web"
-    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+    title: "Nikhita."
+    # subtitle: "I build things for the web"
+    content: "A passionate, mindful Web developer and Software Developer in Test with over 10 years of experience and expertise in Software Testing."
     image: /images/hero.svg
     button:
       enable: true
@@ -112,12 +112,12 @@ params:
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
-          url: https://example.com
+          url: https://github.com/nikhitakale
         - icon: fab fa-twitter
-          url: https://example.com
-      customIcons:
-        - icon: /fav.png
-          url: "https://example.com"
+          url: https://twitter.com/KaleNikhita
+      # customIcons:
+      #   - icon: /fav.png
+      #     url: "https://example.com"
 
   # About
   about:
@@ -125,34 +125,34 @@ params:
     title: "About Me"
     image: "/images/me.png"
     content: |-
-      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. 
+      I am a software developer in test with a passion for web development and testing. I have a background in computer science and information, and I have a strong interest in the intersection of technology and art. I am currently working as a Lead QA in London, UK. 
 
-      I am currently working on a project that will be used to help people find the best way to get around the city.
+      I am currently working on a blockchain project that will help people to get better understanding and use of crypto technology with better user interface.
     skills:
       enable: true
       title: "Here are a few technologies I've been working with recently:"
       items:
-        - "HTML"
-        - "CSS"
-        - "JavaScript"
-        - "React"
-        - "Node"
-        - "Express"
+        - "Blockchain"
+        - "CI/CD and Release mamangement"
+        - "Node and JavaScript"
+        - "Solidity"
+        - "Machine Learning and AI"
+        - "Cyber Security and Fuzzing"
 
   # Experience
   experience:
     enable: true
     # title: "Custom Name"
     items:
-      - job: "Senior Software Developer"
-        company: "Facebook"
-        companyUrl: "https://example.com"
-        date: "Jan 2022 - present"
+      - job: "Lead Quality Assurance Engineer"
+        company: "Biconomy.io"
+        companyUrl: "https://www.biconomy.io/"
+        date: "May 2021 - Sep 2022"
         featuredLink:
           enable: true
           name: "View the project"
-          url: "https://example.com"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+          url: "https://www.biconomy.io/"
+        content: "Biconomy is a Next-Gen Multi-chain Relayer Protocol for WEB3.0 space, providing Bridge for Layer 1  to Layer 2 and vice -versa transactions, staking of crypto tokens ,NFTs & Gasless solutions."
 
       - job: "Software Developer"
         company: "Amazon"
