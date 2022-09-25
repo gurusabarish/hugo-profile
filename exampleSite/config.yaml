@@ -55,6 +55,9 @@ params:
   # Note the lack of "" in true, it should be of boolean type.
   useBootstrapCDN: false
 
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
   theme:
     disableThemeToggle: false
     # defaultTheme: "light" # dark

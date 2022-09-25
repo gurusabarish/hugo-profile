@@ -1,4 +1,4 @@
-<span id="loading-icons" style="display: none;">
+<span id="loading-icons" style="display: {{ if .Site.Params.animate }}none{{else}}block{{ end }};">
     {{ range .Site.Params.hero.socialLinks.fontAwesomeIcons }}
     <span class="px-1">
         <a href="{{ .url }}" target="_blank" class="btn social-icon">
