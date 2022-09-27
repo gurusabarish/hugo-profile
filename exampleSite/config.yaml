@@ -19,7 +19,7 @@ Menus:
       title: Blog posts
       url: /blogs
       weight: 1
-    
+
     - identifier: gallery
       name: Gallery
       title: Blog posts
@@ -111,7 +111,7 @@ params:
       enable: true
       name: "Resume"
       url: "#"
-      download: true 
+      download: true
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
