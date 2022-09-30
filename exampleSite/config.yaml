@@ -112,6 +112,7 @@ params:
       name: "Resume"
       url: "#"
       download: true
+      newPage: true
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
