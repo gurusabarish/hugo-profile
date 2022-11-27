@@ -57,3 +57,49 @@ li > .dropdown-toggle:focus{
 .dropdown-item:focus, .dropdown-item:active {
     background-color: var(--secondary-color) !important;
 }
+
+#search {
+    border-radius: 1rem !important;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-color: var(--background-color) !important;
+    transition: none;
+}
+
+#search:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#search-content {
+    display: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    width: 10%;
+    max-height: 350px;
+    background-color: var(--secondary-color) !important;
+    position: absolute;
+    overflow: scroll;
+}
+
+#search-results > .card {
+    background-color: transparent !important;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#search-results > .card :hover {
+    border-radius: 1rem !important;
+    background-color: var(--background-color) !important;
+    transition: .2s;
+}
+
+#search-results .card a {
+    opacity: 0.9;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color) !important;
+}
+
+#search-results .card a:hover {
+    color: var(--primary-color) !important;
+}

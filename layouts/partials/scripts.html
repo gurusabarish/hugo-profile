@@ -62,3 +62,7 @@
         } catch(err) {}
     }
 </script>
+
+{{ if not (.Site.Params.navbar.disableSearch | default false) }}
+    <script src="/js/search.js"></script>
+{{ end }}
