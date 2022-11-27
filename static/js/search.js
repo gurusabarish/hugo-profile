@@ -11,9 +11,7 @@ async function searchOnChange(evt) {
       searchButtonPosition = searchButtonEle[1].getBoundingClientRect();
       document.getElementById("search-content").style.width = "430px";
     }
-    console.log(searchButtonPosition);
 
-    document.getElementById("search-content").style.display = "block";
     document.getElementById("search-content").style.top =
       searchButtonPosition.top + 50 + "px";
     document.getElementById("search-content").style.left =
@@ -44,7 +42,7 @@ async function searchOnChange(evt) {
       let searchResultsHtml = `<p class="text-center py-3">No results found for "${searchQuery}"</p>`;
       document.getElementById("search-results").innerHTML = searchResultsHtml;
     }
-    console.log(searchResults);
+    document.getElementById("search-content").style.display = "block";
   } else {
     document.getElementById("search-content").style.display = "none";
     document.getElementById("search-results").innerHTML = "";
