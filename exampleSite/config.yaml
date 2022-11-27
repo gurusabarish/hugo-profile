@@ -3,6 +3,15 @@ languageCode: "en-us"
 title: "Hugo Profile"
 theme: hugo-profile
 
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
 Paginate: 3
 disqusShortname: gurusabarish
 googleAnalytics: G-DWJJVE27WD
