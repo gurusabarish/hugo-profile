@@ -9,7 +9,7 @@ async function searchOnChange(evt) {
       document.getElementById("search-content").style.width = "500px";
     } else {
       searchButtonPosition = searchButtonEle[1].getBoundingClientRect();
-      document.getElementById("search-content").style.width = "430px";
+      document.getElementById("search-content").style.width = "300px";
     }
 
     document.getElementById("search-content").style.top =

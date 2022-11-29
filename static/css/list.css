@@ -4,6 +4,7 @@
     border-radius: .75rem;
     cursor: context-menu;
     overflow: hidden;
+    border: none;
 }
 
 #list-page .card a {
@@ -15,7 +16,6 @@
 }
 
 #list-page .card:hover {
-    border: 1px solid var(--secondary-color);
     transition: all 0.3s ease-out;
     transform: translateY(-7px);
 }
@@ -47,6 +47,17 @@
     color: var(--primary-color) !important;
 }
 
+#list-page .card > .card-header {
+    padding: 0 !important;
+    border: none !important;
+    background-color: var(--secondary-color) !important;
+}
+
+#list-page .card > .card-header .card-img-top {
+    width: 100%;
+    height: 250px !important;
+    background-color: transparent !important;
+}
 
 /* pagination */
 #list-page ul li a {
