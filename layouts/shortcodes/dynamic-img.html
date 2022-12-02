@@ -3,10 +3,10 @@
     {{< dynamic-img src="/my/image/on/cloudinary.webp" title="A title for the image" >}}
 
     Optionally, you can customize the width or other general styles for the image:
-    {{< dynamic-img src="/my/image/on/cloudinary.webp" title="A title for the image" width="w_auto" style="width:90%" >}}
+    {{< dynamic-img src="/my/image/on/cloudinary.webp" title="A title for the image" width="w_auto" style="max-width:90%" >}}
 -->
 {{ $image := .Get "src" }}
 {{ $alt := .Get "title" }}
 {{ $width := .Get "width" | default "w_auto" }}
-{{ $style := .Get "style" | default "width:90%" }}
+{{ $style := .Get "style" | default "max-width:90%" }}
 <img alt="{{ $alt }}" title="{{ $alt }}" data-src="https://res.cloudinary.com/{{ $.Site.Params.cloudinary_cloud_name }}/{{ $width }},c_scale,f_auto,q_auto,dpr_auto{{ $image}}" class="cld-responsive" style="{{ $style }}">
