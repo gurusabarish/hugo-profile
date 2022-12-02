@@ -64,6 +64,11 @@ params:
   # Note the lack of "" in true, it should be of boolean type.
   useBootstrapCDN: false
 
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
   # Whether the fade animations on the home page will be enabled
   animate: true
 
