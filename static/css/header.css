@@ -70,6 +70,8 @@ li > .dropdown-toggle:focus{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 #search-content {
+    -ms-scroll-chaining: none;
+    scrollbar-width: none;
     display: none;
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -79,6 +81,10 @@ li > .dropdown-toggle:focus{
     background-color: var(--secondary-color) !important;
     position: absolute;
     overflow: scroll;
+}
+
+#search-content::-webkit-scrollbar {
+    display: none;
 }
 
 #search-results > .card {
