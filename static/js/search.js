@@ -19,11 +19,34 @@ async function searchOnChange(evt) {
 
     let searchJson = await fetch("/index.json").then((res) => res.json());
     let searchResults = searchJson.filter((item) => {
-      return (
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.content.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+      let res = false;
+      if (item.title && item.description && item.content) {
+        res =
+          item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          item.content.toLowerCase().includes(searchQuery.toLowerCase());
+      } else if (item.title && item.description) {
+        res =
+          item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          item.description.toLowerCase().includes(searchQuery.toLowerCase());
+      } else if (item.title && item.content) {
+        res =
+          item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          item.content.toLowerCase().includes(searchQuery.toLowerCase());
+      } else if (item.description && item.content) {
+        res =
+          item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          item.content.toLowerCase().includes(searchQuery.toLowerCase());
+      } else if (item.title) {
+        res = item.title.toLowerCase().includes(searchQuery.toLowerCase());
+      } else if (item.description) {
+        res = item.description
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase());
+      } else if (item.content) {
+        res = item.content.toLowerCase().includes(searchQuery.toLowerCase());
+      }
+      return res;
     });
     if (searchResults.length > 0) {
       let searchResultsHtml = "";
