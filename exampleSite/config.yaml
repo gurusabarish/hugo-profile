@@ -11,10 +11,10 @@ outputs:
   page:
     - "HTML"
     - "RSS"
-
+    
 Paginate: 3
 disqusShortname: gurusabarish
-googleAnalytics: G-DWJJVE27WD
+enableRobotsTXT: true
 
 markup:
   goldmark:
@@ -28,13 +28,11 @@ Menus:
       title: Blog posts
       url: /blogs
       weight: 1
-
     - identifier: gallery
       name: Gallery
       title: Blog posts
       url: /gallery
       weight: 2
-
     #Dropdown menu
     # - identifier: dropdown
     #   title: Example dropdown menu
@@ -74,13 +72,13 @@ params:
 
   theme:
     disableThemeToggle: false
-    # defaultTheme: "light" # dark
+    defaultTheme: "light" # dark
 
-  # font:
-  #   fontSize: 1.5rem # default: 1rem
-  #   fontWeight: 500 # default: 400
-  #   lineHeight: 1 # default: 1.5
-  #   textAlign: right # default: left
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
 
   # color preference
   # color:
@@ -100,19 +98,18 @@ params:
   #     secondaryColor:
 
   # If you want to customize the menu, you can change it here
-  # navbar:
-  #   align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
-  #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
-  #   brandName: "Profile" # Brand name for the brand | default is the title variable
-  #   disableSearch: true
-
-  #   menus:
-  #     disableAbout: true
-  #     disableExperience: true
-  #     disableEducation: true
-  #     disableProjects: true
-  #     disableAchievements: true
-  #     disableContact: true
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    brandName: "Hugo Profile" # Brand name for the brand | default is the title variable
+    disableSearch: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
 
   # Hero
   hero:
@@ -127,7 +124,7 @@ params:
       name: "Resume"
       url: "#"
       download: true
-      newPage: true
+      newPage: false
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
@@ -227,7 +224,7 @@ params:
   education:
     enable: true
     # title: "Custom Name"
-    # index: true
+    index: false
     items:
       - title: "Master of Business Administration"
         school:
@@ -296,10 +293,10 @@ params:
         featured:
           name: Demo
           link: https://hugo-profile.netlify.app
-        # badges:
-        #   - "Hugo"
-        #   - "Bootstrap"
-        #   - "Javascript"
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
         links:
           - icon: fa fa-envelope
             url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
@@ -314,9 +311,9 @@ params:
         featured:
           name: Demo
           link: https://django-converter.herokuapp.com
-        # badges:
-        #   - "Django"
-        #   - "Bootstrap"
+        badges:
+          - "Django"
+          - "Bootstrap"
         links:
           - icon: fab fa-github
             url: https://github.com/gurusabarish/converter
@@ -327,10 +324,10 @@ params:
         featured:
           name: Demo V2
           link: https://hugo-profile-2.netlify.app
-        # badges:
-        #   - "Hugo"
-        #   - "Bootstrap"
-        #   - "Javascript"
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
         links:
           - icon: fab fa-github
             url: https://github.com/gurusabarish/HugoProfileV2
@@ -338,17 +335,18 @@ params:
   #Contact
   contact:
     enable: true
-    #title: "Custom name"
+    # title: "Custom Name"
     content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
     email: gurusabarisha@gmail.com
     btnName: Mail me
 
   footer:
     recentPosts:
+      path: "blogs"
+      count: 3
       title: Recent Posts
       enable: true
       disableFeaturedImage: false
-
     socialNetworks:
       github: https://github.com
       linkedin: https://linkedin.com
