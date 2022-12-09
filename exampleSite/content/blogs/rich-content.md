@@ -71,5 +71,5 @@ Note that you do not include the file extension (e.g. `.png`) in the `src` param
 Optionally, you can customize the general CSS styles for the image:
 
 ```
-{{</* dynamic-img src="/my/image/on/cloudinary.webp" title="A title for the image" style="max-width:60%" */>}}
+{{</* dynamic-img src="/my/image/on/cloudinary" title="A title for the image" style="max-width:60%" */>}}
 ```
