@@ -1,5 +1,5 @@
 {{- /* theme-toggle is enabled */}}
-{{- if (not .Site.Params.theme.disableThemeToggle) }}
+{{- if (not .Site.Params.theme.disableThemeToggle | default false) }}
 {{- /* theme is auto */}}
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
@@ -145,9 +145,9 @@
                     {{end}}
                     {{end}}
 
+                    {{ if (not .Site.Params.theme.disableThemeToggle | default false) }}
                     <li class="nav-item navbar-text">
                         <!-- darkmode mode toggle -->
-                        {{ if (not .Site.Params.theme.disableThemeToggle) }}
                         <div class="text-center">
                             <button id="theme-toggle">
                                 <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -166,8 +166,8 @@
                                 </svg>
                             </button>
                         </div>
-                        {{ end }}
                     </li>
+                    {{ end }}
 
                 </ul>
 

@@ -483,6 +483,7 @@ header .navbar.animate {
 }
 
 #achievements .card {
+    cursor: context-menu;
     background-color: var(--secondary-color) !important;
     border-radius: 1rem;
     box-shadow: 0 0 36px rgba(0,0,0,0.1);
