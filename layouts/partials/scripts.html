@@ -67,6 +67,7 @@
     <script src="/js/search.js"></script>
 {{ end }}
 
+
 {{ if (.Params.mathjax | default false) }}
 
 {{ "<!-- MathJax -->" | safeHTML }}
@@ -84,6 +85,16 @@
              extensions: ["AMSmath.js", "AMSsymbols.js"] }
       }
     });
+</script>
+{{ end }}
+
+{{ if (.Site.Params.cloudinary_cloud_name | default false) }}
+
+{{ "<!-- cloudinary -->" | safeHTML }}
+<script src="https://unpkg.com/cloudinary-core@2.13.0/cloudinary-core-shrinkwrap.js" integrity="sha384-0bQduxVhZMs6xfvcPH9osdUIw44hjF8EahHuQBdyN6Rryk8tgyFO80Yz5d14F+5d" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    var cl = cloudinary.Cloudinary.new({cloud_name: "{{- .Site.Params.cloudinary_cloud_name }}"}); 
+    cl.responsive();
 </script>
 
 {{ end }}
