@@ -1,0 +1,5 @@
+{{ $image := .Get "src" }}
+{{ $alt := .Get "title" }}
+{{ $width := .Get "width" | default "w_auto" }}
+{{ $style := .Get "style" | default "max-width:80%" }}
+<img alt="{{ $alt }}" title="{{ $alt }}" data-src="https://res.cloudinary.com/{{ $.Site.Params.cloudinary_cloud_name }}/{{ $width }},c_scale,f_auto,q_auto,dpr_auto{{ $image}}" class="cld-responsive" style="padding-bottom: 16px; display: block; margin: auto; {{ $style }}">
