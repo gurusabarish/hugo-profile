@@ -67,6 +67,27 @@
     <script src="/js/search.js"></script>
 {{ end }}
 
+
+{{ if (.Params.mathjax | default false) }}
+
+{{ "<!-- MathJax -->" | safeHTML }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js" integrity="sha384-M5jmNxKC9EVnuqeMwRHvFuYUE8Hhp0TgBruj/GZRkYtiMrCRgH7yvv5KY+Owi7TW" crossorigin="anonymous"></script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+</script>
+{{ end }}
+
 {{ if (.Site.Params.cloudinary_cloud_name | default false) }}
 
 {{ "<!-- cloudinary -->" | safeHTML }}
