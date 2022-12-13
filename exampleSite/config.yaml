@@ -13,7 +13,6 @@ outputs:
     - "RSS"
     
 Paginate: 3
-disqusShortname: gurusabarish
 enableRobotsTXT: true
 
 markup:
@@ -71,8 +70,8 @@ params:
   animate: true
 
   theme:
-    disableThemeToggle: false
-    defaultTheme: "light" # dark
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
 
   font:
     fontSize: 1rem # default: 1rem

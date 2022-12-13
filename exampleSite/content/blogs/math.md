@@ -9,9 +9,11 @@ tags:
   - example
 image: /images/mathjax.png
 description: ""
-toc: 
+toc: true
 mathjax: true
 ---
+
+## Mathjax
 
 Math equations can be rendered using [Mathjax](https://www.mathjax.org) syntax with AMS symbol support.
 
@@ -33,3 +35,4 @@ Write in-line equations with `\\( ... \\)` , like \\( x^n / y \\) . It's easy!
 ```
 Write in-line equations with `\\( ... \\)` , like \\( x^n / y \\) . It's easy!
 ```
+
