@@ -89,7 +89,7 @@
                     </li>
                     {{ end }}
 
-                    {{ if and (.Site.Params.projects.enable | default false) (not (.Site.Params.navbar.menus.disableEducation | default false)) }}
+                    {{ if and (.Site.Params.projects.enable | default false) (not (.Site.Params.navbar.menus.disableProjects | default false)) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#projects"
                             aria-label="projects">
