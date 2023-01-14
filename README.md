@@ -24,6 +24,7 @@ A high performance and mobile first hugo template for personal portfolio and blo
   - [Google Analytics](https://gohugo.io/templates/internal/#google-analytics)
 - Comment Support
   - [Disqus](https://gohugo.io/content-management/comments/)
+- Integration with [FormSpree](https://formspree.io/) for submitting "Contact me" form
 
 Technology used: Bootstrap, fontawesome 
 
