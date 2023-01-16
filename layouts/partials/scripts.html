@@ -98,3 +98,7 @@
 </script>
 
 {{ end }}
+
+{{ if (.Site.Params.contact.formspree.enable | default false) }}
+<script src="/js/contact.js"></script>
+{{ end }}
