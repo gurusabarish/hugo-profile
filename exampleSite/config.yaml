@@ -363,3 +363,9 @@ params:
   # List pages like blogs and posts
   listPages:
     disableFeaturedImage: false
+    
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: false
+      content: "min read"
