@@ -367,5 +367,5 @@ params:
   # Single pages like blog and post
   singlePages:
     readTime:
-      enable: false
+      enable: true
       content: "min read"
