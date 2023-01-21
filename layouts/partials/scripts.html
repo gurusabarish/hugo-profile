@@ -22,7 +22,7 @@
         document.body.classList.add('dark');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
 
@@ -49,22 +49,8 @@
 </script>
 {{- end }}
 
-<script>
-    let loadingIcons;
-
-    function loading() {
-        myVar = setTimeout(showPage, 100);
-    }
-
-    function showPage() {
-        try{
-            document.getElementById("loading-icons").style.display = "block";
-        } catch(err) {}
-    }
-</script>
-
 {{ if not (.Site.Params.navbar.disableSearch | default false) }}
-    <script src="/js/search.js"></script>
+    <script src="{{ .Site.Params.staticPath }}/js/search.js"></script>
 {{ end }}
 
 
@@ -100,5 +86,5 @@
 {{ end }}
 
 {{ if (.Site.Params.contact.formspree.enable | default false) }}
-<script src="/js/contact.js"></script>
+<script src="{{ .Site.Params.staticPath }}/js/contact.js"></script>
 {{ end }}
