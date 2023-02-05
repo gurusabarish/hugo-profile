@@ -28,7 +28,7 @@
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             <!-- navbar brand -->
             <a class="navbar-brand primary-font text-wrap" href="{{ .Site.BaseURL | relURL }}">
-                {{ if or (.Site.Params.favicon) (.Site.Params.navbar.brandLogo) }}
+                {{ if and (or (.Site.Params.favicon) (.Site.Params.navbar.brandLogo)) .Site.Params.navbar.showBrandLogo | default true }}
                 <img src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}" width="30" height="30"
                     class="d-inline-block align-top">
                 {{ .Site.Params.navbar.brandName | default .Site.Params.title }}
