@@ -11,7 +11,7 @@ outputs:
   page:
     - "HTML"
     - "RSS"
-    
+
 Paginate: 3
 enableRobotsTXT: true
 # disqusShortname: your-disqus-shortname
@@ -120,6 +120,7 @@ params:
     subtitle: "I build things for the web"
     content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
     image: /images/hero.svg
+    # roundImage: true # Make hero image circular | default false
     button:
       enable: true
       name: "Resume"
@@ -363,7 +364,7 @@ params:
   # List pages like blogs and posts
   listPages:
     disableFeaturedImage: false
-    
+
   # Single pages like blog and post
   singlePages:
     readTime:
