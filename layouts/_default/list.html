@@ -31,8 +31,8 @@
                         </div>
                     </div>
                     <div class="mt-auto post-footer bg-transparent py-3">
-                        <span class="float-start bg-transparent">{{ .Date.Format "January 2, 2006" }}</span>
-                        <a href="{{ .RelPermalink }}" class="float-end btn btn-outline-info btn-sm">Read</a>
+                        <span class="float-start bg-transparent">{{ .Date.Format (.Site.Params.datesFormat.articleList | default "January 2, 2006") }}</span>
+                        <a href="{{ .RelPermalink }}" class="float-end btn btn-outline-info btn-sm">{{ .Site.Params.terms.read | default "Read" }}</a>
                     </div>
                 </div>
             </div>

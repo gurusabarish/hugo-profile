@@ -21,7 +21,7 @@
             <div class="text-center">
               {{ .Params.author }} 
               <small>|</small>
-              {{ .Date.Format "Jan 2, 2006" }}
+              {{ .Date.Format (.Site.Params.datesFormat.article | default "Jan 2, 2006") }}
 
               {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
               <span id="readingTime">
@@ -45,7 +45,7 @@
           {{ if .Params.toc | default true}}
           <aside class="toc">
               <h5>
-                Table Of Contents
+                {{ .Site.Params.terms.toc | default "Table Of Contents" }}
               </h5>
               <div class="toc-content">
                 {{.TableOfContents}}
@@ -55,7 +55,7 @@
 
           {{ if .Params.tags }}
           <aside class="tags">
-            <h5>Tags</h5>
+            <h5>{{ .Site.Params.terms.tags | default "Tags" }}</h5>
             <ul class="tags-ul list-unstyled list-inline">
               {{range .Params.tags}}
               <li class="list-inline-item"><a href="{{`tags` | absURL}}/{{.| urlize}}" target="_blank">{{.}}</a></li>
@@ -66,7 +66,7 @@
 
           {{ if .Params.socialShare | default true }}
           <aside class="social">
-            <h5>Social</h5>
+            <h5>{{ .Site.Params.terms.social | default "Social" }}</h5>
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
@@ -80,7 +80,7 @@
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="mailto:?subject={{ .Title }}&amp;body=Check out this site {{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
+                  <a target="_blank" href='mailto:?subject={{ .Title }}&amp;body={{ .Site.Params.terms.emailText | default "Check out this site" }} {{ .Site.Params.hostName }}{{ .Permalink | absURL }}'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
