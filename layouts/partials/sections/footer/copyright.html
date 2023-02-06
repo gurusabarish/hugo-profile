@@ -7,7 +7,7 @@
                         height="40px" width="40px">
                 </a>
             </div>
-            &copy; {{ now.Format "2006"}} {{ .Site.Params.copyright }} All Rights Reserved
+            &copy; {{ now.Format "2006"}} {{ .Site.Params.copyright }} {{ .Site.Params.terms.copyright | default "All Rights Reserved" }}
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
