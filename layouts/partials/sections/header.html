@@ -1,22 +1,25 @@
+{{- /* theme-toggle is enabled */}}
+{{- if (not .Site.Params.theme.disableThemeToggle | default false) }}
 {{- /* theme is auto */}}
 <script>
-    let localStorageValue = localStorage.getItem("pref-theme");
-    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    switch (localStorageValue) {
-        case "dark":
-            document.body.classList.add('dark');
-            break;
-        case "light":
-            document.body.classList.remove('dark');
-            break;
-        default:
-            if (mediaQuery) {
-                document.body.classList.add('dark');
-            }
-            break;
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
+
 </script>
+{{- /* theme-toggle is disabled and theme is auto */}}
+{{- else if (and (ne .Site.Params.theme.defaultTheme "light") (ne .Site.Params.theme.defaultTheme "dark"))}}
+<script>
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+{{- end }}
 
 
 <!-- Navbar -->
