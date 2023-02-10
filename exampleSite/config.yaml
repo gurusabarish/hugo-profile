@@ -116,6 +116,7 @@ params:
   # Hero
   hero:
     enable: true
+    # githubName: "octocat" # If github name is set, get as much information as possible from github api on build.
     intro: "Hi, my name is"
     title: "Isabella."
     subtitle: "I build things for the web"

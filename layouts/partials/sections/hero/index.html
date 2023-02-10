@@ -7,13 +7,21 @@
                     {{ .Site.Params.hero.intro }}
                 </span>
                 <h2>
-                    {{ .Site.Params.hero.title }}
+                    {{ if .Site.Params.githubName }}
+                        {{- partial "sections/hero/github.html" (dict "context" . "key" "name") -}}
+                    {{ else }}
+                        {{ .Site.Params.hero.title }}
+                    {{ end }}
                 </h2>
                 <h3>
                     {{ .Site.Params.hero.subtitle }}
                 </h3>
                 <p class="hero-content">
-                    {{ .Site.Params.hero.content | markdownify }}
+                    {{ if .Site.Params.githubName }}
+                        {{- partial "sections/hero/github.html" (dict "context" . "key" "bio") -}}
+                    {{ else }}
+                        {{ .Site.Params.hero.content | markdownify }}
+                    {{ end }}
                 </p>
                 <div class="row">
                     <div class="col-auto h-100">
@@ -33,11 +41,9 @@
             </div>
             <div class="col-sm-12 col-md-12 col-lg-4">
                 <div class="row justify-content-center">
-                    <div class="col-sm-12 col-md-9 pt-5 image {{ if .Site.Params.animate }}animate{{ end }} px-5 px-md-5 px-lg-0 text-center">
-                        <img src="{{ .Site.Params.hero.image }}"
-                            class="img-thumbnail mx-auto{{ if .Site.Params.hero.roundImage }} rounded-circle{{ end }}"
-                            alt=""
-                        >
+                    <div
+                        class="col-sm-12 col-md-9 pt-5 image {{ if .Site.Params.animate }}animate{{ end }} px-5 px-md-5 px-lg-0 text-center">
+                        {{- partial "sections/hero/image.html" . -}}
                     </div>
                 </div>
             </div>
