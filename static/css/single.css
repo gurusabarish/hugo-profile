@@ -282,3 +282,25 @@
     transition: .5s;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Singlepage scroll progress start */
+.progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--background-color);
+    z-index: 999;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width .2s;
+}
+
+/* Singlepage scroll progress end */

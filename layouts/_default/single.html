@@ -102,6 +102,13 @@
   </button>
 </section>
 
+{{ if or (.Site.Params.singlePages.scrollprogress.enable | default true) (.Params.enableScrollProgress) }}
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="{{.Site.Params.staticPath}}/js/scrollProgressBar.js"></script>
+{{ end }}
+
 <script>
   var topScroll = document.getElementById("topScroll");
   window.onscroll = function() {scrollFunction()};
