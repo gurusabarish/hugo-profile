@@ -1,0 +1,40 @@
+{{ if .Site.Params.experience.enable | default false }}
+<section id="experience" class="py-5">
+    <div class="container">
+        <h3 class="text-center">{{ .Site.Params.experience.title | default "Experience" }}</h3>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-8 py-5">
+                <div class="experience-container px-3 pt-2">
+                    <ul class="nav nav-pills mb-3 bg-transparent primary-font" id="pills-tab" role="tablist">
+                        {{ range $index, $element := .Site.Params.experience.items }}
+                            {{ partial "sections/experience/experience-tab-label.html" 
+                                (dict 
+                                    "index" $index
+                                    "company" .company 
+                                    "date" .date
+                                )
+                            }}
+                        {{ end }}
+                    </ul>
+                    <div class="tab-content pb-5 pt-2 bg-transparent primary-font" id="pills-tabContent">
+                        {{ range $index, $element := .Site.Params.experience.items }}
+                            {{ partial "sections/experience/experience-tab-entry.html" 
+                                (dict 
+                                    "index" $index 
+                                    "info" .info 
+                                    "company" .company 
+                                    "companyUrl" .companyUrl 
+                                    "date" .date 
+                                    "job" .job 
+                                    "featuredLink" .featuredLink
+                                    "content" .content
+                                )
+                            }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
