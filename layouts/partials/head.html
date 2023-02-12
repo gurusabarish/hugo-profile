@@ -24,7 +24,9 @@
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/font.css" media="all">
 
 <!-- Internal templates -->
-{{ template "_internal/google_analytics.html" . }}
+{{ if not .Site.IsServer }}
+    {{ template "_internal/google_analytics.html" . }}
+{{ end }}
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 
