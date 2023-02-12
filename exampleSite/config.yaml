@@ -71,6 +71,9 @@ params:
   # Whether the fade animations on the home page will be enabled
   animate: true
 
+  # Make nav bar sticky
+  stickyNav: false
+
   theme:
     # disableThemeToggle: true
     # defaultTheme: "light" # dark
