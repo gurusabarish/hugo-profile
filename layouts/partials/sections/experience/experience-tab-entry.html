@@ -42,14 +42,16 @@ params:
                 {{ end }}
             {{ end }}
         </div>
-    
-        {{ if .featuredLink.enable | default false }}
-        <div class="py-2 featuredLink">
-            <a class="p-2 px-4 btn btn-outline-primary btn-sm" href={{ .featuredLink.url | default "#" }} target="_blank">
-            {{ .featuredLink.name | default "Featured Link" }}
-            </a>
-        </div>
-        {{ end }}
+
+        {{ if .featuredLink | default false}}
+            {{ if .featuredLink.enable | default false }}
+            <div class="py-2 featuredLink">
+                <a class="p-2 px-4 btn btn-outline-primary btn-sm" href={{ .featuredLink.url | default "#" }} target="_blank">
+                {{ .featuredLink.name | default "Featured Link" }}
+                </a>
+            </div>
+            {{ end }}
+        {{ end}}
     </div>
     
     {{ .content | markdownify}}
