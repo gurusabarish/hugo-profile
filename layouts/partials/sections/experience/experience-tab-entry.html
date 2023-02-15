@@ -1,6 +1,7 @@
 <!--
 params:
     - index
+    - key
     - info
         - enable
         - content
@@ -17,13 +18,13 @@ params:
 <div
     class="tab-pane fade {{ if (eq .index 0) }} show active {{ end }} bg-transparent"
     role="tabpanel"
-    id='pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}'
+    id='{{.key}}-pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}'
     aria-labelledby='pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}-tab'
 >
     <div>
         <span class="h4">{{ .job }}</span>
         <small>-</small>
-        <a href="{{ .companyUrl }}" target="_blank">{{ .company }}</a>
+        <a href="{{.key}}-{{ .companyUrl }}" target="_blank">{{ .company }}</a>
         <div class="pb-1">
             <small>{{ .date }}</small>
             {{ if .info | default false}}

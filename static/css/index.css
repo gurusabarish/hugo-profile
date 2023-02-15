@@ -264,39 +264,39 @@ header .navbar.animate {
 
 /* experience */
 
-#experience h3 {
+.experience h3 {
     color: var(--text-secondary-color) !important;
 }
 
-#experience * {
+.experience * {
     background-color: transparent !important;
 }
 
-#experience .tab-pane > * {
+.experience .tab-pane > * {
     opacity: 0.9;
 }
 
-#experience .tab-pane small {
+.experience .tab-pane small {
     opacity: 0.8;
 }
 
-#experience .tab-pane ul {
+.experience .tab-pane ul {
     padding-top: 1%;
     padding-bottom: 1%;
 }
 
-#experience .experience-container .tab-content > .tab-pane p {
+.experience .experience-container .tab-content > .tab-pane p {
     padding: 1% 0;
     margin: 0;
 }
 
-#experience .experience-container {
+.experience .experience-container {
     background-color: var(--secondary-color) !important;
     border-radius: .75rem;
     box-shadow: 0px 8px 56px rgb(15 80 100 / 16%);
 }
 
-#experience .nav-item .nav-link {
+.experience .nav-item .nav-link {
     color: var(--text-color) !important;
     border-bottom: 2px solid transparent; 
     border-radius: 0%;
@@ -304,29 +304,29 @@ header .navbar.animate {
     cursor: pointer;
 }
 
-#experience .nav-item .nav-link.active {
+.experience .nav-item .nav-link.active {
     color: var(--text-color) !important;
     border-bottom: 2px solid var(--primary-color); 
     opacity: 0.8;
 }
 
-#experience .nav-item .nav-link.active:hover { 
+.experience .nav-item .nav-link.active:hover { 
     transition: none !important;
 }
 
-#experience .nav-item .nav-link:hover {
+.experience .nav-item .nav-link:hover {
     border-bottom: 2px solid var(--primary-color);
     opacity: 0.8;
 }
 
-#experience a {
+.experience a {
     opacity: 0.9;
     display: inline-block;
     text-decoration: none;
     color: var(--primary-color) !important;
 }
 
-#experience a::after {
+.experience a::after {
     content: "";
     display: block;
     width: 0px;
@@ -337,30 +337,30 @@ header .navbar.animate {
     opacity: 0.5;
 }
 
-#experience a:hover::after, #experience a:focus::after, #experience a:active::after {
+.experience a:hover::after, .experience a:focus::after, .experience a:active::after {
     width: 100%;
 }
 
-#experience .experience-container .tab-content .tab-pane ul {
+.experience .experience-container .tab-content .tab-pane ul {
     overflow: hidden;
     list-style: none;
     margin-bottom: 0;
 }
 
-#experience .experience-container .tab-content .tab-pane ul li {
+.experience .experience-container .tab-content .tab-pane ul li {
     position: relative;
     margin-bottom: 10px;
     padding-left: 20px;
 }
 
-#experience .experience-container .tab-content .tab-pane ul li::before {
+.experience .experience-container .tab-content .tab-pane ul li::before {
     content: "▹";
     color: var(--primary-color);
     position: absolute;
     left: 0px;
 }
 
-#experience .experience-container .tab-content .tab-pane .featuredLink a::after {
+.experience .experience-container .tab-content .tab-pane .featuredLink a::after {
     display: block;
     width: auto;
     height: auto;
@@ -370,17 +370,17 @@ header .navbar.animate {
     opacity: 1;
 }
 
-#experience .experience-container .tab-content .tab-pane .featuredLink a.btn {
+.experience .experience-container .tab-content .tab-pane .featuredLink a.btn {
     border: 1px solid var(--primary-color);
     border-radius: .75rem;
     transition: none;
 }
 
-#experience .experience-container .tab-content .tab-pane .featuredLink a.btn:focus {
+.experience .experience-container .tab-content .tab-pane .featuredLink a.btn:focus {
     box-shadow: none;
 }
 
-#experience .experience-container .tab-content .tab-pane .featuredLink a.btn:hover {
+.experience .experience-container .tab-content .tab-pane .featuredLink a.btn:hover {
     color: var(--text-color) !important;
     opacity: 0.7;
 }
