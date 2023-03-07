@@ -43,6 +43,7 @@
             </div>
         </div>
     </div>
+    {{ if .Site.Params.hero.bottomImage.enable | default true }}
     <div class="hero-bottom-svg d-md-block d-lg-block d-none">
         <svg xmlns="http://www.w3.org/2000/svg" width="201" height="201" viewBox="0 0 201 201">
             <g id="Group_1168" data-name="Group 1168" transform="translate(-384 -1392)">
@@ -305,5 +306,6 @@
             </g>
         </svg>
     </div>
+    {{ end }}
 </section>
 {{ end }}

@@ -121,6 +121,8 @@ params:
     subtitle: "I build things for the web"
     content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
     image: /images/hero.svg
+    bottomImage:
+      enable: true
     # roundImage: true # Make hero image circular | default false
     button:
       enable: true
