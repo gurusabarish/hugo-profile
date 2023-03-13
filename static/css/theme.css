@@ -1,3 +1,8 @@
+/* ensuring the whole body is consistent */
+body {
+    background-color: var(--background-color);    
+}
+
 /* light mode */
 .light > *{
     background-color: var(--background-color) !important;
