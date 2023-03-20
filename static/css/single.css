@@ -25,6 +25,11 @@
     background-color: var(--secondary-color);
 }
 
+#single .page-content img {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
 #single .page-content a {
     display: inline-block;
     text-decoration: none;
