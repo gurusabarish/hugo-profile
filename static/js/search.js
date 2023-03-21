@@ -6,7 +6,10 @@ async function searchOnChange(evt) {
   });
 
   if (searchQuery !== "") {
-    let searchJson = await fetch("/index.json").then((res) => res.json());
+    if (!window.searchJson) {
+      window.searchJson = await fetch("/index.json").then((res) => res.json());
+    }
+
     let searchResults = searchJson.filter((item) => {
       let res = false;
       if (item.title && item.description && item.content) {
@@ -64,22 +67,25 @@ async function searchOnChange(evt) {
 
 function alignSearchContent() {
   const searchButtonEle = document.querySelectorAll("#search");
-  if (searchButtonEle.value !== "") {
-    let searchButtonPosition;
-    if (window.innerWidth > 768) {
-      searchButtonPosition = searchButtonEle[0].getBoundingClientRect();
-      document.getElementById("search-content").style.width = "500px";
-    } else {
-      var navbarCollapse = document.querySelector("#navbarContent");
-      navbarCollapse.classList.add("show");
-      searchButtonPosition = searchButtonEle[1].getBoundingClientRect();
-      document.getElementById("search-content").style.width = "300px";
-    }
+  // check if search value is not empty
+  for (let i = 0; i < searchButtonEle.length; i++) {
+    if (searchButtonEle[i].value !== "") {
+      let searchButtonPosition;
+      if (window.innerWidth > 768) {
+        searchButtonPosition = searchButtonEle[0].getBoundingClientRect();
+        document.getElementById("search-content").style.width = "500px";
+      } else {
+        var navbarCollapse = document.querySelector("#navbarContent");
+        navbarCollapse.classList.add("show");
+        searchButtonPosition = searchButtonEle[1].getBoundingClientRect();
+        document.getElementById("search-content").style.width = "300px";
+      }
 
-    document.getElementById("search-content").style.top =
-      searchButtonPosition.top + 50 + "px";
-    document.getElementById("search-content").style.left =
-      searchButtonPosition.left + "px";
+      document.getElementById("search-content").style.top =
+        searchButtonPosition.top + 50 + "px";
+      document.getElementById("search-content").style.left =
+        searchButtonPosition.left + "px";
+    }
   }
 }
 
