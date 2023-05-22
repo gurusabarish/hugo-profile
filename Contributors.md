@@ -1,4 +1,4 @@
-# Contributors!
+# Contributors
 
 - [Nivins](https://github.com/ilynivin)
 - [Gurusabarish](https://github.com/gurusabarish)
