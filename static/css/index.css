@@ -515,6 +515,10 @@ header .navbar.animate {
     color: var(--text-secondary-color) !important;
 }
 
+#achievements img {
+    border-radius: 0.7rem;
+}
+
 /* contact */
 
 #contact h3 {
