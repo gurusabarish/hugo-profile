@@ -8,6 +8,11 @@
                 {{ if .url }}
                 <div class="col-lg-4 col-md-6 my-3">
                     <a class="card my-3 h-100 p-3" href="{{ .url }}" title="{{ .title }}" target="_blank">
+                        {{if .image }}
+                            <div class="card-head">
+                                <img class="card-img-top" src="{{ .image }}">
+                            </div>
+                        {{ end }}
                         <div class="card-body bg-transparent">
                             <h5 class="card-title bg-transparent">{{ .title }}</h5>
                             <div class="card-text secondary-font">
@@ -19,6 +24,11 @@
                 {{ else }}
                 <div class="col-lg-4 col-md-6 my-3">
                     <div class="card my-3 h-100 p-3" title="{{ .title }}">
+                        {{if .image }}
+                            <div class="card-head">
+                                <img class="card-img-top" src="{{ .image }}">
+                            </div>
+                        {{ end }}
                         <div class="card-body bg-transparent">
                             <h5 class="card-title bg-transparent">{{ .title }}</h5>
                             <div class="card-text secondary-font">
