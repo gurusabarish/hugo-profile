@@ -54,10 +54,20 @@
 {{ end }}
 
 
-{{ if (.Params.mathjax | default false) }}
+{{ if (or .Params.mathjax (.Page.Store.Get "needMathJax")) | default false }}
 
 {{ "<!-- MathJax -->" | safeHTML }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js" integrity="sha384-M5jmNxKC9EVnuqeMwRHvFuYUE8Hhp0TgBruj/GZRkYtiMrCRgH7yvv5KY+Owi7TW" crossorigin="anonymous"></script>
+{{ $cdnURL := "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"}}
+{{ with resources.GetRemote $cdnURL -}}
+  {{ with .Err -}}
+    {{ errorf "Error while retrieving MathJax script from CDN: %s." . -}}
+  {{ else -}}
+    {{ $secureCSS := . | resources.Fingerprint "sha512" -}}
+<script src="{{ .RelPermalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous" ></script>
+  {{ end -}}
+{{ else -}}
+  {{ errorf "Unable to retrieve MathJax script from CDN. Status: %s." .Data.Status -}}
+{{ end -}}
 
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({

@@ -5,34 +5,39 @@ draft: false
 author: "Gurusabarish"
 tags:
   - Markdown syntax
-  - Mathjax
+  - MathJax
   - example
 image: /images/mathjax.png
 description: ""
 toc: true
-mathjax: true
 ---
 
-## Mathjax
+## MathJax
 
-Math equations can be rendered using [Mathjax](https://www.mathjax.org) syntax with AMS symbol support.
+Math equations can be rendered using [MathJax](https://www.mathjax.org) syntax with AMS symbol support.
 
-Optionally enable this on a per-page basis by adding `mathjax: true` to your frontmatter.
+Then, put your block equation inside a `math` code block.
 
-Then, use `$$ ... $$` on a line by itself to render a block equation:
+````
+```math
+| Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | < \text{negligible}
+```
+````
 
-$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | < \text{negligible} $$
+This block above renders to :
 
-The raw version is:
+```math
+| Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | < \text{negligible}
+```
+
+If you want to write in-line equations, you need manually enable MathJax support on a per-page basis by adding `mathjax: true` to your frontmatter.
 
 ```
-$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | < \text{negligible} $$
+Now you can write in-line equations with `\\( ... \\)` , like \\( x^n / y \\) . It's easy!
 ```
 
+The block above renders to:
 
-Write in-line equations with `\\( ... \\)` , like \\( x^n / y \\) . It's easy!
+Now you can write in-line equations with `\\( ... \\)` , like \\( x^n / y \\) . It's easy!
 
-```
-Write in-line equations with `\\( ... \\)` , like \\( x^n / y \\) . It's easy!
-```
 
