@@ -3,6 +3,10 @@ header {
     position: relative;
 }
 
+header .navbar {
+    background-color: var(--background-color) !important;
+}
+
 header .navbar .navbar-nav a {
     color: var(--text-color) !important;
 }
