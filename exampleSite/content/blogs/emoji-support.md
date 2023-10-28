@@ -21,7 +21,7 @@ The [emojify](https://gohugo.io/functions/emojify/) function can be called direc
 
 To enable emoji globally, set ```enableEmoji``` to ```true``` in your site’s [configuration](https://gohugo.io/getting-started/configuration/) and then you can type emoji shorthand codes directly in content files; e.g.
 
-The [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) is a useful reference for emoji shorthand codes.
+The [Emoji cheat sheet](https://www.webfx.com/tools/emoji-cheat-sheet/) is a useful reference for emoji shorthand codes.
 
 <hr>
 
