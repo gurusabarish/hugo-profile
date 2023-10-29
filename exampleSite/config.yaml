@@ -67,6 +67,9 @@ params:
   # This requires your images to be uploaded + hosted on Cloudinary
   # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
   # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+  
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
 
   # Whether the fade animations on the home page will be enabled
   animate: true
