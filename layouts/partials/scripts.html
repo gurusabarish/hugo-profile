@@ -54,7 +54,7 @@
 {{ end }}
 
 
-{{ if (.Params.mathjax | default false) }}
+{{ if or (.Params.mathjax | default false) (.Site.Params.mathjax) }}
 
 {{ "<!-- MathJax -->" | safeHTML }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js" integrity="sha384-M5jmNxKC9EVnuqeMwRHvFuYUE8Hhp0TgBruj/GZRkYtiMrCRgH7yvv5KY+Owi7TW" crossorigin="anonymous"></script>
