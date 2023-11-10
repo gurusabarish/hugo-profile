@@ -3,6 +3,16 @@ languageCode: "en-us"
 title: "Hugo Profile"
 theme: hugo-profile
 
+# If using Plausible analytics:
+# - run 'hugo mod init github.com/YOUR/REPO' in your project root
+# - uncomment this section
+# - run 'hugo mod get' in your project root
+# See https://github.com/divinerites/plausible-hugo
+# module:
+#   imports:
+#     - disable: false
+#       path: github.com/divinerites/plausible-hugo
+
 outputs:
   home:
     - "HTML"
@@ -57,6 +67,15 @@ params:
   description: Text about my cool site
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
+
+  plausible:
+    # Enable to use Plausible analytics
+    # and uncomment and modify the below configurations
+    enable: false
+    # domain: "hugo-profile.netlify.app"
+    # outbound_link: true
+    # debug: false
+    # gitstar: false
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.

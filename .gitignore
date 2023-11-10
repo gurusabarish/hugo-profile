@@ -2,6 +2,7 @@
 /content
 /static/images
 .vscode
+.idea
 
 ### Hugo ###
 # Generated files by hugo
