@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-3">
-        <div class="sticky-sidebar">
+        <div id="stickySideBar" class="sticky-sidebar">
           {{ if .Params.toc | default true}}
           <aside class="toc">
               <h5>
@@ -124,6 +124,17 @@
   function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+  }
+
+  // To set height of sticky sidebar dynamically
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar = {{ .Site.Params.navbar.stickyNavBar.enable | default false }};
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
   }
 </script>
 

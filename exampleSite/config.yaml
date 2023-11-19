@@ -109,6 +109,9 @@ params:
     brandName: "Hugo Profile" # Brand name for the brand | default is the title variable
     disableSearch: false
     # searchPlaceholder: "Search"
+    # stickyNavBar:
+    #   enable : true
+    #   showOnScrollUp : true
     menus:
       disableAbout: false
       disableExperience: false
