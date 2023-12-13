@@ -20,9 +20,10 @@
             <h1 class="text-center mb-4">{{ .Title }}</h1>
             <div class="text-center">
               {{ .Params.author }} 
+              {{ if .Site.Params.singlePages.showDate | default false }}
               <small>|</small>
-              {{ .Date.Format (.Site.Params.datesFormat.article | default "Jan 2, 2006") }}
-
+              {{ .Site.Params.datesFormat.article | default "Jan 1, 1970" }}
+              {{ end }}
               {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
               <span id="readingTime">
                 {{ .Site.Params.singlePages.readTime.content | default "min read" }}
