@@ -2,6 +2,7 @@ baseURL: "https://hugo-profile.netlify.app"
 languageCode: "en-us"
 title: "Hugo Profile"
 theme: hugo-profile
+showCopyright: true
 
 outputs:
   home:

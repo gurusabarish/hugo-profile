@@ -7,15 +7,17 @@
                         height="40px">
                 </a>
             </div>
+            {{ if .Site.Params.showCopyright | default false }}
             &copy; {{ now.Format "2006"}} {{ .Site.Params.copyright }} {{ .Site.Params.terms.copyright | default "All Rights Reserved" }}
+            {{ end }}
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
                     &#10084;
                 </span>
                 and
-                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
-                    title="Designed and developed by gurusabarish">
+                <a href="https://github.com/SeineEloquenz/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish, Alexander Linder">
                     Hugo Profile
                 </a>
             </div>
