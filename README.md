@@ -40,7 +40,7 @@ Technology used: Bootstrap, fontawesome
 [For more details](https://github.com/gurusabarish/hugo-profile/wiki)
 ## Hugo theme
 
-- Install Hugo and create a site using `hugo new site my-site -f=yaml`
+- Install Hugo and create a site using `hugo new site my-site --format="yaml"`
 - Clone this repo inside your themes folder
 ```
 cd themes
