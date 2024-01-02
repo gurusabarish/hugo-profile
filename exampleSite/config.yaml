@@ -1,6 +1,6 @@
-baseURL: "https://hugo-profile.netlify.app"
+baseURL: "https://taha-boussaid.netlify.app/"
 languageCode: "en-us"
-title: "Hugo Profile"
+title: "Taha Boussaid"
 theme: hugo-profile
 
 outputs:
@@ -53,8 +53,8 @@ Menus:
     #   weight: 2
 
 params:
-  title: "Hugo Profile"
-  description: Text about my cool site
+  title: "Taha Boussaid"
+  description: This my personal portfolio
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
 
@@ -69,7 +69,7 @@ params:
   # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
   
   # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
-  mathjax: false
+  mathjax: true
 
   # Whether the fade animations on the home page will be enabled
   animate: true
@@ -106,7 +106,7 @@ params:
     align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
     # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
     # showBrandLogo: false # Show brand logo in nav bar | default is true
-    brandName: "Hugo Profile" # Brand name for the brand | default is the title variable
+    brandName: "Taha Boussaid" # Brand name for the brand | default is the title variable
     disableSearch: false
     # searchPlaceholder: "Search"
     stickyNavBar:
@@ -125,7 +125,7 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Taha."
-    subtitle: "Thermodynamic & Fluid mechanics passionate, Data.Sc & AI enthusiast "
+    subtitle: "Thermodynamic passionate & AI enthusiast"
     content: "I am currently a PhD student at INSA Lyon. I work on multi-criteria predictive control optimization of distributed energy systems, using physics-based & probabilistic machine learning approaches."
     image: /images/personal.JPEG
     bottomImage:
@@ -134,18 +134,17 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "#"
-      download: true
-      newPage: false
+      url: "https://drive.proton.me/urls/Z2XJZ4Z9GG#vULCkiKxO9AM"
+      download: false
+      newPage: true
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
-          url: https://example.com
-        - icon: fab fa-x-twitter
-          url: https://example.com
-      customIcons:
-        - icon: /fav.png
-          url: "https://example.com"
+          url: https://github.com/tboussaid
+        - icon: fa-brands fa-researchgate
+          url: https://www.researchgate.net/profile/Taha-Boussaid
+        - icon: fa-brands fa-linkedin
+          url: https://www.linkedin.com/in/taha-boussaid/
 
   # About
   about:
@@ -153,19 +152,29 @@ params:
     title: "About Me"
     image: "/images/me.png"
     content: |-
-      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. 
+      I am currently a PhD student at INSA Lyon. I work on multi-criteria predictive control optimization of distributed energy systems, using physics-based & probabilistic machine learning approaches. 
+
+      During my 5 years of engineering studies I had the opportunity to work on different projects, with different scopes : CFD / Energy optimization / Environmental policies / CAD / AI & Data.Sc.
+
+      I conducted my MSc project at University College London (UCL) in the mechanical engineering department. My work consisted on designing and studying novel designs of microchannel heat sinks and to assess their thermo-hydraulic enhancement with nanofluids.
+
+      I have been involved in various associations, and have acquired transversal skills in team management and IT projects.
+
+      Please feel free to contact me for a discussion or if you need any further information about my career. I am always happy to meet new people! 
 
       I am currently working on a project that will be used to help people find the best way to get around the city.
     skills:
       enable: true
-      title: "Here are a few technologies I've been working with recently:"
+      title: "Here are a few technologies I've been working with:"
       items:
-        - "HTML"
-        - "CSS"
-        - "JavaScript"
-        - "React"
-        - "Node"
-        - "Express"
+        - "HTML/CSS/JS"
+        - "Python (Flask/Dash/TensorFlow/Pytorch)"
+        - "Java"
+        - "MongoDB"
+        - "StarCCM+"
+        - "Ansys CFD"
+        - "PVSyst"
+        - "Matlab/Simulink"
 
   # Experience
   experience:
