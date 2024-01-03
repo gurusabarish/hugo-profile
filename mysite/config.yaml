@@ -56,7 +56,7 @@ params:
   title: "Taha Boussaid"
   description: This my personal portfolio
   # staticPath: ""  # The path to serve the static files from
-  favicon: "/preview.png"
+  favicon: "/LogoPerso.png"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -164,7 +164,6 @@ params:
 
       Please feel free to contact me for a discussion or if you need any further information about my career. I am always happy to meet new people! 
 
-      I am currently working on a project that will be used to help people find the best way to get around the city.
     skills:
       enable: true
       title: "Here are a few technologies I've been working with:"
