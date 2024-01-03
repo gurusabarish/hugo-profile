@@ -62,8 +62,8 @@
 
             {{ if not (.Site.Params.navbar.disableSearch | default false) }}
                 <div>
-                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='{{ .Site.Params.navbar.searchPlaceholder | default "Ctrl + k to Search..."}}'
-                        aria-label="Search" oninput="searchOnChange(event)">
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='{{ .Site.Params.navbar.searchPlaceholder | default "Ctrl + K to Search..."}}'
+                        aria-label="Search" oninput="searchOnChange(event)" style="background-color: #646463;">
                 </div>
             {{ end }}
 

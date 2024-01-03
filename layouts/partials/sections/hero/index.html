@@ -6,17 +6,17 @@
                 <span class="subtitle">
                     {{ .Site.Params.hero.intro }}
                 </span>
-                <h3>
+                <h2>
                     {{ .Site.Params.hero.title }}
-                </h3>
-                <h4>
+                </h2>
+                <h3>
                     {{ .Site.Params.hero.subtitle }}
-                </h4>
+                </h3>
                 <p class="hero-content">
                     {{ .Site.Params.hero.content | markdownify }}
                 </p>
                 <div class="row">
-                    <div class="col-auto h-100">
+                    <div class="col-auto h-75">
                         {{ if .Site.Params.hero.button.enable }}
                         <a href="{{ .Site.Params.hero.button.url }}" class="btn" {{ cond .Site.Params.hero.button.download "download" "" }}
 			  {{ if .Site.Params.hero.button.newPage | default true }}
