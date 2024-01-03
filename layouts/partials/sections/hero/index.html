@@ -16,7 +16,7 @@
                     {{ .Site.Params.hero.content | markdownify }}
                 </p>
                 <div class="row">
-                    <div class="col-auto h-50">
+                    <div class="col-auto h-100">
                         {{ if .Site.Params.hero.button.enable }}
                         <a href="{{ .Site.Params.hero.button.url }}" class="btn" {{ cond .Site.Params.hero.button.download "download" "" }}
 			  {{ if .Site.Params.hero.button.newPage | default true }}
