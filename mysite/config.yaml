@@ -125,8 +125,8 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Taha."
-    subtitle: "I am a MechEng PhD student"
-    content: "Thermodynamic & Fluid mechanics passionate, Data.Sc & AI enthusiast. I work on multi-criteria predictive control optimization of distributed energy systems, using physics-based machine learning."
+    subtitle: "I am a PhD student."
+    content: "As a Thermodynamic & Fluid mechanics passionate, Data.Sc & AI enthusiast, I work on multi-criteria predictive control optimization of distributed energy systems, using physics-based machine learning."
     image: /images/personal.JPEG
     bottomImage:
       enable: true
