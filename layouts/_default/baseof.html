@@ -4,6 +4,23 @@
 <head>
   {{- partial "head.html" . -}}
   {{- block "head" . }} {{- end }}
+  <!-- Open Graph and Twitter Card Meta Tags -->
+  {{ with .Params.image }}
+  <meta property="og:image" content="{{ . | absURL }}">
+  {{ end }}
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ .Description }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ .Description }}">
+  {{ with .Params.image }}
+  <meta name="twitter:image" content="{{ . | absURL }}">
+  {{ end }}
+  <!-- End of Open Graph and Twitter Card Meta Tags -->
   <title>
     {{- block "title" . }} {{- end }}
   </title>
