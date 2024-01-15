@@ -165,7 +165,17 @@
   position: sticky;
 }
 
+#single .sticky-sidebar ::-webkit-scrollbar {
+    height: 0px;
+    width: 8px;
+}
+
 /* Tags */
+#single aside.tags {
+    max-height: 35vh;
+    overflow: scroll;
+}
+
 #single aside.tags h5 {
     margin: .7em 0;
     margin-bottom: 1em;
@@ -173,16 +183,16 @@
 
 
 #single aside.tags ul.tags-ul li a {
-    padding: 10px 15px;
+    padding: 5px 10px;
     margin-bottom: 2px;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: var(--background-color);
     text-decoration: none;
     color: var(--text-color);
 }
 
 #single aside.tags ul.tags-ul li {
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.8rem;
 }
 
 #single aside.tags ul.tags-ul li:hover {
@@ -193,6 +203,8 @@
 /*TOC*/
 #single aside.toc {
     padding: .7rem 1rem;
+    max-height: 50vh;
+    overflow: scroll;
 }
 
 #single aside.toc h5 {
