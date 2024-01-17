@@ -22,36 +22,6 @@ markup:
     renderer:
       unsafe: true
 
-Menus:
-  main:
-    - identifier: blog
-      name: Blog
-      title: Blog posts
-      url: /blogs
-      weight: 1
-    - identifier: gallery
-      name: Gallery
-      title: Blog posts
-      url: /gallery
-      weight: 2
-    #Dropdown menu
-    # - identifier: dropdown
-    #   title: Example dropdown menu
-    #   name: Dropdown
-    #   weight: 3
-    # - identifier: dropdown1
-    #   title: example dropdown 1
-    #   name: example 1
-    #   url: /#
-    #   parent: dropdown
-    #   weight: 1
-    # - identifier: dropdown2
-    #   title: example dropdown 2
-    #   name: example 2
-    #   url: /#
-    #   parent: dropdown
-    #   weight: 2
-
 params:
   title: "Taha Boussaid"
   description: This my personal portfolio
@@ -123,10 +93,10 @@ params:
   # Hero
   hero:
     enable: true
-    intro: "Hi, my name is"
+    intro: "Hello, my name is"
     title: "Taha."
-    subtitle: "I am a PhD student."
-    content: "As a Thermodynamic & Fluid mechanics passionate, Data.Sc & AI enthusiast, I work on multi-criteria predictive control optimization of distributed energy systems, using physics-based machine learning."
+    subtitle: "I am a PhD candidate."
+    content: "As a Thermodynamic & Fluid mechanics passionate, Data.Sc & AI enthusiast, I work on multi-criteria predictive control optimization of distributed energy systems under uncertainty, using physics-based machine learning."
     image: /images/personal.JPEG
     bottomImage:
       enable: true
@@ -154,7 +124,11 @@ params:
     title: "About Me"
     image: "/images/personal.JPEG"
     content: |-
-      I am currently a PhD student at [INSA Lyon, France](https://www.insa-lyon.fr/en/). I work on multi-criteria predictive control optimization of distributed energy systems, using physics-based & probabilistic machine learning approaches. 
+      I am currently a PhD candidate at [INSA Lyon, France](https://www.insa-lyon.fr/en/). Specifically, my thesis is being held in two laboratories: 
+      
+      1. [CETHIL](https://cethil.insa-lyon.fr/en/), center for energy and thermal sciences of Lyon.
+
+      2. [LIRIS](https://liris.cnrs.fr/en), image and information systems Laboratory.
 
       During my 5 years of engineering studies I had the opportunity to work on different projects, with different scopes : CFD / Energy optimization / Environmental policies / CAD / AI & Data.Sc.
 
@@ -162,19 +136,31 @@ params:
 
       I have been involved in various associations, and have acquired transversal skills in team management and IT projects.
 
-      Please feel free to contact me for a discussion or if you need any further information about my career. I am always happy to meet new people! 
+      Given my academic background, I am always curious to work on and know more about the following subjects:
+
+      1. Artificial intelligence and data science applied to the optimisation of energy systems.<br>
+
+      2. Renewable energy production, conversion and storage systems.<br>
+
+      3. Turbomachinery.<br>
+
+      4. Numerical modelling, maths & probability.
 
     skills:
       enable: true
-      title: "Here are a few technologies I've been working with:"
+      title: "Here are also few technologies I've been working with:"
       items:
         - "HTML/CSS"
         - "Javascript"
-        - "Python (ML)"
+        - "Python"
         - "Java"
         - "MongoDB"
+        - "SQL"
+        - "Power BI"
         - "StarCCM+"
-        - "Ansys CFD"
+        - "Ansys Fluent/CFX"
+        - "Paraview"
+        - "Aspen Hysys"
         - "PVSyst"
         - "TRNSys"
         - "Matlab/Simulink"
@@ -184,7 +170,7 @@ params:
     enable: true
     # title: "Custom Name"
     items:
-      - job: "PhD Student"
+      - job: "PhD Candidate"
         company: "CETHIL"
         companyUrl: "https://cethil.insa-lyon.fr/en/"
         date: "October 2022 - Present"
@@ -196,6 +182,16 @@ params:
         date: "March 2022 - August 2022"
         content: "Development and deployment of geometric convolutional neural networks (GCNN) as surrogate models for CFD simulations to accelerate the design phase of hydrauloc turbines."
 
+      - job: "Tech Lead"
+        company: "Forum Organisation"
+        companyUrl: "https://www.forumorg.org/"
+        date: "March 2021 - March 2022"
+        content: |- 
+          Head of Tech within a professional association that generates contacts between recruiters and students. With my team of 8 people, we conducted the following missions:
+
+          - Management, development and maintenance of a job-dating platform (visio modules, blog with headless cms etc.)
+          - Development of a Data/BI pipeline for the different activities of the association (KPIs, Power BI)
+      
       - job: "Research intern"
         company: "University College London"
         companyUrl: "https://www.ucl.ac.uk/mechanical-engineering/ucl-mechanical-engineering"
@@ -204,7 +200,7 @@ params:
           enable: true
           name: "Summary paper"
           url: "https://drive.proton.me/urls/FVF5349QVW#iXgcuD3Pcegh"
-        content: |
+        content: |-
           My work focused on two separate projects : 
           
           - The study, conception and design of microchannel heat sinks for power electronics. A state of art of the current advances have been made and novel designs were proposed and studied. Finally, the work also focused on the use of nanofluids to enhance the heat transfer.
@@ -212,46 +208,43 @@ params:
 
   # Education
   education:
-    enable: false
-    # title: "Custom Name"
+    enable: true
+    title: "Education"
     index: false
     items:
-      - title: "Master of Business Administration"
+      - title: "Engineer in Energy and Environmental Sciences"
         school:
-          name: "University of California, Berkeley"
-          url: "https://example.org"
-        date: "2013 - 2015"
-        GPA: "3.8 out of 5.0"
+          name: "INSA Lyon"
+          url: "https://gen.insa-lyon.fr/en/"
+        date: "2017 - 2022"
         content: |-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-      - title: "Bachelor of Science in Computer Science"
-        school:
-          name: "Massachusetts Institute of Technology"
-          url: "https://example.org"
-        date: "2009 - 2013"
-        GPA: "3.9 out of 5.0"
-        content: |-
-          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-          - Face mask detection using a single convolutional neural network.
+          My degree was obtained after succeeding in two cycles:
+          
+          - First cycle [2017-2019]: initial training for engineering professions (pure sciences such as maths, fundamental physics and chimestry)
+          - Second cycle [2019-2022]: energy and environment master (heat transfer, fluid mechanic, advanced thermodynamic, tubormachines, data science)
 
           Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-        featuredLink:
-          enable: true
-          name: "My academic record"
-          url: "https://example.com"
+            - President of the association of Moroccan engineers and researchers of INSA Lyon [(ACEIMI)](https://www.aceimi-insa.com/)
+            - Member of the course strategy team at [Proto INSA Club](http://protoinsaclub.fr/) (low consumption vehicle construction). 
+
+      - title: "MSc Thesis"
+        school: 
+          name: "University College London (UCL)"
+          url: "https://www.ucl.ac.uk/"
+        date: "2021"
+        content: |-
+          I conducted my MSc thesis for 5 months in the "Advanced Electric propulsion" laboratory of the mechanical engineering department. My work consisted on the 
+          evaluation of microchannel heat sinks to manage the thermal losses of power electronic, and specifically inverters in electric cars.
+      
       - title: "High School"
         school:
-          name: "Thomas Jefferson High School for Science and Technology."
-          url: "https://example.org"
-        GPA: "4.2 out of 5.0"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
+          name: "ESL High School (Fez, Morocco)."
+          url: ""
+        date: "2016-2017"
+        content: |-
+          High School diploma in mathematical science with high honors.<br>
+          Laureate of "Concours générale des sciences et techniques", in the mathematics subject.
+        
 
   # Achievements
   achievements:
@@ -277,53 +270,53 @@ params:
 
   # projects
   projects:
-    enable: false
-    # title: "Custom Name"
+    enable: true
+    title: "Teaching"
     items:
-      - title: Hugo Profile
-        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
-        image: /images/projects/profile.png
-        featured:
-          name: Demo
-          link: https://hugo-profile.netlify.app
+      - title: Machine Learning for time series analysis
+        content: |-
+          I am in charge of giving lectures and tutorials to final-year graduate students at Energy and Environment department at INSA.<br>
+          - Statistical tools (autocorrelation, Dickey-Fuller tests...),
+          - Standard models (ARIMA models, Exponential smoothing),
+          - Deep Learning Models (LSTM, GRU). 
+        image: /images/projects/time_series.png
         badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
+          - "Statistics"
+          - "ARIMA/SARIMAX"
+          - "RNN"
         links:
-          - icon: fa fa-envelope
-            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/hugo-profile
-          - icon: fab fa-twitter
-            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+            url: https://github.com/benjaminbertin/gen-2023/blob/main/notebooks/12-time-series.ipynb
 
-      - title: Image Converter
-        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
-        image: /images/projects/converter.jpg
-        featured:
-          name: Demo
-          link: https://django-converter.herokuapp.com
+      - title: Hilbertian Analysis
+        content: |-
+          Tutorials in hilbertian analysis for bachelor level students. The program covers:
+          - Integration,
+          - Differential equations and numerical methods,
+          - Laplace and Fourier transforms,
+          - Hilbert spaces and operators.
+        image: /images/projects/hilbert.png
         badges:
-          - "Django"
-          - "Bootstrap"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/converter
+          - "Maths"
+          - "Convolution"
+          - "ODE"
 
-      - title: Hugo Profile V2
-        content: A clean and simple Hugo template for personal portfolio and blog.
-        image: /images/projects/profile2.jpg
-        featured:
-          name: Demo V2
-          link: https://hugo-profile-2.netlify.app
+      - title: Teaching assistant for undergrad
+        content: |-
+          Tutorials and lectures for undegrad students in:
+          - Mathematics (linear algebra, real functions, probabilities),
+          - Physics (mechanics, electrodynamics),
+          - Coupled heat transfers,
+          - Python (numpy, scipy).
+        image: /images/projects/assistant.png
         badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
+          - "Maxwell equations"
+          - "Linear Algebra"
+          - "Tensors"
+          - "Statistical tests"
         links:
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/HugoProfileV2
+            url: https://github.com/tboussaid/python-beginners
 
   #Contact
   contact:
@@ -359,7 +352,7 @@ params:
   # Single pages like blog and post
   singlePages:
     readTime:
-      enable: true
+      enable: false
       content: "min read"
     scrollprogress:
       enable: true
