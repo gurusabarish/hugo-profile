@@ -96,7 +96,7 @@ params:
     intro: "Hello, my name is"
     title: "Taha."
     subtitle: "I am a PhD candidate."
-    content: "As a Thermodynamic & Fluid mechanics passionate, Data.Sc & AI enthusiast, I work on multi-criteria predictive control optimization of distributed energy systems under uncertainty, using physics-based machine learning."
+    content: "As a Thermodynamic & Fluid mechanics passionate, Data.Sc & AI enthusiast, I work on multi-criteria predictive control optimization of district heating networks under uncertainty by using physics-based machine learning."
     image: /images/personal.JPEG
     bottomImage:
       enable: true
@@ -104,7 +104,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "https://drive.proton.me/urls/Z2XJZ4Z9GG#vULCkiKxO9AM"
+      url: "https://drive.proton.me/urls/XWXW9G2EG4#JG0n5D28M7N8"
       download: false
       newPage: true
     socialLinks:
@@ -124,11 +124,11 @@ params:
     title: "About Me"
     image: "/images/personal.JPEG"
     content: |-
-      I am currently a PhD candidate at [INSA Lyon, France](https://www.insa-lyon.fr/en/). Specifically, my thesis is being held in two laboratories: 
+      I am currently a PhD candidate at [INSA Lyon, France](https://www.insa-lyon.fr/en/). My thesis is being held in two laboratories: 
       
       1. [CETHIL](https://cethil.insa-lyon.fr/en/), center for energy and thermal sciences of Lyon.
 
-      2. [LIRIS](https://liris.cnrs.fr/en), image and information systems Laboratory.
+      2. [LIRIS](https://liris.cnrs.fr/en), image and information systems laboratory.
 
       During my 5 years of engineering studies I had the opportunity to work on different projects, with different scopes : CFD / Energy optimization / Environmental policies / CAD / AI & Data.Sc.
 
@@ -239,7 +239,7 @@ params:
       - title: "High School"
         school:
           name: "ESL High School (Fez, Morocco)."
-          url: ""
+          url: "https://www.facebook.com/eslschool"
         date: "2016-2017"
         content: |-
           High School diploma in mathematical science with high honors.<br>
