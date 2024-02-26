@@ -127,7 +127,7 @@ params:
     title: "Sagar."
     subtitle: "I build modern application firewall."
     content: "A passionate software engineer building advanced security firewalls for safeguarding deployments, Presented at top industry conferences including BlackHat, Hack in Paris, APISecure, and HITB Security."
-    image: /images/hero.svg
+    image: /images/sbhure.jpeg
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
@@ -153,7 +153,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.png"
+    image: "/images/dp.jpeg"
     content: |-
       I am Sagar Bhure, a seasoned Software Engineer specializing in security research. With a US patent in ML and Security, I speak at industry-leading conferences like Hack in Paris and BlackHat, sharing innovative insights and tools for cybersecurity professionals. 
 
