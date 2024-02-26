@@ -125,7 +125,7 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Sagar."
-    subtitle: "I build next generation software."
+    subtitle: "I build next-gen software."
     content: "A passionate software engineer building advanced security firewalls for safeguarding deployments, Presented at top industry conferences including BlackHat, Hack in Paris, APISecure, and HITB Security."
     image: /images/sbhure.jpeg
     bottomImage:
