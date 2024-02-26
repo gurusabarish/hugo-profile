@@ -1,6 +1,6 @@
 baseURL: "https://hugo-profile.netlify.app"
 languageCode: "en-us"
-title: "Hugo Profile"
+title: "Sagar Bhure"
 theme: hugo-profile
 
 outputs:
@@ -106,7 +106,7 @@ params:
     align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
     # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
     # showBrandLogo: false # Show brand logo in nav bar | default is true
-    brandName: "Hugo Profile" # Brand name for the brand | default is the title variable
+    brandName: "Sagar Bhure" # Brand name for the brand | default is the title variable
     disableSearch: false
     # searchPlaceholder: "Search"
     stickyNavBar:
@@ -125,7 +125,7 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Sagar."
-    subtitle: "I engineer solutions for infrastructure security."
+    subtitle: "I build modern application firewall."
     content: "A passionate software engineer building advanced security firewalls for safeguarding deployments, Presented at top industry conferences including BlackHat, Hack in Paris, APISecure, and HITB Security."
     image: /images/hero.svg
     bottomImage:
@@ -272,7 +272,7 @@ params:
       - title: Facebook Hackathon Winner
         content: Developed a product using Artificial Intelligence.
         image: /images/achievment.jpg
-      - title: Hugo Profile
+      - title: Sagar Bhure
         content: Developed a theme and getting 1K+ downloads per month.
         url: "https://github.com/gurusabarish/hugo-profile"
         image: /images/achievment.jpg
@@ -287,7 +287,7 @@ params:
     enable: true
     # title: "Custom Name"
     items:
-      - title: Hugo Profile
+      - title: Sagar Bhure
         content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
         image: /images/projects/profile.png
         featured:
@@ -318,7 +318,7 @@ params:
           - icon: fab fa-github
             url: https://github.com/gurusabarish/converter
 
-      - title: Hugo Profile V2
+      - title: Sagar Bhure V2
         content: A clean and simple Hugo template for personal portfolio and blog.
         image: /images/projects/profile2.jpg
         featured:
