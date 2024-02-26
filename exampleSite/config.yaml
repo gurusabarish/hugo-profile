@@ -53,10 +53,10 @@ Menus:
     #   weight: 2
 
 params:
-  title: "Hugo Profile"
+  title: "Sagar Bhure"
   description: Text about my cool site
   # staticPath: ""  # The path to serve the static files from
-  favicon: "/fav.png"
+  favicon: "/icon.ico"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -125,8 +125,8 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Sagar."
-    subtitle: "I build things for the web"
-    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+    subtitle: "I engineer solutions for infrastructure security."
+    content: "A passionate software engineer building advanced security firewalls for safeguarding deployments, Presented at top industry conferences including BlackHat, Hack in Paris, APISecure, and HITB Security."
     image: /images/hero.svg
     bottomImage:
       enable: true
@@ -140,9 +140,11 @@ params:
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
-          url: https://example.com
+          url: https://github.com/sagarbhure/
         - icon: fab fa-x-twitter
-          url: https://example.com
+          url: https://twitter.com/infosecbhure
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/sagarbhure/
       customIcons:
         - icon: /fav.png
           url: "https://example.com"
@@ -153,39 +155,41 @@ params:
     title: "About Me"
     image: "/images/me.png"
     content: |-
-      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. 
+      I am Sagar Bhure, a seasoned Software Engineer specializing in security research. With a US patent in ML and Security, I speak at industry-leading conferences like Hack in Paris and BlackHat, sharing innovative insights and tools for cybersecurity professionals. 
 
-      I am currently working on a project that will be used to help people find the best way to get around the city.
+      I'm currently spearheading three Open Source Software (OSS) projects within OWASP. These include OWASP ML Top 10, which addresses security in machine learning deployments, along with initiatives in eBPF network security and observability, and quantum cryptography. 
     skills:
       enable: true
       title: "Here are a few technologies I've been working with recently:"
       items:
-        - "HTML"
-        - "CSS"
-        - "JavaScript"
-        - "React"
-        - "Node"
-        - "Express"
+        - "C/C++"
+        - "Python"
+        - "Golang"
+        - "Algorithm"
+        - "Data Structures"
+        - "Computer Networking"
+        - "CyberSecurity"
+        - "Machine Learning"
 
   # Experience
   experience:
     enable: true
     # title: "Custom Name"
     items:
-      - job: "Senior Software Developer"
-        company: "Facebook"
-        companyUrl: "https://example.com"
-        date: "Jan 2022 - present"
+      - job: "Senior Software Engineer"
+        company: "F5 Networks"
+        companyUrl: "https://f5.com"
+        date: "Mar 2020 - present"
         featuredLink:
           enable: true
           name: "View the project"
           url: "https://example.com"
         content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
 
-      - job: "Software Developer"
-        company: "Amazon"
-        companyUrl: "https://example.com"
-        date: "Sep 2020 - Dec 2021"
+      - job: "Senior Engineer"
+        company: "Qualcomm"
+        companyUrl: "http://www.qualcomm.com/"
+        date: "Aug 2019 - Feb 2020"
         featuredLink:
           enable: true
           url: "https://example.com"
@@ -198,10 +202,10 @@ params:
           - Lead backend developer for a product.
           - Created a frontend design for a product.
 
-      - job: "Junior Software Developer"
-        company: "Apple"
-        companyUrl: "https://example.com"
-        date: "Jan 2020 - Aug 2020"
+      - job: "Software Specialist"
+        company: "PTC Softwares"
+        companyUrl: "https://ptc.com"
+        date: "July 2017- Aug 2019"
         info:
           enable: false
         featuredLink:
@@ -212,48 +216,29 @@ params:
 
           - Lead backend developer for a product.
           - Created a frontend design for a product.
-
-      - job: "UI/UX Designer"
-        company: "Netflix"
-        companyUrl: "https://example.com"
-        date: "June 2017 - Nov 2019"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
-        content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "Product Designer"
-        company: "Google"
-        companyUrl: "https://example.com"
-        date: "Feb 2016 - Mar 2017"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
-
+    
   # Education
   education:
     enable: true
     # title: "Custom Name"
     index: false
     items:
-      - title: "Master of Business Administration"
+      - title: "Master of Technology (M.Tech)"
         school:
-          name: "University of California, Berkeley"
-          url: "https://example.org"
-        date: "2013 - 2015"
-        GPA: "3.8 out of 5.0"
+          name: "Indian Institute of Technology, Kanpur"
+          url: "https://www.iitk.ac.in/"
+        date: "2016 - 2017"
+        GPA: "8.5 out of 10.0"
         content: |-
           Extracurricular Activities
             - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
       - title: "Bachelor of Science in Computer Science"
         school:
-          name: "Massachusetts Institute of Technology"
-          url: "https://example.org"
-        date: "2009 - 2013"
-        GPA: "3.9 out of 5.0"
+          name: "Indian Institute of Technology, Kanpur"
+          url: "https://www.iitk.ac.in/"
+        date: "2012 - 2016"
+        #GPA: "3.9 out of 5.0"
         content: |-
           I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
           - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
@@ -268,9 +253,9 @@ params:
           url: "https://example.com"
       - title: "High School"
         school:
-          name: "Thomas Jefferson High School for Science and Technology."
-          url: "https://example.org"
-        GPA: "4.2 out of 5.0"
+          name: "Delhi Public School, Durg"
+          url: "https://www.dpsdurg.edu.in/"
+        Percentage: "92 out of 100"
         featuredLink:
           enable: true
           url: "https://example.com"
