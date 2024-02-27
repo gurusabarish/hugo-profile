@@ -230,35 +230,39 @@ params:
         date: "2016 - 2017"
         GPA: "8.5 out of 10.0"
         content: |-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-      - title: "Bachelor of Science in Computer Science"
+          Thesis focused on Dispersion analysis of composites and architecture of porous scaffold using Digital Image Processing
+          Skills: 
+            - Python, Computer Vision, OpenCV, Matlab.
+            - Aerospace Structures, Aerodynamics, Composite Materials.
+                  enable: true
+          name: "My Masters Thesis"
+          url: "https://github.com/sagarbhure/MasterThesis"
+      - title: "Bachelor of Technology (B.Tech)"
         school:
           name: "Indian Institute of Technology, Kanpur"
           url: "https://www.iitk.ac.in/"
         date: "2012 - 2016"
         #GPA: "3.9 out of 5.0"
         content: |-
-          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+          I innovatively designed and built a functional MIG-21 model featuring a Thrust Vectoring mechanism.
+          - C/C++, Data Structures, Algorithm, Python.
           - Face mask detection using a single convolutional neural network.
+          - Aerodynamics, Thermodynamics, Mathematics, Artificial Intelligence.
 
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-        featuredLink:
           enable: true
           name: "My academic record"
-          url: "https://example.com"
+          url: "https://sagarbhure.com"
       - title: "High School"
         school:
           name: "Delhi Public School, Durg"
           url: "https://www.dpsdurg.edu.in/"
+        date: 2009-2011
         Percentage: "92 out of 100"
+        content: 
+          Topper in PCM at school, with excellence award in Physics and Mathematics, and one of the few to qualify for IIT JEE.
         featuredLink:
           enable: true
-          url: "https://example.com"
+          url: "https://sagarbhure.com"
 
   # Achievements
   achievements:
@@ -287,7 +291,7 @@ params:
     enable: true
     # title: "Custom Name"
     items:
-      - title: Sagar Bhure
+      - title: OWASP ML TOP 10
         content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
         image: /images/projects/profile.png
         featured:
