@@ -234,9 +234,10 @@ params:
           Skills: 
             - Python, Computer Vision, OpenCV, Matlab.
             - Aerospace Structures, Aerodynamics, Composite Materials.
-                  enable: true
-          name: "My Masters Thesis"
-          url: "https://github.com/sagarbhure/MasterThesis"
+          featuredLink:
+            enable: true
+            name: "My Masters Thesis"
+            url: "https://github.com/sagarbhure/MasterThesis"
       - title: "Bachelor of Technology (B.Tech)"
         school:
           name: "Indian Institute of Technology, Kanpur"
@@ -248,7 +249,7 @@ params:
           - C/C++, Data Structures, Algorithm, Python.
           - Face mask detection using a single convolutional neural network.
           - Aerodynamics, Thermodynamics, Mathematics, Artificial Intelligence.
-
+        featuredLink:
           enable: true
           name: "My academic record"
           url: "https://sagarbhure.com"
