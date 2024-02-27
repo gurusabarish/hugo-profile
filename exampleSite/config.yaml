@@ -234,10 +234,10 @@ params:
           Skills: 
             - Python, Computer Vision, OpenCV, Matlab.
             - Aerospace Structures, Aerodynamics, Composite Materials.
-          featuredLink:
-            enable: true
-            name: "My Masters Thesis"
-            url: "https://github.com/sagarbhure/MasterThesis"
+        featuredLink:
+          enable: true
+          name: "My Masters Thesis"
+          url: "https://github.com/sagarbhure/MasterThesis"
       - title: "Bachelor of Technology (B.Tech)"
         school:
           name: "Indian Institute of Technology, Kanpur"
