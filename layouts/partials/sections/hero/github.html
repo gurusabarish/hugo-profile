@@ -1,0 +1,5 @@
+{{ $apiEndpoint := printf "%s%s" "https://api.github.com/users/" .context.Site.Params.githubName }}
+{{ $key := .key }}
+{{ with getJSON $apiEndpoint }}
+    {{ index . $key }}
+{{ end }}

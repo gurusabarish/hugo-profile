@@ -1,0 +1,10 @@
+{{ $img := .Site.Params.hero.image }}
+{{ if .Site.Params.githubName }}
+    {{ $apiEndpoint := printf "%s%s" "https://api.github.com/users/" .Site.Params.githubName }}
+    {{ with getJSON $apiEndpoint }}
+        {{ $img = index . "avatar_url" }}
+    {{ end }}
+{{ else }}
+{{ end }}
+<!-- Image could be downloaded locally/compressed/converted format here -->
+<img src="{{ $img }}" class="img-thumbnail mx-auto{{ if .Site.Params.hero.roundImage }} rounded-circle{{ end }}" alt="">
