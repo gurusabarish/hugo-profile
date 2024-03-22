@@ -135,7 +135,7 @@ params:
       enable: true
       name: "Resume"
       url: "#"
-      download: true
+      download: false
       newPage: false
     socialLinks:
       fontAwesomeIcons:
@@ -183,8 +183,12 @@ params:
         featuredLink:
           enable: true
           name: "View the project"
-          url: "https://example.com"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+          url: "https://www.f5.com/cloud/use-cases/web-application-and-api-protection-waap"
+        content:  | 
+         I'm currently working in the WAAP/WAF product line, developing cutting-edge software to safeguard your applications and infrastructure from cybercriminals.
+
+         - Co-Lead OWASP ML top 10, Compiling the top 10 critical attack vectors for machine learning deployments.
+         - Leading OSS tools eBPFShield that utilize eBPF for kernel-level observability and security, safeguarding your network.
 
       - job: "Senior Engineer"
         company: "Qualcomm"
@@ -192,15 +196,12 @@ params:
         date: "Aug 2019 - Feb 2020"
         featuredLink:
           enable: true
-          url: "https://example.com"
+          url: "https://www.youtube.com/watch?v=IcnYh_yLTGE"
         info:
           enable: true
           content: I worked as a software developer for more than one year in Amazon.
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+          As part of my experience, I worked at Qualcomm and Developed Demura for HIDL binderized IPC of correction data; skilled in Android debugging, App Security Testing (Burp, Adb, MobSF), and familiar with android display algorithms.
 
       - job: "Software Specialist"
         company: "PTC Softwares"
@@ -210,12 +211,13 @@ params:
           enable: false
         featuredLink:
           enable: true
-          url: "https://example.com"
+          url: "https://m.youtube.com/watch?v=wxPBmWPWl0U"
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          
+          At PTC Software, I enhanced Pro/Engineer graphics, led AI projects, improved Creo 6.0 performance, facilitated model naming, and integrated Ansys Live graphics.
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+          - Markerless Pose Detection Using Artificial Intelligence
+          - Graphics Integration of Ansys Live in Creo 6.0
     
   # Education
   education:
