@@ -296,11 +296,11 @@ params:
     # title: "Custom Name"
     items:
       - title: OWASP ML TOP 10
-        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
-        image: /images/projects/profile.png
+        content:  A comprehensive list of the ten most critical attack vectors targeting machine learning deployments.
+        image: /images/projects/mlten.png
         featured:
-          name: Demo
-          link: https://hugo-profile.netlify.app
+          name: Website
+          link: https://owasp.org/www-project-machine-learning-security-top-10/
         badges:
           - "Hugo"
           - "Bootstrap"
@@ -313,12 +313,12 @@ params:
           - icon: fab fa-twitter
             url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
 
-      - title: Image Converter
-        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
-        image: /images/projects/converter.jpg
+      - title: OWASP eBPFShield
+        content: A OSS tool that utilize eBPF for kernel-level observability and security, safeguarding your network.
+        image: /images/projects/ebpf.png
         featured:
-          name: Demo
-          link: https://django-converter.herokuapp.com
+          name: Website
+          link: https://owasp.org/www-project-ebpfshield/
         badges:
           - "Django"
           - "Bootstrap"
@@ -326,7 +326,7 @@ params:
           - icon: fab fa-github
             url: https://github.com/gurusabarish/converter
 
-      - title: Sagar Bhure V2
+      - title: placeholder
         content: A clean and simple Hugo template for personal portfolio and blog.
         image: /images/projects/profile2.jpg
         featured:
@@ -344,8 +344,8 @@ params:
   contact:
     enable: true
     # title: "Custom Name"
-    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-    email: gurusabarisha@gmail.com
+    content: Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    email: sagar.bhure@owasp.org
     btnName: Mail me
     # formspree:
     #   enable: true # `contact.email` value will be ignored
