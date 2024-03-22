@@ -199,7 +199,7 @@ params:
           url: "https://www.youtube.com/watch?v=IcnYh_yLTGE"
         info:
           enable: true
-          content: I worked as a software developer for one year in Qualcomm, Hyderabad IN.
+          content: I worked as senior engineer for one year in Qualcomm, Hyderabad IN.
         content: |
           As part of my experience, I worked at Qualcomm and Developed Demura for HIDL binderized IPC of correction data; skilled in Android debugging, App Security Testing (Burp, Adb, MobSF), and familiar with android display algorithms.
 
