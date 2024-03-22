@@ -199,7 +199,7 @@ params:
           url: "https://www.youtube.com/watch?v=IcnYh_yLTGE"
         info:
           enable: true
-          content: I worked as a software developer for more than one year in Amazon.
+          content: I worked as a software developer for one year in Qualcomm, Hyderabad IN.
         content: |
           As part of my experience, I worked at Qualcomm and Developed Demura for HIDL binderized IPC of correction data; skilled in Android debugging, App Security Testing (Burp, Adb, MobSF), and familiar with android display algorithms.
 
@@ -208,7 +208,8 @@ params:
         companyUrl: "https://ptc.com"
         date: "July 2017- Aug 2019"
         info:
-          enable: false
+          enable: true
+          content: I worked as a software specialist for two years in PTC Softwares, Pune IN.
         featuredLink:
           enable: true
           url: "https://m.youtube.com/watch?v=wxPBmWPWl0U"
