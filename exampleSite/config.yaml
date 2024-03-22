@@ -108,7 +108,7 @@ params:
     # showBrandLogo: false # Show brand logo in nav bar | default is true
     brandName: "Sagar Bhure" # Brand name for the brand | default is the title variable
     disableSearch: false
-    # searchPlaceholder: "Search"
+    searchPlaceholder: "Search"
     stickyNavBar:
       enable : true
       showOnScrollUp : true
