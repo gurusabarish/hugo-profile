@@ -297,7 +297,7 @@ params:
     items:
       - title: OWASP ML TOP 10
         content:  A comprehensive list of the ten most critical attack vectors targeting machine learning deployments.
-        image: /images/projects/mlten.png
+        image: /images/projects/profile2.jpg
         featured:
           name: Website
           link: https://owasp.org/www-project-machine-learning-security-top-10/
@@ -315,7 +315,7 @@ params:
 
       - title: OWASP eBPFShield
         content: A OSS tool that utilize eBPF for kernel-level observability and security, safeguarding your network.
-        image: /images/projects/ebpf.png
+        image: /images/projects/profile2.jpg
         featured:
           name: Website
           link: https://owasp.org/www-project-ebpfshield/
