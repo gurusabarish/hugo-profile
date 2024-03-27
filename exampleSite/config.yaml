@@ -226,36 +226,36 @@ params:
     # title: "Custom Name"
     index: false
     items:
-      - title: "Master of Technology (M.Tech)"
+      - title: "Indian Institute of Technology, Kanpur"
         school:
-          name: "Indian Institute of Technology, Kanpur"
+          name: "Dual Degree in AE (B.Tech & M.Tech)"
           url: "https://www.iitk.ac.in/"
         date: "2016 - 2017"
         GPA: "8.5 out of 10.0"
         content: |-
           Thesis focused on Dispersion analysis of composites and architecture of porous scaffold using Digital Image Processing
           Skills: 
-            - Python, Computer Vision, OpenCV, Matlab.
-            - Aerospace Structures, Aerodynamics, Composite Materials.
+            - Computer Vision, Artificial Intelligence, Python, Matlab.
+            - Aerospace Structures, Aerodynamics, Composite Materials, Thermodynamics.
         featuredLink:
           enable: true
-          name: "My Masters Thesis"
+          name: "Masters Thesis Link"
           url: "https://github.com/sagarbhure/MasterThesis"
-      - title: "Bachelor of Technology (B.Tech)"
-        school:
-          name: "Indian Institute of Technology, Kanpur"
-          url: "https://www.iitk.ac.in/"
-        date: "2012 - 2016"
-        #GPA: "3.9 out of 5.0"
-        content: |-
-          I innovatively designed and built a functional MIG-21 model featuring a Thrust Vectoring mechanism.
-          - C/C++, Data Structures, Algorithm, Python.
-          - Face mask detection using a single convolutional neural network.
-          - Aerodynamics, Thermodynamics, Mathematics, Artificial Intelligence.
-        featuredLink:
-          enable: true
-          name: "My academic record"
-          url: "https://sagarbhure.com"
+      # - title: "Bachelor of Technology (B.Tech)"
+      #   school:
+      #     name: "Indian Institute of Technology, Kanpur"
+      #     url: "https://www.iitk.ac.in/"
+      #   date: "2012 - 2016"
+      #   #GPA: "3.9 out of 5.0"
+      #   content: |-
+      #     I innovatively designed and built a functional MIG-21 model featuring a Thrust Vectoring mechanism.
+      #     - C/C++, Data Structures, Algorithm, Python.
+      #     - Face mask detection using a single convolutional neural network.
+      #     - Aerodynamics, Thermodynamics, Mathematics, Artificial Intelligence.
+      #   featuredLink:
+      #     enable: true
+      #     name: "My academic record"
+      #     url: "https://sagarbhure.com"
       - title: "High School"
         school:
           name: "Delhi Public School, Durg"
