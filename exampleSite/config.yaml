@@ -230,7 +230,7 @@ params:
         school:
           name: "Dual Degree in AE (B.Tech & M.Tech)"
           url: "https://www.iitk.ac.in/"
-        date: "2016 - 2017"
+        date: "2012 - 2017"
         GPA: "8.5 out of 10.0"
         content: |-
           Thesis focused on Dispersion analysis of composites and architecture of porous scaffold using Digital Image Processing
@@ -263,7 +263,7 @@ params:
         date: 2009-2011
         Percentage: "92 out of 100"
         content: 
-          Topper in PCM at school, with excellence award in Physics and Mathematics, and one of the few to qualify for IIT JEE.
+          School PCM topper, awarded for excellence in Physics and Mathematics, and successfully cleared the IIT-JEE exam.
         featuredLink:
           enable: true
           url: "https://sagarbhure.com"
