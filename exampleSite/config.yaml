@@ -1,4 +1,4 @@
-baseURL: "https://hugo-profile.netlify.app"
+baseURL: "https://sagarbhure.com"
 languageCode: "en-us"
 title: "Sagar Bhure"
 theme: hugo-profile
@@ -151,7 +151,7 @@ params:
 
   # About
   about:
-    enable: false
+    enable: true
     title: "About Me"
     image: "/images/dp.jpeg"
     content: |-
