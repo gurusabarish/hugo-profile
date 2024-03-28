@@ -256,9 +256,9 @@ params:
       #     enable: true
       #     name: "My academic record"
       #     url: "https://sagarbhure.com"
-      - title: "High School"
+      - title: "Delhi Public School, Durg"
         school:
-          name: "Delhi Public School, Durg"
+          name: "High School"
           url: "https://www.dpsdurg.edu.in/"
         date: 2009-2011
         Percentage: "92 out of 100"
