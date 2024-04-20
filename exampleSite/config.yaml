@@ -56,7 +56,7 @@ params:
   title: "Raghu Manne"
   description: Portfolio website
   # staticPath: ""  # The path to serve the static files from
-  #favicon: "/fav.png"
+  favicon: "/images/profile.jpeg"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -229,17 +229,22 @@ params:
   achievements:
     enable: true
     items:
-      - title: Certified Kubernetes Administrator
+      - title: "CKA: Certified Kubernetes Administrator"
         #content: I solved all problems with optimal solution.
         url: https://www.credly.com/badges/1de94f31-06bd-4768-9713-605b39ac1ac5
         image: /images/cka.png
       - title: "CKAD: Certified Kubernetes Application Developer"
-        #content: I solved all problems with optimal solution.
         url: https://www.credly.com/badges/df0a1809-fe8e-4cc6-bc03-331a785b284f
         image: /images/ckad.png
-    
-    
-
+      - title: "Google Cloud: Professional Cloud DevOps Engineer"
+        url: https://www.credly.com/badges/9608d47c-6592-423b-b913-f7bb6671b126
+        image: /images/gcp-devops.png
+      - title: "Google Cloud: Professional Cloud Architect Certification"
+        url: https://www.credly.com/badges/f86442b2-1401-4d88-8377-a92bfb221f1c
+        image: /images/gcp-pca.png
+      - title: "Google Cloud: Associate Cloud Engineer Certification"
+        url: https://www.credly.com/badges/d301642d-a6da-4371-80fa-f212e9bd6328
+        image: /images/gcp-ace.png
 
   # Achievements
   # achievements:
