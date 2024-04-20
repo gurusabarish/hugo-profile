@@ -29,11 +29,11 @@ Menus:
       title: Blog posts
       url: /blogs
       weight: 1
-    - identifier: gallery
-      name: Gallery
-      title: Blog posts
-      url: /gallery
-      weight: 2
+    # - identifier: gallery
+    #   name: Gallery
+    #   title: Blog posts
+    #   url: /gallery
+    #   weight: 2
     #Dropdown menu
     # - identifier: dropdown
     #   title: Example dropdown menu
@@ -56,7 +56,7 @@ params:
   title: "Raghu Manne"
   description: Portfolio website
   # staticPath: ""  # The path to serve the static files from
-  favicon: "/fav.png"
+  #favicon: "/fav.png"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -146,9 +146,9 @@ params:
           url: https://twitter.com/theRaghuManne
         - icon: fab fa-linkedin
           url: https://www.linkedin.com/in/raghumanne
-      customIcons:
-        - icon: /fav.png
-          url: "https://example.com"
+      # customIcons:
+      #   - icon: /fav.png
+      #     url: "https://example.com"
 
   # About
   about:
@@ -156,9 +156,7 @@ params:
     title: "About Me"
     #image: "/images/me.png"
     content: |-
-      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. 
-
-      I am currently working on a project that will be used to help people find the best way to get around the city.
+      A Cloud & DevOps engineer enthusiast towards cloud native technologies. Work towards no stone is left unturned to utilize my knowledge and skill in given opportunity effectively for professional growth and to contribute in the best possible way for the betterment of the organisation and self.
     skills:
       enable: true
       title: "Here are a few technologies i have experience working with:"
@@ -228,7 +226,7 @@ params:
         date: "2016 - 2020"
 
   #Certifications
-  certifications:
+  achievements:
     enable: true
     items:
       - title: Certified Kubernetes Administrator
@@ -336,11 +334,11 @@ params:
       enable: true
       disableFeaturedImage: false
     socialNetworks:
-      github: https://github.com
-      linkedin: https://linkedin.com
-      twitter: https://twitter.com
-      instagram: https://instagram.com
-      facebook: https://facebook.com
+      github: https://github.com/raghu-manne
+      linkedin: https://www.linkedin.com/in/raghumanne
+      twitter: https://twitter.com/theRaghuManne
+      instagram: https://instagram.com/theraghumanne
+
 
   # List pages like blogs and posts
   listPages:
