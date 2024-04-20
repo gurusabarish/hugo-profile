@@ -211,11 +211,11 @@ Events:
 
 HPA now will scale up the replicas to consume all the messages in the queue.
 
-kubectl describe hpa keda-hpa-pubsub-test
+![kubectl describe hpa keda-hpa-pubsub-test](https://raw.githubusercontent.com/raghu-manne/hugo-profile/netlify-deployment/exampleSite/static/images/blogs/keda/1.png)
 
 Once there are no messages left in the queue then HPA will eventually scale down the replicas.
 
-kubectl describe hpa keda-hpa-pubsub-test
+![kubectl describe hpa keda-hpa-pubsub-test](https://raw.githubusercontent.com/raghu-manne/hugo-profile/netlify-deployment/exampleSite/static/images/blogs/keda/2.png)
 
 And then ScaledObject kicks in and scales down the remaining one pod to zero.
 
