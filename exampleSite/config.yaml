@@ -140,9 +140,11 @@ params:
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
-          url: https://example.com
+          url: https://github.com/raghu-manne
         - icon: fab fa-x-twitter
-          url: https://example.com
+          url: https://twitter.com/theRaghuManne
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/raghumanne
       customIcons:
         - icon: /fav.png
           url: "https://example.com"
