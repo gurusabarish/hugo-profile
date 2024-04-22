@@ -1,8 +1,8 @@
 ---
 title: "KEDA; autoscale Kubernetes workloads the way you want"
-date: 2024-04-20T21:54:58+05:30
+date: 2024-03-11T21:54:58+05:30
 draft: false
-github_link: "https://github.com/gurusabarish/hugo-profile"
+github_link: "[github.com/raghu-manne](https://github.com/raghu-manne)"
 author: "Raghu Manne"
 tags:
   - Kubernetes
