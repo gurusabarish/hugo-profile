@@ -1,4 +1,5 @@
-baseURL: "https://netlify.raghumanne.com/"
+#baseURL: "https://netlify.raghumanne.com/"
+baseURL: "https://raghumanne.com/"
 languageCode: "en-us"
 title: "Raghu Manne"
 theme: hugo-profile
