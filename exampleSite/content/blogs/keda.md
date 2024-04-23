@@ -8,7 +8,7 @@ tags:
   - Kubernetes
   - KEDA
   - autoscaling
-image: /images/blogs/keda/architecture.png
+image: /images/blogs/keda/logo.png
 description: ""
 toc: 
 ---
@@ -42,6 +42,8 @@ KEDA didn't reinvent the wheel, it just passes the events from event source to t
 If you are trying to use KEDA with managed Kubernetes services like GKE, EKS, AKS etc., you can leverage their native identity authentication methods like GCP Workload Identity, Azure Workload identity to talk to their services and retrieve metrics from them.
 
 ### Architecture
+
+![Architecture](https://raw.githubusercontent.com/raghu-manne/hugo-profile/netlify-deployment/exampleSite/static/images/blogs/keda/logo.png)
 
 Admission Webhook: To avoid misconfiguration scenarios like multiple HPA for a single targeted resource.
 
