@@ -43,7 +43,7 @@ If you are trying to use KEDA with managed Kubernetes services like GKE, EKS, AK
 
 ### Architecture
 
-![Architecture](https://raw.githubusercontent.com/raghu-manne/hugo-profile/netlify-deployment/exampleSite/static/images/blogs/keda/logo.png)
+![Architecture](https://raw.githubusercontent.com/raghu-manne/hugo-profile/netlify-deployment/exampleSite/static/images/blogs/keda/architecture.png)
 
 Admission Webhook: To avoid misconfiguration scenarios like multiple HPA for a single targeted resource.
 
