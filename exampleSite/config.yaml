@@ -136,7 +136,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "https://rxresu.me/cnk.raghu.manne/remote"
+      url: "https://drive.google.com/file/d/1DwL-MXQxIxsH8W8rdjnEhWMdEXQCsKPa/view?usp=sharing"
       download: true
       newPage: false
     socialLinks:
