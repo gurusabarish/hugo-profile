@@ -9,9 +9,12 @@
                 <h2>
                     {{ .Site.Params.hero.title }}
                 </h2>
-                <h3>
+                <h5>
                     {{ .Site.Params.hero.subtitle }}
-                </h3>
+                </h5>
+                <h5>
+                    {{ .Site.Params.hero.location }}
+                </h5>
                 <p class="hero-content">
                     {{ .Site.Params.hero.content | markdownify }}
                 </p>
