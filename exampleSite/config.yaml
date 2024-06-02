@@ -112,6 +112,7 @@ params:
     stickyNavBar:
       enable : true
       showOnScrollUp : true
+    enableSeparator: false
     menus:
       disableAbout: false
       disableExperience: false

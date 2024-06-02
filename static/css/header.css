@@ -45,6 +45,10 @@ header .nav-link{
 .navbar .nav-link:hover {
     color: var(--primary-color) !important;
 }
+.nav-link.nav-link-sep:after {
+    content: "|";
+    color: var(--text-color) !important;
+}
 
 li > .dropdown-toggle:focus{
     color: var(--primary-color) !important;
