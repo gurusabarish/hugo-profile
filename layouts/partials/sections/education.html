@@ -1,10 +1,9 @@
-{{ if .Site.Params.education.enable | default false }}
-<section id="education" class="py-5">
+<section id="{{ .id | default .type }}" class="education py-5">
     <div class="container">
-        <h3 class="text-center">{{ .Site.Params.education.title | default "Education" }}</h3>
+        <h3 class="text-center">{{ .title | default (strings.FirstUpper .type) }}</h3>
         <div class="row justify-content-center py-5">
-            {{ $indexMenu := .Site.Params.education.index }}
-            {{ range $index, $element := .Site.Params.education.items }}
+            {{ $indexMenu := .index }}
+            {{ range $index, $element := .items }}
             <div class="col-12 p-0">
                 <div class="row row align-items-center justify-content-center m-1 mb-4">
                     {{ if $indexMenu }}
@@ -24,7 +23,7 @@
                                     <small>{{ .date }}</small>
                                 </div>
                                 <h5 class="card-title">{{ .title }}</h5>
-                                
+
                                 {{ if .school.url }}
                                 <a href="{{ .school.url }}" target="_blank">
                                     <h6>
@@ -40,7 +39,7 @@
                                     GPA:
                                     <i>
                                         <small>{{ .GPA }}</small>
-                                    </i> 
+                                    </i>
                                 </div>
                                 {{ end }}
                                 <div class="py-1 education-content">
@@ -63,4 +62,3 @@
         </div>
     </div>
 </section>
-{{ end }}
