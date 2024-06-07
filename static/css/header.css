@@ -69,6 +69,10 @@ li > .dropdown-toggle:focus{
     background-color: var(--secondary-color) !important;
 }
 
+.dropdown-divider {
+	border-top: 1px solid var(--lt-color-border-dark);
+}
+
 #search {
     border-radius: 1rem !important;
     background-color: var(--secondary-color);
