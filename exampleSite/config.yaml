@@ -380,12 +380,14 @@ params:
 
   # Single pages like blog and post
   singlePages:
+    socialShare: true
     readTime:
       enable: true
       content: "min read"
     scrollprogress:
       enable: true
-    socialShare: true
+    tags:
+      openInNewTab: true
 
   # For translations
   terms:
