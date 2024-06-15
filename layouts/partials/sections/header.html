@@ -139,6 +139,11 @@
                     </li>
                     {{ end }}
 
+                    {{ if and .Site.Menus.main (.Site.Params.navbar.enableSeparator | default false) }}
+                        <li class="nav-item navbar-text d-none d-lg-block d-xl-block"><div class="nav-link nav-link-sep"></div></li>
+                        <div class="dropdown-divider"></div>
+                    {{ end }}
+
                     <!-- custom menus from the user -->
                     {{ range .Site.Menus.main }}
                     {{ if .HasChildren }}
