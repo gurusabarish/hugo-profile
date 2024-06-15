@@ -1,6 +1,12 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
 <!-- <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/list.css" media="all"> -->
+{{ if .Params.viewer | default true }}
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/gallery.css">
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/viewer/viewer.min.css">
+<script src="{{ .Site.Params.staticPath }}/viewer/viewer.min.js"></script>
+{{ end }}
+
 {{ end }}
 
 {{ define "title" }}
@@ -19,11 +25,22 @@
             {{ range .Params.galleryImages }}
             <div class="col-md-4 p-0 m-0">
                 <div class="card p-0 m-0 border-0">
-                    <img class="w-100" height="280px" src="{{ .src }}">
+                    <img class="w-100 {{if .Params.viewer | default true}}viewer-enabled-image{{end}}" height="280px" src="{{ .src }}">
                 </div>
             </div>
             {{ end }}
         </div>
     </div>
 </div>
+
+{{ if .Params.viewer | default true }}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var viewer = new Viewer(document.getElementById('list-page'), {
+            ...{{ .Params.viewerOptions }}
+        });
+    });
+</script>
+{{ end }}
+
 {{ end }}
