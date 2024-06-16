@@ -1,9 +1,8 @@
-{{ if .Site.Params.projects.enable | default false }}
-<section id="projects" class="py-5">
+<section id="{{ .id | default .type }}" class="projects py-5">
     <div class="container">
-        <h3 class="text-center">{{ .Site.Params.projects.title | default "Projects" }}</h3>
+        <h3 class="text-center">{{ .title | default (strings.FirstUpper .type) }}</h3>
         <div class="row justify-content-center px-3 px-md-5">
-            {{ range .Site.Params.projects.items }}
+            {{ range .items }}
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="{{ .title }}">
                     <div class="card-head">
@@ -41,7 +40,7 @@
                 </div>
             </div>
             {{ end }}
-            {{ range ( where .Site.RegularPages "Type" "projects" ) }}
+            {{ range ( where site.RegularPages "Type" "projects" ) }}
             {{ if .Params.showInHome | default true }}
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="{{ .Title }}">
@@ -80,4 +79,3 @@
         </div>
     </div>
 </section>
-{{ end }}

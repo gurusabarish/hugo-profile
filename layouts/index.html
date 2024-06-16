@@ -12,11 +12,22 @@
 {{ end }}
 
 {{ define "main" }}
-{{- partial "sections/hero/index.html" . -}}
-{{- partial "sections/about.html" . -}}
-{{- partial "sections/experience.html" . -}}
-{{- partial "sections/education.html" . -}}
-{{- partial "sections/projects.html" . -}}
-{{- partial "sections/achievements.html" . -}}
-{{- partial "sections/contact.html" . -}}
+    {{ range $index, $element := (where .Site.Params.sections "enable" true) }}
+        {{ if not .type }}
+            {{ errorf "Type property needs to be set for section with index %d." $index }}
+        {{ else }}
+            {{ with $element }}
+                {{ $partialPathIndex := printf "sections/%s/index.html" .type }}
+                {{ $partialPathStandalone := printf "sections/%s.html" .type }}
+
+                {{ if templates.Exists (printf "partials/%s" $partialPathIndex) }}
+                    {{- partial $partialPathIndex . -}}
+                {{ else if templates.Exists (printf "partials/%s" $partialPathStandalone) }}
+                    {{- partial $partialPathStandalone . -}}
+                {{ else }}
+                    {{ errorf "Cannot find partial for section type: %s" .type }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
 {{ end }}

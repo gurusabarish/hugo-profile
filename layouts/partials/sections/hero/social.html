@@ -1,5 +1,5 @@
 <span>
-    {{ range .Site.Params.hero.socialLinks.fontAwesomeIcons }}
+    {{ range .socialLinks.fontAwesomeIcons }}
     <span class="px-1">
         <a href="{{ .url }}"
             {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
@@ -10,7 +10,7 @@
     </span>
     {{ end }}
 
-    {{ range .Site.Params.hero.socialLinks.customIcons }}
+    {{ range .socialLinks.customIcons }}
     <span class="px-1">
         <a href="{{ .url }}"
             {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}

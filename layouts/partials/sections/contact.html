@@ -1,39 +1,38 @@
-{{ if .Site.Params.contact.enable | default false }}
-<section id="contact" class="py-5">
+<section id="{{ .id | default .type }}" class="contact py-5">
     <div class="container">
-        <h3 class="text-center">{{ .Site.Params.contact.title | default "Get in Touch" }}</h3>
+        <h3 class="text-center">{{ .title | default (strings.FirstUpper .type) }}</h3>
         <div class="px-0 px-md-5 px-lg-5">
             <div class="row justify-content-center px-md-5">
                 <div class="col-md-8 py-3">
                     <div class="text-center">
-                        {{ .Site.Params.contact.content | emojify | markdownify }}
+                        {{ .content | emojify | markdownify }}
                     </div>
-                    {{ if .Site.Params.contact.formspree.enable | default false }}
+                    {{ if .formspree.enable | default false }}
                     <div class="row justify-content-center">
-                        <form id="contact-form" action="https://formspree.io/f/{{ .Site.Params.contact.formspree.formId }}" onsubmit="handleFormspreeSubmit(event)" method="POST" class="col-md-7">
+                        <form id="contact-form" action="https://formspree.io/f/{{ .formspree.formId }}" onsubmit="handleFormspreeSubmit(event)" method="POST" class="col-md-7">
                             <div class="form-group pt-3">
-                                <input type="email" class="form-control"  name="email" required="true" placeholder='{{ .Site.Params.contact.formspree.emailCaption | emojify | default "Enter your email" }}'>
+                                <input type="email" class="form-control"  name="email" required="true" placeholder='{{ .formspree.emailCaption | emojify | default "Enter your email" }}'>
                             </div>
                             <div class="form-group pt-3">
-                                <textarea class="form-control" name="message" required="true" placeholder='{{ .Site.Params.contact.formspree.messageCaption | emojify | default "Enter your message" }}' rows="{{ .Site.Params.contact.formspree.messageRows | default 3 }}"></textarea>
+                                <textarea class="form-control" name="message" required="true" placeholder='{{ .formspree.messageCaption | emojify | default "Enter your message" }}' rows="{{ .formspree.messageRows | default 3 }}"></textarea>
                             </div>
                             <div class="form-group text-center pt-3">
-                                <button type="submit" class="btn">{{ .Site.Params.contact.btnName | default "Get in Touch" }}</button>
+                                <button type="submit" class="btn">{{ .btnName | default "Get in Touch" }}</button>
                             </div>
                         </form>
                     </div>
-                    {{ else if or (.Site.Params.contact.email)  (.Site.Params.contact.btnLink) }}
+                    {{ else if or .email .btnLink }}
                     <div class="text-center pt-3">
-                        <a 
-                            href='{{ if .Site.Params.contact.btnLink }}
-                                    {{ .Site.Params.contact.btnLink | default "#" }}
-                                  {{ else }}
-                                    mailto:{{ .Site.Params.contact.email }}
-                                  {{ end }}'
+                        <a
+                            href='{{ if .btnLink }}
+                                    {{ .btnLink | default "#" }}
+                                {{ else }}
+                                    mailto:{{ .email }}
+                                {{ end }}'
                             target="_blank"
                             class="btn"
                         >
-                            {{ .Site.Params.contact.btnName | default "Get in Touch" }}
+                            {{ .btnName | default "Get in Touch" }}
                         </a>
                     </div>
                     {{ end }}
@@ -43,7 +42,6 @@
     </div>
     <div id="contact-form-status"></div>
 </section>
-{{ end }}
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="check-circle-fill" viewBox="0 0 16 16">
