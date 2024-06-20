@@ -14,7 +14,9 @@
 {{ define "main" }}
 {{- partial "sections/hero/index.html" . -}}
 {{- partial "sections/about.html" . -}}
-{{- partial "sections/experience.html" . -}}
+{{ range $index, $element := .Site.Params.experiences }}
+    {{- partial "sections/experience/experience.html" $element -}}
+{{ end }}
 {{- partial "sections/education.html" . -}}
 {{- partial "sections/projects.html" . -}}
 {{- partial "sections/achievements.html" . -}}
