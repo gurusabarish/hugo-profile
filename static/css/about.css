@@ -27,7 +27,7 @@
 #single .page-content a {
     display: inline-block;
     text-decoration: none;
-    color: var(--primary-color) !important;
+    color: var(--text-link-color) !important;
 }
 
 #single .page-content a::after {

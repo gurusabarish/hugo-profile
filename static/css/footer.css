@@ -4,7 +4,7 @@ footer a h5 {
 
 footer a {
   text-decoration: none;
-  color: var(--text-secondary-color) !important;
+  color: var(--text-link-color) !important;
 }
 
 footer a:hover {
@@ -35,7 +35,7 @@ footer .card-footer {
 }
 
 footer .card-footer a {
-    color: var(--text-secondary-color) !important;
+    color: var(--text-link-color) !important;
     border-color: var(--primary-color) !important;
     transition: none;
     background-color: var(--background-color) !important;
