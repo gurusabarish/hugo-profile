@@ -33,7 +33,7 @@
 #single .page-content a {
     display: inline-block;
     text-decoration: none;
-    color: var(--primary-color) !important;
+    color: var(--text-link-color) !important;
 }
 
 #single .page-content a::after {
@@ -52,7 +52,7 @@
 }
 
 #single .page-content h1, #single .page-content h2, #single .page-content h3, #single .page-content h4, #single .page-content h5, #single .page-content h6 {
-    color: var(--primary-color) !important;
+    color: var(--text-link-color) !important;
     margin-bottom: 0.7em;
     opacity: 0.9;
 }
@@ -188,7 +188,7 @@
     border-radius: 10px;
     background-color: var(--background-color);
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text-link-color) !important;
 }
 
 #single aside.tags ul.tags-ul li {
@@ -223,7 +223,7 @@
 #single aside.toc .toc-content ol li a, #single aside.toc .toc-content ul li a {
     font-size: 16px;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text-link-color) !important;
     opacity: 0.9;
 }
 
@@ -261,7 +261,7 @@
 #single aside.social .social-content ul li a {
     border: 1px solid var(--primary-color);
     padding: .7rem;
-    color: var(--text-color);
+    color: var(--text-link-color) !important;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -273,7 +273,7 @@
 
 #single aside.social .social-content ul li:hover a {
     opacity: .8;
-    color: var(--primary-color);
+    color: var(--text-link-color) !important;
 }
 
 /* Top scroll */
