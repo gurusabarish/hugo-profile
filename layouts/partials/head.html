@@ -40,11 +40,6 @@
 <!-- theme -->
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/theme.css" media="all">
 
-<!-- Custom Styles -->
-{{ if .Site.Params.customCSS }}
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/style.css">
-{{ end }}
-
 <style>
     :root {
         --text-color: {{ .Site.Params.color.textColor | default "#343a40" }};
@@ -78,11 +73,11 @@
         width: 8px;
         background-color: var(--background-color);
     }
-    
+
     ::-webkit-scrollbar-track {
         border-radius: 1rem;
     }
-    
+
     ::-webkit-scrollbar-thumb {
         border-radius: 1rem;
         background: #b0b0b0;

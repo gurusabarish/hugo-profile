@@ -15,7 +15,7 @@
                                 <input type="email" class="form-control"  name="email" required="true" placeholder='{{ .Site.Params.contact.formspree.emailCaption | emojify | default "Enter your email" }}'>
                             </div>
                             <div class="form-group pt-3">
-                                <textarea class="form-control" name="message" required="true" placeholder='{{ .Site.Params.contact.formspree.messageCaption | emojify | default "Enter your message" }}' rows="3"></textarea>
+                                <textarea class="form-control" name="message" required="true" placeholder='{{ .Site.Params.contact.formspree.messageCaption | emojify | default "Enter your message" }}' rows="{{ .Site.Params.contact.formspree.messageRows | default 3 }}"></textarea>
                             </div>
                             <div class="form-group text-center pt-3">
                                 <button type="submit" class="btn">{{ .Site.Params.contact.btnName | default "Get in Touch" }}</button>

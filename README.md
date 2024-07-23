@@ -11,7 +11,7 @@
 
 A high performance and mobile first hugo template for personal portfolio and blog
 
-- Example Site: [hugo-profile.netlify.app](https://hugo-profile.netlify.app)
+- ### Example Site: [https://hugo-profile.netlify.app](https://hugo-profile.netlify.app)
 
 # Features
 - Fully Responsive

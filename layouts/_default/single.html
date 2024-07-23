@@ -19,8 +19,10 @@
           <div class="title mb-5">
             <h1 class="text-center mb-4">{{ .Title }}</h1>
             <div class="text-center">
-              {{ .Params.author }} 
-              <small>|</small>
+              {{ if .Params.author }}
+                {{ .Params.author }}
+                <small>|</small>
+              {{ end }}
               {{ .Date.Format (.Site.Params.datesFormat.article | default "Jan 2, 2006") }}
 
               {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
@@ -58,13 +60,15 @@
             <h5>{{ .Site.Params.terms.tags | default "Tags" }}</h5>
             <ul class="tags-ul list-unstyled list-inline">
               {{range .Params.tags}}
-              <li class="list-inline-item"><a href="{{`tags` | absURL}}/{{.| urlize}}" target="_blank">{{.}}</a></li>
+              <li class="list-inline-item"><a href="{{`tags` | absURL}}/{{.| urlize}}"
+                {{ if site.Params.singlePages.tags.openInNewTab | default true }}target="_blank"{{ end }}
+              >{{.}}</a></li>
               {{end}}
             </ul>
           </aside>
           {{end}}
 
-          {{ if .Params.socialShare | default true }}
+          {{ if .Params.socialShare | default .Site.Params.singlePages.socialShare | default true }}
           <aside class="social">
             <h5>{{ .Site.Params.terms.social | default "Social" }}</h5>
             <div class="social-content">
