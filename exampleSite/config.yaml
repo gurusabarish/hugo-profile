@@ -57,7 +57,7 @@ params:
   title: "Raghu Manne"
   description: Portfolio website
   # staticPath: ""  # The path to serve the static files from
-  favicon: "/images/profile.jpeg"
+  favicon: "/images/profile-cropped.jpg"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -134,9 +134,9 @@ params:
       enable: true
     # roundImage: true # Make hero image circular | default false
     button:
-      enable: true
+      enable: false
       name: "Resume"
-      url: "https://drive.google.com/file/d/1DwL-MXQxIxsH8W8rdjnEhWMdEXQCsKPa/view?usp=sharing"
+      url: ""
       download: true
       newPage: false
     socialLinks:
@@ -179,7 +179,7 @@ params:
       - job: "Cloud Engineer"
         company: "Searce"
         companyUrl: "https://searce.com"
-        date: "August 2022 - present"
+        date: "August 2022 - July 2024"
         # featuredLink:
         #   enable: true
         #   name: "View the project"
