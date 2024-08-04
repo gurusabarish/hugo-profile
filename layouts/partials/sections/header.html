@@ -52,7 +52,7 @@
             <!-- navbar brand -->
             <a class="navbar-brand primary-font text-wrap" href="{{ .Site.BaseURL | relURL }}">
                 {{ if and (or (.Site.Params.favicon) (.Site.Params.navbar.brandLogo)) (.Site.Params.navbar.showBrandLogo | default true) }}
-                <img src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}" width="120" height="120"
+                <img src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}" width="70" height="70"
                     class="d-inline-block">
                 {{ .Site.Params.navbar.brandName | default .Site.Params.title }}
                 {{ else }}
