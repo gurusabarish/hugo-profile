@@ -1,0 +1,43 @@
+{{ if .enable | default false }}
+{{$key := .key}}
+<section class="experience py-5" id="{{ .key }}">
+    <div class="container">
+        <h3 class="text-center">{{ .title | default "Experience" }}</h3>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-8 py-5">
+                <div class="experience-container px-3 pt-2">
+                    <ul class="nav nav-pills mb-3 bg-transparent primary-font" id="{{ .key }}-pills-tab" role="tablist">
+                        {{ range $index, $element := .items }}
+                            {{ partial "sections/experience/experience-tab.html" 
+                                (dict 
+                                    "index" $index
+                                    "key" $key
+                                    "company" .company 
+                                    "date" .date
+                                )
+                            }}
+                        {{ end }}
+                    </ul>
+                    <div class="tab-content pb-5 pt-2 bg-transparent primary-font" id="{{ .key }}-pills-tabContent">
+                        {{ range $index, $element := .items }}
+                            {{ partial "sections/experience/experience-tab-entry.html" 
+                                (dict 
+                                    "index" $index
+                                    "key" $key
+                                    "info" .info 
+                                    "company" .company 
+                                    "companyUrl" .companyUrl 
+                                    "date" .date 
+                                    "job" .job 
+                                    "featuredLink" .featuredLink
+                                    "content" .content
+                                )
+                            }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

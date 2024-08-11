@@ -1,0 +1,21 @@
+<!--
+params:
+    - index
+    - key
+    - company
+    - date  
+-->
+
+<li class="nav-item px-1 bg-transparent" role="presentation">
+    <div
+            class="nav-link {{ if (eq .index 0) }}active{{ end }} bg-transparent"
+            aria-selected="true"
+            role="tab"
+            data-bs-toggle="pill"
+            id='{{.key}}-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}-tab'
+            data-bs-target='#{{.key}}-pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}'
+            aria-controls='{{ replace .company " " "-" }}-{{ replace .date " " "-" }}'
+    >
+        {{ .company }}
+    </div>
+</li>
