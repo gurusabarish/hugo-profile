@@ -44,7 +44,7 @@
     :root {
         --text-color: {{ .Site.Params.color.textColor | default "#343a40" }};
         --text-secondary-color: {{ .Site.Params.color.secondaryTextColor | default "#6c757d" }};
-        --text-link-color: {{ .Site.Params.color.textLinkColor | default "#0d6efd" }};
+        --text-link-color: {{ .Site.Params.color.textLinkColor | default (.Site.Params.color.primaryColor | default "#007bff") }};
         --background-color: {{ .Site.Params.color.backgroundColor | default "#eaedf0" }};
         --secondary-background-color: {{ .Site.Params.color.secondaryBackgroundColor | default "#64ffda1a" }};
         --primary-color: {{ .Site.Params.color.primaryColor | default "#007bff" }};
@@ -53,7 +53,7 @@
         /* dark mode colors */
         --text-color-dark: {{ .Site.Params.color.darkmode.textColor | default "#e4e6eb" }};
         --text-secondary-color-dark: {{ .Site.Params.color.darkmode.secondaryTextColor | default "#b0b3b8" }};
-        --text-link-color-dark: {{ .Site.Params.color.textLinkColor | default "#0d6efd" }};
+        --text-link-color-dark: {{ .Site.Params.color.darkmode.textLinkColor | default (.Site.Params.color.darkmode.primaryColor | default "#ffffff") }};
         --background-color-dark: {{ .Site.Params.color.darkmode.backgroundColor | default "#18191a" }};
         --secondary-background-color-dark: {{ .Site.Params.color.darkmode.secondaryBackgroundColor | default "#212529" }};
         --primary-color-dark: {{ .Site.Params.color.darkmode.primaryColor | default "#ffffff" }};
