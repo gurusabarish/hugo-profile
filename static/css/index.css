@@ -384,6 +384,10 @@ header .navbar.animate {
     opacity: 0.7;
 }
 
+#experience .job-container {
+	margin-top: 20px;
+}
+
 /* Education */
 
 #education .container > h3 {
