@@ -89,6 +89,7 @@ params:
   # color:
   #   textColor: "#343a40"
   #   secondaryTextColor: "#6c757d"
+  #   textLinkColor: "#007bff"
   #   backgroundColor: "#eaedf0"
   #   secondaryBackgroundColor: "#64ffda1a"
   #   primaryColor: "#007bff"
@@ -97,6 +98,7 @@ params:
   #   darkmode:
   #     textColor: "#e4e6eb"
   #     secondaryTextColor: "#b0b3b8"
+  #     textLinkColor: "#ffffff"
   #     backgroundColor: "#18191a"
   #     secondaryBackgroundColor: "#212529"
   #     primaryColor: "#ffffff"
@@ -128,7 +130,7 @@ params:
     intro: "Hi, my name is"
     title: "Isabella."
     subtitle: "I build things for the web"
-    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that look great, feel fantastic, and function correctly."
     image: /images/hero.svg
     bottomImage:
       enable: true
