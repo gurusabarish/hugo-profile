@@ -359,6 +359,13 @@ header .navbar.animate {
     left: 0px;
 }
 
+#experience .experience-container .tab-content .tab-pane ul li.circle::before {
+    content: "●";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0px;
+}
+
 #experience .experience-container .tab-content .tab-pane .featuredLink a::after {
     display: block;
     width: auto;
