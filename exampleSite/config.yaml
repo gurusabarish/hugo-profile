@@ -176,18 +176,30 @@ params:
     enable: true
     # title: "Custom Name"
     items:
-      - job: "Senior Software Developer"
-        company: "Facebook"
+      - company: "Facebook "
+        companyAlias: "Facebook"
         companyUrl: "https://example.com"
         date: "Jan 2022 - present"
         featuredLink:
           enable: true
           name: "View the project"
           url: "https://example.com"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+        positions:
+          - job: "Team Leader"
+            tasks:
+              - "Led development teams of 6-8 members to complete two key projects, exceeding the KPI target by 120-140%."
+              - "Successfully trained seven internship students into skilled employees for the company."
+          - job: "Senior Software Engineer"
+            tasks:
+              - "Design architecture built the core and contributed to the development phase of the Logistic microservice in an ERP that reduced average delivery time for orders by 25%, decreased wrong or missing delivery cases by 95%, and saved 50% of the time used by warehouse operators in assigning delivery employees."
+              - "Design architecture built the core and contributed to the development phase of the Finance reporting microservice in an ERP that generated finance reports 80% faster and reduced the time required for reconciliation by 40%."
+          - job: "Scrum Master"
+            tasks:
+              - "Successfully applied Scrum methodology to team operations, leading to a 75% reduction in overdue tasks, a 30% increase in productivity, and a 35% decrease in QA-phase bugs within six months."
+              - "Served as a Scrum Master, facilitating all Scrum ceremonies, including daily stand-ups, sprint planning, reviews, and retrospectives. Provided all support needed by team members to achieve the achievements mentioned above."
 
-      - job: "Software Developer"
-        company: "Amazon"
+      - company: "Amazon Inc"
+        companyAlias: "Amazon"
         companyUrl: "https://example.com"
         date: "Sep 2020 - Dec 2021"
         featuredLink:
@@ -196,14 +208,18 @@ params:
         info:
           enable: true
           content: I worked as a software developer for more than one year in Amazon.
-        content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+        positions:
+          - job: "Senior Software Engineer"
+            tasks:
+              - "Design architecture built the core and contributed to the development phase of the Logistic microservice in an ERP that reduced average delivery time for orders by 25%, decreased wrong or missing delivery cases by 95%, and saved 50% of the time used by warehouse operators in assigning delivery employees."
+              - "Design architecture built the core and contributed to the development phase of the Finance reporting microservice in an ERP that generated finance reports 80% faster and reduced the time required for reconciliation by 40%."
+          - job: "Scrum Master"
+            tasks:
+              - "Successfully applied Scrum methodology to team operations, leading to a 75% reduction in overdue tasks, a 30% increase in productivity, and a 35% decrease in QA-phase bugs within six months."
+              - "Served as a Scrum Master, facilitating all Scrum ceremonies, including daily stand-ups, sprint planning, reviews, and retrospectives. Provided all support needed by team members to achieve the achievements mentioned above."
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "Junior Software Developer"
-        company: "Apple"
+      - company: "Apple Inc"
+        companyAlias: "Apple"
         companyUrl: "https://example.com"
         date: "Jan 2020 - Aug 2020"
         info:
@@ -211,30 +227,29 @@ params:
         featuredLink:
           enable: true
           url: "https://example.com"
-        content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+        positions:
+          - job: "Team Leader"
+            tasks:
+              - "Led development teams of 6-8 members to complete two key projects, exceeding the KPI target by 120-140%."
+              - "Successfully trained seven internship students into skilled employees for the company."
+          - job: "Senior Software Engineer"
+            tasks:
+              - "Design architecture built the core and contributed to the development phase of the Logistic microservice in an ERP that reduced average delivery time for orders by 25%, decreased wrong or missing delivery cases by 95%, and saved 50% of the time used by warehouse operators in assigning delivery employees."
+              - "Design architecture built the core and contributed to the development phase of the Finance reporting microservice in an ERP that generated finance reports 80% faster and reduced the time required for reconciliation by 40%."
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "UI/UX Designer"
-        company: "Netflix"
+      - company: "Netflix inc"
+        companyAlias: "Netfilx"
         companyUrl: "https://example.com"
         date: "June 2017 - Nov 2019"
         featuredLink:
           enable: true
           url: "https://example.com"
-        content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "Product Designer"
-        company: "Google"
-        companyUrl: "https://example.com"
-        date: "Feb 2016 - Mar 2017"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+        positions:
+          - job: "Designer"
+            tasks:
+              - "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+              - Lead backend developer for a product.
+              - Created a frontend design for a product.
 
   # Education
   education:
