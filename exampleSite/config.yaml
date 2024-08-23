@@ -24,33 +24,41 @@ markup:
 
 Menus:
   main:
+    # Define the 'Blog' menu item
+    # The 'weight' property determines the order in which this item appears in the menu.
+    # Lower weights appear before higher weights.
     - identifier: blog
       name: Blog
       title: Blog posts
       url: /blogs
-      weight: 1
+      weight: 1  # This item appears first
+
+    # Define the 'Gallery' menu item
+    # Adjust the 'weight' to set its order relative to other items.
     - identifier: gallery
       name: Gallery
-      title: Blog posts
+      title: Gallery posts
       url: /gallery
-      weight: 2
-    #Dropdown menu
+      weight: 2  # This item appears after 'Blog'
+
+    # Dropdown menu example (commented out)
+    # Use the 'weight' property to control the order of dropdown menus and their items.
     # - identifier: dropdown
     #   title: Example dropdown menu
     #   name: Dropdown
-    #   weight: 3
+    #   weight: 3  # This dropdown appears after 'Gallery'
     # - identifier: dropdown1
     #   title: example dropdown 1
     #   name: example 1
     #   url: /#
     #   parent: dropdown
-    #   weight: 1
+    #   weight: 1  # This item appears first within the 'Dropdown' menu
     # - identifier: dropdown2
     #   title: example dropdown 2
     #   name: example 2
     #   url: /#
     #   parent: dropdown
-    #   weight: 2
+    #   weight: 2  # This item appears after 'example 1'
 
 params:
   title: "Hugo Profile"
