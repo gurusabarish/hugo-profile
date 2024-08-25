@@ -2,6 +2,7 @@
 <script>
     if (document.body.className.includes("dark")) {
         document.body.classList.remove('dark');
+        document.documentElement.classList.remove('dark');
         localStorage.setItem("pref-theme", 'light');
     }
 </script>
@@ -10,6 +11,7 @@
 {{- /* theme is dark */}}
 <script>
     if (document.body.className.includes("light")) {
+        document.documentElement.classList.add('dark');
         document.body.classList.add('dark');
         localStorage.setItem("pref-theme", 'dark');
     }
@@ -19,10 +21,13 @@
 {{- /* theme is auto */}}
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
         document.body.classList.add('dark');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
     } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
         document.body.classList.add('dark');
     }
 
@@ -34,9 +39,11 @@
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
             localStorage.setItem("pref-theme", 'light');
         } else {
             document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
             localStorage.setItem("pref-theme", 'dark');
         }
     })
