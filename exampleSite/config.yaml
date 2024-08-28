@@ -28,29 +28,31 @@ Menus:
       name: Blog
       title: Blog posts
       url: /blogs
-      weight: 1
+      weight: 1  # The weight determines the position of the item in the navbar. Lower values appear first.
     - identifier: gallery
       name: Gallery
       title: Blog posts
       url: /gallery
-      weight: 2
+      weight: 2  # This item will appear after the 'Blog' item due to its higher weight.
+
     #Dropdown menu
     # - identifier: dropdown
     #   title: Example dropdown menu
     #   name: Dropdown
-    #   weight: 3
+    #   weight: 3  # The dropdown menu will appear after 'Gallery' in the navbar.
     # - identifier: dropdown1
     #   title: example dropdown 1
     #   name: example 1
     #   url: /#
     #   parent: dropdown
-    #   weight: 1
+    #   weight: 1  # Inside the dropdown, this item appears first.
     # - identifier: dropdown2
     #   title: example dropdown 2
     #   name: example 2
     #   url: /#
     #   parent: dropdown
-    #   weight: 2
+    #   weight: 2  # This item appears after 'example 1' within the dropdown.
+
 
 params:
   title: "Hugo Profile"
