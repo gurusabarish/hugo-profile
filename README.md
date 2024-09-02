@@ -30,6 +30,7 @@ Technology used: Bootstrap, fontawesome
 
 # Requirements
 - Hugo Version 0.87.0 or higher
+- [Install Hugo](https://gohugo.io/installation/)
 
 
 # How to use this template
@@ -40,17 +41,37 @@ Technology used: Bootstrap, fontawesome
 [For more details](https://github.com/gurusabarish/hugo-profile/wiki)
 ## Hugo theme
 
-- Install Hugo and create a site using `hugo new site my-site --format="yaml"`
-- Clone this repo inside your themes folder
-```
-cd themes
-git clone https://github.com/gurusabarish/hugo-profile.git
-```
-- Create config.yaml (you can use `config.toml` too) inside root folder 
-- Setup the configurations in `config.yaml`. [reference](https://github.com/gurusabarish/hugo-profile/blob/master/exampleSite/config.yaml)
-- You should have the mentioned (_inside the config file_) images in static folder to use them.
+1. **Create a New Hugo Site**
 
-For more details: [Hugo's official docs](https://gohugo.io/getting-started/quick-start/), [content management](https://www.mikedane.com/static-site-generators/hugo/content-organization/)
+   Choose a directory where you want to create your new Hugo site. You can do this by navigating to your preferred directory and running the following command:
+
+   ```bash
+   hugo new site my-site --format="yaml"
+   ```
+
+   This command creates a new Hugo site in a folder named `my-site` with configuration files in YAML format.
+
+2. **Add the `hugo-profile` Theme**
+
+   Next, you need to add the `hugo-profile` theme to your new site. Change into the `my-site` directory and clone the theme repository into the `themes` folder:
+
+   ```bash
+   cd my-site
+
+   git clone https://github.com/gurusabarish/hugo-profile.git themes/hugo-profile
+   ```
+
+   This command clones the `hugo-profile` theme into your `themes` directory, making it available for use in your new Hugo site.
+
+  3. Create `config.yaml` (you can use `config.toml` too) inside root folder (`/my-site`) 
+  
+  4. Setup the configurations in `config.yaml`. [reference](https://github.com/gurusabarish/hugo-profile/blob/master/exampleSite/config.yaml)
+   
+  5. You should have the mentioned (_inside the config file_) images in static folder to use them.
+
+For more details: 
+- [Hugo's Official Documentation](https://gohugo.io/getting-started/quick-start/)
+- [Content Management](https://www.mikedane.com/static-site-generators/hugo/content-organization/)
 
 ## Direct deployment using netlify
 
@@ -61,7 +82,7 @@ For more details: [host on netlify](https://gohugo.io/hosting-and-deployment/hos
 
 # Deployment
 
-Run `hugo`. It will generate a folder called public. You can use the files inside public folder for deployment. You should delete the public folder for each time when you are using `hugo` command.
+Run `hugo`. It will generate a folder called `public/`. You can use the files inside public folder for deployment. You should delete the public folder for each time when you are using `hugo` command.
 
 # Issues
 
