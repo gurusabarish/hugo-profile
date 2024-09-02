@@ -378,6 +378,7 @@ params:
       twitter: https://twitter.com
       instagram: https://instagram.com
       facebook: https://facebook.com
+      # email: mailto:youremail@example.com #Uncomment to add email icon to footer. Can be used as an alternative to contact's default "Email me" and/or Contact form
 
   # List pages like blogs and posts
   listPages:

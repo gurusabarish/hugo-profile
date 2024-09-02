@@ -8,6 +8,10 @@
     fill: none;
 }
 
+.light .footer-socialNetworks-email-svg-path{
+    fill: #18191a !important;
+}
+
 /* dark mode */
 .dark {
     --background-color: var(--background-color-dark) !important;
@@ -21,6 +25,10 @@
 
 .dark #footer-socialNetworks-github-svg-path{
     fill: #FFFFFF;
+}
+
+.dark .footer-socialNetworks-email-svg-path{
+    fill: #FFFFFF !important;
 }
 
 .text-secondary {
