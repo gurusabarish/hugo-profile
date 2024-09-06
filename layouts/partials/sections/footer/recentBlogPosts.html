@@ -18,6 +18,16 @@
                     </a>
                 </div>
                 {{ end }}
+                {{ if and (not (.Site.Params.footer.recentPosts.disableFeaturedVideo | default false)) (.Params.image) }}
+                <div class="card-header">
+                    <div class="video-container" style="text-align: center;">
+                        <video width="640" height="360" autoplay loop>
+                        <source src="{{ .Params.video }}" type="video/mp4" alt="{{ .Title }}">
+                        Your browser does not support video.
+                        </video>
+                    </div>
+                </div>
+                {{ end }}
                 <div class="card-body bg-transparent p-3 shadow-sm">
                     <a href="{{ .RelPermalink }}" class="primary-font card-title">
                         <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 25 }}</h5>
