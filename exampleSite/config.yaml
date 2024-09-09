@@ -148,9 +148,9 @@ params:
           url: https://www.linkedin.com/in/sagarbhure/
         - icon: "fas fa-envelope"
           url: "mailto:sagarbhureaerospace@gmail.com"
-      customIcons:
-        - icon: /fav.png
-          url: "https://example.com"
+#      customIcons:
+#        - icon: /fav.png
+#          url: "https://example.com"
       
  #       button:
   #        enable: true
