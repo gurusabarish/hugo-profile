@@ -146,16 +146,20 @@ params:
           url: https://twitter.com/infosecbhure
         - icon: fab fa-linkedin
           url: https://www.linkedin.com/in/sagarbhure/
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/sagarbhure/
+        - icon: "fas fa-envelope"
+          url: "mailto:sagarbhureaerospace@gmail.com"
       customIcons:
         - icon: /fav.png
           url: "https://example.com"
       
-      button:
-        enable: true
-        name: "Say Hi"
-        url: "mailto:sagarbhureaerospace@gmail.com"
-        download: false
-        newPage: false
+ #       button:
+  #        enable: true
+   #       name: "Say Hi"
+    #      url: "mailto:sagarbhureaerospace@gmail.com"
+     #    download: false
+      #   newPage: false
 
   # About
   about:
