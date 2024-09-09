@@ -133,10 +133,17 @@ params:
     # roundImage: true # Make hero image circular | default false
     button:
       enable: true
-      name: "Resume"
-      url: "#"
+      name: "My Resume"
+      url: "https://drive.google.com/file/d/1pjChnZ1VQ7cZe7xwTfUVEMdPfQn0lGJl/view?usp=sharing"
       download: false
       newPage: false
+    button:
+      enable: true
+      name: "Say Hi"
+      url: "mailto:sagarbhureaerospace@gmail.com"
+      download: false
+      newPage: false
+
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
