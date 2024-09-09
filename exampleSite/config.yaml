@@ -126,7 +126,7 @@ params:
     intro: "Hi, my name is"
     title: "Sagar."
     subtitle: "I build next-gen software."
-    content: "A passionate software engineer building advanced security firewalls for safeguarding deployments, Presented at top industry conferences including BlackHat, Hack in Paris, APISecure, and HITB Security."
+    content: "I'm a passionate software engineer with a focus on developing advanced security solutions to protect deployments and infrastructure. My expertise spans AI Security and eBPF, and I’ve had the privilege of presenting my work at leading industry conferences, including BlackHat, NorthSec, HITCON, Hack in Paris, APISecure, and HITB Security"
     image: /images/sbhure.jpeg
     bottomImage:
       enable: true
@@ -135,12 +135,6 @@ params:
       enable: true
       name: "My Resume"
       url: "https://drive.google.com/file/d/1pjChnZ1VQ7cZe7xwTfUVEMdPfQn0lGJl/view?usp=sharing"
-      download: false
-      newPage: false
-    button:
-      enable: true
-      name: "Say Hi"
-      url: "mailto:sagarbhureaerospace@gmail.com"
       download: false
       newPage: false
 
@@ -155,6 +149,13 @@ params:
       customIcons:
         - icon: /fav.png
           url: "https://example.com"
+      
+      button:
+        enable: true
+        name: "Say Hi"
+        url: "mailto:sagarbhureaerospace@gmail.com"
+        download: false
+        newPage: false
 
   # About
   about:
