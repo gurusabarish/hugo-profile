@@ -146,8 +146,6 @@ params:
           url: https://twitter.com/infosecbhure
         - icon: fab fa-linkedin
           url: https://www.linkedin.com/in/sagarbhure/
-        - icon: fab fa-linkedin
-          url: https://www.linkedin.com/in/sagarbhure/
         - icon: "fas fa-envelope"
           url: "mailto:sagarbhureaerospace@gmail.com"
       customIcons:
