@@ -18,7 +18,7 @@
                     </a>
                 </div>
                 {{ end }}
-                {{ if and (not (.Site.Params.footer.recentPosts.disableFeaturedVideo | default false)) (.Params.image) }}
+                {{ if and (not (.Site.Params.footer.recentPosts.disableFeaturedVideo | default false)) (.Params.video) }}
                 <div class="card-header">
                     <div class="video-container" style="text-align: center;">
                         <video width="640" height="360" autoplay loop>
