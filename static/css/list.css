@@ -63,10 +63,10 @@
 .video-container {
     position: relative;
     padding-top: 56.25%; 
-    width: 100%; /* Full width of the parent container */
+    width: 100%; 
     max-width: 640px; 
-    margin: 0 auto; /* Center the container */
-    overflow: auto; /* Hide overflow to maintain aspect ratio */
+    margin: 0 auto; 
+    overflow: auto; 
 }
 
 .video-container video {
@@ -75,7 +75,7 @@
     left: 0;
     width: 100%; 
     height: 100%; 
-    border-radius: 8px; /* Add rounded corners */
+    border-radius: 8px; 
 }
 
 /* pagination */
