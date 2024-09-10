@@ -18,7 +18,20 @@
                     {{ if and (not (.Site.Params.listPages.disableFeaturedImage | default false)) (.Params.image) }}
                     <div class="card-header">
                         <a href="{{ .RelPermalink }}">
+                            
                             <img src="{{ .Params.image }}" class="card-img-top" alt="{{ .Title }}">
+                        </a>
+                    </div>
+                    {{ end }}
+                    {{ if and (not (.Site.Params.listPages.disableFeaturedVideo | default true)) (.Params.video) }}
+                    <div class="card-header">
+                        <a href="{{ .RelPermalink }}">
+                            <div class="video-container" style="text-align: center;">
+                                <video width="640" height="360" autoplay loop>
+                                <source src="{{ .Params.video }}" type="video/mp4" alt="{{ .Title }}">
+                                Your browser does not support video.
+                                </video>
+                            </div>
                         </a>
                     </div>
                     {{ end }}

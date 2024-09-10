@@ -1,15 +1,12 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Params.description }}">
 <link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
-
 <!-- fontawesome -->
 <script defer src="{{.Site.Params.staticPath}}/fontawesome-6/all-6.4.2.js"></script>
 {{ end }}
-
 {{ define "title" }}
 {{.Title }} | {{ .Site.Title }}
 {{ end }}
-
 {{ define "main" }}
 <section id="single">
   <div class="container">
@@ -24,7 +21,6 @@
                 <small>|</small>
               {{ end }}
               {{ .Date.Format (.Site.Params.datesFormat.article | default "Jan 2, 2006") }}
-
               {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
               <span id="readingTime">
                 {{ .Site.Params.singlePages.readTime.content | default "min read" }}
@@ -35,6 +31,14 @@
           {{ if .Params.image }}
           <div class="featured-image">
             <img class="img-fluid mx-auto d-block" src="{{ .Params.image }}" alt="{{ .Title }}">
+          </div>
+          {{ end }}
+          {{ if .Params.video }}
+          <div class="video-container" style="text-align: center;">
+            <video width="640" height="360" autoplay loop>
+              <source src="{{ .Params.video }}" type="video/mp4" alt="{{ .Title }}">
+              Your browser does not support video.
+            </video>
           </div>
           {{ end }}
           <article class="page-content  p-2">
@@ -54,7 +58,6 @@
               </div>
           </aside>
           {{ end }}
-
           {{ if .Params.tags }}
           <aside class="tags">
             <h5>{{ .Site.Params.terms.tags | default "Tags" }}</h5>
@@ -67,7 +70,6 @@
             </ul>
           </aside>
           {{end}}
-
           {{ if .Params.socialShare | default .Site.Params.singlePages.socialShare | default true }}
           <aside class="social">
             <h5>{{ .Site.Params.terms.social | default "Social" }}</h5>
@@ -110,18 +112,15 @@
     <i class="fas fa-angle-up"></i>
   </button>
 </section>
-
 {{ if or (.Site.Params.singlePages.scrollprogress.enable | default true) (.Params.enableScrollProgress) }}
 <div class="progress">
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <Script src="{{.Site.Params.staticPath}}/js/scrollProgressBar.js"></script>
 {{ end }}
-
 <script>
   var topScroll = document.getElementById("topScroll");
   window.onscroll = function() {scrollFunction()};
-
   function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       topScroll.style.display = "block";
@@ -129,12 +128,10 @@
       topScroll.style.display = "none";
     }
   }
-
   function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-
   // To set height of sticky sidebar dynamically
   let stickySideBarElem = document.getElementById("stickySideBar");
   let stickyNavBar = {{ .Site.Params.navbar.stickyNavBar.enable | default false }};
@@ -146,9 +143,7 @@
     stickySideBarElem.style.top = "50px";
   }
 </script>
-
 {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
 <script src="{{.Site.Params.staticPath}}/js/readingTime.js"></script>
 {{end}}
-
 {{ end }}
