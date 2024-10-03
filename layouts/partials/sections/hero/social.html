@@ -4,6 +4,7 @@
         <a href="{{ .url }}"
             {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
             class="btn social-icon"
+            aria-label="{{ .label }}"
         >
             <i class="{{ .icon }}"></i>
         </a>
@@ -15,6 +16,7 @@
         <a href="{{ .url }}"
             {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
             class="btn social-icon"
+            aria-label="{{ .label }}"
         >
             <img src="{{ .icon }}">
         </a>
