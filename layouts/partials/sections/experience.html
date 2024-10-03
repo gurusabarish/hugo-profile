@@ -15,8 +15,7 @@
                                 role="tab" 
                                 data-bs-toggle="pill"
                                 id='{{ replace .company " " "-" }}-{{ replace .date " " "-" }}-tab'
-                                data-bs-target='#pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}'
-                                aria-controls='{{ replace .company " " "-" }}-{{ replace .date " " "-" }}' 
+                                data-bs-target='#pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}' 
                             >
                                 {{ .company }}
                             </div>
@@ -25,12 +24,11 @@
                         <li class="nav-item px-1 bg-transparent" role="presentation">
                             <div 
                                 class="nav-link bg-transparent" 
-                                aria-selected="true" 
+                                aria-selected="false" 
                                 role="tab" 
                                 data-bs-toggle="pill"
                                 id='{{ replace .company " " "-" }}-{{ replace .date " " "-" }}-tab'
                                 data-bs-target='#pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}' 
-                                aria-controls='{{ replace .company " " "-" }}-{{ replace .date " " "-" }}'
                             >
                                 {{ .company }}
                             </div>
@@ -45,7 +43,6 @@
                             class="tab-pane fade show active bg-transparent" 
                             role="tabpanel"
                             id='pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}'
-                            aria-labelledby='pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}-tab'
                         >
                             <div>
                                 <span class="h4">{{ .job }}</span>
@@ -83,7 +80,6 @@
                             class="tab-pane fade bg-transparent" 
                             role="tabpanel"
                             id='pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}'
-                            aria-labelledby='pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}-tab'
                         >
                             <div>
                                 <span class="h4">{{ .job }}</span>
