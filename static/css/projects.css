@@ -1,9 +1,5 @@
 /* projects */
 
-#projects h3 {
-    color: var(--text-secondary-color) !important;
-}
-
 #projects a {
     text-decoration: none;
     color: var(--text-color) !important;
