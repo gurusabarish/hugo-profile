@@ -364,10 +364,6 @@ header .navbar.animate {
     transition: none;
 }
 
-#experience .experience-container .tab-content .tab-pane .featuredLink a.btn:focus {
-    box-shadow: none;
-}
-
 #experience .experience-container .tab-content .tab-pane .featuredLink a.btn:hover {
     color: var(--text-color) !important;
     opacity: 0.7;

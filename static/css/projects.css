@@ -54,7 +54,3 @@
     border-radius: .5rem !important;
     border-color: var(--primary-color) !important;
 }
-
-#projects .float-end .btn:focus {
-    box-shadow: none !important;
-}
