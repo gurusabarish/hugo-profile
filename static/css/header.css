@@ -33,7 +33,7 @@ header .navbar .navbar-nav a {
 }
 .navbar-text {
     font-size: 16px !important;
-    opacity: 0.95;
+    opacity: 1;
     white-space: nowrap;
 }
 header .nav-link{

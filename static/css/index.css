@@ -88,7 +88,7 @@ header .navbar.animate {
 
 #hero .subtitle {
     font-size: clamp(14px,5vw,16px);
-    opacity: 0.6;
+    opacity: 1;
 }
 
 #hero h2 {
@@ -99,13 +99,13 @@ header .navbar.animate {
 #hero h3 {
     font-size: clamp(40px, 8vw, 60px);
     /* color: var(--primary-color) !important; */
-    opacity: 0.5;
+    opacity: 1;
 }
 
 #hero p {
     margin: 20px 0px 0px;
     max-width: 640px;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 #hero .image img {
@@ -155,10 +155,6 @@ header .navbar.animate {
     color: var(--text-color) !important;
     border-radius: .75rem;
     transition: none;
-}
-
-#hero a.btn:focus {
-    box-shadow: none;
 }
 
 #hero a.btn:hover {
