@@ -91,7 +91,7 @@ header .navbar.animate {
     opacity: 1;
 }
 
-#hero h2 {
+#hero h1 {
     font-size: clamp(40px, 8vw, 80px);
     color: var(--primary-color) !important;
 }
