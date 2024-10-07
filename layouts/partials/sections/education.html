@@ -23,13 +23,13 @@
                                 <div class="float-end">
                                     <small>{{ .date }}</small>
                                 </div>
-                                <h5 class="card-title">{{ .title }}</h5>
+                                <h4 class="card-title">{{ .title }}</h4>
                                 
                                 {{ if .school.url }}
                                 <a href="{{ .school.url }}" target="_blank">
-                                    <h6>
+                                    <h5>
                                     {{ .school.name }}
-                                    </h6>
+                                    </h5>
                                 </a>
                                 {{ else }}
                                 {{ .school.name }}

@@ -96,7 +96,7 @@ header .navbar.animate {
     color: var(--primary-color) !important;
 }
 
-#hero h3 {
+#hero h2 {
     font-size: clamp(40px, 8vw, 60px);
     /* color: var(--primary-color) !important; */
     opacity: 1;
@@ -418,13 +418,13 @@ header .navbar.animate {
     opacity: 0.9;
 }
 
-#education .card .card-body > a h6 {
+#education .card .card-body > a h5 {
     display: inline-block;
     text-decoration: none;
     color: var(--primary-color) !important;
 }
 
-#education .card .card-body > a h6::after {
+#education .card .card-body > a h5::after {
     content: "";
     display: block;
     width: 0px;
@@ -435,7 +435,7 @@ header .navbar.animate {
     opacity: 0.5;
 }
 
-#education .card .card-body > a h6:hover::after, #education .card .card-body > a h6:focus::after, #education .card .card-body > a h6:active::after {
+#education .card .card-body > a h5:hover::after, #education .card .card-body > a h5:focus::after, #education .card .card-body > a h5:active::after {
     width: 100%;
 }
 
@@ -472,7 +472,7 @@ header .navbar.animate {
     cursor: alias;
 }
 
-#achievements .card h5 {
+#achievements .card h4 {
     color: var(--text-color) !important;
     opacity: 0.9;
 }
