@@ -148,6 +148,21 @@ params:
           url: https://www.linkedin.com/in/sagarbhure/
         - icon: "fas fa-envelope"
           url: "mailto:sagarbhureaerospace@gmail.com"
+    conferences:
+      enable: true
+      items:
+        - icon: "fas fa-lock" # Example icon for BlackHat
+          name: "BlackHat"
+        - icon: "fas fa-shield-alt" # Example icon for NorthSec
+          name: "NorthSec"
+        - icon: "fas fa-user-secret" # Example icon for HITCON
+          name: "HITCON"
+        - icon: "fas fa-network-wired" # Example icon for Hack in Paris
+          name: "Hack in Paris"
+        - icon: "fas fa-code" # Example icon for APISecure
+          name: "APISecure"
+        - icon: "fas fa-bug" # Example icon for HITB Security
+          name: "HITB Security"
 #      customIcons:
 #        - icon: /fav.png
 #          url: "https://example.com"
