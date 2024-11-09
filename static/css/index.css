@@ -352,6 +352,14 @@ header .navbar.animate {
     padding-left: 20px;
 }
 
+#experience .experience-container .tab-content .tab-pane ul li ul {
+    padding-bottom: 0px;
+}
+
+#experience .experience-container .tab-content .tab-pane ul li ul > li:last-child {
+    margin-bottom: 0px;
+}
+
 #experience .experience-container .tab-content .tab-pane ul li::before {
     content: "▹";
     color: var(--primary-color);
