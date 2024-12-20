@@ -25,11 +25,11 @@
               {{ end }}
               {{ .Date.Format (.Site.Params.datesFormat.article | default "Jan 2, 2006") }}
 
-              {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
+              <!-- {{ if or (.Site.Params.singlePages.readTime.enable | default false) (.Params.enableReadingTime) }}
               <span id="readingTime">
                 {{ .Site.Params.singlePages.readTime.content | default "min read" }}
               </span>
-              {{ end }}
+              {{ end }} -->
             </div>
           </div>
           {{ if .Params.image }}
