@@ -372,6 +372,7 @@ params:
       title: Recent Posts
       enable: true
       disableFeaturedImage: false
+      disableFeaturedVideo: false
     socialNetworks:
       github: https://github.com
       linkedin: https://linkedin.com
@@ -382,7 +383,7 @@ params:
   # List pages like blogs and posts
   listPages:
     disableFeaturedImage: false
-
+    disableFeaturedVideo: false
   # Single pages like blog and post
   singlePages:
     socialShare: true
