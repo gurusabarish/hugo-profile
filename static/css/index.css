@@ -91,14 +91,13 @@ header .navbar.animate {
     opacity: 0.6;
 }
 
-#hero h2 {
+#hero h1 {
     font-size: clamp(40px, 8vw, 80px);
     color: var(--primary-color) !important;
 }
 
-#hero h3 {
+#hero h2 {
     font-size: clamp(40px, 8vw, 60px);
-    /* color: var(--primary-color) !important; */
     opacity: 0.5;
 }
 
