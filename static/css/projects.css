@@ -62,3 +62,38 @@
 #projects .float-end .btn:focus {
     box-shadow: none !important;
 }
+
+#projects .card-footer {
+    padding: 1rem; /* Adjust padding as needed */
+}
+
+#projects .card-footer .d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#projects .card-footer .icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem; /* Adjust icon size */
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+#projects .card-footer .icons a:hover {
+    color: var(--primary-color); /* Add hover color */
+}
+
+#projects .card-footer .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#projects .card-footer .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
