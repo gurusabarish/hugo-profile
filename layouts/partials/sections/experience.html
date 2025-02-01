@@ -18,6 +18,9 @@
                                 data-bs-target='#pills-{{ $sanitizedCompany }}'
                                 aria-controls='{{ $sanitizedCompany }}' 
                             >
+                                {{ if .companyLogo }}
+                                <img class="experience-company-logo" src="{{ .companyLogo }}" alt="{{ .company }} logo">
+                                {{ end }}
                                 {{ .company }}
                             </div>
                         </li>
