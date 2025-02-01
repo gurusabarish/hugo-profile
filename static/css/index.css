@@ -271,6 +271,19 @@ header .navbar.animate {
     background-color: transparent !important;
 }
 
+#experience .experience-company-logo {
+    /* Align the logo to the left of the text */
+    float: left;
+    /* Height must be fixed to avoid the logo overflowing the tab height, which cannot be changed */
+    height: 25px;
+    /* Width is fixed, but with a max limit, which means that logos with a width lower than this limit will NOT add empty space at left and right */
+    max-width:  30px;
+    /* Scale down will take the necessary specified space that is width x height without stretching the logo */
+    object-fit: scale-down;
+    /* Leave some space on the right side of the logo to separate it from the text */
+    margin-right: 5px;
+}
+
 #experience .tab-pane > * {
     opacity: 0.9;
 }
