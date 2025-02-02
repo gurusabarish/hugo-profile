@@ -40,6 +40,23 @@
     </span>
     {{ end }}
 
+    {{ if .Site.Params.footer.socialNetworks.email }}
+    <span class="px-1">
+        <a href="mailto:{{ .Site.Params.footer.socialNetworks.email }}" aria-label="gmail">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 256 193">
+                <!-- Gmail logo -->
+                <path fill="#4285F4" d="M58.182 192.05V93.14L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455h40.727Z"/>
+                <path fill="#34A853" d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-58.182 43.637v98.908Z"/>
+                <path fill="#EA4335" d="M58.182 93.14 0 49.504v-9.317C0 30.518 7.825 22.69 17.455 22.69h40.727v70.45Z"/>
+                <path fill="#FBBC05" d="M197.818 22.69h40.727c9.659 0 17.455 7.826 17.455 17.455v9.317l-58.182 43.637v-70.45Z"/>
+                <path fill="#C5221F" d="M58.182 22.69v70.45l58.181 43.636 15.273-11.227 42.182-31.409v-70.45H58.182Z"/>
+                <path fill="#FFFFFF" d="M116.363 136.776 58.182 93.14v98.91h58.181v-55.274Z"/>
+            </svg>
+        </a>
+    </span>
+    {{end}}
+    
+
     {{ if .Site.Params.footer.socialNetworks.twitter }}
     <a href="{{ .Site.Params.footer.socialNetworks.twitter }}" aria-label="twitter">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
