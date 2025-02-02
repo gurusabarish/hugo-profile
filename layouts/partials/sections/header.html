@@ -166,7 +166,8 @@
                     {{else}}
                     <!-- Single menu item -->
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{.URL}}" title="{{ .Title }}">
+                        <a class="nav-link" href="{{.URL}}" title="{{ .Title }}" 
+                        {{ if eq .Identifier "github" }}target="_blank" rel="noopener noreferrer"{{ end }}> 
                             {{ .Pre }}
                             {{ .Name }}
                         </a>
