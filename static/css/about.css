@@ -74,6 +74,7 @@
 }
 
 /* table */
+
 #single .page-content table {
     width: auto;
     border-radius: 5px;
@@ -161,6 +162,7 @@
 
 #single aside {
     /* background-color: var(--secondary-color); */
+    
     border-radius: .7rem;
     padding: .7rem 1rem;
     margin-bottom: 1em;
@@ -169,63 +171,6 @@
 #single .sticky-sidebar {
     position: sticky;
     top: 150px;
-}
-
-/* aboutImg */
-
-#single aside.aboutImg {
-    padding: .7rem 1rem;
-}
-
-#single aside.aboutImg img {
-    border-radius: 1.5rem !important;
-    position: relative;
-    /* box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2); */
-    max-width: 100%;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-    #single aside.aboutImg img {
-        width: 60%;
-    }
- }
-
-
-#single aside.aboutImg h5 {
-    margin: .7em 0;
-    margin-bottom: 1em;
-    color: var(--text-color);
-}
-
-#single aside.aboutImg .img-icon img {
-    width: 1em;
-}
-
-#single aside.aboutImg .aboutImg-content {
-    margin-bottom: 1em;
-    opacity: 0.9;
-}
-
-#single aside.aboutImg .aboutImg-content ul {
-    margin-bottom: 1em;
-    opacity: 0.9;
-}
-
-#single aside.aboutImg .aboutImg-content ul li a {
-    border: 1px solid var(--primary-color);
-    padding: .7rem;
-    color: var(--text-color);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-#single aside.aboutImg .aboutImg-content ul li {
-    margin: .7rem .5rem;
-    margin-left: 0;
-}
-
-#single aside.aboutImg .aboutImg-content ul li:hover a {
-    opacity: .8;
-    color: var(--primary-color);
 }
 
 /* Top scroll */
@@ -249,4 +194,43 @@
     color: var(--secondary-color);
     transition: .5s;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#single aside.aboutImg {
+    display: flex; /* Enable Flexbox */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Add space between the image and text */
+    padding: 0.7rem 1rem;
+}
+
+#single aside.aboutImg img {
+    border-radius: 1.5rem !important;
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+#single aside.aboutImg .aboutImg-content {
+    flex: 1; /* Allow the text to take up remaining space */
+    margin-bottom: 1em;
+    opacity: 0.9;
+}
+
+/* Responsive layout for mobile devices */
+@media (max-width: 768px) {
+    #single aside.aboutImg {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    #single aside.aboutImg img {
+        width: 100%; /* Make the image full width on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Remove unnecessary tablet-specific styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #single aside.aboutImg img {
+        width: 100%; /* Reset to full width for consistency */
+    }
 }
