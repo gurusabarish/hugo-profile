@@ -1,12 +1,13 @@
 
 /* Default font for body */
 body {
-    font-family: "Lora", serif !important;
+    /* font-family: "Lora", serif !important; */
+    font-family: "Lato", serif !important;
 }
 
 /* secondary font */
 .secondary-font, #secondary-font {
-    font-family: "Lora", serif;
+    font-family: "Montserrat", serif;
 }
 
 /* primary font */
