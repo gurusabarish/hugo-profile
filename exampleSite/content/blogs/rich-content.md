@@ -12,17 +12,7 @@ description: ""
 toc: 
 ---
 
-Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes) for rich content, along with a [Privacy Config](https://gohugo.io/about/hugo-and-gdpr/) and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
-
-## Gist Simple Shortcode
-```
-{{</* gist spf13 7896402 "img.html" */>}}
-```
-<br>
-{{< gist spf13 7896402 "img.html" >}}
-<br>
-
-
+Hugo ships with several [Embedded Shortcodes](https://gohugo.io/content-management/shortcodes/#embedded) for rich content, along with a [Privacy Config](https://gohugo.io/about/privacy/#configuration) and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
 
 ## Twitter Simple Shortcode
 ```
