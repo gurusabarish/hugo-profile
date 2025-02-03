@@ -82,3 +82,39 @@
     </div>
 </section>
 {{ end }}
+
+<script>
+    /**
+     * Activates a tab based on the current URL hash.
+     *
+     * This function retrieves the hash from the window's location. If the hash exists,
+     * it searches for the corresponding element in the document. If the element is found,
+     * it uses Bootstrap's Tab API to activate the associated tab.
+     */
+    function activateTabFromHash() {
+        var hash = window.location.hash;
+        if (hash) {
+            var triggerEl = document.querySelector(hash);
+            if (triggerEl) {
+                var tabInstance = bootstrap.Tab.getOrCreateInstance(triggerEl);
+                tabInstance.show();
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Activate tab based on the URL hash
+        activateTabFromHash();
+
+        // Listen for when a tab is shown to update the URL with its id
+        var tabElements = document.querySelectorAll('[data-bs-toggle="pill"]');
+        tabElements.forEach(function(tab) {
+            tab.addEventListener('shown.bs.tab', function(e) {
+                history.pushState(null, "", '#' + e.target.id);
+            });
+        });
+    });
+
+    // Listen for hash changes (in case the URL is manually updated)
+    window.addEventListener('hashchange', activateTabFromHash);
+</script>
