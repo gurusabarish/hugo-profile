@@ -22,20 +22,25 @@
                     </div>
                     {{ if or (.links) (.featured) }}
                     <div class="card-footer py-3">
-                        {{ range .links }}
-                        <span class="m-1 mx-2">
-                            <a href="{{ .url }}" target="_blank">
-                                <i class="{{ .icon }}"></i>
-                            </a>
-                        </span>
-                        {{ end }}
-                        {{ if .featured }}
-                        <span class="float-end">
-                            <a class="btn btn-sm" href="{{ .featured.link }}" target="_blank">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="icons d-flex">
+                                {{ range .links }}
+                                <span class="m-1 mx-2">
+                                    <a href="{{ .url }}" target="_blank">
+                                        <i class="{{ .icon }}"></i>
+                                    </a>
+                                </span>
+                                {{ end }}
+                            </div>
+                            {{ if .featured }}
+                            <span class="float-end">
+                                <a class="btn btn-sm" href="{{ .featured.link }}" target="_blank">
                                 {{ .featured.name }}
+                                </a>
+                            </span>
                             </a>
-                        </span>
-                        {{ end }}
+                            {{ end }}
+                        </div>
                     </div>
                     {{ end }}
                 </div>
