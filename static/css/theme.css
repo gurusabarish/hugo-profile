@@ -32,7 +32,10 @@
 }
 
 #theme-toggle svg {
-    height: 18px;
+    display: block; /* Prevent inline gaps */
+    vertical-align: middle; /* Ensure icons align with text */
+    width: 24px; /* Set consistent size */
+    height: 24px;
 }
 
 button#theme-toggle {
