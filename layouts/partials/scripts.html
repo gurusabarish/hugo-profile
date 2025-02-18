@@ -50,14 +50,16 @@
 {{- end }}
 
 {{ if not (.Site.Params.navbar.disableSearch | default false) }}
-    <script src="{{ .Site.Params.staticPath }}/js/search.js"></script>
+<script src="{{ .Site.Params.staticPath }}/js/search.js"></script>
 {{ end }}
 
 
 {{ if or (.Params.mathjax | default false) (.Site.Params.mathjax) }}
 
 {{ "<!-- MathJax -->" | safeHTML }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js" integrity="sha384-M5jmNxKC9EVnuqeMwRHvFuYUE8Hhp0TgBruj/GZRkYtiMrCRgH7yvv5KY+Owi7TW" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"
+    integrity="sha384-M5jmNxKC9EVnuqeMwRHvFuYUE8Hhp0TgBruj/GZRkYtiMrCRgH7yvv5KY+Owi7TW"
+    crossorigin="anonymous"></script>
 
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -74,12 +76,14 @@
 </script>
 {{ end }}
 
-{{ if (.Site.Params.cloudinary_cloud_name | default false) }}
+{{ if (.Site.Params.cloudinaryCloudName | default false) }}
 
 {{ "<!-- cloudinary -->" | safeHTML }}
-<script src="https://unpkg.com/cloudinary-core@2.13.0/cloudinary-core-shrinkwrap.js" integrity="sha384-0bQduxVhZMs6xfvcPH9osdUIw44hjF8EahHuQBdyN6Rryk8tgyFO80Yz5d14F+5d" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/cloudinary-core@2.13.0/cloudinary-core-shrinkwrap.js"
+    integrity="sha384-0bQduxVhZMs6xfvcPH9osdUIw44hjF8EahHuQBdyN6Rryk8tgyFO80Yz5d14F+5d"
+    crossorigin="anonymous"></script>
 <script type="text/javascript">
-    var cl = cloudinary.Cloudinary.new({cloud_name: "{{- .Site.Params.cloudinary_cloud_name }}"}); 
+    var cl = cloudinary.Cloudinary.new({ cloud_name: "{{- .Site.Params.cloudinaryCloudName }}" });
     cl.responsive();
 </script>
 

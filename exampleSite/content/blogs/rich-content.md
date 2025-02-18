@@ -50,7 +50,7 @@ These shortcodes are not Hugo built-ins, but are provided by the theme.
 
 You can learn more about this [here](https://cloudinary.com/documentation/responsive_images).
 
-Set the `cloudinary_cloud_name` parameter in your site config to use this shortcode.
+Set the `cloudinaryCloudName` parameter in your site config to use this shortcode.
 
 ```
 {{</* dynamic-img src="/my/image/on/cloudinary" title="A title for the image" */>}}
