@@ -28,7 +28,7 @@
    {{ if .Site.Params.footer.socialNetworks.github }}
     <span class="px-1">
         <a href="{{ .Site.Params.footer.socialNetworks.github }}" target="_blank"  aria-label="github">
-            <img src="images/misc/github-logo.png" alt="Github" width="38" height="38" />
+            <img src="{{ "images/misc/github-logo.png" | absURL }}" alt="Github" width="38" height="38" />
         </a>
     </span>
     {{ end }}
@@ -50,7 +50,7 @@
     {{ if .Site.Params.footer.socialNetworks.linkedin }}
     <span class="px-1">
         <a href="{{ .Site.Params.footer.socialNetworks.linkedin }}" target="_blank" aria-label="linkedin">
-            <img src="images/misc/linkedin-logo.png" alt="linkedin" width="38" height="38" />
+            <img src="{{ "images/misc/linkedin-logo.png" | absURL }}" alt="linkedin" width="38" height="38" />
         </a>
     </span>
     {{ end }}
@@ -76,7 +76,7 @@
     {{ if .Site.Params.footer.socialNetworks.email }}
     <span class="px-1">
         <a href="mailto:{{ .Site.Params.footer.socialNetworks.email }}" target="_blank" aria-label="gmail">
-            <img src="images/misc/gmail-logo.png" alt="Gmail" width="38" height="38" />
+            <img src="{{ "images/misc/gmail-logo.png"  | absURL }}" alt="Gmail" width="38" height="38" />
         </a>
     </span>
     {{ end }}

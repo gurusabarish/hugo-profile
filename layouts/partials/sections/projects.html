@@ -7,7 +7,7 @@
         <div class="row justify-content-center px-3 px-md-5">
             {{ range .Site.Params.featured_projects.items }}
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="{{ .title }}">
+                <div class="card my-3 h-100" title="{{ .title }}" onclick="location.href='{{ .featured.link}}';" style="cursor: pointer;">
                     <div class="card-head">
                         <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}">
                     </div>
@@ -46,7 +46,7 @@
             {{ range ( where .Site.RegularPages "Type" "projects" ) }}
             {{ if .Params.showInHome | default true }}
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="{{ .Title }}">
+                <div class="card my-3 h-100" title="{{ .Title }}" onclick="location.href='{{ .RelPermalink}}';" style="cursor: pointer;">
                     <div class="card-head">
                         <img class="card-img-top" src="{{ .Params.image }}" alt="{{ .Title }}">
                     </div>
@@ -93,7 +93,7 @@
         <div class="row justify-content-center px-3 px-md-5">
             {{ range .Site.Params.projects.items }}
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="{{ .title }}">
+                <div class="card my-3 h-100" title="{{ .title }}" onclick="location.href='{{ .featured.link }}';" style="cursor: pointer;">
                     <div class="card-head">
                         <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}">
                     </div>
@@ -132,7 +132,7 @@
             {{ range ( where .Site.RegularPages "Type" "projects" ) }}
             {{ if .Params.showInHome | default true }}
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="{{ .Title }}">
+                <div class="card my-3 h-100" title="{{ .Title }}" onclick="location.href='{{ .RelPermalink}}';" style="cursor: pointer;">
                     <div class="card-head">
                         <img class="card-img-top" src="{{ .Params.image }}" alt="{{ .Title }}">
                     </div>
