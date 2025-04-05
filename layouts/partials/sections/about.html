@@ -14,13 +14,12 @@
                 {{ .Site.Params.about.content | markdownify }}
 
                 {{ if .Site.Params.about.skills.enable }}
-                {{ .Site.Params.about.skills.title }}
+                <h4 class="mt-4">{{ .Site.Params.about.skills.title }}</h4>
                 <div class="row">
                     {{ range .Site.Params.about.skills.items }}
-                    <div class="col-md-4">
-                        <ul class="list-unstyled">
-                            <li>{{ . | markdownify }}</li>
-                        </ul>
+                    <div class="col-md-4 mb-2 d-flex">
+                        <span class="me-2 flex-shrink-0">&raquo;</span>
+                        <div>{{ . | markdownify }}</div>
                     </div>
                     {{ end }}
                 </div>
