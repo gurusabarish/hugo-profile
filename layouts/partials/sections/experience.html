@@ -1,27 +1,60 @@
 {{ if .Site.Params.experience.enable | default false }}
-<section id="experience" class="py-5">
-    <div class="container">
-        <h3 class="text-center">{{ .Site.Params.experience.title | default "Experience" }}</h3>
-        <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-8 col-lg-8 py-5">
-                <div class="experience-container px-3 pt-2">
+<section id="experience" class="py-0 py-sm-5">
+    <div class="container bg-transparent">
+        <h3 class="text-center bg-transparent">{{ .Site.Params.experience.title | default "Experience" }}</h3>
+        <div class="row justify-content-center bg-transparent">
+            <div class="col-sm-12 col-md-8 col-lg-8 py-5 bg-transparent">
+                <div class="experience-container px-3 pt-2 bg-transparent">
                     <style>
-                    #experience .tab-pane ul {
-                        list-style: none;
-                        padding-left: 0; 
-                        margin-top: 10px;
+                    /* Global styles for the experience section */
+                    #experience {
+                        background-color: transparent;
                     }
+                    
+                    /* Preserve default styling for navigation tabs */
+                    #experience #pills-tab {
+                        background-color: transparent;
+                    }
+                    
+                    #experience #pills-tab li {
+                        padding-left: 0 !important;
+                        background-color: transparent;
+                    }
+                    
+                    #experience #pills-tab li::before {
+                        content: none !important;
+                    }
+                    
+                    /* Style content area lists to match career highlights */
+                    #experience .tab-pane ul {
+                        display: grid;
+                        gap: 0px 10px;
+                        padding: 0px;
+                        margin: 20px 0px 0px;
+                        overflow: hidden;
+                        list-style: none;
+                        background-color: transparent;
+                    }
+                    
                     #experience .tab-pane ul li {
                         position: relative;
-                        margin-bottom: 5px; 
-                        padding-left: 20px; 
+                        margin-bottom: 10px;
+                        padding-left: 20px;
+                        background-color: transparent;
                     }
+                    
                     #experience .tab-pane ul li::before {
                         content: "»";
-                        color: var(--primary-color); 
+                        color: var(--primary-color);
                         position: absolute;
-                        left: 0;
-                        top: 0; 
+                        left: 0px;
+                    }
+                    
+                    /* Ensure all content areas are transparent */
+                    #experience .tab-content,
+                    #experience .tab-pane,
+                    #experience .tab-pane > div {
+                        background-color: transparent;
                     }
                     </style>
                     <ul class="nav nav-pills mb-3 bg-transparent primary-font" id="pills-tab" role="tablist">
@@ -70,7 +103,7 @@
                                 {{ $company := .company }}
                                 {{ $companyUrl := .companyUrl }}
                                 {{ range .positions }}
-                                <div class="mb-4">
+                                <div class="mb-4 bg-transparent">
                                     <span class="h4">{{ .job }}</span>
                                     <small>-</small>
                                     <a href="{{ $companyUrl }}" target="_blank">{{ $company }}</a>
@@ -102,11 +135,11 @@
                                 </div>
                                 {{ end }}
                             {{ else }}
-                                <div>
+                                <div class="bg-transparent">
                                     <span class="h4">{{ .job }}</span>
                                     <small>-</small>
                                     <a href="{{ .companyUrl }}" target="_blank">{{ .company }}</a>
-                                    <div class="pb-1">
+                                    <div class="pb-1 bg-transparent">
                                         <small>{{ .date }}</small>
                                         {{ if .info.enable | default true }}
                                         <span class="p-2">
@@ -123,7 +156,7 @@
                                     </div>
 
                                     {{ if .featuredLink.enable | default false }}
-                                    <div class="py-2 featuredLink">
+                                    <div class="py-2 featuredLink bg-transparent">
                                         <a class="p-2 px-4 btn btn-outline-primary btn-sm" href={{ .featuredLink.url | default "#" }} target="_blank">
                                             {{ .featuredLink.name | default "Featured Link" }} 
                                         </a>
@@ -145,11 +178,11 @@
                                 {{ $company := .company }}
                                 {{ $companyUrl := .companyUrl }}
                                 {{ range .positions }}
-                                <div class="mb-4">
+                                <div class="mb-4 bg-transparent">
                                     <span class="h4">{{ .job }}</span>
                                     <small>-</small>
                                     <a href="{{ $companyUrl }}" target="_blank">{{ $company }}</a>
-                                    <div class="pb-1">
+                                    <div class="pb-1 bg-transparent">
                                         <small>{{ .date }}</small>
                                         {{ if .info.enable | default true }}
                                         <span class="p-2">
@@ -166,25 +199,25 @@
                                     </div>
                                     
                                     {{ if .featuredLink.enable | default false }}
-                                    <div class="py-2 featuredLink">
+                                    <div class="py-2 featuredLink bg-transparent">
                                         <a class="p-2 px-4 btn btn-outline-primary btn-sm" href={{ .featuredLink.url | default "#" }} target="_blank">
                                             {{ .featuredLink.name | default "Featured Link" }} 
                                         </a>
                                     </div>
                                     {{ end }}
 
-                                    <div class="pt-2">
+                                    <div class="pt-2 bg-transparent">
                                         {{ .content | markdownify}}
                                     </div>
                                 </div>
                                 {{ end }}
                             {{ else }}
-                                <div>
+                                <div class="bg-transparent">
                                     <span class="h4">{{ .job }}</span>
                                     <small>-</small>
                                     <a href="{{ .companyUrl }}" target="_blank">{{ .company }}</a>
                                     
-                                    <div class="pb-1">
+                                    <div class="pb-1 bg-transparent">
                                         <small>{{ .date }}</small>
                                         {{ if .info.enable | default true }}
                                         <span class="p-2">
@@ -201,14 +234,14 @@
                                     </div>
                                     
                                     {{ if .featuredLink.enable | default false }}
-                                    <div class="py-2 featuredLink">
+                                    <div class="py-2 featuredLink bg-transparent">
                                         <a class="p-2 px-4 btn btn-outline-primary btn-sm" href={{ .featuredLink.url | default "#" }} target="_blank">
                                             {{ .featuredLink.name | default "Featured Link" }} 
                                         </a>
                                     </div>
                                     {{ end }}
 
-                                    <div class="pt-2">
+                                    <div class="pt-2 bg-transparent">
                                         {{ .content | markdownify}}
                                     </div>
                                 </div>
