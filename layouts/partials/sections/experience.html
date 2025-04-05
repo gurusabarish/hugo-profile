@@ -5,6 +5,25 @@
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-8 col-lg-8 py-5">
                 <div class="experience-container px-3 pt-2">
+                    <style>
+                    #experience .tab-pane ul {
+                        list-style: none;
+                        padding-left: 0; 
+                        margin-top: 10px;
+                    }
+                    #experience .tab-pane ul li {
+                        position: relative;
+                        margin-bottom: 5px; 
+                        padding-left: 20px; 
+                    }
+                    #experience .tab-pane ul li::before {
+                        content: "»";
+                        color: var(--primary-color); 
+                        position: absolute;
+                        left: 0;
+                        top: 0; 
+                    }
+                    </style>
                     <ul class="nav nav-pills mb-3 bg-transparent primary-font" id="pills-tab" role="tablist">
                         {{ range $index, $element := .Site.Params.experience.items }}
                         {{ if (eq $index 0) }}
