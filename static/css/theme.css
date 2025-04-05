@@ -54,3 +54,9 @@ body *::selection {
     color: var(--text-color) !important;
     background-color: var(--primary-color) !important;
 }
+
+#hero .subtitle {
+    font-size: clamp(18px, 5vw, 24px) !important;
+    opacity: 0.8 !important;
+    font-weight: 500 !important;
+}

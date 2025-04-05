@@ -1,0 +1,39 @@
+{{ if .Site.Params.career_highlights.enable | default false }}
+<section id="career-highlights" class="py-0 py-sm-5">
+    <div class="container bg-transparent">
+        <h3 class="text-center bg-transparent">{{ .Site.Params.career_highlights.title | default "Career Highlights" }}</h3>
+        <div class="bg-transparent row justify-content-center px-3 py-5">
+            <div class="col-sm-12 col-md-12 col-lg-8 content">
+                <style>
+                #career-highlights ul {
+                    display: grid;
+                    gap: 0px 10px;
+                    padding: 0px;
+                    margin: 20px 0px 0px;
+                    overflow: hidden;
+                    list-style: none;
+                }
+                
+                #career-highlights ul li {
+                    position: relative;
+                    margin-bottom: 10px;
+                    padding-left: 20px;
+                }
+                
+                #career-highlights ul li::before {
+                    content: "▹";
+                    color: var(--primary-color);
+                    position: absolute;
+                    left: 0px;
+                }
+                </style>
+                <ul>
+                    {{ range .Site.Params.career_highlights.items }}
+                    <li>{{ . | markdownify }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }} 
