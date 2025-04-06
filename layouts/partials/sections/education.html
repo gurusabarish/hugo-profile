@@ -1,12 +1,12 @@
 {{ if .Site.Params.education.enable | default false }}
 <section id="education" class="py-5">
-    <div class="container">
+    <div class="container bg-transparent">
         <h3 class="text-center">{{ .Site.Params.education.title | default "Education" }}</h3>
-        <div class="row justify-content-center py-5">
+        <div class="row justify-content-center bg-transparent px-3 py-5">
             {{ $indexMenu := .Site.Params.education.index }}
             {{ range $index, $element := .Site.Params.education.items }}
             <div class="col-12 p-0">
-                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                <div class="row row align-items-center justify-content-center m-1 mb-5">
                     {{ if $indexMenu }}
                     <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
                         <div class="py-2">
@@ -17,45 +17,16 @@
                     </div>
                     {{ end }}
 
-                    <div class="col-md-9">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="float-end">
-                                    <small>{{ .date }}</small>
-                                </div>
+                    <div class="col-md-12">
+                        <!-- Removed card and card-body for styling consistency -->
                                 <h5 class="card-title">{{ .title }}</h5>
-                                
-                                {{ if .school.url }}
-                                <a href="{{ .school.url }}" target="_blank">
-                                    <h6>
-                                    {{ .school.name }}
-                                    </h6>
-                                </a>
-                                {{ else }}
-                                {{ .school.name }}
-                                {{ end }}
-
-                                {{ if .GPA }}
                                 <div class="py-1">
-                                    GPA:
-                                    <i>
-                                        <small>{{ .GPA }}</small>
-                                    </i> 
+                                    {{ .school.name }} ({{ .date }})
                                 </div>
-                                {{ end }}
                                 <div class="py-1 education-content">
                                     {{ .content | markdownify}}
                                 </div>
-
-                                {{ if .featuredLink.enable }}
-                                <div class="py-1">
-                                    <a href="{{ .featuredLink.url }}" class="btn">
-                                        {{ .featuredLink.name | default "Featured" }}
-                                    </a>
-                                </div>
-                                {{ end }}
-                            </div>
-                        </div>
+                        <!-- Removed closing card and card-body divs -->
                     </div>
                 </div>
             </div>
@@ -64,3 +35,4 @@
     </div>
 </section>
 {{ end }}
+
