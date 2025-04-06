@@ -94,6 +94,15 @@
                     </li>
                     {{ end }}
 
+                    {{ if and (.Site.Params.career_highlights.enable | default false) (not (.Site.Params.navbar.menus.disableCareerHighlights | default false)) }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#career_highlights"
+                            aria-label="career_highlights">
+                            {{ .Site.Params.career_highlights.title | default "Career Highlights" }}
+                        </a>
+                    </li>
+                    {{ end }}
+
                     {{ if and (.Site.Params.experience.enable | default false) (not (.Site.Params.navbar.menus.disableExperience | default false)) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#experience"
