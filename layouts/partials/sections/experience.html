@@ -27,7 +27,7 @@
                         margin-right: 0.5em; /* Space between bullet and text, matches .me-2 */
                     }
                     </style>
-                    <ul class="nav nav-pills mb-3 bg-transparent primary-font" id="pills-tab" role="tablist">
+                    <ul class="nav nav-pills mb-3 bg-transparent" id="pills-tab" role="tablist"> <!-- Removed primary-font class -->
                         {{ range $index, $element := .Site.Params.experience.items }}
                         {{ if (eq $index 0) }}
                         <li class="nav-item px-1 bg-transparent" role="presentation">
