@@ -112,6 +112,15 @@
                     </li>
                     {{ end }}
 
+                    {{ if and (.Site.Params.certifications.enable | default false) (not (.Site.Params.navbar.menus.disableCertifications | default false)) }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#certifications"
+                            aria-label="certifications">
+                            {{ .Site.Params.certifications.title | default "Certifications" }}
+                        </a>
+                    </li>
+                    {{ end }}
+
                     {{ if and (.Site.Params.projects.enable | default false) (not (.Site.Params.navbar.menus.disableProjects | default false)) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#projects"
