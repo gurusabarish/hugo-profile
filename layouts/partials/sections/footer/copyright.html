@@ -1,6 +1,6 @@
 <div class="container py-4">
     <div class="row justify-content-center">
-        <div class="col-md-4 text-center">
+        <div class="col-md-8 text-center">
             {{ if or .Site.Params.navbar.brandLogo .Site.Params.favicon }}
                 <div class="pb-2">
                     <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">
@@ -9,7 +9,7 @@
                     </a>
                 </div>
             {{ end }}
-            &copy; {{ now.Format "2006"}} {{ .Site.Params.copyright }} {{ .Site.Params.terms.copyright | default "All Rights Reserved" }}
+            &copy; 2025 Brad Dunlap - All rights reserved
         </div>
     </div>
 </div>

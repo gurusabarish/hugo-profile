@@ -15,19 +15,13 @@
         <div class="col-lg-4 col-md-6 my-3">
             <div class="card-columns">
                 <div class="card h-100">
-                    {{ if and (not (.Site.Params.listPages.disableFeaturedImage | default false)) (.Params.image) }}
-                    <div class="card-header">
-                        <a href="{{ .RelPermalink }}">
-                            <img src="{{ .Params.image }}" class="card-img-top" alt="{{ .Title }}">
-                        </a>
-                    </div>
-                    {{ end }}
+                    {{/* Featured image removed */}}
                     <div class="card-body bg-transparent p-4 shadow-sm">
                         <a href="{{ .RelPermalink }}" class="primary-font card-title">
                             <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 25 }}</h5>
                         </a>
                         <div class="card-text secondary-font">
-                            <p>{{ .Summary | truncate 300}}</p>
+                            <p>{{ .Summary | replaceRE "!\\[.*?\\]\\(.*?\\)" "" | truncate 300}}</p>
                         </div>
                     </div>
                     <div class="mt-auto post-footer bg-transparent py-3">
