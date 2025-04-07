@@ -14,6 +14,7 @@ header .navbar .navbar-nav a {
     color: var(--text-color) !important;
     display: flex;
     align-items: center; /* Vertically align all items */
+    justify-content: center; /* Horizontally align all items */
 }
 
 #theme-toggle {
