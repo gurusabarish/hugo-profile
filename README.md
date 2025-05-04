@@ -9,7 +9,7 @@
 ![Open Pull Requests](https://img.shields.io/github/issues-pr/gurusabarish/hugo-profile?color=yellowgreen)
 ![License](https://img.shields.io/github/license/gurusabarish/hugo-profile)
 
-Hugo Profile is a high-performance, mobile-first Hugo theme for personal portfolios and blogs.
+**Hugo Profile:** a high-performance, mobile-first Hugo theme for personal portfolios and blogs.
 
 - Example Site: [https://hugo-profile.netlify.app](https://hugo-profile.netlify.app)
 - Wiki Page: [https://github.com/gurusabarish/hugo-profile/wiki](https://github.com/gurusabarish/hugo-profile/wiki)
@@ -18,94 +18,121 @@ Hugo Profile is a high-performance, mobile-first Hugo theme for personal portfol
 - Fully Responsive
 - Minimalist Design
 - SEO Friendly
-- Light / Dark / Auto Theme Modes
-  - See our wiki for [theme color customization](https://github.com/gurusabarish/hugo-profile/wiki/Color-Customization)
-- Taxonomy Support – Categories and tags for organizing content
-- Analytics Support 
-  - [Google Analytics](https://gohugo.io/templates/internal/#google-analytics)
-- Comment Support
-  - [Disqus](https://gohugo.io/content-management/comments/)
-- Contact Form Integration
-  - Integration with [FormSpree](https://formspree.io/) for submitting "Contact me" form
-- Technology used: Bootstrap, fontawesome 
+- [Light/Dark/Auto Theme Color Configuration](https://github.com/gurusabarish/hugo-profile/wiki/Color-Customization)
+- Categories and Tags Support
+- Analytics Support ([Google Analytics](https://gohugo.io/templates/internal/#google-analytics))
+- Comment Support ([Disqus](https://gohugo.io/content-management/comments/))
+- Contact Form Integration ([FormSpree](https://formspree.io/))
+- Built with Bootstrap and Font Awesome
 
 
 ## Requirements
 
 - **Hugo version 0.87.0 or higher**   
-If you haven't installed Hugo, see [here](https://gohugo.io/installation/) for installation.
+To check your installed version, run:   
+  ```bash
+  hugo version
+  ```
+  If Hugo is not installed, follow the [official installation guide](https://gohugo.io/installation/) for installation.
 
 
 ## Quick Start 
 
+1. Create a new Hugo site:  
 
-1. Create your site with Hugo.  
-    This uses the `config.yaml` configuration file instead of the default TOML.   
-
-    ```
+    ```bash
     hugo new site my-site --format="yaml"
-    ```
-  
+    ```  
+    This uses a `hugo.yaml` configuration file instead of the default TOML format. 
 
-2. Clone this repository inside your themes folder:
-    ```
-    cd my-site/themes && git clone https://github.com/gurusabarish/hugo-profile.git
-    ```
-    This allows you to make lots of custom changes. However, if you wish to get automatic or structured updates from the original repo, you can add the theme as a submodule:
+2. Add a theme.  
 
+    Option A: Clone this repository inside your themes folder.  
+    This allows you to make lots of custom changes.
+    ```bash
+    cd my-site/themes
+    git clone https://github.com/gurusabarish/hugo-profile.git
     ```
+
+    Option B: Add as a Git submodule.  
+    This allows you to get automatic or structured updates from the original repository.
+
+    ```bash
     cd my-site
     git init
     git submodule add https://github.com/gurusabarish/hugo-profile.git themes/hugo-profile
     ```    
 
-3. Copy the example configuration file to your root directory:
-    ```
+3. Copy the example configuration file to your site root:
+    ```bash
     cp -f themes/hugo-profile/exampleSite/hugo.yaml ./hugo.yaml
     ```
 
-4. Verify your site is on:
-    ```
+4. Start the Hugo development server:
+    ```bash
     hugo server
     ```
+5. Recommended: Copy example content and assets.
 
+    When you first run `hugo server`, the site may look incomplete — images may be missing and the Blog or Gallery sections might not appear.  
 
-***Note:*** 
+    This is because their content currently resides in `themes/hugo-profile/exampleSite/`, whereas Hugo expects them in the root-level `static/` (for images) and `content/` (for pages) directories.
 
-You may not see the images or the Blog/Gallery sections on the site initially, because their content currently resides in "themes/hugo-profile/exampleSite/", whereas Hugo expects them in the root-level `static/` (for images) and `content/` (for pages).
+    To have a complete view of the example site, run:  
 
-To have a complete view of the example site, simply run:    
+    ```bash
+    rsync -av themes/hugo-profile/exampleSite/static/ ./static/
+    rsync -av themes/hugo-profile/exampleSite/content/ ./content/
+    ```
 
-```
-rsync -av themes/hugo-profile/exampleSite/static/ ./static/
-rsync -av themes/hugo-profile/exampleSite/content/ ./content/
-```
-
-You can customize or replace this content to match your own site.
+    You can customize or replace this content to match your own site.
 
 
 ## Content Management
 
+You can now start customizing your site.
 
+To change the site title or homepage content, edit the `hugo.yaml` file in the root directory. This file also controls settings for showing or hiding sections of the site (e.g., About, Education).
 
-For more details: [Hugo's official docs](https://gohugo.io/getting-started/quick-start/), [content management](https://www.mikedane.com/static-site-generators/hugo/content-organization/)
+To create a new page, for example, in the Blog section, run:
 
+```bash
+hugo new content content/blogs/my-post.md
+```
 
-Refer to our [wiki](https://github.com/gurusabarish/hugo-profile/wiki) for more details.
+This creates a new file in the `content/blogs/` folder with front matter that includes metadata like the date.
 
+Here are some useful resources for your reference:
 
+* [Hugo's Quick Start Guide](https://gohugo.io/getting-started/quick-start/) – About how to create a site, add content, and publish the site.
+
+* [Hugo Content Organization – Giraffe Academy](https://www.mikedane.com/static-site-generators/hugo/content-organization/)
+
+* [Wiki Page](https://github.com/gurusabarish/hugo-profile/wiki) – Tips specific to this theme.
 
 
 ## Deployment
 
-If you do not require extensive customization of website elements, the simplest way is to click the **Use this template** button to create your own repo, and connect that repo to Netlify. Whenever you make changes to the files inside the `exampleSite` folder, Netlify will automatically detect and deploy your changes. 
+If you do not require extensive customization, the easiest way to deploy is:
+1. Click the **Use this template** button to create your own repository.
+2. Connect the repository to **Netlify**.
+
+Whenever you make changes to the files inside the `exampleSite` folder, Netlify will automatically detect and deploy your changes. 
+
+---
 
 
-If you follow the steps in the [Quick Start](#quick-start) section above, you can still deploy your site to Netlify, but a few additional configurations are required. **See [here](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/) to host your site on Netlify**.
+If you followed the steps in the [Quick Start](#quick-start) section above, you can still deploy your site to Netlify, but you'll need a few additional configurations.   
 
+See the **[Host on Netlify](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/)** guide for further information.
 
-Alternatively, you can run `hugo` to generate the final, ready-to-deploy static output (i.e., the `public/` folder) and upload to the hosting platform. It is recommended to delete the `public/` folder before re-building to ensure it contains only the latest output:
-```
+---
+
+For manual deployment, run `hugo` to generate the final, ready-to-deploy static site in the `public/` folder, which you can upload to any hosting platform.
+
+It is recommended to delete the `public/` folder before each build to ensure it only contains the latest output:
+
+```bash
 rm -rf public/ && hugo
 ```
 
