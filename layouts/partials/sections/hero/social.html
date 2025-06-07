@@ -4,6 +4,9 @@
         <a href="{{ .url }}"
             {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
             class="btn social-icon"
+            {{ if .popup }}
+            data-popup='{{ .popup | jsonify }}'
+            {{ end }}
         >
             <i class="{{ .icon }}"></i>
         </a>

@@ -13,6 +13,11 @@
   <title>
     {{- block "title" . }} {{- end }}
   </title>
+
+  <!-- Font Awesome -->
+  <script defer src="{{ .Site.Params.staticPath }}/fontawesome-6/all-6.4.2.js"></script>
+
+  <link rel="stylesheet" href="{{ "css/email-popup.css" | relURL }}">
 </head>
 
 <body class="light">
@@ -37,6 +42,8 @@
   <section id="search-content" class="py-2">
     <div class="container" id="search-results"></div>
   </section>
+
+  <script src="{{ "js/email-popup.js" | relURL }}"></script>
 </body>
 
 </html>
