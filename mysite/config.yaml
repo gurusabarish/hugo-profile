@@ -26,7 +26,7 @@ params:
   title: "Taha Boussaid"
   description: This my personal portfolio
   # staticPath: ""  # The path to serve the static files from
-  favicon: "/LogoPerso.png"
+  favicon: "/logo_site_vf.svg"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -80,7 +80,7 @@ params:
     disableSearch: false
     # searchPlaceholder: "Search"
     stickyNavBar:
-      enable : true
+      enable : false
       showOnScrollUp : true
     menus:
       disableAbout: false
@@ -104,7 +104,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "https://drive.proton.me/urls/XWXW9G2EG4#JG0n5D28M7N8"
+      url: "https://drive.proton.me/urls/HX0TEK7RWR#5gb8TWymB0OA"
       download: false
       newPage: true
     socialLinks:
@@ -161,7 +161,7 @@ params:
         - "Ansys Fluent/CFX"
         - "Paraview"
         - "Aspen Hysys"
-        - "PVSyst"
+        - "Dymola"
         - "TRNSys"
         - "Matlab/Simulink"
 
@@ -248,25 +248,15 @@ params:
 
   # Achievements
   achievements:
-    enable: false
+    enable: true
     # title: "Custom Name"
     items:
-      - title: Google kickstart runner
-        content: I solved all problems with optimal solution.
-        url: https://example.com
-        image: /images/achievment.jpg
-      - title: Facebook Hackathon Winner
-        content: Developed a product using Artificial Intelligence.
-        image: /images/achievment.jpg
-      - title: Hugo Profile
-        content: Developed a theme and getting 1K+ downloads per month.
-        url: "https://github.com/gurusabarish/hugo-profile"
-        image: /images/achievment.jpg
-      - title: Microsoft Imagine Runner
-        content: We are developed a product which can help others.
-      - title: Google Summer of Code
-        content: Contributed to a open source project.
-        url: https://example.com
+      - title: Best Collaboration Award
+        content: International Forum on Energy and Informatics.
+        url: https://cethil.insa-lyon.fr/en/node/4668 
+      - title: Best Paper Award
+        content: 38th International Conference on Efficiency, Cost, Optimization, Simulation and Environmental Impacts of Energy Systems.
+        url: https://www.linkedin.com/posts/ecos2025_ecos-activity-7347669878981509120-hYCi?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC2kL7UB5YkxLxy4xTPaaEagQRwuiLwgChI 
 
   # projects
   projects:
