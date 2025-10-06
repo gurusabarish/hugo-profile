@@ -12,11 +12,24 @@ header {
 
 header .navbar .navbar-nav a {
     color: var(--text-color) !important;
+    display: flex;
+    align-items: center; /* Vertically align all items */
+    justify-content: center; /* Horizontally align all items */
 }
 
 #theme-toggle {
     background-color: var(--background-color) !important;
     color: var(--text-color) !important;
+    display: flex;
+    align-items: center; /* Center the icons vertically */
+    justify-content: center; /* Center the icons horizontally */
+    width: 40px; /* Set consistent width */
+    height: 40px; /* Set consistent height */
+    border: none; /* Remove default border */
+    background: none; /* Remove default background */
+    cursor: pointer; /* Pointer for interactivity */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
 }
 
 .navbar-toggler {
