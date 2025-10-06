@@ -39,6 +39,27 @@
     border: none !important;
 }
 
+#projects .card .card-body a {
+    display: inline-block;
+}
+
+#projects .card .card-body a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0.5;
+}
+
+#projects .card .card-body a:hover::after,
+#projects .card .card-body a:focus::after,
+#projects .card .card-body a:active::after {
+    width: 100%;
+}
+
 #projects .card .card-footer {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;

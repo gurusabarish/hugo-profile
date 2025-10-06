@@ -440,13 +440,13 @@ header .navbar.animate {
     opacity: 0.9;
 }
 
-#education .card .card-body > a h6 {
+#education .card .card-body a {
     display: inline-block;
     text-decoration: none;
     color: var(--text-link-color) !important;
 }
 
-#education .card .card-body > a h6::after {
+#education .card .card-body a::after {
     content: "";
     display: block;
     width: 0px;
@@ -457,7 +457,7 @@ header .navbar.animate {
     opacity: 0.5;
 }
 
-#education .card .card-body > a h6:hover::after, #education .card .card-body > a h6:focus::after, #education .card .card-body > a h6:active::after {
+#education .card .card-body a:hover::after, #education .card .card-body a:focus::after, #education .card .card-body a:active::after {
     width: 100%;
 }
 
@@ -478,6 +478,7 @@ header .navbar.animate {
 
 #achievements a {
     text-decoration: none;
+    color: var(--text-link-color) !important;
 }
 
 #achievements h3 {
@@ -517,6 +518,27 @@ header .navbar.animate {
     color: var(--text-secondary-color) !important;
 }
 
+#achievements .card-text a {
+    display: inline-block;
+}
+
+#achievements .card-text a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0.5;
+}
+
+#achievements .card-text a:hover::after,
+#achievements .card-text a:focus::after,
+#achievements .card-text a:active::after {
+    width: 100%;
+}
+
 #achievements img {
     border-radius: 0.7rem;
 }
@@ -525,6 +547,29 @@ header .navbar.animate {
 
 #contact h3 {
     color: var(--text-secondary-color) !important;
+}
+
+#contact a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-link-color) !important;
+}
+
+#contact a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0.5;
+}
+
+#contact a:hover::after,
+#contact a:focus::after,
+#contact a:active::after {
+    width: 100%;
 }
 
 #contact .btn {
