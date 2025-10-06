@@ -49,8 +49,3 @@ body.dark #moon {
 body:not(.dark) #sun {
     display: none;
 }
-
-body *::selection {
-    color: var(--text-color) !important;
-    background-color: var(--primary-color) !important;
-}
