@@ -358,6 +358,10 @@ header .navbar.animate {
     left: 0px;
 }
 
+#experience .experience-container .tab-content .tab-pane .featuredLink img {
+    width: 1.1em;
+}
+
 #experience .experience-container .tab-content .tab-pane .featuredLink a::after {
     display: block;
     width: auto;
