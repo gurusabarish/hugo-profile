@@ -212,12 +212,18 @@ header .navbar.animate {
 
 #about ul {
     display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
+    grid-template-columns: var(--about-me-column-count);
     gap: 0px 10px;
     padding: 0px;
     margin: 20px 0px 0px;
     overflow: hidden;
     list-style: none;
+}
+
+@media (min-width: 768px) { 
+  :root {
+    --about-me-column-count: repeat(3, minmax(140px, 200px));
+  }
 }
 
 #about ul li {

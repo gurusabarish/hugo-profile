@@ -58,6 +58,7 @@
         --secondary-background-color-dark: {{ .Site.Params.color.darkmode.secondaryBackgroundColor | default "#212529" }};
         --primary-color-dark: {{ .Site.Params.color.darkmode.primaryColor | default "#ffffff" }};
         --secondary-color-dark: {{ .Site.Params.color.darkmode.secondaryColor | default "#212529" }};
+        --about-me-column-count: repeat(2, minmax(140px, 200px));
     }
     body {
         font-size: {{ .Site.Params.font.fontSize | default "1rem" }};
