@@ -32,16 +32,10 @@
 }
 
 #theme-toggle svg {
-    display: block; /* Prevent inline gaps */
-    vertical-align: middle; /* Ensure icons align with text */
-    width: 24px; /* Set consistent size */
+    display: block;
+    vertical-align: middle;
+    width: 24px;
     height: 24px;
-}
-
-button#theme-toggle {
-    border: none;
-    font-size: 26px;
-    margin: auto 4px;
 }
 
 body.dark #moon {
