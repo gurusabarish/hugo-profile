@@ -17,6 +17,10 @@ header .navbar .navbar-nav a {
 #theme-toggle {
     background-color: var(--background-color) !important;
     color: var(--text-color) !important;
+    width: 40px;
+    height: 40px;
+    background: none;
+    cursor: pointer;
 }
 
 .navbar-toggler {

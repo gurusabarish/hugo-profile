@@ -26,7 +26,6 @@
                             </li>
                         {{ end }}
                     </ul>
-
                     <div class="tab-content pb-3 bg-transparent primary-font" id="pills-tabContent">
                         {{ range $index, $element := .Site.Params.experience.items }}
                             {{ $company := .company }}
@@ -83,6 +82,7 @@
                                                                 </a>
                                                             </div>
                                                         {{ end }}
+
                                                         {{ range $job.featuredItems.customIcons }}
                                                             <div class="list-inline-item">
                                                                 <a
