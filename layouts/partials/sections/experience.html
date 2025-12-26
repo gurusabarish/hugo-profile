@@ -7,31 +7,38 @@
                 <div class="experience-container px-3 pt-2">
                     <ul class="nav nav-pills mb-2 bg-transparent primary-font" id="pills-tab" role="tablist">
                         {{ range $index, $element := .Site.Params.experience.items }}
+                            {{ $firstJobDate := "" }}
+                            {{ if .jobs }}
+                                {{ $firstJobDate = (index .jobs 0).date }}
+                            {{ end }}
                             <li class="nav-item px-1 bg-transparent" role="presentation">
-                                <div 
-                                    class="nav-link {{ if (eq $index 0) }}active{{ end }} bg-transparent" 
-                                    aria-selected="true" 
-                                    role="tab" 
+                                <div
+                                    class="nav-link {{ if (eq $index 0) }}active{{ end }} bg-transparent"
+                                    aria-selected="true"
+                                    role="tab"
                                     data-bs-toggle="pill"
-                                    id='{{ replace .company " " "-" }}-{{ replace .date " " "-" }}-tab'
-                                    data-bs-target='#pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}'
-                                    aria-controls='{{ replace .company " " "-" }}-{{ replace .date " " "-" }}' 
+                                    id='{{ replaceRE "-+" "-" (replaceRE "[^a-zA-Z0-9]" "-" (print .company "-" $firstJobDate)) | lower }}-tab'
+                                    data-bs-target='#pills-{{ replaceRE "-+" "-" (replaceRE "[^a-zA-Z0-9]" "-" (print .company "-" $firstJobDate)) | lower }}'
+                                    aria-controls='{{ replaceRE "-+" "-" (replaceRE "[^a-zA-Z0-9]" "-" (print .company "-" $firstJobDate)) | lower }}'
                                 >
                                     {{ .company }}
                                 </div>
                             </li>
                         {{ end }}
                     </ul>
-
                     <div class="tab-content pb-3 bg-transparent primary-font" id="pills-tabContent">
                         {{ range $index, $element := .Site.Params.experience.items }}
                             {{ $company := .company }}
                             {{ $companyUrl := .companyUrl }}
-                            <div 
+                            {{ $firstJobDate := "" }}
+                            {{ if .jobs }}
+                                {{ $firstJobDate = (index .jobs 0).date }}
+                            {{ end }}
+                            <div
                                 class="tab-pane fade bg-transparent {{ if eq $index 0 }}show active{{ end }}"
                                 role="tabpanel"
-                                id='pills-{{ replace $company " " "-" }}-{{ replace .date " " "-" }}'
-                                aria-labelledby='pills-{{ replace $company " " "-" }}-{{ replace .date " " "-" }}-tab'
+                                id='pills-{{ replaceRE "-+" "-" (replaceRE "[^a-zA-Z0-9]" "-" (print .company "-" $firstJobDate)) | lower }}'
+                                aria-labelledby='{{ replaceRE "-+" "-" (replaceRE "[^a-zA-Z0-9]" "-" (print .company "-" $firstJobDate)) | lower }}-tab'
                             >
                                 {{ range $jobIdx, $job := .jobs }}
                                     <div>
@@ -41,10 +48,9 @@
                                                 
                                                 {{ if $job.info.content }}
                                                     <span class="p-2">
-                                                        <span 
-                                                            style="cursor: pointer;" 
-                                                            data-bs-toggle="tooltip" 
-                                                            data-bs-placement="top" 
+                                                        <span
+                                                            data-bs-toggle="tooltip"
+                                                            data-bs-placement="top"
                                                             data-bs-original-title={{$job.info.content}}
                                                         > 
                                                             <i class="fas fa-info-circle fa-xs"></i>
@@ -66,7 +72,6 @@
                                                                 <a
                                                                     href="{{ .url }}"
                                                                     target="_blank"
-
                                                                     {{ if .tooltip}}
                                                                         data-bs-toggle="tooltip" 
                                                                         data-bs-placement="top" 
@@ -99,7 +104,6 @@
                                                 {{ end }}
                                             </div>
                                         </div>
-
                                         <div class="pb-2 pb-3">
                                             {{ $job.content | markdownify}}
                                         </div>

@@ -119,14 +119,9 @@ header .navbar.animate {
     transition: box-shadow 0.3s;
 }
 
-#hero .image img:hover {
-    cursor: pointer;
-}
-
 #hero .image.animate img:hover {
     box-shadow: 0 0 11px rgb(15 80 100 / 20%);
     filter: contrast(1.2);
-    cursor: pointer;
 }
 
 #hero a.btn.social-icon {
@@ -485,17 +480,12 @@ header .navbar.animate {
 }
 
 #achievements .card {
-    cursor: context-menu;
     background-color: var(--secondary-color) !important;
     border-radius: 1rem;
     box-shadow: 0 0 36px rgba(0,0,0,0.1);
     /* transform: translate3d(0, 0, 0); */
     transition: box-shadow .2s linear,opacity .2s linear;
     border: 2px solid transparent;
-}
-
-#achievements a.card {
-    cursor: alias;
 }
 
 #achievements .card h5 {
