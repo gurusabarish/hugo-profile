@@ -10,27 +10,7 @@
     <div class="row justify-content-center">
         {{ range $recentPosts }}
         <div class="col-lg-4 col-md-6 pt-2">
-            <div class="card h-100">
-                {{ if and (not (.Site.Params.footer.recentPosts.disableFeaturedImage | default false)) (.Params.image) }}
-                <div class="card-header">
-                    <a href="{{ .RelPermalink }}">
-                        <img src="{{ .Params.image }}" class="card-img-top" alt="{{ .Title }}">
-                    </a>
-                </div>
-                {{ end }}
-                <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="{{ .RelPermalink }}" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 25 }}</h5>
-                    </a>
-                    <div class="card-text secondary-font">
-                        <p>{{ .Summary | truncate 300}}</p>
-                    </div>
-                </div>
-                <div class="mt-auto card-footer">
-                    <span class="float-start">{{ .Date.Format (.Site.Params.datesFormat.articleRecent | default "January 2, 2006") }}</span>
-                    <a href="{{ .RelPermalink }}" class="float-end btn btn-outline-info btn-sm">{{ .Site.Params.terms.read | default "Read" }}</a>
-                </div>
-            </div>
+            {{- partial "cards/blogPost.html" (dict "Title" .Title "Params" .Params "Summary" .Summary "RelPermalink" .RelPermalink "Date" .Date "Site" .Site "disableFeaturedImage" ($.Site.Params.footer.recentPosts.disableFeaturedImage | default false) "dateFormat" ($.Site.Params.datesFormat.articleRecent | default "January 2, 2006")) -}}
         </div>
         {{ end }}
     </div>

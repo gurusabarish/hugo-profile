@@ -1,0 +1,61 @@
+{{/* 
+    Reusable project card component
+    Expected context:
+    - .title: Project title
+    - .image: Project image URL
+    - .badges: Array of badge strings
+    - .content or .Summary: Project description
+    - .links: Array of link objects with .url and .icon
+    - .featured: Featured link object with .name and .link (optional)
+    - .RelPermalink: Link to full project page (optional, for content pages)
+*/}}
+{{ $isContentPage := .RelPermalink }}
+{{ $displayTitle := .title }}
+{{ if $isContentPage }}
+    {{ $displayTitle = .title | truncate 50 }}
+{{ end }}
+
+<div class="card my-3 h-100" title="{{ .title }}">
+    <div class="card-head">
+        <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}">
+    </div>
+    <div class="card-body bg-transparent p-3">
+        <div class="pb-2 bg-transparent">
+            {{ range .badges }}
+            <span class="badge badge-secondary">{{ . }}</span>
+            {{ end }}
+        </div>
+        <h5 class="card-title bg-transparent {{ if not $isContentPage }}mt-1{{ end }}">{{ $displayTitle }}</h5>
+        <div class="card-text bg-transparent secondary-font">
+            {{ if .content }}
+                {{ .content }}
+            {{ else if .Summary }}
+                {{ .Summary | truncate 100 | safeHTML }}
+            {{ end }}
+        </div>
+    </div>
+    {{ if or (.links) (.featured) ($isContentPage) }}
+    <div class="card-footer py-3">
+        {{ range .links }}
+        <span class="m-1 mx-2">
+            <a href="{{ .url }}" {{ if not $isContentPage }}target="_blank"{{ end }}>
+                <i class="{{ .icon }}"></i>
+            </a>
+        </span>
+        {{ end }}
+        {{ if .featured }}
+        <span class="float-end">
+            <a class="btn btn-sm" href="{{ .featured.link }}" target="_blank">
+                {{ .featured.name }}
+            </a>
+        </span>
+        {{ else if $isContentPage }}
+        <span class="float-end">
+            <a class="btn btn-sm" href="{{ .RelPermalink }}">
+                Know more
+            </a>
+        </span>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>

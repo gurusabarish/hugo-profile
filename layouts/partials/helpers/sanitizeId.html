@@ -1,0 +1,6 @@
+{{/* 
+    Sanitize a string for use as HTML ID or CSS class name
+    Usage: {{ partial "helpers/sanitizeId.html" "My Company Name" }}
+    Returns: sanitized string safe for use as ID
+*/}}
+{{ replaceRE "-+" "-" (replaceRE "[^a-zA-Z0-9]" "-" .) | lower }}
