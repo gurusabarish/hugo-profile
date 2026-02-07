@@ -2,7 +2,11 @@
 
 ## Overview
 
-This repository contains a comprehensive solutions guide (`ISSUE_SOLUTIONS.md`) that provides detailed answers and workarounds for open GitHub issues that can be resolved without code changes to the theme.
+This repository contains a comprehensive solutions guide split into two parts:
+- **`ISSUE_SOLUTIONS.md`** - Main solutions document (Configuration, Features, Build, Display, Enhancements, Technical)
+- **`ISSUE_SOLUTIONS_PART2.md`** - Additional solutions (Internationalization, Other issues, Summary)
+
+These documents provide detailed answers and workarounds for open GitHub issues that can be resolved without code changes to the theme.
 
 ## Important Note
 
@@ -10,7 +14,7 @@ This repository contains a comprehensive solutions guide (`ISSUE_SOLUTIONS.md`) 
 
 ## Document Purpose
 
-The `ISSUE_SOLUTIONS.md` file contains:
+The solution documents contain:
 - Comprehensive solutions for **27+ open issues**
 - Step-by-step instructions
 - Code examples with proper syntax
@@ -74,7 +78,7 @@ As per instructions:
 
 ### For Repository Maintainers:
 
-1. Open `ISSUE_SOLUTIONS.md`
+1. Open `ISSUE_SOLUTIONS.md` or `ISSUE_SOLUTIONS_PART2.md`
 2. Find the solution for each issue
 3. Copy the relevant section
 4. Paste as a comment on the corresponding GitHub issue
@@ -83,7 +87,7 @@ As per instructions:
 ### For Users:
 
 If you have questions about the theme, you can:
-1. Check `ISSUE_SOLUTIONS.md` for your question
+1. Check both `ISSUE_SOLUTIONS.md` and `ISSUE_SOLUTIONS_PART2.md` for your question
 2. Follow the step-by-step instructions
 3. Use the code examples provided
 4. Refer to the linked documentation for more details
