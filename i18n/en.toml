@@ -75,3 +75,7 @@ other = "Page not found"
 # Date formats
 [min_read]
 other = "min read"
+
+# SEO
+[seo_description]
+other = "A personal portfolio and blog"
