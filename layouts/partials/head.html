@@ -23,6 +23,14 @@
 <!-- font configuration -->
 <link rel="stylesheet" href="{{ (printf "%scss/font.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Keywords -->
+{{ with .Site.Params.keywords }}
+  <meta name="keywords" content="{{ . }}">
+{{ end }}
+
 <!-- Internal templates -->
 {{ template "_internal/google_analytics.html" . }}
 {{ template "_internal/opengraph.html" . }}
@@ -33,8 +41,8 @@
   {{ range .AllTranslations }}
     <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
   {{ end }}
-  <!-- OpenGraph locale -->
-  <meta property="og:locale" content="{{ .Language.Lang }}">
+  <link rel="alternate" hreflang="x-default" href="{{ (index .AllTranslations 0).Permalink }}">
+  <!-- OpenGraph locale alternates -->
   {{ range .Translations }}
     <meta property="og:locale:alternate" content="{{ .Language.Lang }}">
   {{ end }}
