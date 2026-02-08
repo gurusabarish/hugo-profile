@@ -11,7 +11,7 @@
                     <a class="card my-3 h-100 p-3" href="{{ .url }}" title="{{ .title }}" target="_blank">
                         {{if .image }}
                             <div class="card-head">
-                                <img class="card-img-top" src="{{ .image }}" loading="lazy">
+                                <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}" loading="lazy">
                             </div>
                         {{ end }}
                         <div class="card-body bg-transparent">
@@ -27,7 +27,7 @@
                     <div class="card my-3 h-100 p-3" title="{{ .title }}">
                         {{if .image }}
                             <div class="card-head">
-                                <img class="card-img-top" src="{{ .image }}" loading="lazy">
+                                <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}" loading="lazy">
                             </div>
                         {{ end }}
                         <div class="card-body bg-transparent">
