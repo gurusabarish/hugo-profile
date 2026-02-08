@@ -41,7 +41,12 @@
   {{ range .AllTranslations }}
     <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
   {{ end }}
-  <link rel="alternate" hreflang="x-default" href="{{ (index .AllTranslations 0).Permalink }}">
+  {{ $defaultLang := (index .Sites 0).Language.Lang }}
+  {{ range .AllTranslations }}
+    {{ if eq .Language.Lang $defaultLang }}
+      <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+    {{ end }}
+  {{ end }}
   <!-- OpenGraph locale alternates -->
   {{ range .Translations }}
     <meta property="og:locale:alternate" content="{{ .Language.Lang }}">
