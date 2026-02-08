@@ -3,6 +3,10 @@
 <link rel="stylesheet" href="{{ (printf "%scss/index.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 <link rel="stylesheet" href="{{ (printf "%scss/projects.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 
+{{ with .Site.Params.hero.image }}
+<link rel="preload" as="image" href="{{ . }}">
+{{ end }}
+
 <!-- fontawesome -->
 <script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
 {{ end }}
