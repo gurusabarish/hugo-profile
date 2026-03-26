@@ -54,6 +54,7 @@
 
 #list-page .card > .card-header .card-img-top {
     width: 100%;
+    object-fit: cover;
     height: 250px !important;
     background-color: transparent !important;
 }
