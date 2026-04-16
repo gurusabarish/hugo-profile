@@ -32,6 +32,7 @@
                     </div>
                 </div>
             </div>
+            {{ if .Site.Params.hero.image }}
             <div class="col-sm-12 col-md-12 col-lg-4">
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-md-9 pt-5 image {{ if .Site.Params.animate }}animate{{ end }} px-5 px-md-5 px-lg-0 text-center">
@@ -42,6 +43,7 @@
                     </div>
                 </div>
             </div>
+            {{ end }}
         </div>
     </div>
     {{ if .Site.Params.hero.bottomImage.enable | default true }}
