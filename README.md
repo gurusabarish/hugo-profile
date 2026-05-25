@@ -29,7 +29,7 @@
 
 ## Requirements
 
-- **Hugo version 0.87.0 or higher**   
+- **Hugo version 0.158.0 or higher**   
 To check your installed version, run:   
   ```bash
   hugo version
