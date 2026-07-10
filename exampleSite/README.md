@@ -19,7 +19,7 @@
 [static site generator]: https://en.wikipedia.org/wiki/Static_site_generator
 [support]: https://discourse.gohugo.io
 [themes]: https://themes.gohugo.io/
-[twitter]: https://twitter.com/gohugoio
+[twitter]: https://x.com/gohugoio
 [website]: https://gohugo.io
 [windows]: https://gohugo.io/installation/windows
 
