@@ -1,6 +1,6 @@
 # Hugo Profile
 
-[![Twitter](https://img.shields.io/twitter/url?label=Tweet&style=social&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile) [![GitHub forks](https://img.shields.io/github/forks/gurusabarish/hugo-profile?style=plastic)](https://github.com/gurusabarish/hugo-profile/network) [![GitHub stars](https://img.shields.io/github/stars/gurusabarish/hugo-profile?style=plastic)](https://github.com/gurusabarish/hugo-profile/stargazers)
+[![Twitter](https://img.shields.io/twitter/url?label=Tweet&style=social&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile)](https://x.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile) [![GitHub forks](https://img.shields.io/github/forks/gurusabarish/hugo-profile?style=plastic)](https://github.com/gurusabarish/hugo-profile/network) [![GitHub stars](https://img.shields.io/github/stars/gurusabarish/hugo-profile?style=plastic)](https://github.com/gurusabarish/hugo-profile/stargazers)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5c1dcb34-cada-4c80-82b7-cfdbdbd7c774/deploy-status)](https://app.netlify.com/sites/hugo-profile/deploys)
 ![Latest Release](https://img.shields.io/github/v/release/gurusabarish/hugo-profile?include_prereleases)
@@ -126,13 +126,16 @@ defaultContentLanguageInSubdir: false
 
 languages:
   en:
-    languageName: "English"
+    locale: "en-US"
+    label: "English"
     weight: 1
   es:
-    languageName: "Español"
+    locale: "es-ES"
+    label: "Español"
     weight: 2
   fr:
-    languageName: "Français"
+    locale: "fr-FR"
+    label: "Français"
     weight: 3
 ```
 
@@ -166,7 +169,8 @@ To add support for a new language (e.g., German):
    ```yaml
    languages:
      de:
-       languageName: "Deutsch"
+       locale: "nl-NL"
+       label: "Deutsch"
        weight: 4
    ```
 
@@ -215,11 +219,11 @@ rm -rf public/ && hugo
 ## Trouble-Shooting
 
 ```
-ERROR error calling resources.GetRemote: Get "https://publish.twitter.com/oembed?dnt=false&url=https%3A%2F%2Ftwitter.com%2FGoHugoIO%2Fstatus%2F1315233626070503424": net/http: TLS handshake timeout
+ERROR error calling resources.GetRemote: Get "https://publish.x.com/oembed?dnt=false&url=https%3A%2F%x.com%2FGoHugoIO%2Fstatus%2F1315233626070503424": net/http: TLS handshake timeout
 Built in 10266 ms
 Error: error building site: logged 1 error(s)
 ```
-The TLS handshake timeout error can happen due to network issues. If this error persists, you can delete the shortcode example `{{< tweet user="GoHugoIO" id="1315233626070503424" >}}` in the "content/blogs/rich-content.md" file.
+The TLS handshake timeout error can happen due to network issues. If this error persists, you can delete the shortcode example `{{< x user="GoHugoIO" id="1315233626070503424" >}}` in the "content/blogs/rich-content.md" file.
 
 
 ## Issues
