@@ -126,13 +126,16 @@ defaultContentLanguageInSubdir: false
 
 languages:
   en:
-    languageName: "English"
+    locale: "en-US"
+    label: "English"
     weight: 1
   es:
-    languageName: "Español"
+    locale: "es-ES"
+    label: "Español"
     weight: 2
   fr:
-    languageName: "Français"
+    locale: "fr-FR"
+    label: "Français"
     weight: 3
 ```
 
@@ -166,7 +169,8 @@ To add support for a new language (e.g., German):
    ```yaml
    languages:
      de:
-       languageName: "Deutsch"
+       locale: "nl-NL"
+       label: "Deutsch"
        weight: 4
    ```
 

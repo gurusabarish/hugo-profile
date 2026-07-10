@@ -9,7 +9,8 @@ defaultContentLanguageInSubdir: false
 
 languages:
   en:
-    languageName: "English"
+    locale: "en-US"
+    label: "English"
     weight: 1
     contentDir: "content"
     menu:
@@ -25,7 +26,8 @@ languages:
           url: /gallery
           weight: 2
   es:
-    languageName: "Español"
+    locale: "es-ES"
+    label: "Español"
     weight: 2
     contentDir: "content/es"
     menu:
@@ -231,8 +233,9 @@ languages:
         content: Mi bandeja de entrada siempre está abierta. Ya sea que tengas una pregunta o simplemente quieras saludar, ¡haré todo lo posible para responderte!
         btnName: Escríbeme
   fr:
+    locale: "fr-FR"
+    label: "Français"
     contentDir: "content/fr"
-    languageName: "Français"
     weight: 3
     menu:
       main:
