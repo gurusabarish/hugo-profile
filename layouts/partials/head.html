@@ -31,7 +31,7 @@
 <!-- Multilingual SEO -->
 {{ if hugo.IsMultilingual }}
   {{ range .AllTranslations }}
-    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.Label }}">
   {{ end }}
   <!-- OpenGraph locale -->
   <meta property="og:locale" content="{{ .Language.Lang }}">

@@ -9,7 +9,8 @@ defaultContentLanguageInSubdir: false
 
 languages:
   en:
-    languageName: "English"
+    locale: "en-US"
+    label: "English"
     weight: 1
     contentDir: "content"
     menu:
@@ -25,7 +26,8 @@ languages:
           url: /gallery
           weight: 2
   es:
-    languageName: "Español"
+    locale: "es-ES"
+    label: "Español"
     weight: 2
     contentDir: "content/es"
     menu:
@@ -183,7 +185,7 @@ languages:
               - icon: fab fa-github
                 url: https://github.com/gurusabarish/hugo-profile
               - icon: fab fa-twitter
-                url: https://twitter.com/intent/tweet?text=Échale+un+vistazo:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+                url: https://x.com/intent/tweet?text=Échale+un+vistazo:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
           - title: Conversor de Imágenes
             content: Una aplicación web para convertir imágenes a pdf, png a jpg, png a jpg y png a webp sin base de datos usando django.
             image: /images/projects/converter.jpg
@@ -231,8 +233,9 @@ languages:
         content: Mi bandeja de entrada siempre está abierta. Ya sea que tengas una pregunta o simplemente quieras saludar, ¡haré todo lo posible para responderte!
         btnName: Escríbeme
   fr:
+    locale: "fr-FR"
+    label: "Français"
     contentDir: "content/fr"
-    languageName: "Français"
     weight: 3
     menu:
       main:
@@ -389,7 +392,7 @@ languages:
               - icon: fab fa-github
                 url: https://github.com/gurusabarish/hugo-profile
               - icon: fab fa-twitter
-                url: https://twitter.com/intent/tweet?text=Découvrez-le:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+                url: https://x.com/intent/tweet?text=Découvrez-le:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
           - title: Convertisseur d'Images
             content: Une application web pour convertir des images en pdf, png en jpg, png en jpg et png en webp sans base de données en utilisant django.
             image: /images/projects/converter.jpg
@@ -772,7 +775,7 @@ params:
           - icon: fab fa-github
             url: https://github.com/gurusabarish/hugo-profile
           - icon: fab fa-twitter
-            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+            url: https://x.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
 
       - title: Image Converter
         content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
@@ -825,7 +828,7 @@ params:
     socialNetworks:
       github: https://github.com
       linkedin: https://linkedin.com
-      twitter: https://twitter.com
+      x: https://x.com
       instagram: https://instagram.com
       facebook: https://facebook.com
 
