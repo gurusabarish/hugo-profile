@@ -1,0 +1,18 @@
+**Hugo Profile**
+
+- [Home](Home)
+- [Installation](Installation)
+- [Configuration Reference](Configuration-Reference)
+- [Homepage Sections](Homepage-Sections)
+- [Navigation and Search](Navigation-and-Search)
+- [Blog and Content](Blog-and-Content)
+- [Gallery](Gallery)
+- [Project Pages](Project-Pages)
+- [Color Customization](Color-Customization)
+- [Internationalization](Internationalization)
+- [Footer](Footer)
+- [Integrations](Integrations)
+- [Advanced Customization](Advanced-Customization)
+- [Deployment](Deployment)
+- [Troubleshooting](Troubleshooting)
+- [Contributing](Contributing)
