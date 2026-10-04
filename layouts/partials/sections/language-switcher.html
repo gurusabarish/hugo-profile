@@ -4,7 +4,7 @@
         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {{ with .Language }}
             🌐
-            <span class="d-none d-md-inline">{{ .LanguageName }}</span>
+            <span class="d-none d-md-inline">{{ .Label }}</span>
         {{ end }}
     </a>
     <div class="dropdown-menu shadow-lg rounded" aria-labelledby="languageDropdown">
@@ -15,8 +15,8 @@
             {{- range site.Home.AllTranslations -}}
             <a class="dropdown-item text-center nav-link{{ if eq .Language.Lang $.Language.Lang }} active{{ end }}" 
                href="{{ .RelPermalink }}" 
-               title="{{ .Language.LanguageName }}">
-                {{ .Language.LanguageName }}
+               title="{{ .Language.Label }}">
+                {{ .Language.Label }}
             </a>
             {{- end -}}
         {{- else -}}
@@ -24,8 +24,8 @@
             {{- range $translations -}}
             <a class="dropdown-item text-center nav-link{{ if eq .Language.Lang $.Language.Lang }} active{{ end }}" 
                href="{{ .RelPermalink }}" 
-               title="{{ .Language.LanguageName }}">
-                {{ .Language.LanguageName }}
+               title="{{ .Language.Label }}">
+                {{ .Language.Label }}
             </a>
             {{- end -}}
         {{- end -}}
