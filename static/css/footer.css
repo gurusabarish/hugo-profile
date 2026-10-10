@@ -3,12 +3,33 @@ footer a h5 {
 }
 
 footer a {
-  text-decoration: none;
-  color: var(--text-link-color) !important;
+    text-decoration: none;
+    color: var(--text-link-color) !important;
 }
 
-footer a:hover {
-  color: var(--primary-color) !important;
+#copyright a {
+    display: inline-block;
+}
+
+#copyright a:hover {
+    color: var(--primary-color) !important;
+}
+
+#copyright a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0.5;
+}
+
+#copyright a:hover::after,
+#copyright a:focus::after,
+#copyright a:active::after {
+    width: 100%;
 }
 
 footer .card {
