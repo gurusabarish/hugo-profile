@@ -23,6 +23,14 @@
 <!-- font configuration -->
 <link rel="stylesheet" href="{{ (printf "%scss/font.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Keywords -->
+{{ with .Site.Params.keywords }}
+  <meta name="keywords" content="{{ . }}">
+{{ end }}
+
 <!-- Internal templates -->
 {{ template "_internal/google_analytics.html" . }}
 {{ template "_internal/opengraph.html" . }}
@@ -33,8 +41,13 @@
   {{ range .AllTranslations }}
     <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
   {{ end }}
-  <!-- OpenGraph locale -->
-  <meta property="og:locale" content="{{ .Language.Lang }}">
+  {{ $defaultLang := (index .Sites 0).Language.Lang }}
+  {{ range .AllTranslations }}
+    {{ if eq .Language.Lang $defaultLang }}
+      <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+    {{ end }}
+  {{ end }}
+  <!-- OpenGraph locale alternates -->
   {{ range .Translations }}
     <meta property="og:locale:alternate" content="{{ .Language.Lang }}">
   {{ end }}
@@ -48,7 +61,8 @@
 {{- end -}}
 <link rel="stylesheet" href="{{ (printf "%scss/header.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 <link rel="stylesheet" href="{{ (printf "%scss/language-switcher.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
-<link rel="stylesheet" href="{{ (printf "%scss/footer.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
+<link rel="stylesheet" href="{{ (printf "%scss/footer.css" (.Site.Params.staticPath | default "")) | relURL }}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="{{ (printf "%scss/footer.css" (.Site.Params.staticPath | default "")) | relURL }}"></noscript>
 
 <!-- theme -->
 <link rel="stylesheet" href="{{ (printf "%scss/theme.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">

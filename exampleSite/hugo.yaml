@@ -490,6 +490,7 @@ Menus:
 params:
   title: "Hugo Profile"
   description: Text about my cool site
+  keywords: "portfolio, blog, hugo, theme"
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
 
