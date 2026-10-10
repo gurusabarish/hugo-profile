@@ -26,7 +26,13 @@
                         {{ range .links }}
                         <span class="m-1 mx-2">
                             <a href="{{ .url }}" target="_blank">
+                                {{ if or (in .icon "/") (hasSuffix .icon ".svg") (hasSuffix .icon ".png") (hasSuffix
+                                .icon ".jpg") (hasSuffix .icon ".webp") }}
+                                <img src="{{ .icon }}" alt="icon"
+                                    style="height: 1em; width: auto; vertical-align: -0.125em;">
+                                {{ else }}
                                 <i class="{{ .icon }}"></i>
+                                {{ end }}
                             </a>
                         </span>
                         {{ end }}
@@ -64,7 +70,13 @@
                         {{ range .Params.links }}
                         <span class="m-1 mx-2">
                             <a href="{{ .url }}">
+                                {{ if or (in .icon "/") (hasSuffix .icon ".svg") (hasSuffix .icon ".png") (hasSuffix
+                                .icon ".jpg") (hasSuffix .icon ".webp") }}
+                                <img src="{{ .icon }}" alt="icon"
+                                    style="height: 1em; width: auto; vertical-align: -0.125em;">
+                                {{ else }}
                                 <i class="{{ .icon }}"></i>
+                                {{ end }}
                             </a>
                         </span>
                         {{ end }}
