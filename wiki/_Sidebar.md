@@ -5,6 +5,7 @@
 - [Configuration Reference](Configuration-Reference)
 - [Homepage Sections](Homepage-Sections)
 - [Navigation and Search](Navigation-and-Search)
+- [Multi-Page Sites](Multi-Page-Sites)
 - [Blog and Content](Blog-and-Content)
 - [Gallery](Gallery)
 - [Project Pages](Project-Pages)

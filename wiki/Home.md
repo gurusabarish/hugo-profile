@@ -13,6 +13,7 @@ Welcome to the end-to-end documentation for **Hugo Profile**, a high-performance
 | --- | --- | --- |
 | Homepage | Hero, About, Experience, Education, Projects, Achievements and Contact sections, each individually switchable | [Homepage Sections](Homepage-Sections) |
 | Navigation | Sticky navbar, brand logo/name, custom and dropdown menus, built-in search | [Navigation and Search](Navigation-and-Search) |
+| Extra pages | Standalone pages, new sections, about layout, menu links | [Multi-Page Sites](Multi-Page-Sites) |
 | Blog | Lists, single posts, table of contents, tags, reading time, scroll progress, social sharing, comments | [Blog and Content](Blog-and-Content) |
 | Gallery | Image gallery with lightbox viewer | [Gallery](Gallery) |
 | Projects | Optional project pages that also appear on the homepage | [Project Pages](Project-Pages) |
@@ -27,7 +28,7 @@ Welcome to the end-to-end documentation for **Hugo Profile**, a high-performance
 
 1. [Installation](Installation) – get a site running.
 2. [Configuration Reference](Configuration-Reference) – every `hugo.yaml` option in one place.
-3. [Homepage Sections](Homepage-Sections) and [Blog and Content](Blog-and-Content) – fill in your content.
+3. [Homepage Sections](Homepage-Sections), [Multi-Page Sites](Multi-Page-Sites) and [Blog and Content](Blog-and-Content) – fill in your content.
 4. [Color Customization](Color-Customization) and [Advanced Customization](Advanced-Customization) – make it yours.
 5. [Deployment](Deployment) – publish.
 
