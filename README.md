@@ -13,6 +13,7 @@
 
 - Example Site: [https://hugo-profile.netlify.app](https://hugo-profile.netlify.app)
 - Wiki Page: [https://github.com/gurusabarish/hugo-profile/wiki](https://github.com/gurusabarish/hugo-profile/wiki)
+- Full documentation (versioned in this repo): [wiki/Home.md](wiki/Home.md)
 
 **Features:**
 - Fully Responsive
