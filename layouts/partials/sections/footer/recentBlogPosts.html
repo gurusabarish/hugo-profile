@@ -20,7 +20,7 @@
                 {{ if and (not (.Site.Params.footer.recentPosts.disableFeaturedImage | default false)) (.Params.image) }}
                 <div class="card-header">
                     <a href="{{ .RelPermalink }}">
-                        <img src="{{ .Params.image }}" class="card-img-top" alt="{{ .Title }}">
+                        <img src="{{ .Params.image }}" class="card-img-top" alt="{{ .Title }}" loading="lazy">
                     </a>
                 </div>
                 {{ end }}
