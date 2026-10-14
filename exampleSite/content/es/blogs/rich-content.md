@@ -16,7 +16,7 @@ Hugo viene con varios [Shortcodes Integrados](https://gohugo.io/content-manageme
 
 ## Shortcode Simple de X
 ```
-{{</* tweet user="GoHugoIO" id="1315233626070503424" */>}}
+{{</* x user="GoHugoIO" id="1315233626070503424" */>}}
 ```
 <br>
 <!-- Temporarily removed for build -->
